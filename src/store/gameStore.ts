@@ -120,7 +120,7 @@ export const useGameStore = create<GameStore>()(
               : team
           );
           
-          // التحقق من انتهاء الجولات
+          // التحقق من انتهاء الجولات - نحذف زيادة الجولة هنا لأنها ستتم في nextTurn
           const isLastRound = round >= maxRounds;
           if (isLastRound) {
             set({ 
@@ -131,8 +131,7 @@ export const useGameStore = create<GameStore>()(
           } else {
             set({ 
               teams: updatedTeams,
-              answerRevealed: false,
-              round: round + 1
+              answerRevealed: false
             });
           }
         }
@@ -149,15 +148,23 @@ export const useGameStore = create<GameStore>()(
         set({ teams: updatedTeams });
       },
       nextTurn: () => {
-        const { teams } = get();
+        const { teams, round, maxRounds } = get();
         const currentActiveIndex = teams.findIndex((team) => team.isActive);
         const nextActiveIndex = (currentActiveIndex + 1) % teams.length;
+        
+        // زيادة الجولة فقط عندما نعود للفريق الأول
+        const shouldIncrementRound = nextActiveIndex === 0;
+        const nextRound = shouldIncrementRound ? round + 1 : round;
 
         const updatedTeams = teams.map((team, index) => ({
           ...team,
           isActive: index === nextActiveIndex,
         }));
-        set({ teams: updatedTeams, round: get().round + 1 });
+
+        set({ 
+          teams: updatedTeams,
+          round: nextRound
+        });
       },
       revealAnswer: () => {
         set({ answerRevealed: true });

@@ -157,7 +157,7 @@ export const useGameStore = create<GameStore>()(
           ...team,
           isActive: index === nextActiveIndex,
         }));
-        set({ teams: updatedTeams });
+        set({ teams: updatedTeams, round: get().round + 1 });
       },
       revealAnswer: () => {
         set({ answerRevealed: true });

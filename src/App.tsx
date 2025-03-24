@@ -14,8 +14,15 @@ import { fetchRandomTVShow } from './services/tvSeriesApi';
 import { Gamepad2 } from 'lucide-react';
 
 function App() {
-  const [gameStarted, setGameStarted] = useState(false);
+  const [gameStarted, setGameStarted] = useState(() => {
     // التحقق من وجود بيانات محفوظة
+    const stored = localStorage.getItem('game-storage');
+    if (stored) {
+      const { state } = JSON.parse(stored);
+      return Boolean(state.gameStarted);
+    }
+    return false;
+  });
   const [categorySelected, setCategorySelected] = useState(false);
   const [loading, setLoading] = useState(false);
   const { 
@@ -28,7 +35,10 @@ function App() {
     categoryUsedItems,
     clearUsedItems, 
     clearCategoryUsedItems,
-    resetGame 
+    resetGame,
+    round,
+    maxRounds,
+    gameEnded 
   } = useGameStore();
 
   const handleGameStart = (teams: string[]) => {
@@ -70,21 +80,17 @@ function App() {
   const handleCategorySelect = async (category: Category) => {
     setLoading(true);
     setCategory(category);
+    clearCategoryUsedItems(category); // Clear used items when selecting new category
 
     try {
-      // Check if we've used all items in the category
-      if (categoryUsedItems[category]?.size >= getCategoryMaxItems(category)) {
-        clearCategoryUsedItems(category); // Reset used items if we've used them all
-      }
-
       let item: GameItem | null = null;
       let attempts = 0;
-      const maxAttempts = 10; // Increased from 5 to give more chances
+      const maxAttempts = 5;
 
       while (!item && attempts < maxAttempts) {
         const fetchedItem = await fetchItemForCategory(category);
         
-        if (fetchedItem && (!categoryUsedItems[category]?.has(fetchedItem.id))) {
+        if (fetchedItem && (!categoryUsedItems[category] || !categoryUsedItems[category].has(fetchedItem.id))) {
           item = fetchedItem;
           break;
         }
@@ -95,43 +101,13 @@ function App() {
         setCurrentItem(item);
         setCategorySelected(true);
       } else {
-        // If still no item found, clear used items and try one more time
-        clearCategoryUsedItems(category);
-        const lastAttemptItem = await fetchItemForCategory(category);
-        if (lastAttemptItem) {
-          setCurrentItem(lastAttemptItem);
-          setCategorySelected(true);
-        } else {
-          throw new Error('Failed to fetch a valid item');
-        }
+        throw new Error('No suitable items found after multiple attempts');
       }
     } catch (error) {
       console.error('Error setting up game:', error);
       setCategorySelected(false);
     } finally {
       setLoading(false);
-    }
-  };
-
-  // Add this helper function at the same level as handleCategorySelect
-  const getCategoryMaxItems = (category: Category): number => {
-    switch (category) {
-      case 'tv':
-        return 200; // Based on your TVSeries.json content
-      case 'movies':
-        return 100; // Adjust based on your actual data
-      case 'games':
-        return 100;
-      case 'anime':
-        return 100;
-      case 'football':
-        return 100;
-      case 'countries':
-        return 250;
-      case 'wwe':
-        return 100;
-      default:
-        return 100;
     }
   };
 
@@ -145,6 +121,27 @@ function App() {
   const handleBackToCategories = () => {
     setCategorySelected(false);
   };
+
+  useEffect(() => {
+    if (round > maxRounds) {
+      const stored = localStorage.getItem('game-storage');
+      if (stored) {
+        const { state } = JSON.parse(stored);
+        const teams = state.teams;
+        const winner = teams.reduce((prev: any, current: any) => 
+          (prev.score > current.score) ? prev : current
+        );
+        alert(`انتهت اللعبة! الفائز هو ${winner.name} بـ ${winner.score} نقطة`);
+        handleResetGame();
+      }
+    }
+  }, [round, maxRounds]);
+
+  useEffect(() => {
+    if (gameEnded) {
+      handleResetGame();
+    }
+  }, [gameEnded]);
 
   return (
     <div className="min-h-screen bg-[#0f0a1e] text-gray-100 relative overflow-hidden" dir="rtl">

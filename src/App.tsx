@@ -77,17 +77,21 @@ function App() {
   const handleCategorySelect = async (category: Category) => {
     setLoading(true);
     setCategory(category);
-    clearCategoryUsedItems(category); // Clear used items when selecting new category
 
     try {
+      // Check if we've used all items in the category
+      if (categoryUsedItems[category]?.size >= getCategoryMaxItems(category)) {
+        clearCategoryUsedItems(category); // Reset used items if we've used them all
+      }
+
       let item: GameItem | null = null;
       let attempts = 0;
-      const maxAttempts = 5;
+      const maxAttempts = 10; // Increased from 5 to give more chances
 
       while (!item && attempts < maxAttempts) {
         const fetchedItem = await fetchItemForCategory(category);
         
-        if (fetchedItem && (!categoryUsedItems[category] || !categoryUsedItems[category].has(fetchedItem.id))) {
+        if (fetchedItem && (!categoryUsedItems[category]?.has(fetchedItem.id))) {
           item = fetchedItem;
           break;
         }
@@ -98,13 +102,43 @@ function App() {
         setCurrentItem(item);
         setCategorySelected(true);
       } else {
-        throw new Error('No suitable items found after multiple attempts');
+        // If still no item found, clear used items and try one more time
+        clearCategoryUsedItems(category);
+        const lastAttemptItem = await fetchItemForCategory(category);
+        if (lastAttemptItem) {
+          setCurrentItem(lastAttemptItem);
+          setCategorySelected(true);
+        } else {
+          throw new Error('Failed to fetch a valid item');
+        }
       }
     } catch (error) {
       console.error('Error setting up game:', error);
       setCategorySelected(false);
     } finally {
       setLoading(false);
+    }
+  };
+
+  // Add this helper function at the same level as handleCategorySelect
+  const getCategoryMaxItems = (category: Category): number => {
+    switch (category) {
+      case 'tv':
+        return 200; // Based on your TVSeries.json content
+      case 'movies':
+        return 100; // Adjust based on your actual data
+      case 'games':
+        return 100;
+      case 'anime':
+        return 100;
+      case 'football':
+        return 100;
+      case 'countries':
+        return 250;
+      case 'wwe':
+        return 100;
+      default:
+        return 100;
     }
   };
 

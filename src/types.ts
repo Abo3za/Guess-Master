@@ -1,4 +1,4 @@
-export type Category = 'anime' | 'tv' | 'movies' | 'games' | 'football' | 'countries';
+export type Category = 'anime' | 'tv' | 'movies' | 'games' | 'football' | 'countries' | 'wwe';
 
 export type Difficulty = 'normal' | 'hard';
 

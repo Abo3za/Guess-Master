@@ -3,7 +3,7 @@ import { Category, Difficulty, DIFFICULTY_POINTS, DIFFICULTY_HINTS } from '../ty
 import { 
   Gamepad2, Tv, Film, FolderRoot as Football, 
   BookOpen, Globe2, Trash2, Users, Plus, Minus,
-  Sparkles, Target, Zap
+  Sparkles, Target, Zap, Sword
 } from 'lucide-react';
 import { useGameStore } from '../store/gameStore';
 
@@ -48,6 +48,12 @@ const categories = [
     label: 'دول',
     icon: <Globe2 className="w-6 h-6 md:w-8 md:h-8" />,
     bgImage: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=800'
+  },
+  {
+    value: 'wwe',
+    label: 'المصارعة',
+    icon: <Sword className="w-6 h-6" />,
+    bgImage: '/images/categories/wwe-bg.jpg'
   }
 ];
 

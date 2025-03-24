@@ -1,0 +1,105 @@
+{
+  "players": [
+    {
+      "id": 1,
+      "name": "Lionel Messi",
+      "nationality": "Argentina",
+      "position": "Forward",
+      "club": "Inter Miami (ex-Barcelona)",
+      "goals": 800,
+      "trophies": 40,
+      "highlight": "Won World Cup 2022"
+    },
+    {
+      "id": 2,
+      "name": "Cristiano Ronaldo",
+      "nationality": "Portugal",
+      "position": "Forward",
+      "club": "Al-Nassr (ex-Real Madrid)",
+      "goals": 850,
+      "trophies": 35,
+      "highlight": "Top scorer in international football"
+    },
+    {
+      "id": 3,
+      "name": "Neymar Jr",
+      "nationality": "Brazil",
+      "position": "Forward",
+      "club": "Al Hilal (ex-PSG)",
+      "goals": 450,
+      "trophies": 25,
+      "highlight": "Most expensive transfer in football history"
+    },
+    {
+      "id": 4,
+      "name": "Kylian Mbappe",
+      "nationality": "France",
+      "position": "Forward",
+      "club": "Paris Saint-Germain",
+      "goals": 300,
+      "trophies": 15,
+      "highlight": "Scored a hat-trick in World Cup final"
+    },
+    {
+      "id": 5,
+      "name": "Erling Haaland",
+      "nationality": "Norway",
+      "position": "Forward",
+      "club": "Manchester City",
+      "goals": 200,
+      "trophies": 5,
+      "highlight": "Broke Premier League scoring record"
+    },
+    {
+      "id": 6,
+      "name": "Luka Modric",
+      "nationality": "Croatia",
+      "position": "Midfielder",
+      "club": "Real Madrid",
+      "goals": 100,
+      "trophies": 25,
+      "highlight": "Won Ballon d'Or 2018"
+    },
+    {
+      "id": 7,
+      "name": "Mohamed Salah",
+      "nationality": "Egypt",
+      "position": "Forward",
+      "club": "Liverpool",
+      "goals": 300,
+      "trophies": 6,
+      "highlight": "Premier League Golden Boot winner"
+    },
+    {
+      "id": 8,
+      "name": "Kevin De Bruyne",
+      "nationality": "Belgium",
+      "position": "Midfielder",
+      "club": "Manchester City",
+      "goals": 120,
+      "trophies": 10,
+      "highlight": "Best playmaker in Premier League"
+    },
+    {
+      "id": 9,
+      "name": "Robert Lewandowski",
+      "nationality": "Poland",
+      "position": "Striker",
+      "club": "Barcelona",
+      "goals": 600,
+      "trophies": 25,
+      "highlight": "Scored 5 goals in 9 minutes"
+    },
+    {
+      "id": 10,
+      "name": "Virgil van Dijk",
+      "nationality": "Netherlands",
+      "position": "Defender",
+      "club": "Liverpool",
+      "goals": 50,
+      "trophies": 7,
+      "highlight": "PFA Player of the Year 2019"
+    }
+  ]
+
+}

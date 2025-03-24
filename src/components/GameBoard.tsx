@@ -36,6 +36,8 @@ const getCategoryPrompt = (category: string): string => {
       return 'خمن الحدث التاريخي';
     case 'science':
       return 'خمن الاكتشاف العلمي';
+    case 'wwe':
+      return 'خمن المصارع';
     default:
       return 'قم بالتخمين';
   }

@@ -1,0 +1,104 @@
+{
+  "games": [
+    {
+        "id": 1,
+        "title": "The Legend of Zelda: Breath of the Wild",
+        "release_year": 2017,
+        "genre": "Action-Adventure",
+        "developer": "Nintendo",
+        "platform": "Nintendo Switch",
+        "mode": "Single-player",
+        "rating": 9.5
+    },
+    {
+        "id": 2,
+        "title": "The Witcher 3: Wild Hunt",
+        "release_year": 2015,
+        "genre": "RPG",
+        "developer": "CD Projekt Red",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 9.3
+    },
+    {
+        "id": 3,
+        "title": "Minecraft",
+        "release_year": 2011,
+        "genre": "Sandbox",
+        "developer": "Mojang",
+        "platform": "Multi-platform",
+        "mode": "Single & Multiplayer",
+        "rating": 8.9
+    },
+    {
+        "id": 4,
+        "title": "God of War (2018)",
+        "release_year": 2018,
+        "genre": "Action",
+        "developer": "Santa Monica Studio",
+        "platform": "PS4",
+        "mode": "Single-player",
+        "rating": 9.6
+    },
+    {
+        "id": 5,
+        "title": "Red Dead Redemption 2",
+        "release_year": 2018,
+        "genre": "Action-Adventure",
+        "developer": "Rockstar Games",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single & Multiplayer",
+        "rating": 9.7
+    },
+    {
+        "id": 6,
+        "title": "Elden Ring",
+        "release_year": 2022,
+        "genre": "Action RPG",
+        "developer": "FromSoftware",
+        "platform": "PC, PS5, Xbox",
+        "mode": "Single & Multiplayer",
+        "rating": 9.4
+    },
+    {
+        "id": 7,
+        "title": "Overwatch",
+        "release_year": 2016,
+        "genre": "Shooter",
+        "developer": "Blizzard Entertainment",
+        "platform": "PC, Console",
+        "mode": "Multiplayer",
+        "rating": 8.5
+    },
+    {
+        "id": 8,
+        "title": "Fortnite",
+        "release_year": 2017,
+        "genre": "Battle Royale",
+        "developer": "Epic Games",
+        "platform": "Multi-platform",
+        "mode": "Multiplayer",
+        "rating": 8.0
+    },
+    {
+        "id": 9,
+        "title": "Hollow Knight",
+        "release_year": 2017,
+        "genre": "Metroidvania",
+        "developer": "Team Cherry",
+        "platform": "PC, Switch",
+        "mode": "Single-player",
+        "rating": 9.0
+    },
+    {
+        "id": 10,
+        "title": "Resident Evil 4 Remake",
+        "release_year": 2023,
+        "genre": "Survival Horror",
+        "developer": "Capcom",
+        "platform": "PC, PS5, Xbox",
+        "mode": "Single-player",
+        "rating": 9.1
+    }
+  ]
+}

@@ -5,10 +5,11 @@ import { CategorySelection } from './components/CategorySelection';
 import { useGameStore } from './store/gameStore';
 import { Category, GameItem } from './types';
 import { fetchRandomGame } from './services/rawgApi';
-import { fetchRandomMovie, fetchRandomTVShow } from './services/omdbApi';
+import { fetchRandomMovie, } from './services/omdbApi';
 import { fetchRandomAnime } from './services/jikanApi';
 import { fetchRandomFootballItem } from './services/footballApi';
 import { fetchRandomCountry } from './services/countriesApi';
+import { fetchRandomWrestler } from './services/wweApi';
 import { Gamepad2 } from 'lucide-react';
 
 function App() {
@@ -40,22 +41,25 @@ function App() {
   };
 
   const fetchItemForCategory = async (category: Category): Promise<GameItem | null> => {
+    if (!selectedDifficulty) {
+      throw new Error('Difficulty is not selected');
+    }
+
     switch (category) {
       case 'anime':
-        if (selectedDifficulty) {
-          return await fetchRandomAnime(category, selectedDifficulty);
-        }
-        throw new Error('Difficulty is not selected');
+        return await fetchRandomAnime(category, selectedDifficulty);
       case 'tv':
-        return await fetchRandomTVShow(category);
+        return await fetchRandomTVShow(category, selectedDifficulty);
       case 'movies':
-        return await fetchRandomMovie(category);
+        return await fetchRandomMovie(category, selectedDifficulty);
       case 'games':
-        return await fetchRandomGame();
+        return await fetchRandomGame(category, selectedDifficulty);
       case 'football':
-        return await fetchRandomFootballItem(category);
+        return await fetchRandomFootballItem(category, selectedDifficulty);
       case 'countries':
-        return await fetchRandomCountry(category);
+        return await fetchRandomCountry(category, selectedDifficulty);
+      case 'wwe':
+        return await fetchRandomWrestler(category, selectedDifficulty);
       default:
         return null;
     }

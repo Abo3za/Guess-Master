@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "title": "The Shawshank Redemption",
+    "release_year": 1994,
+    "genre": "Drama",
+    "director": "Frank Darabont",
+    "main_actor": "Tim Robbins",
+    "rating": 9.3,
+    "highlight": "Top rated movie on IMDb"
+  },
+  {
+    "id": 2,
+    "title": "The Godfather",
+    "release_year": 1972,
+    "genre": "Crime, Drama",
+    "director": "Francis Ford Coppola",
+    "main_actor": "Marlon Brando",
+    "rating": 9.2,
+    "highlight": "Iconic mafia film"
+  },
+  {
+    "id": 3,
+    "title": "The Dark Knight",
+    "release_year": 2008,
+    "genre": "Action, Crime, Drama",
+    "director": "Christopher Nolan",
+    "main_actor": "Christian Bale",
+    "rating": 9.0,
+    "highlight": "Heath Ledger's legendary Joker"
+  },
+  {
+    "id": 4,
+    "title": "Inception",
+    "release_year": 2010,
+    "genre": "Sci-Fi, Action",
+    "director": "Christopher Nolan",
+    "main_actor": "Leonardo DiCaprio",
+    "rating": 8.8,
+    "highlight": "Dream within a dream concept"
+  },
+  {
+    "id": 5,
+    "title": "Forrest Gump",
+    "release_year": 1994,
+    "genre": "Drama, Romance",
+    "director": "Robert Zemeckis",
+    "main_actor": "Tom Hanks",
+    "rating": 8.8,
+    "highlight": "Life is like a box of chocolates"
+  },
+  {
+    "id": 6,
+    "title": "Fight Club",
+    "release_year": 1999,
+    "genre": "Drama, Thriller",
+    "director": "David Fincher",
+    "main_actor": "Brad Pitt",
+    "rating": 8.8,
+    "highlight": "The first rule is: You do not talk about Fight Club"
+  }
+  ]
+

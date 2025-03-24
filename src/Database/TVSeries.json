@@ -1,0 +1,2005 @@
+{
+    "shows": [
+      {
+        "id": 1,
+        "title": "Breaking Bad",
+        "release_year": 2008,
+        "genre": "Crime, Drama",
+        "seasons": 5,
+        "main_actor": "Bryan Cranston",
+        "platform": "AMC",
+        "total_episodes": 62
+      },
+      {
+        "id": 2,
+        "title": "Game of Thrones",
+        "release_year": 2011,
+        "genre": "Fantasy, Drama",
+        "seasons": 8,
+        "main_actor": "Emilia Clarke",
+        "platform": "HBO",
+        "total_episodes": 73
+      },
+      {
+        "id": 3,
+        "title": "Stranger Things",
+        "release_year": 2016,
+        "genre": "Sci-Fi, Horror",
+        "seasons": 4,
+        "main_actor": "Millie Bobby Brown",
+        "platform": "Netflix",
+        "total_episodes": 34
+      },
+      {
+        "id": 4,
+        "title": "Friends",
+        "release_year": 1994,
+        "genre": "Comedy, Romance",
+        "seasons": 10,
+        "main_actor": "Jennifer Aniston",
+        "platform": "NBC",
+        "total_episodes": 236
+      },
+      {
+        "id": 5,
+        "title": "The Office",
+        "release_year": 2005,
+        "genre": "Comedy",
+        "seasons": 9,
+        "main_actor": "Steve Carell",
+        "platform": "NBC",
+        "total_episodes": 201
+      },
+      {
+        "id": 6,
+        "title": "The Crown",
+        "release_year": 2016,
+        "genre": "Biography, Drama",
+        "seasons": 6,
+        "main_actor": "Claire Foy",
+        "platform": "Netflix",
+        "total_episodes": 60
+      },
+      {
+        "id": 7,
+        "title": "The Mandalorian",
+        "release_year": 2019,
+        "genre": "Action, Sci-Fi",
+        "seasons": 3,
+        "main_actor": "Pedro Pascal",
+        "platform": "Disney+",
+        "total_episodes": 24
+      },
+      {
+        "id": 8,
+        "title": "The Witcher",
+        "release_year": 2019,
+        "genre": "Fantasy",
+        "seasons": 3,
+        "main_actor": "Henry Cavill",
+        "platform": "Netflix",
+        "total_episodes": 24
+      },
+      {
+        "id": 9,
+        "title": "Dark",
+        "release_year": 2017,
+        "genre": "Sci-Fi, Thriller",
+        "seasons": 3,
+        "main_actor": "Louis Hofmann",
+        "platform": "Netflix",
+        "total_episodes": 26
+      },
+      {
+        "id": 10,
+        "title": "Sherlock",
+        "release_year": 2010,
+        "genre": "Crime, Mystery",
+        "seasons": 4,
+        "main_actor": "Benedict Cumberbatch",
+        "platform": "BBC",
+        "total_episodes": 13
+      },
+      {
+        "id": 11,
+        "title": "The Sopranos",
+        "release_year": 1999,
+        "genre": "Crime, Drama",
+        "seasons": 6,
+        "main_actor": "James Gandolfini",
+        "platform": "HBO",
+        "total_episodes": 86
+      },
+      {
+        "id": 12,
+        "title": "Mad Men",
+        "release_year": 2007,
+        "genre": "Drama",
+        "seasons": 7,
+        "main_actor": "Jon Hamm",
+        "platform": "AMC",
+        "total_episodes": 92
+      },
+      {
+        "id": 13,
+        "title": "Lost",
+        "release_year": 2004,
+        "genre": "Drama, Mystery, Sci-Fi",
+        "seasons": 6,
+        "main_actor": "Matthew Fox",
+        "platform": "ABC",
+        "total_episodes": 121
+      },
+      {
+        "id": 14,
+        "title": "House of Cards",
+        "release_year": 2013,
+        "genre": "Drama, Political",
+        "seasons": 6,
+        "main_actor": "Kevin Spacey",
+        "platform": "Netflix",
+        "total_episodes": 73
+      },
+      {
+        "id": 15,
+        "title": "Westworld",
+        "release_year": 2016,
+        "genre": "Sci-Fi, Western, Drama",
+        "seasons": 3,
+        "main_actor": "Evan Rachel Wood",
+        "platform": "HBO",
+        "total_episodes": 28
+      },
+      {
+        "id": 16,
+        "title": "The Boys",
+        "release_year": 2019,
+        "genre": "Superhero, Drama, Action",
+        "seasons": 3,
+        "main_actor": "Karl Urban",
+        "platform": "Amazon Prime",
+        "total_episodes": 24
+      },
+      {
+        "id": 17,
+        "title": "Better Call Saul",
+        "release_year": 2015,
+        "genre": "Crime, Drama",
+        "seasons": 6,
+        "main_actor": "Bob Odenkirk",
+        "platform": "AMC",
+        "total_episodes": 63
+      },
+      {
+        "id": 18,
+        "title": "The Handmaid's Tale",
+        "release_year": 2017,
+        "genre": "Drama, Sci-Fi",
+        "seasons": 5,
+        "main_actor": "Elisabeth Moss",
+        "platform": "Hulu",
+        "total_episodes": 46
+      },
+      {
+        "id": 19,
+        "title": "True Detective",
+        "release_year": 2014,
+        "genre": "Crime, Drama, Mystery",
+        "seasons": 3,
+        "main_actor": "Matthew McConaughey",
+        "platform": "HBO",
+        "total_episodes": 24
+      },
+      {
+        "id": 20,
+        "title": "The Wire",
+        "release_year": 2002,
+        "genre": "Crime, Drama",
+        "seasons": 5,
+        "main_actor": "Dominic West",
+        "platform": "HBO",
+        "total_episodes": 60
+      },
+      {
+        "id": 21,
+        "title": "Ozark",
+        "release_year": 2017,
+        "genre": "Crime, Drama, Thriller",
+        "seasons": 4,
+        "main_actor": "Jason Bateman",
+        "platform": "Netflix",
+        "total_episodes": 44
+      },
+      {
+        "id": 22,
+        "title": "Peaky Blinders",
+        "release_year": 2013,
+        "genre": "Crime, Drama, Historical",
+        "seasons": 6,
+        "main_actor": "Cillian Murphy",
+        "platform": "Netflix",
+        "total_episodes": 36
+      },
+      {
+        "id": 23,
+        "title": "Vikings",
+        "release_year": 2013,
+        "genre": "Historical, Action, Drama",
+        "seasons": 6,
+        "main_actor": "Travis Fimmel",
+        "platform": "History Channel",
+        "total_episodes": 89
+      },
+      {
+        "id": 24,
+        "title": "The Expanse",
+        "release_year": 2015,
+        "genre": "Sci-Fi, Mystery, Drama",
+        "seasons": 6,
+        "main_actor": "Steven Strait",
+        "platform": "Amazon Prime",
+        "total_episodes": 62
+      },
+      {
+        "id": 25,
+        "title": "Battlestar Galactica",
+        "release_year": 2004,
+        "genre": "Sci-Fi, Drama",
+        "seasons": 4,
+        "main_actor": "Edward James Olmos",
+        "platform": "Sci-Fi Channel",
+        "total_episodes": 73
+      },
+      {
+        "id": 26,
+        "title": "The Leftovers",
+        "release_year": 2014,
+        "genre": "Drama, Mystery, Fantasy",
+        "seasons": 3,
+        "main_actor": "Justin Theroux",
+        "platform": "HBO",
+        "total_episodes": 28
+      },
+      {
+        "id": 27,
+        "title": "Dexter",
+        "release_year": 2006,
+        "genre": "Crime, Drama, Mystery",
+        "seasons": 8,
+        "main_actor": "Michael C. Hall",
+        "platform": "Showtime",
+        "total_episodes": 96
+      },
+      {
+        "id": 28,
+        "title": "Sons of Anarchy",
+        "release_year": 2008,
+        "genre": "Crime, Drama, Action",
+        "seasons": 7,
+        "main_actor": "Charlie Hunnam",
+        "platform": "FX",
+        "total_episodes": 92
+      },
+      {
+        "id": 29,
+        "title": "House M.D.",
+        "release_year": 2004,
+        "genre": "Medical, Drama, Mystery",
+        "seasons": 8,
+        "main_actor": "Hugh Laurie",
+        "platform": "FOX",
+        "total_episodes": 177
+      },
+      {
+        "id": 30,
+        "title": "ER",
+        "release_year": 1994,
+        "genre": "Medical, Drama",
+        "seasons": 15,
+        "main_actor": "George Clooney",
+        "platform": "NBC",
+        "total_episodes": 331
+      },
+      {
+        "id": 31,
+        "title": "Grey's Anatomy",
+        "release_year": 2005,
+        "genre": "Medical, Drama, Romance",
+        "seasons": 18,
+        "main_actor": "Ellen Pompeo",
+        "platform": "ABC",
+        "total_episodes": 380
+      },
+      {
+        "id": 32,
+        "title": "Scrubs",
+        "release_year": 2001,
+        "genre": "Medical, Comedy, Drama",
+        "seasons": 9,
+        "main_actor": "Zach Braff",
+        "platform": "ABC",
+        "total_episodes": 182
+      },
+      {
+        "id": 33,
+        "title": "Supernatural",
+        "release_year": 2005,
+        "genre": "Fantasy, Horror, Drama",
+        "seasons": 15,
+        "main_actor": "Jared Padalecki",
+        "platform": "The CW",
+        "total_episodes": 327
+      },
+      {
+        "id": 34,
+        "title": "Buffy the Vampire Slayer",
+        "release_year": 1997,
+        "genre": "Fantasy, Horror, Drama",
+        "seasons": 7,
+        "main_actor": "Sarah Michelle Gellar",
+        "platform": "The WB",
+        "total_episodes": 144
+      },
+      {
+        "id": 35,
+        "title": "Angel",
+        "release_year": 1999,
+        "genre": "Fantasy, Drama",
+        "seasons": 5,
+        "main_actor": "David Boreanaz",
+        "platform": "WB",
+        "total_episodes": 110
+      },
+      {
+        "id": 36,
+        "title": "Charmed",
+        "release_year": 1998,
+        "genre": "Fantasy, Drama, Romance",
+        "seasons": 8,
+        "main_actor": "Holly Marie Combs",
+        "platform": "The WB",
+        "total_episodes": 178
+      },
+      {
+        "id": 37,
+        "title": "The X-Files",
+        "release_year": 1993,
+        "genre": "Sci-Fi, Mystery, Drama",
+        "seasons": 11,
+        "main_actor": "David Duchovny",
+        "platform": "FOX",
+        "total_episodes": 218
+      },
+      {
+        "id": 38,
+        "title": "Fringe",
+        "release_year": 2008,
+        "genre": "Sci-Fi, Mystery, Drama",
+        "seasons": 5,
+        "main_actor": "Anna Torv",
+        "platform": "FOX",
+        "total_episodes": 100
+      },
+      {
+        "id": 39,
+        "title": "Twin Peaks",
+        "release_year": 1990,
+        "genre": "Mystery, Drama, Thriller",
+        "seasons": 2,
+        "main_actor": "Kyle MacLachlan",
+        "platform": "ABC",
+        "total_episodes": 30
+      },
+      {
+        "id": 40,
+        "title": "Carnivàle",
+        "release_year": 2003,
+        "genre": "Fantasy, Drama, Mystery",
+        "seasons": 2,
+        "main_actor": "Clancy Brown",
+        "platform": "HBO",
+        "total_episodes": 24
+      },
+      {
+        "id": 41,
+        "title": "Boardwalk Empire",
+        "release_year": 2010,
+        "genre": "Crime, Drama, Historical",
+        "seasons": 5,
+        "main_actor": "Steve Buscemi",
+        "platform": "HBO",
+        "total_episodes": 56
+      },
+      {
+        "id": 42,
+        "title": "Rome",
+        "release_year": 2005,
+        "genre": "Historical, Drama, Action",
+        "seasons": 2,
+        "main_actor": "Kevin McKidd",
+        "platform": "HBO",
+        "total_episodes": 22
+      },
+      {
+        "id": 43,
+        "title": "The Tudors",
+        "release_year": 2007,
+        "genre": "Historical, Drama, Romance",
+        "seasons": 4,
+        "main_actor": "Jonathan Rhys Meyers",
+        "platform": "Showtime",
+        "total_episodes": 38
+      },
+      {
+        "id": 44,
+        "title": "Downton Abbey",
+        "release_year": 2010,
+        "genre": "Historical, Drama, Romance",
+        "seasons": 6,
+        "main_actor": "Maggie Smith",
+        "platform": "ITV/PBS",
+        "total_episodes": 52
+      },
+      {
+        "id": 45,
+        "title": "Outlander",
+        "release_year": 2014,
+        "genre": "Historical, Drama, Romance",
+        "seasons": 6,
+        "main_actor": "Caitriona Balfe",
+        "platform": "Starz",
+        "total_episodes": 80
+      },
+      {
+        "id": 46,
+        "title": "The Simpsons",
+        "release_year": 1989,
+        "genre": "Animation, Comedy, Drama",
+        "seasons": 33,
+        "main_actor": "Dan Castellaneta",
+        "platform": "Fox",
+        "total_episodes": 700
+      },
+      {
+        "id": 47,
+        "title": "Family Guy",
+        "release_year": 1999,
+        "genre": "Animation, Comedy",
+        "seasons": 20,
+        "main_actor": "Seth MacFarlane",
+        "platform": "Fox",
+        "total_episodes": 350
+      },
+      {
+        "id": 48,
+        "title": "South Park",
+        "release_year": 1997,
+        "genre": "Animation, Comedy, Drama",
+        "seasons": 25,
+        "main_actor": "Trey Parker",
+        "platform": "Comedy Central",
+        "total_episodes": 300
+      },
+      {
+        "id": 49,
+        "title": "Futurama",
+        "release_year": 1999,
+        "genre": "Animation, Sci-Fi, Comedy",
+        "seasons": 7,
+        "main_actor": "Billy West",
+        "platform": "Fox",
+        "total_episodes": 140
+      },
+      {
+        "id": 50,
+        "title": "Archer",
+        "release_year": 2009,
+        "genre": "Animation, Comedy, Action",
+        "seasons": 12,
+        "main_actor": "H. Jon Benjamin",
+        "platform": "FX",
+        "total_episodes": 100
+      },
+      {
+        "id": 51,
+        "title": "BoJack Horseman",
+        "release_year": 2014,
+        "genre": "Animation, Drama, Comedy",
+        "seasons": 6,
+        "main_actor": "Will Arnett",
+        "platform": "Netflix",
+        "total_episodes": 77
+      },
+      {
+        "id": 52,
+        "title": "Rick and Morty",
+        "release_year": 2013,
+        "genre": "Animation, Sci-Fi, Comedy",
+        "seasons": 6,
+        "main_actor": "Justin Roiland",
+        "platform": "Adult Swim",
+        "total_episodes": 61
+      },
+      {
+        "id": 53,
+        "title": "The Big Bang Theory",
+        "release_year": 2007,
+        "genre": "Comedy, Romance",
+        "seasons": 12,
+        "main_actor": "Jim Parsons",
+        "platform": "CBS",
+        "total_episodes": 279
+      },
+      {
+        "id": 54,
+        "title": "How I Met Your Mother",
+        "release_year": 2005,
+        "genre": "Comedy, Romance",
+        "seasons": 9,
+        "main_actor": "Josh Radnor",
+        "platform": "CBS",
+        "total_episodes": 208
+      },
+      {
+        "id": 55,
+        "title": "Seinfeld",
+        "release_year": 1989,
+        "genre": "Comedy, Drama",
+        "seasons": 9,
+        "main_actor": "Jerry Seinfeld",
+        "platform": "NBC",
+        "total_episodes": 180
+      },
+      {
+        "id": 56,
+        "title": "Arrested Development",
+        "release_year": 2003,
+        "genre": "Comedy, Drama",
+        "seasons": 5,
+        "main_actor": "Jason Bateman",
+        "platform": "FOX/Netflix",
+        "total_episodes": 84
+      },
+      {
+        "id": 57,
+        "title": "The Sopranos",
+        "release_year": 1999,
+        "genre": "Crime, Drama",
+        "seasons": 6,
+        "main_actor": "James Gandolfini",
+        "platform": "HBO",
+        "total_episodes": 86
+      },
+      {
+        "id": 58,
+        "title": "Better Call Saul",
+        "release_year": 2015,
+        "genre": "Crime, Drama",
+        "seasons": 6,
+        "main_actor": "Bob Odenkirk",
+        "platform": "AMC",
+        "total_episodes": 63
+      },
+      {
+        "id": 59,
+        "title": "Ozark",
+        "release_year": 2017,
+        "genre": "Crime, Drama, Thriller",
+        "seasons": 4,
+        "main_actor": "Jason Bateman",
+        "platform": "Netflix",
+        "total_episodes": 44
+      },
+      {
+        "id": 60,
+        "title": "House of Cards",
+        "release_year": 2013,
+        "genre": "Drama, Political",
+        "seasons": 6,
+        "main_actor": "Kevin Spacey",
+        "platform": "Netflix",
+        "total_episodes": 73
+      },
+      {
+        "id": 61,
+        "title": "Westworld",
+        "release_year": 2016,
+        "genre": "Sci-Fi, Western, Drama",
+        "seasons": 3,
+        "main_actor": "Evan Rachel Wood",
+        "platform": "HBO",
+        "total_episodes": 28
+      },
+      {
+        "id": 62,
+        "title": "True Detective",
+        "release_year": 2014,
+        "genre": "Crime, Drama, Mystery",
+        "seasons": 3,
+        "main_actor": "Matthew McConaughey",
+        "platform": "HBO",
+        "total_episodes": 24
+      },
+      {
+        "id": 63,
+        "title": "The Wire",
+        "release_year": 2002,
+        "genre": "Crime, Drama",
+        "seasons": 5,
+        "main_actor": "Dominic West",
+        "platform": "HBO",
+        "total_episodes": 60
+      },
+      {
+        "id": 64,
+        "title": "Fargo",
+        "release_year": 2014,
+        "genre": "Crime, Drama, Thriller",
+        "seasons": 4,
+        "main_actor": "Billy Bob Thornton",
+        "platform": "FX",
+        "total_episodes": 41
+      },
+      {
+        "id": 65,
+        "title": "Peaky Blinders",
+        "release_year": 2013,
+        "genre": "Crime, Drama, Historical",
+        "seasons": 6,
+        "main_actor": "Cillian Murphy",
+        "platform": "Netflix",
+        "total_episodes": 36
+      },
+      {
+        "id": 66,
+        "title": "Vikings",
+        "release_year": 2013,
+        "genre": "Historical, Action, Drama",
+        "seasons": 6,
+        "main_actor": "Travis Fimmel",
+        "platform": "History Channel",
+        "total_episodes": 89
+      },
+      {
+        "id": 67,
+        "title": "The Expanse",
+        "release_year": 2015,
+        "genre": "Sci-Fi, Mystery, Drama",
+        "seasons": 6,
+        "main_actor": "Steven Strait",
+        "platform": "Amazon Prime",
+        "total_episodes": 62
+      },
+      {
+        "id": 68,
+        "title": "Battlestar Galactica",
+        "release_year": 2004,
+        "genre": "Sci-Fi, Drama",
+        "seasons": 4,
+        "main_actor": "Edward James Olmos",
+        "platform": "Sci-Fi Channel",
+        "total_episodes": 73
+      },
+      {
+        "id": 69,
+        "title": "The Leftovers",
+        "release_year": 2014,
+        "genre": "Drama, Mystery, Fantasy",
+        "seasons": 3,
+        "main_actor": "Justin Theroux",
+        "platform": "HBO",
+        "total_episodes": 28
+      },
+      {
+        "id": 70,
+        "title": "Dexter",
+        "release_year": 2006,
+        "genre": "Crime, Drama, Mystery",
+        "seasons": 8,
+        "main_actor": "Michael C. Hall",
+        "platform": "Showtime",
+        "total_episodes": 96
+      },
+      {
+        "id": 71,
+        "title": "Sons of Anarchy",
+        "release_year": 2008,
+        "genre": "Crime, Drama, Action",
+        "seasons": 7,
+        "main_actor": "Charlie Hunnam",
+        "platform": "FX",
+        "total_episodes": 92
+      },
+      {
+        "id": 72,
+        "title": "House M.D.",
+        "release_year": 2004,
+        "genre": "Medical, Drama, Mystery",
+        "seasons": 8,
+        "main_actor": "Hugh Laurie",
+        "platform": "FOX",
+        "total_episodes": 177
+      },
+      {
+        "id": 73,
+        "title": "ER",
+        "release_year": 1994,
+        "genre": "Medical, Drama",
+        "seasons": 15,
+        "main_actor": "George Clooney",
+        "platform": "NBC",
+        "total_episodes": 331
+      },
+      {
+        "id": 74,
+        "title": "Grey's Anatomy",
+        "release_year": 2005,
+        "genre": "Medical, Drama, Romance",
+        "seasons": 18,
+        "main_actor": "Ellen Pompeo",
+        "platform": "ABC",
+        "total_episodes": 380
+      },
+      {
+        "id": 75,
+        "title": "Scrubs",
+        "release_year": 2001,
+        "genre": "Medical, Comedy, Drama",
+        "seasons": 9,
+        "main_actor": "Zach Braff",
+        "platform": "ABC",
+        "total_episodes": 182
+      },
+      {
+        "id": 76,
+        "title": "Supernatural",
+        "release_year": 2005,
+        "genre": "Fantasy, Horror, Drama",
+        "seasons": 15,
+        "main_actor": "Jared Padalecki",
+        "platform": "The CW",
+        "total_episodes": 327
+      },
+      {
+        "id": 77,
+        "title": "Buffy the Vampire Slayer",
+        "release_year": 1997,
+        "genre": "Fantasy, Horror, Drama",
+        "seasons": 7,
+        "main_actor": "Sarah Michelle Gellar",
+        "platform": "The WB",
+        "total_episodes": 144
+      },
+      {
+        "id": 78,
+        "title": "Angel",
+        "release_year": 1999,
+        "genre": "Fantasy, Drama",
+        "seasons": 5,
+        "main_actor": "David Boreanaz",
+        "platform": "WB",
+        "total_episodes": 110
+      },
+      {
+        "id": 79,
+        "title": "Charmed",
+        "release_year": 1998,
+        "genre": "Fantasy, Drama, Romance",
+        "seasons": 8,
+        "main_actor": "Holly Marie Combs",
+        "platform": "The WB",
+        "total_episodes": 178
+      },
+      {
+        "id": 80,
+        "title": "The X-Files",
+        "release_year": 1993,
+        "genre": "Sci-Fi, Mystery, Drama",
+        "seasons": 11,
+        "main_actor": "David Duchovny",
+        "platform": "FOX",
+        "total_episodes": 218
+      },
+      {
+        "id": 81,
+        "title": "Fringe",
+        "release_year": 2008,
+        "genre": "Sci-Fi, Mystery, Drama",
+        "seasons": 5,
+        "main_actor": "Anna Torv",
+        "platform": "FOX",
+        "total_episodes": 100
+      },
+      {
+        "id": 82,
+        "title": "Twin Peaks",
+        "release_year": 1990,
+        "genre": "Mystery, Drama, Thriller",
+        "seasons": 2,
+        "main_actor": "Kyle MacLachlan",
+        "platform": "ABC",
+        "total_episodes": 30
+      },
+      {
+        "id": 83,
+        "title": "Carnivàle",
+        "release_year": 2003,
+        "genre": "Fantasy, Drama, Mystery",
+        "seasons": 2,
+        "main_actor": "Clancy Brown",
+        "platform": "HBO",
+        "total_episodes": 24
+      },
+      {
+        "id": 84,
+        "title": "Boardwalk Empire",
+        "release_year": 2010,
+        "genre": "Crime, Drama, Historical",
+        "seasons": 5,
+        "main_actor": "Steve Buscemi",
+        "platform": "HBO",
+        "total_episodes": 56
+      },
+      {
+        "id": 85,
+        "title": "Rome",
+        "release_year": 2005,
+        "genre": "Historical, Drama, Action",
+        "seasons": 2,
+        "main_actor": "Kevin McKidd",
+        "platform": "HBO",
+        "total_episodes": 22
+      },
+      {
+        "id": 86,
+        "title": "The Tudors",
+        "release_year": 2007,
+        "genre": "Historical, Drama, Romance",
+        "seasons": 4,
+        "main_actor": "Jonathan Rhys Meyers",
+        "platform": "Showtime",
+        "total_episodes": 38
+      },
+      {
+        "id": 87,
+        "title": "Downton Abbey",
+        "release_year": 2010,
+        "genre": "Historical, Drama, Romance",
+        "seasons": 6,
+        "main_actor": "Maggie Smith",
+        "platform": "ITV/PBS",
+        "total_episodes": 52
+      },
+      {
+        "id": 88,
+        "title": "Outlander",
+        "release_year": 2014,
+        "genre": "Historical, Drama, Romance",
+        "seasons": 6,
+        "main_actor": "Caitriona Balfe",
+        "platform": "Starz",
+        "total_episodes": 80
+      },
+      {
+        "id": 89,
+        "title": "The Simpsons",
+        "release_year": 1989,
+        "genre": "Animation, Comedy, Drama",
+        "seasons": 33,
+        "main_actor": "Dan Castellaneta",
+        "platform": "Fox",
+        "total_episodes": 700
+      },
+      {
+        "id": 90,
+        "title": "Family Guy",
+        "release_year": 1999,
+        "genre": "Animation, Comedy",
+        "seasons": 20,
+        "main_actor": "Seth MacFarlane",
+        "platform": "Fox",
+        "total_episodes": 350
+      },
+      {
+        "id": 91,
+        "title": "South Park",
+        "release_year": 1997,
+        "genre": "Animation, Comedy, Drama",
+        "seasons": 25,
+        "main_actor": "Trey Parker",
+        "platform": "Comedy Central",
+        "total_episodes": 300
+      },
+      {
+        "id": 92,
+        "title": "Futurama",
+        "release_year": 1999,
+        "genre": "Animation, Sci-Fi, Comedy",
+        "seasons": 7,
+        "main_actor": "Billy West",
+        "platform": "Fox",
+        "total_episodes": 140
+      },
+      {
+        "id": 93,
+        "title": "Archer",
+        "release_year": 2009,
+        "genre": "Animation, Comedy, Action",
+        "seasons": 12,
+        "main_actor": "H. Jon Benjamin",
+        "platform": "FX",
+        "total_episodes": 100
+      },
+      {
+        "id": 94,
+        "title": "BoJack Horseman",
+        "release_year": 2014,
+        "genre": "Animation, Drama, Comedy",
+        "seasons": 6,
+        "main_actor": "Will Arnett",
+        "platform": "Netflix",
+        "total_episodes": 77
+      },
+      {
+        "id": 95,
+        "title": "Rick and Morty",
+        "release_year": 2013,
+        "genre": "Animation, Sci-Fi, Comedy",
+        "seasons": 6,
+        "main_actor": "Justin Roiland",
+        "platform": "Adult Swim",
+        "total_episodes": 61
+      },
+      {
+        "id": 96,
+        "title": "The Big Bang Theory",
+        "release_year": 2007,
+        "genre": "Comedy, Romance",
+        "seasons": 12,
+        "main_actor": "Jim Parsons",
+        "platform": "CBS",
+        "total_episodes": 279
+      },
+      {
+        "id": 97,
+        "title": "How I Met Your Mother",
+        "release_year": 2005,
+        "genre": "Comedy, Romance",
+        "seasons": 9,
+        "main_actor": "Josh Radnor",
+        "platform": "CBS",
+        "total_episodes": 208
+      },
+      {
+        "id": 98,
+        "title": "Seinfeld",
+        "release_year": 1989,
+        "genre": "Comedy, Drama",
+        "seasons": 9,
+        "main_actor": "Jerry Seinfeld",
+        "platform": "NBC",
+        "total_episodes": 180
+      },
+      {
+        "id": 99,
+        "title": "Arrested Development",
+        "release_year": 2003,
+        "genre": "Comedy, Drama",
+        "seasons": 5,
+        "main_actor": "Jason Bateman",
+        "platform": "FOX/Netflix",
+        "total_episodes": 84
+      },
+      {
+        "id": 100,
+        "title": "The Office (UK)",
+        "release_year": 2001,
+        "genre": "Comedy",
+        "seasons": 2,
+        "main_actor": "Ricky Gervais",
+        "platform": "BBC",
+        "total_episodes": 12
+      },
+      {
+        "id": 101,
+        "title": "The Sopranos",
+        "release_year": 1999,
+        "genre": "Crime, Drama",
+        "seasons": 6,
+        "main_actor": "James Gandolfini",
+        "platform": "HBO",
+        "total_episodes": 86
+      },
+      {
+        "id": 102,
+        "title": "Better Call Saul",
+        "release_year": 2015,
+        "genre": "Crime, Drama",
+        "seasons": 6,
+        "main_actor": "Bob Odenkirk",
+        "platform": "AMC",
+        "total_episodes": 63
+      },
+      {
+        "id": 103,
+        "title": "Ozark",
+        "release_year": 2017,
+        "genre": "Crime, Drama, Thriller",
+        "seasons": 4,
+        "main_actor": "Jason Bateman",
+        "platform": "Netflix",
+        "total_episodes": 44
+      },
+      {
+        "id": 104,
+        "title": "House of Cards",
+        "release_year": 2013,
+        "genre": "Drama, Political",
+        "seasons": 6,
+        "main_actor": "Kevin Spacey",
+        "platform": "Netflix",
+        "total_episodes": 73
+      },
+      {
+        "id": 105,
+        "title": "Westworld",
+        "release_year": 2016,
+        "genre": "Sci-Fi, Western, Drama",
+        "seasons": 3,
+        "main_actor": "Evan Rachel Wood",
+        "platform": "HBO",
+        "total_episodes": 28
+      },
+      {
+        "id": 106,
+        "title": "True Detective",
+        "release_year": 2014,
+        "genre": "Crime, Drama, Mystery",
+        "seasons": 3,
+        "main_actor": "Matthew McConaughey",
+        "platform": "HBO",
+        "total_episodes": 24
+      },
+      {
+        "id": 107,
+        "title": "The Wire",
+        "release_year": 2002,
+        "genre": "Crime, Drama",
+        "seasons": 5,
+        "main_actor": "Dominic West",
+        "platform": "HBO",
+        "total_episodes": 60
+      },
+      {
+        "id": 108,
+        "title": "Fargo",
+        "release_year": 2014,
+        "genre": "Crime, Drama, Thriller",
+        "seasons": 4,
+        "main_actor": "Billy Bob Thornton",
+        "platform": "FX",
+        "total_episodes": 41
+      },
+      {
+        "id": 109,
+        "title": "Peaky Blinders",
+        "release_year": 2013,
+        "genre": "Crime, Drama, Historical",
+        "seasons": 6,
+        "main_actor": "Cillian Murphy",
+        "platform": "Netflix",
+        "total_episodes": 36
+      },
+      {
+        "id": 110,
+        "title": "Vikings",
+        "release_year": 2013,
+        "genre": "Historical, Action, Drama",
+        "seasons": 6,
+        "main_actor": "Travis Fimmel",
+        "platform": "History Channel",
+        "total_episodes": 89
+      },
+      {
+        "id": 111,
+        "title": "The Expanse",
+        "release_year": 2015,
+        "genre": "Sci-Fi, Mystery, Drama",
+        "seasons": 6,
+        "main_actor": "Steven Strait",
+        "platform": "Amazon Prime",
+        "total_episodes": 62
+      },
+      {
+        "id": 112,
+        "title": "Battlestar Galactica",
+        "release_year": 2004,
+        "genre": "Sci-Fi, Drama",
+        "seasons": 4,
+        "main_actor": "Edward James Olmos",
+        "platform": "Sci-Fi Channel",
+        "total_episodes": 73
+      },
+      {
+        "id": 113,
+        "title": "The Leftovers",
+        "release_year": 2014,
+        "genre": "Drama, Mystery, Fantasy",
+        "seasons": 3,
+        "main_actor": "Justin Theroux",
+        "platform": "HBO",
+        "total_episodes": 28
+      },
+      {
+        "id": 114,
+        "title": "Dexter",
+        "release_year": 2006,
+        "genre": "Crime, Drama, Mystery",
+        "seasons": 8,
+        "main_actor": "Michael C. Hall",
+        "platform": "Showtime",
+        "total_episodes": 96
+      },
+      {
+        "id": 115,
+        "title": "Sons of Anarchy",
+        "release_year": 2008,
+        "genre": "Crime, Drama, Action",
+        "seasons": 7,
+        "main_actor": "Charlie Hunnam",
+        "platform": "FX",
+        "total_episodes": 92
+      },
+      {
+        "id": 116,
+        "title": "House M.D.",
+        "release_year": 2004,
+        "genre": "Medical, Drama, Mystery",
+        "seasons": 8,
+        "main_actor": "Hugh Laurie",
+        "platform": "FOX",
+        "total_episodes": 177
+      },
+      {
+        "id": 117,
+        "title": "ER",
+        "release_year": 1994,
+        "genre": "Medical, Drama",
+        "seasons": 15,
+        "main_actor": "George Clooney",
+        "platform": "NBC",
+        "total_episodes": 331
+      },
+      {
+        "id": 118,
+        "title": "Grey's Anatomy",
+        "release_year": 2005,
+        "genre": "Medical, Drama, Romance",
+        "seasons": 18,
+        "main_actor": "Ellen Pompeo",
+        "platform": "ABC",
+        "total_episodes": 380
+      },
+      {
+        "id": 119,
+        "title": "Scrubs",
+        "release_year": 2001,
+        "genre": "Medical, Comedy, Drama",
+        "seasons": 9,
+        "main_actor": "Zach Braff",
+        "platform": "ABC",
+        "total_episodes": 182
+      },
+      {
+        "id": 120,
+        "title": "Supernatural",
+        "release_year": 2005,
+        "genre": "Fantasy, Horror, Drama",
+        "seasons": 15,
+        "main_actor": "Jared Padalecki",
+        "platform": "The CW",
+        "total_episodes": 327
+      },
+      {
+        "id": 121,
+        "title": "Buffy the Vampire Slayer",
+        "release_year": 1997,
+        "genre": "Fantasy, Horror, Drama",
+        "seasons": 7,
+        "main_actor": "Sarah Michelle Gellar",
+        "platform": "The WB",
+        "total_episodes": 144
+      },
+      {
+        "id": 122,
+        "title": "Angel",
+        "release_year": 1999,
+        "genre": "Fantasy, Drama",
+        "seasons": 5,
+        "main_actor": "David Boreanaz",
+        "platform": "WB",
+        "total_episodes": 110
+      },
+      {
+        "id": 123,
+        "title": "Charmed",
+        "release_year": 1998,
+        "genre": "Fantasy, Drama, Romance",
+        "seasons": 8,
+        "main_actor": "Holly Marie Combs",
+        "platform": "The WB",
+        "total_episodes": 178
+      },
+      {
+        "id": 124,
+        "title": "The X-Files",
+        "release_year": 1993,
+        "genre": "Sci-Fi, Mystery, Drama",
+        "seasons": 11,
+        "main_actor": "David Duchovny",
+        "platform": "FOX",
+        "total_episodes": 218
+      },
+      {
+        "id": 125,
+        "title": "Fringe",
+        "release_year": 2008,
+        "genre": "Sci-Fi, Mystery, Drama",
+        "seasons": 5,
+        "main_actor": "Anna Torv",
+        "platform": "FOX",
+        "total_episodes": 100
+      },
+      {
+        "id": 126,
+        "title": "Twin Peaks",
+        "release_year": 1990,
+        "genre": "Mystery, Drama, Thriller",
+        "seasons": 2,
+        "main_actor": "Kyle MacLachlan",
+        "platform": "ABC",
+        "total_episodes": 30
+      },
+      {
+        "id": 127,
+        "title": "Carnivàle",
+        "release_year": 2003,
+        "genre": "Fantasy, Drama, Mystery",
+        "seasons": 2,
+        "main_actor": "Clancy Brown",
+        "platform": "HBO",
+        "total_episodes": 24
+      },
+      {
+        "id": 128,
+        "title": "Boardwalk Empire",
+        "release_year": 2010,
+        "genre": "Crime, Drama, Historical",
+        "seasons": 5,
+        "main_actor": "Steve Buscemi",
+        "platform": "HBO",
+        "total_episodes": 56
+      },
+      {
+        "id": 129,
+        "title": "Rome",
+        "release_year": 2005,
+        "genre": "Historical, Drama, Action",
+        "seasons": 2,
+        "main_actor": "Kevin McKidd",
+        "platform": "HBO",
+        "total_episodes": 22
+      },
+      {
+        "id": 130,
+        "title": "The Tudors",
+        "release_year": 2007,
+        "genre": "Historical, Drama, Romance",
+        "seasons": 4,
+        "main_actor": "Jonathan Rhys Meyers",
+        "platform": "Showtime",
+        "total_episodes": 38
+      },
+      {
+        "id": 131,
+        "title": "Downton Abbey",
+        "release_year": 2010,
+        "genre": "Historical, Drama, Romance",
+        "seasons": 6,
+        "main_actor": "Maggie Smith",
+        "platform": "ITV/PBS",
+        "total_episodes": 52
+      },
+      {
+        "id": 132,
+        "title": "Outlander",
+        "release_year": 2014,
+        "genre": "Historical, Drama, Romance",
+        "seasons": 6,
+        "main_actor": "Caitriona Balfe",
+        "platform": "Starz",
+        "total_episodes": 80
+      },
+      {
+        "id": 133,
+        "title": "The Simpsons",
+        "release_year": 1989,
+        "genre": "Animation, Comedy, Drama",
+        "seasons": 33,
+        "main_actor": "Dan Castellaneta",
+        "platform": "Fox",
+        "total_episodes": 700
+      },
+      {
+        "id": 134,
+        "title": "Family Guy",
+        "release_year": 1999,
+        "genre": "Animation, Comedy",
+        "seasons": 20,
+        "main_actor": "Seth MacFarlane",
+        "platform": "Fox",
+        "total_episodes": 350
+      },
+      {
+        "id": 135,
+        "title": "South Park",
+        "release_year": 1997,
+        "genre": "Animation, Comedy, Drama",
+        "seasons": 25,
+        "main_actor": "Trey Parker",
+        "platform": "Comedy Central",
+        "total_episodes": 300
+      },
+      {
+        "id": 136,
+        "title": "Futurama",
+        "release_year": 1999,
+        "genre": "Animation, Sci-Fi, Comedy",
+        "seasons": 7,
+        "main_actor": "Billy West",
+        "platform": "Fox",
+        "total_episodes": 140
+      },
+      {
+        "id": 137,
+        "title": "Archer",
+        "release_year": 2009,
+        "genre": "Animation, Comedy, Action",
+        "seasons": 12,
+        "main_actor": "H. Jon Benjamin",
+        "platform": "FX",
+        "total_episodes": 100
+      },
+      {
+        "id": 138,
+        "title": "BoJack Horseman",
+        "release_year": 2014,
+        "genre": "Animation, Drama, Comedy",
+        "seasons": 6,
+        "main_actor": "Will Arnett",
+        "platform": "Netflix",
+        "total_episodes": 77
+      },
+      {
+        "id": 139,
+        "title": "Rick and Morty",
+        "release_year": 2013,
+        "genre": "Animation, Sci-Fi, Comedy",
+        "seasons": 6,
+        "main_actor": "Justin Roiland",
+        "platform": "Adult Swim",
+        "total_episodes": 61
+      },
+      {
+        "id": 140,
+        "title": "The Big Bang Theory",
+        "release_year": 2007,
+        "genre": "Comedy, Romance",
+        "seasons": 12,
+        "main_actor": "Jim Parsons",
+        "platform": "CBS",
+        "total_episodes": 279
+      },
+      {
+        "id": 141,
+        "title": "How I Met Your Mother",
+        "release_year": 2005,
+        "genre": "Comedy, Romance",
+        "seasons": 9,
+        "main_actor": "Josh Radnor",
+        "platform": "CBS",
+        "total_episodes": 208
+      },
+      {
+        "id": 142,
+        "title": "Seinfeld",
+        "release_year": 1989,
+        "genre": "Comedy, Drama",
+        "seasons": 9,
+        "main_actor": "Jerry Seinfeld",
+        "platform": "NBC",
+        "total_episodes": 180
+      },
+      {
+        "id": 143,
+        "title": "Arrested Development",
+        "release_year": 2003,
+        "genre": "Comedy, Drama",
+        "seasons": 5,
+        "main_actor": "Jason Bateman",
+        "platform": "FOX/Netflix",
+        "total_episodes": 84
+      },
+      {
+        "id": 144,
+        "title": "The Sopranos",
+        "release_year": 1999,
+        "genre": "Crime, Drama",
+        "seasons": 6,
+        "main_actor": "James Gandolfini",
+        "platform": "HBO",
+        "total_episodes": 86
+      },
+      {
+        "id": 145,
+        "title": "Better Call Saul",
+        "release_year": 2015,
+        "genre": "Crime, Drama",
+        "seasons": 6,
+        "main_actor": "Bob Odenkirk",
+        "platform": "AMC",
+        "total_episodes": 63
+      },
+      {
+        "id": 146,
+        "title": "Ozark",
+        "release_year": 2017,
+        "genre": "Crime, Drama, Thriller",
+        "seasons": 4,
+        "main_actor": "Jason Bateman",
+        "platform": "Netflix",
+        "total_episodes": 44
+      },
+      {
+        "id": 147,
+        "title": "House of Cards",
+        "release_year": 2013,
+        "genre": "Drama, Political",
+        "seasons": 6,
+        "main_actor": "Kevin Spacey",
+        "platform": "Netflix",
+        "total_episodes": 73
+      },
+      {
+        "id": 148,
+        "title": "Westworld",
+        "release_year": 2016,
+        "genre": "Sci-Fi, Western, Drama",
+        "seasons": 3,
+        "main_actor": "Evan Rachel Wood",
+        "platform": "HBO",
+        "total_episodes": 28
+      },
+      {
+        "id": 149,
+        "title": "True Detective",
+        "release_year": 2014,
+        "genre": "Crime, Drama, Mystery",
+        "seasons": 3,
+        "main_actor": "Matthew McConaughey",
+        "platform": "HBO",
+        "total_episodes": 24
+      },
+      {
+        "id": 150,
+        "title": "The Leftovers",
+        "release_year": 2014,
+        "genre": "Drama, Mystery, Fantasy",
+        "seasons": 3,
+        "main_actor": "Justin Theroux",
+        "platform": "HBO",
+        "total_episodes": 28
+      },
+      {
+        "id": 151,
+        "title": "Dexter",
+        "release_year": 2006,
+        "genre": "Crime, Drama, Mystery",
+        "seasons": 8,
+        "main_actor": "Michael C. Hall",
+        "platform": "Showtime",
+        "total_episodes": 96
+      },
+      {
+        "id": 152,
+        "title": "Sons of Anarchy",
+        "release_year": 2008,
+        "genre": "Crime, Drama, Action",
+        "seasons": 7,
+        "main_actor": "Charlie Hunnam",
+        "platform": "FX",
+        "total_episodes": 92
+      },
+      {
+        "id": 153,
+        "title": "House M.D.",
+        "release_year": 2004,
+        "genre": "Medical, Drama, Mystery",
+        "seasons": 8,
+        "main_actor": "Hugh Laurie",
+        "platform": "FOX",
+        "total_episodes": 177
+      },
+      {
+        "id": 154,
+        "title": "ER",
+        "release_year": 1994,
+        "genre": "Medical, Drama",
+        "seasons": 15,
+        "main_actor": "George Clooney",
+        "platform": "NBC",
+        "total_episodes": 331
+      },
+      {
+        "id": 155,
+        "title": "Grey's Anatomy",
+        "release_year": 2005,
+        "genre": "Medical, Drama, Romance",
+        "seasons": 18,
+        "main_actor": "Ellen Pompeo",
+        "platform": "ABC",
+        "total_episodes": 380
+      },
+      {
+        "id": 156,
+        "title": "Scrubs",
+        "release_year": 2001,
+        "genre": "Medical, Comedy, Drama",
+        "seasons": 9,
+        "main_actor": "Zach Braff",
+        "platform": "ABC",
+        "total_episodes": 182
+      },
+      {
+        "id": 157,
+        "title": "Supernatural",
+        "release_year": 2005,
+        "genre": "Fantasy, Horror, Drama",
+        "seasons": 15,
+        "main_actor": "Jared Padalecki",
+        "platform": "The CW",
+        "total_episodes": 327
+      },
+      {
+        "id": 158,
+        "title": "Buffy the Vampire Slayer",
+        "release_year": 1997,
+        "genre": "Fantasy, Horror, Drama",
+        "seasons": 7,
+        "main_actor": "Sarah Michelle Gellar",
+        "platform": "The WB",
+        "total_episodes": 144
+      },
+      {
+        "id": 159,
+        "title": "Angel",
+        "release_year": 1999,
+        "genre": "Fantasy, Drama",
+        "seasons": 5,
+        "main_actor": "David Boreanaz",
+        "platform": "WB",
+        "total_episodes": 110
+      },
+      {
+        "id": 160,
+        "title": "Charmed",
+        "release_year": 1998,
+        "genre": "Fantasy, Drama, Romance",
+        "seasons": 8,
+        "main_actor": "Holly Marie Combs",
+        "platform": "The WB",
+        "total_episodes": 178
+      },
+      {
+        "id": 161,
+        "title": "The X-Files",
+        "release_year": 1993,
+        "genre": "Sci-Fi, Mystery, Drama",
+        "seasons": 11,
+        "main_actor": "David Duchovny",
+        "platform": "FOX",
+        "total_episodes": 218
+      },
+      {
+        "id": 162,
+        "title": "Fringe",
+        "release_year": 2008,
+        "genre": "Sci-Fi, Mystery, Drama",
+        "seasons": 5,
+        "main_actor": "Anna Torv",
+        "platform": "FOX",
+        "total_episodes": 100
+      },
+      {
+        "id": 163,
+        "title": "Twin Peaks",
+        "release_year": 1990,
+        "genre": "Mystery, Drama, Thriller",
+        "seasons": 2,
+        "main_actor": "Kyle MacLachlan",
+        "platform": "ABC",
+        "total_episodes": 30
+      },
+      {
+        "id": 164,
+        "title": "Carnivàle",
+        "release_year": 2003,
+        "genre": "Fantasy, Drama, Mystery",
+        "seasons": 2,
+        "main_actor": "Clancy Brown",
+        "platform": "HBO",
+        "total_episodes": 24
+      },
+      {
+        "id": 165,
+        "title": "Boardwalk Empire",
+        "release_year": 2010,
+        "genre": "Crime, Drama, Historical",
+        "seasons": 5,
+        "main_actor": "Steve Buscemi",
+        "platform": "HBO",
+        "total_episodes": 56
+      },
+      {
+        "id": 166,
+        "title": "Rome",
+        "release_year": 2005,
+        "genre": "Historical, Drama, Action",
+        "seasons": 2,
+        "main_actor": "Kevin McKidd",
+        "platform": "HBO",
+        "total_episodes": 22
+      },
+      {
+        "id": 167,
+        "title": "The Tudors",
+        "release_year": 2007,
+        "genre": "Historical, Drama, Romance",
+        "seasons": 4,
+        "main_actor": "Jonathan Rhys Meyers",
+        "platform": "Showtime",
+        "total_episodes": 38
+      },
+      {
+        "id": 168,
+        "title": "Downton Abbey",
+        "release_year": 2010,
+        "genre": "Historical, Drama, Romance",
+        "seasons": 6,
+        "main_actor": "Maggie Smith",
+        "platform": "ITV/PBS",
+        "total_episodes": 52
+      },
+      {
+        "id": 169,
+        "title": "Outlander",
+        "release_year": 2014,
+        "genre": "Historical, Drama, Romance",
+        "seasons": 6,
+        "main_actor": "Caitriona Balfe",
+        "platform": "Starz",
+        "total_episodes": 80
+      },
+      {
+        "id": 170,
+        "title": "The Simpsons",
+        "release_year": 1989,
+        "genre": "Animation, Comedy, Drama",
+        "seasons": 33,
+        "main_actor": "Dan Castellaneta",
+        "platform": "Fox",
+        "total_episodes": 700
+      },
+      {
+        "id": 171,
+        "title": "Family Guy",
+        "release_year": 1999,
+        "genre": "Animation, Comedy",
+        "seasons": 20,
+        "main_actor": "Seth MacFarlane",
+        "platform": "Fox",
+        "total_episodes": 350
+      },
+      {
+        "id": 172,
+        "title": "South Park",
+        "release_year": 1997,
+        "genre": "Animation, Comedy, Drama",
+        "seasons": 25,
+        "main_actor": "Trey Parker",
+        "platform": "Comedy Central",
+        "total_episodes": 300
+      },
+      {
+        "id": 173,
+        "title": "Futurama",
+        "release_year": 1999,
+        "genre": "Animation, Sci-Fi, Comedy",
+        "seasons": 7,
+        "main_actor": "Billy West",
+        "platform": "Fox",
+        "total_episodes": 140
+      },
+      {
+        "id": 174,
+        "title": "Archer",
+        "release_year": 2009,
+        "genre": "Animation, Comedy, Action",
+        "seasons": 12,
+        "main_actor": "H. Jon Benjamin",
+        "platform": "FX",
+        "total_episodes": 100
+      },
+      {
+        "id": 175,
+        "title": "BoJack Horseman",
+        "release_year": 2014,
+        "genre": "Animation, Drama, Comedy",
+        "seasons": 6,
+        "main_actor": "Will Arnett",
+        "platform": "Netflix",
+        "total_episodes": 77
+      },
+      {
+        "id": 176,
+        "title": "Rick and Morty",
+        "release_year": 2013,
+        "genre": "Animation, Sci-Fi, Comedy",
+        "seasons": 6,
+        "main_actor": "Justin Roiland",
+        "platform": "Adult Swim",
+        "total_episodes": 61
+      },
+      {
+        "id": 177,
+        "title": "The Big Bang Theory",
+        "release_year": 2007,
+        "genre": "Comedy, Romance",
+        "seasons": 12,
+        "main_actor": "Jim Parsons",
+        "platform": "CBS",
+        "total_episodes": 279
+      },
+      {
+        "id": 178,
+        "title": "How I Met Your Mother",
+        "release_year": 2005,
+        "genre": "Comedy, Romance",
+        "seasons": 9,
+        "main_actor": "Josh Radnor",
+        "platform": "CBS",
+        "total_episodes": 208
+      },
+      {
+        "id": 179,
+        "title": "Seinfeld",
+        "release_year": 1989,
+        "genre": "Comedy, Drama",
+        "seasons": 9,
+        "main_actor": "Jerry Seinfeld",
+        "platform": "NBC",
+        "total_episodes": 180
+      },
+      {
+        "id": 180,
+        "title": "Arrested Development",
+        "release_year": 2003,
+        "genre": "Comedy, Drama",
+        "seasons": 5,
+        "main_actor": "Jason Bateman",
+        "platform": "FOX/Netflix",
+        "total_episodes": 84
+      },
+      {
+        "id": 181,
+        "title": "The Crown",
+        "release_year": 2016,
+        "genre": "Biography, Drama",
+        "seasons": 6,
+        "main_actor": "Claire Foy",
+        "platform": "Netflix",
+        "total_episodes": 60
+      },
+      {
+        "id": 182,
+        "title": "The Mandalorian",
+        "release_year": 2019,
+        "genre": "Action, Sci-Fi",
+        "seasons": 3,
+        "main_actor": "Pedro Pascal",
+        "platform": "Disney+",
+        "total_episodes": 24
+      },
+      {
+        "id": 183,
+        "title": "The Witcher",
+        "release_year": 2019,
+        "genre": "Fantasy",
+        "seasons": 3,
+        "main_actor": "Henry Cavill",
+        "platform": "Netflix",
+        "total_episodes": 24
+      },
+      {
+        "id": 184,
+        "title": "Dark",
+        "release_year": 2017,
+        "genre": "Sci-Fi, Thriller",
+        "seasons": 3,
+        "main_actor": "Louis Hofmann",
+        "platform": "Netflix",
+        "total_episodes": 26
+      },
+      {
+        "id": 185,
+        "title": "Sherlock",
+        "release_year": 2010,
+        "genre": "Crime, Mystery",
+        "seasons": 4,
+        "main_actor": "Benedict Cumberbatch",
+        "platform": "BBC",
+        "total_episodes": 13
+      },
+      {
+        "id": 186,
+        "title": "Mad Men",
+        "release_year": 2007,
+        "genre": "Drama",
+        "seasons": 7,
+        "main_actor": "Jon Hamm",
+        "platform": "AMC",
+        "total_episodes": 92
+      },
+      {
+        "id": 187,
+        "title": "Lost",
+        "release_year": 2004,
+        "genre": "Drama, Mystery, Sci-Fi",
+        "seasons": 6,
+        "main_actor": "Matthew Fox",
+        "platform": "ABC",
+        "total_episodes": 121
+      },
+      {
+        "id": 188,
+        "title": "House M.D.",
+        "release_year": 2004,
+        "genre": "Medical, Drama, Mystery",
+        "seasons": 8,
+        "main_actor": "Hugh Laurie",
+        "platform": "FOX",
+        "total_episodes": 177
+      },
+      {
+        "id": 189,
+        "title": "The Wire",
+        "release_year": 2002,
+        "genre": "Crime, Drama",
+        "seasons": 5,
+        "main_actor": "Dominic West",
+        "platform": "HBO",
+        "total_episodes": 60
+      },
+      {
+        "id": 190,
+        "title": "Fargo",
+        "release_year": 2014,
+        "genre": "Crime, Drama, Thriller",
+        "seasons": 4,
+        "main_actor": "Billy Bob Thornton",
+        "platform": "FX",
+        "total_episodes": 41
+      },
+      {
+        "id": 191,
+        "title": "Peaky Blinders",
+        "release_year": 2013,
+        "genre": "Crime, Drama, Historical",
+        "seasons": 6,
+        "main_actor": "Cillian Murphy",
+        "platform": "Netflix",
+        "total_episodes": 36
+      },
+      {
+        "id": 192,
+        "title": "Vikings",
+        "release_year": 2013,
+        "genre": "Historical, Action, Drama",
+        "seasons": 6,
+        "main_actor": "Travis Fimmel",
+        "platform": "History Channel",
+        "total_episodes": 89
+      },
+      {
+        "id": 193,
+        "title": "The Expanse",
+        "release_year": 2015,
+        "genre": "Sci-Fi, Mystery, Drama",
+        "seasons": 6,
+        "main_actor": "Steven Strait",
+        "platform": "Amazon Prime",
+        "total_episodes": 62
+      },
+      {
+        "id": 194,
+        "title": "Battlestar Galactica",
+        "release_year": 2004,
+        "genre": "Sci-Fi, Drama",
+        "seasons": 4,
+        "main_actor": "Edward James Olmos",
+        "platform": "Sci-Fi Channel",
+        "total_episodes": 73
+      },
+      {
+        "id": 195,
+        "title": "The Leftovers",
+        "release_year": 2014,
+        "genre": "Drama, Mystery, Fantasy",
+        "seasons": 3,
+        "main_actor": "Justin Theroux",
+        "platform": "HBO",
+        "total_episodes": 28
+      },
+      {
+        "id": 196,
+        "title": "Dexter",
+        "release_year": 2006,
+        "genre": "Crime, Drama, Mystery",
+        "seasons": 8,
+        "main_actor": "Michael C. Hall",
+        "platform": "Showtime",
+        "total_episodes": 96
+      },
+      {
+        "id": 197,
+        "title": "Sons of Anarchy",
+        "release_year": 2008,
+        "genre": "Crime, Drama, Action",
+        "seasons": 7,
+        "main_actor": "Charlie Hunnam",
+        "platform": "FX",
+        "total_episodes": 92
+      },
+      {
+        "id": 198,
+        "title": "House of Cards",
+        "release_year": 2013,
+        "genre": "Drama, Political",
+        "seasons": 6,
+        "main_actor": "Kevin Spacey",
+        "platform": "Netflix",
+        "total_episodes": 73
+      },
+      {
+        "id": 199,
+        "title": "Westworld",
+        "release_year": 2016,
+        "genre": "Sci-Fi, Western, Drama",
+        "seasons": 3,
+        "main_actor": "Evan Rachel Wood",
+        "platform": "HBO",
+        "total_episodes": 28
+      },
+      {
+        "id": 200,
+        "title": "Twin Peaks",
+        "release_year": 1990,
+        "genre": "Mystery, Drama, Thriller",
+        "seasons": 2,
+        "main_actor": "Kyle MacLachlan",
+        "platform": "ABC",
+        "total_episodes": 30
+      }
+    ]
+  }
+  

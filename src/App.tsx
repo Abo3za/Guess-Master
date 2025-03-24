@@ -10,6 +10,7 @@ import { fetchRandomAnime } from './services/jikanApi';
 import { fetchRandomFootballItem } from './services/footballApi';
 import { fetchRandomCountry } from './services/countriesApi';
 import { fetchRandomWrestler } from './services/wweApi';
+import { fetchRandomTVShow } from './services/tvSeriesApi';
 import { Gamepad2 } from 'lucide-react';
 
 function App() {

@@ -44,12 +44,6 @@ const categories = [
     bgImage: 'https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=800'
   },
   {
-    value: 'countries',
-    label: 'دول',
-    icon: <Globe2 className="w-6 h-6 md:w-8 md:h-8" />,
-    bgImage: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=800'
-  },
-  {
     value: 'wwe',
     label: 'المصارعة',
     icon: <Sword className="w-6 h-6" />,

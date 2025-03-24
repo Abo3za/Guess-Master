@@ -53,7 +53,7 @@ const categories = [
     value: 'wwe',
     label: 'المصارعة',
     icon: <Sword className="w-6 h-6" />,
-    bgImage: '/images/categories/wwe-bg.jpg'
+    bgImage: '../public/Images/WWE.webp'
   }
 ];
 
@@ -80,6 +80,8 @@ const difficulties: { value: Difficulty; label: string; icon: JSX.Element }[] = 
 export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, onResetGame }) => {
   const { teams, adjustScore, usedItems, initializeGame, setDifficulty } = useGameStore();
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
+  
+  const activeTeam = teams.find(team => team.isActive);
 
   const handleClearSession = () => {
     initializeGame(teams.map(team => team.name));
@@ -148,10 +150,10 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
 
         <div className="text-center sm:text-right mb-6 sm:mb-8">
           <h2 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-            {selectedCategory ? 'اختر مستوى الصعوبة' : 'اختر فئة'}
+            دور {activeTeam?.name}
           </h2>
           <p className="text-gray-300 text-sm sm:text-base">
-            {selectedCategory ? 'حدد مستوى الصعوبة للبدء' : 'حدد الفئة للبدء'}
+            {selectedCategory ? 'حدد مستوى الصعوبة للبدء' : 'اختر الفئة التي تريد'}
           </p>
         </div>
       </div>

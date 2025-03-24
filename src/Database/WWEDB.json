@@ -1,52 +1,2004 @@
-[
-  {
-    "id": 1,
-    "name": "The Rock",
-    "nickname": "The People's Champion",
-    "debut_year": 1996,
-    "weight": 118,
-    "height": 196,
-    "nationality": "American",
-    "championships": ["WWE Championship", "Intercontinental Championship", "Tag Team Championship"]
-  },
-  {
-    "id": 2,
-    "name": "John Cena",
-    "nickname": "The Face That Runs The Place",
-    "debut_year": 2002,
-    "weight": 114,
-    "height": 185,
-    "nationality": "American",
-    "championships": ["WWE Championship", "United States Championship", "World Heavyweight Championship"]
-  },
-  {
-    "id": 3,
-    "name": "Undertaker",
-    "nickname": "The Deadman",
-    "debut_year": 1990,
-    "weight": 136,
-    "height": 208,
-    "nationality": "American",
-    "championships": ["WWE Championship", "World Heavyweight Championship"]
-  },
-  {
-    "id": 4,
-    "name": "Stone Cold Steve Austin",
-    "nickname": "The Texas Rattlesnake",
-    "debut_year": 1989,
-    "weight": 114,
-    "height": 188,
-    "nationality": "American",
-    "championships": ["WWE Championship", "Intercontinental Championship"]
-  },
-  {
-    "id": 5,
-    "name": "Triple H",
-    "nickname": "The Game",
-    "debut_year": 1992,
-    "weight": 116,
-    "height": 193,
-    "nationality": "American",
-    "championships": ["WWE Championship", "World Heavyweight Championship", "Intercontinental Championship"]
-  }
-]
+{
+  "players": [
+    {
+      "id": 1,
+      "name": "The Undertaker",
+      "nationality": "American",
+      "height_weight": "2.08m / 140kg",
+      "style": "Powerhouse",
+      "championships": 7,
+      "was_in_faction": true,
+      "finisher": "Tombstone Piledriver"
+    },
+    {
+      "id": 2,
+      "name": "John Cena",
+      "nationality": "American",
+      "height_weight": "1.85m / 114kg",
+      "style": "Brawler",
+      "championships": 16,
+      "was_in_faction": true,
+      "finisher": "Attitude Adjustment"
+    },
+    {
+      "id": 3,
+      "name": "Stone Cold Steve Austin",
+      "nationality": "American",
+      "height_weight": "1.88m / 114kg",
+      "style": "Brawler",
+      "championships": 6,
+      "was_in_faction": false,
+      "finisher": "Stone Cold Stunner"
+    },
+    {
+      "id": 4,
+      "name": "Triple H",
+      "nationality": "American",
+      "height_weight": "1.93m / 116kg",
+      "style": "Technician",
+      "championships": 14,
+      "was_in_faction": true,
+      "finisher": "Pedigree"
+    },
+    {
+      "id": 5,
+      "name": "Shawn Michaels",
+      "nationality": "American",
+      "height_weight": "1.85m / 102kg",
+      "style": "High-Flyer",
+      "championships": 4,
+      "was_in_faction": true,
+      "finisher": "Sweet Chin Music"
+    },
+    {
+      "id": 6,
+      "name": "Roman Reigns",
+      "nationality": "American",
+      "height_weight": "1.91m / 120kg",
+      "style": "Powerhouse",
+      "championships": 6,
+      "was_in_faction": true,
+      "finisher": "Spear"
+    },
+    {
+      "id": 7,
+      "name": "Brock Lesnar",
+      "nationality": "American",
+      "height_weight": "1.91m / 130kg",
+      "style": "Powerhouse",
+      "championships": 10,
+      "was_in_faction": false,
+      "finisher": "F-5"
+    },
+    {
+      "id": 8,
+      "name": "Rey Mysterio",
+      "nationality": "American",
+      "height_weight": "1.68m / 79kg",
+      "style": "High-Flyer",
+      "championships": 3,
+      "was_in_faction": true,
+      "finisher": "619"
+    },
+    {
+      "id": 9,
+      "name": "CM Punk",
+      "nationality": "American",
+      "height_weight": "1.88m / 99kg",
+      "style": "Technician",
+      "championships": 5,
+      "was_in_faction": true,
+      "finisher": "GTS (Go to Sleep)"
+    },
+    {
+      "id": 10,
+      "name": "Randy Orton",
+      "nationality": "American",
+      "height_weight": "1.96m / 113kg",
+      "style": "Striker",
+      "championships": 14,
+      "was_in_faction": true,
+      "finisher": "RKO"
+    },
+    {
+      "id": 11,
+      "name": "Hulk Hogan",
+      "nationality": "American",
+      "height_weight": "2.01m / 118kg",
+      "style": "Powerhouse",
+      "championships": 12,
+      "was_in_faction": false,
+      "finisher": "Leg Drop"
+    },
+    {
+      "id": 12,
+      "name": "The Rock",
+      "nationality": "American",
+      "height_weight": "1.96m / 118kg",
+      "style": "Charismatic",
+      "championships": 10,
+      "was_in_faction": false,
+      "finisher": "Rock Bottom / People's Elbow"
+    },
+    {
+      "id": 13,
+      "name": "Andre the Giant",
+      "nationality": "French",
+      "height_weight": "2.24m / 240kg",
+      "style": "Powerhouse",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Giant Splash"
+    },
+    {
+      "id": 14,
+      "name": "The Ultimate Warrior",
+      "nationality": "American",
+      "height_weight": "1.85m / 113kg",
+      "style": "High-Flyer/Powerhouse",
+      "championships": 2,
+      "was_in_faction": false,
+      "finisher": "Running Shoulder Block"
+    },
+    {
+      "id": 15,
+      "name": "Bret Hart",
+      "nationality": "Canadian",
+      "height_weight": "1.80m / 102kg",
+      "style": "Technician",
+      "championships": 5,
+      "was_in_faction": false,
+      "finisher": "Sharpshooter"
+    },
+    {
+      "id": 16,
+      "name": "Ric Flair",
+      "nationality": "American",
+      "height_weight": "1.83m / 107kg",
+      "style": "Technician",
+      "championships": 16,
+      "was_in_faction": true,
+      "finisher": "Figure-Four Leglock"
+    },
+    {
+      "id": 17,
+      "name": "Dusty Rhodes",
+      "nationality": "American",
+      "height_weight": "1.83m / 107kg",
+      "style": "Brawler",
+      "championships": 3,
+      "was_in_faction": true,
+      "finisher": "Bionic Elbow"
+    },
+    {
+      "id": 18,
+      "name": "Macho Man Randy Savage",
+      "nationality": "American",
+      "height_weight": "1.85m / 107kg",
+      "style": "High-Flyer",
+      "championships": 4,
+      "was_in_faction": true,
+      "finisher": "Elbow Drop"
+    },
+    {
+      "id": 19,
+      "name": "Ricochet",
+      "nationality": "American",
+      "height_weight": "1.73m / 75kg",
+      "style": "High-Flyer",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "630 Splash"
+    },
+    {
+      "id": 20,
+      "name": "Edge",
+      "nationality": "Canadian",
+      "height_weight": "1.93m / 104kg",
+      "style": "Technician/High-Flyer",
+      "championships": 11,
+      "was_in_faction": true,
+      "finisher": "Edgecution"
+    },
+    {
+      "id": 21,
+      "name": "Chris Jericho",
+      "nationality": "Canadian",
+      "height_weight": "1.83m / 104kg",
+      "style": "Technician",
+      "championships": 12,
+      "was_in_faction": true,
+      "finisher": "Walls of Jericho"
+    },
+    {
+      "id": 22,
+      "name": "Batista",
+      "nationality": "American",
+      "height_weight": "1.98m / 130kg",
+      "style": "Powerhouse",
+      "championships": 6,
+      "was_in_faction": false,
+      "finisher": "Spinebuster"
+    },
+    {
+      "id": 23,
+      "name": "Kurt Angle",
+      "nationality": "American",
+      "height_weight": "1.78m / 102kg",
+      "style": "Technician",
+      "championships": 8,
+      "was_in_faction": true,
+      "finisher": "Ankle Lock"
+    },
+    {
+      "id": 24,
+      "name": "Jeff Hardy",
+      "nationality": "American",
+      "height_weight": "1.80m / 91kg",
+      "style": "High-Flyer",
+      "championships": 5,
+      "was_in_faction": true,
+      "finisher": "Swanton Bomb"
+    },
+    {
+      "id": 25,
+      "name": "Matt Hardy",
+      "nationality": "American",
+      "height_weight": "1.80m / 91kg",
+      "style": "High-Flyer",
+      "championships": 4,
+      "was_in_faction": true,
+      "finisher": "Twist of Fate"
+    },
+    {
+      "id": 26,
+      "name": "Rob Van Dam",
+      "nationality": "American",
+      "height_weight": "1.88m / 104kg",
+      "style": "High-Flyer",
+      "championships": 4,
+      "was_in_faction": false,
+      "finisher": "Five-Star Frog Splash"
+    },
+    {
+      "id": 27,
+      "name": "Samoa Joe",
+      "nationality": "American",
+      "height_weight": "1.93m / 115kg",
+      "style": "Brawler",
+      "championships": 3,
+      "was_in_faction": false,
+      "finisher": "Coquina Clutch"
+    },
+    {
+      "id": 28,
+      "name": "Kevin Owens",
+      "nationality": "Canadian",
+      "height_weight": "1.85m / 109kg",
+      "style": "Brawler",
+      "championships": 3,
+      "was_in_faction": false,
+      "finisher": "Pop-up Powerbomb"
+    },
+    {
+      "id": 29,
+      "name": "Seth Rollins",
+      "nationality": "American",
+      "height_weight": "1.80m / 98kg",
+      "style": "High-Flyer/Technician",
+      "championships": 5,
+      "was_in_faction": true,
+      "finisher": "Curb Stomp"
+    },
+    {
+      "id": 30,
+      "name": "Jon Moxley",
+      "nationality": "American",
+      "height_weight": "1.78m / 104kg",
+      "style": "Brawler",
+      "championships": 4,
+      "was_in_faction": true,
+      "finisher": "Dirty Deeds"
+    },
+    {
+      "id": 31,
+      "name": "Kofi Kingston",
+      "nationality": "Ghanaian-American",
+      "height_weight": "1.83m / 98kg",
+      "style": "High-Flyer",
+      "championships": 2,
+      "was_in_faction": true,
+      "finisher": "Trouble in Paradise"
+    },
+    {
+      "id": 32,
+      "name": "Big E",
+      "nationality": "American",
+      "height_weight": "1.93m / 125kg",
+      "style": "Powerhouse",
+      "championships": 3,
+      "was_in_faction": true,
+      "finisher": "Big Ending"
+    },
+    {
+      "id": 33,
+      "name": "Braun Strowman",
+      "nationality": "American",
+      "height_weight": "2.03m / 159kg",
+      "style": "Powerhouse",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Running Powerslam"
+    },
+    {
+      "id": 34,
+      "name": "Shinsuke Nakamura",
+      "nationality": "Japanese",
+      "height_weight": "1.88m / 104kg",
+      "style": "Striker",
+      "championships": 5,
+      "was_in_faction": true,
+      "finisher": "Kinshasa"
+    },
+    {
+      "id": 35,
+      "name": "Finn Bálor",
+      "nationality": "Irish",
+      "height_weight": "1.80m / 90kg",
+      "style": "High-Flyer",
+      "championships": 3,
+      "was_in_faction": true,
+      "finisher": "Coup de Grace"
+    },
+    {
+      "id": 36,
+      "name": "Will Ospreay",
+      "nationality": "British",
+      "height_weight": "1.83m / 95kg",
+      "style": "High-Flyer",
+      "championships": 2,
+      "was_in_faction": false,
+      "finisher": "OsCutter"
+    },
+    {
+      "id": 37,
+      "name": "Pentagon Jr",
+      "nationality": "Mexican",
+      "height_weight": "1.70m / 92kg",
+      "style": "Luchador",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Cement Mixer"
+    },
+    {
+      "id": 38,
+      "name": "Penta El Zero Miedo",
+      "nationality": "Mexican",
+      "height_weight": "1.70m / 90kg",
+      "style": "Luchador",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Springboard Moonsault"
+    },
+    {
+      "id": 39,
+      "name": "AJ Styles",
+      "nationality": "American",
+      "height_weight": "1.78m / 93kg",
+      "style": "High-Flyer/Technician",
+      "championships": 7,
+      "was_in_faction": true,
+      "finisher": "Styles Clash"
+    },
+    {
+      "id": 40,
+      "name": "Bobby Lashley",
+      "nationality": "American",
+      "height_weight": "1.96m / 130kg",
+      "style": "Powerhouse",
+      "championships": 4,
+      "was_in_faction": false,
+      "finisher": "Dominator"
+    },
+    {
+      "id": 41,
+      "name": "Cesaro",
+      "nationality": "Swiss",
+      "height_weight": "1.86m / 113kg",
+      "style": "Technician",
+      "championships": 2,
+      "was_in_faction": true,
+      "finisher": "Neutralizer"
+    },
+    {
+      "id": 42,
+      "name": "Mick Foley",
+      "nationality": "American",
+      "height_weight": "1.80m / 113kg",
+      "style": "Brawler",
+      "championships": 5,
+      "was_in_faction": true,
+      "finisher": "Mandible Claw"
+    },
+    {
+      "id": 43,
+      "name": "The Miz",
+      "nationality": "American",
+      "height_weight": "1.88m / 98kg",
+      "style": "Technician",
+      "championships": 5,
+      "was_in_faction": true,
+      "finisher": "Skull Crushing Finale"
+    },
+    {
+      "id": 44,
+      "name": "Kevin Nash",
+      "nationality": "American",
+      "height_weight": "2.03m / 154kg",
+      "style": "Powerhouse",
+      "championships": 7,
+      "was_in_faction": true,
+      "finisher": "Jackknife Powerbomb"
+    },
+    {
+      "id": 45,
+      "name": "Scott Hall",
+      "nationality": "American",
+      "height_weight": "1.98m / 113kg",
+      "style": "Brawler",
+      "championships": 3,
+      "was_in_faction": true,
+      "finisher": "Schoolboy"
+    },
+    {
+      "id": 46,
+      "name": "Diamond Dallas Page",
+      "nationality": "American",
+      "height_weight": "1.88m / 104kg",
+      "style": "Brawler",
+      "championships": 3,
+      "was_in_faction": true,
+      "finisher": "Diamond Cutter"
+    },
+    {
+      "id": 47,
+      "name": "Kane",
+      "nationality": "American",
+      "height_weight": "2.03m / 120kg",
+      "style": "Powerhouse",
+      "championships": 7,
+      "was_in_faction": true,
+      "finisher": "Chokeslam"
+    },
+    {
+      "id": 48,
+      "name": "Miro",
+      "nationality": "Bulgarian-American",
+      "height_weight": "1.96m / 130kg",
+      "style": "Powerhouse",
+      "championships": 2,
+      "was_in_faction": false,
+      "finisher": "Powerbomb"
+    },
+    {
+      "id": 49,
+      "name": "Big Show",
+      "nationality": "American",
+      "height_weight": "2.16m / 174kg",
+      "style": "Powerhouse",
+      "championships": 10,
+      "was_in_faction": true,
+      "finisher": "Chokeslam"
+    },
+    {
+      "id": 50,
+      "name": "William Regal",
+      "nationality": "British",
+      "height_weight": "1.88m / 110kg",
+      "style": "Technician",
+      "championships": 2,
+      "was_in_faction": true,
+      "finisher": "Regal Stretch"
+    },
+    {
+      "id": 51,
+      "name": "Booker T",
+      "nationality": "American",
+      "height_weight": "1.88m / 108kg",
+      "style": "Brawler",
+      "championships": 11,
+      "was_in_faction": true,
+      "finisher": "Scissor Kick"
+    },
+    {
+      "id": 52,
+      "name": "Chris Benoit",
+      "nationality": "Canadian",
+      "height_weight": "1.70m / 90kg",
+      "style": "Technician",
+      "championships": 6,
+      "was_in_faction": true,
+      "finisher": "Crippler Crossface"
+    },
+    {
+      "id": 53,
+      "name": "Eddie Guerrero",
+      "nationality": "American/Mexican",
+      "height_weight": "1.70m / 95kg",
+      "style": "High-Flyer/Technician",
+      "championships": 4,
+      "was_in_faction": true,
+      "finisher": "Frog Splash"
+    },
+    {
+      "id": 54,
+      "name": "Bubba Ray Dudley",
+      "nationality": "American",
+      "height_weight": "1.83m / 122kg",
+      "style": "Brawler",
+      "championships": 8,
+      "was_in_faction": true,
+      "finisher": "Total Elimination"
+    },
+    {
+      "id": 55,
+      "name": "D-Von Dudley",
+      "nationality": "American",
+      "height_weight": "1.78m / 100kg",
+      "style": "Brawler",
+      "championships": 8,
+      "was_in_faction": true,
+      "finisher": "D-Von Bomb"
+    },
+    {
+      "id": 56,
+      "name": "Mark Henry",
+      "nationality": "American",
+      "height_weight": "1.96m / 150kg",
+      "style": "Powerhouse",
+      "championships": 3,
+      "was_in_faction": false,
+      "finisher": "Knockout"
+    },
+    {
+      "id": 57,
+      "name": "Sting",
+      "nationality": "American",
+      "height_weight": "1.88m / 107kg",
+      "style": "Powerhouse/High-Flyer",
+      "championships": 7,
+      "was_in_faction": true,
+      "finisher": "Scorpion Death Drop"
+    },
+    {
+      "id": 58,
+      "name": "Goldust",
+      "nationality": "American",
+      "height_weight": "1.80m / 100kg",
+      "style": "Technician",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Final Cut"
+    },
+    {
+      "id": 59,
+      "name": "Road Dogg",
+      "nationality": "American",
+      "height_weight": "1.85m / 109kg",
+      "style": "Brawler",
+      "championships": 2,
+      "was_in_faction": true,
+      "finisher": "That's What I'm Talking About"
+    },
+    {
+      "id": 60,
+      "name": "Billy Gunn",
+      "nationality": "American",
+      "height_weight": "1.83m / 102kg",
+      "style": "Brawler",
+      "championships": 3,
+      "was_in_faction": true,
+      "finisher": "Freaks Not Allowed"
+    },
+    {
+      "id": 61,
+      "name": "The Big Boss Man",
+      "nationality": "American",
+      "height_weight": "1.93m / 120kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Big Boot"
+    },
+    {
+      "id": 62,
+      "name": "Sabu",
+      "nationality": "American",
+      "height_weight": "1.78m / 90kg",
+      "style": "High-Flyer/Extreme",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Triple Jump Moonsault"
+    },
+    {
+      "id": 63,
+      "name": "Tazz",
+      "nationality": "American",
+      "height_weight": "1.80m / 102kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Tazzplex"
+    },
+    {
+      "id": 64,
+      "name": "Funaki",
+      "nationality": "Japanese",
+      "height_weight": "1.73m / 90kg",
+      "style": "Luchador/Technician",
+      "championships": 2,
+      "was_in_faction": true,
+      "finisher": "Fu-naki Driver"
+    },
+    {
+      "id": 65,
+      "name": "Tajiri",
+      "nationality": "Japanese",
+      "height_weight": "1.70m / 82kg",
+      "style": "High-Flyer/Technical",
+      "championships": 2,
+      "was_in_faction": true,
+      "finisher": "Buzzsaw Kick"
+    },
+    {
+      "id": 66,
+      "name": "Dean Malenko",
+      "nationality": "American",
+      "height_weight": "1.73m / 81kg",
+      "style": "Technician",
+      "championships": 2,
+      "was_in_faction": false,
+      "finisher": "Sharpshooter"
+    },
+    {
+      "id": 67,
+      "name": "Chris Candido",
+      "nationality": "American",
+      "height_weight": "1.70m / 77kg",
+      "style": "High-Flyer/Technician",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Diving Headbutt"
+    },
+    {
+      "id": 68,
+      "name": "Eddie Gilbert",
+      "nationality": "American",
+      "height_weight": "1.80m / 95kg",
+      "style": "Technician",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Slide Cutter"
+    },
+    {
+      "id": 69,
+      "name": "Brian Pillman",
+      "nationality": "American",
+      "height_weight": "1.83m / 102kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Pillman's Peptic Suds"
+    },
+    {
+      "id": 70,
+      "name": "Bam Bam Bigelow",
+      "nationality": "American",
+      "height_weight": "2.03m / 135kg",
+      "style": "Powerhouse",
+      "championships": 2,
+      "was_in_faction": false,
+      "finisher": "Bigelow Bomb"
+    },
+    {
+      "id": 71,
+      "name": "The Road Warrior Hawk",
+      "nationality": "American",
+      "height_weight": "1.98m / 120kg",
+      "style": "Powerhouse",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Signature Splash"
+    },
+    {
+      "id": 72,
+      "name": "The Road Warrior Animal",
+      "nationality": "American",
+      "height_weight": "1.98m / 120kg",
+      "style": "Powerhouse",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Running Clothesline"
+    },
+    {
+      "id": 73,
+      "name": "Crash Holly",
+      "nationality": "American",
+      "height_weight": "1.78m / 86kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Fallaway Slam"
+    },
+    {
+      "id": 74,
+      "name": "Jeff Jarrett",
+      "nationality": "American",
+      "height_weight": "1.85m / 102kg",
+      "style": "Brawler",
+      "championships": 9,
+      "was_in_faction": true,
+      "finisher": "Codebreaker"
+    },
+    {
+      "id": 75,
+      "name": "Al Snow",
+      "nationality": "American",
+      "height_weight": "1.85m / 104kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Phoenix Splash"
+    },
+    {
+      "id": 76,
+      "name": "Test",
+      "nationality": "American",
+      "height_weight": "1.88m / 104kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Bombs Away"
+    },
+    {
+      "id": 77,
+      "name": "Billy Kidman",
+      "nationality": "American",
+      "height_weight": "1.73m / 86kg",
+      "style": "High-Flyer",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Shooting Star Press"
+    },
+    {
+      "id": 78,
+      "name": "Lance Storm",
+      "nationality": "Canadian",
+      "height_weight": "1.78m / 85kg",
+      "style": "Technician",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Storm Driver"
+    },
+    {
+      "id": 79,
+      "name": "Aleister Black",
+      "nationality": "American",
+      "height_weight": "1.80m / 98kg",
+      "style": "Brawler/Technician",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Black Mass"
+    },
+    {
+      "id": 80,
+      "name": "Sami Zayn",
+      "nationality": "Canadian",
+      "height_weight": "1.80m / 86kg",
+      "style": "High-Flyer",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Helluva Kick"
+    },
+    {
+      "id": 81,
+      "name": "Tetsuya Naito",
+      "nationality": "Japanese",
+      "height_weight": "1.83m / 93kg",
+      "style": "Luchador/Technician",
+      "championships": 3,
+      "was_in_faction": true,
+      "finisher": "Destino"
+    },
+    {
+      "id": 82,
+      "name": "Kazuchika Okada",
+      "nationality": "Japanese",
+      "height_weight": "1.88m / 107kg",
+      "style": "Technician",
+      "championships": 5,
+      "was_in_faction": false,
+      "finisher": "Rainmaker"
+    },
+    {
+      "id": 83,
+      "name": "Hiromu Takahashi",
+      "nationality": "Japanese",
+      "height_weight": "1.73m / 83kg",
+      "style": "High-Flyer",
+      "championships": 2,
+      "was_in_faction": true,
+      "finisher": "Phoenix Splash"
+    },
+    {
+      "id": 84,
+      "name": "Jay White",
+      "nationality": "New Zealander",
+      "height_weight": "1.80m / 95kg",
+      "style": "Technician",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Blade Runner"
+    },
+    {
+      "id": 85,
+      "name": "Kenny Omega",
+      "nationality": "Canadian",
+      "height_weight": "1.78m / 90kg",
+      "style": "High-Flyer/Technician",
+      "championships": 4,
+      "was_in_faction": true,
+      "finisher": "One-Winged Angel"
+    },
+    {
+      "id": 86,
+      "name": "Adam Cole",
+      "nationality": "American",
+      "height_weight": "1.83m / 91kg",
+      "style": "Technician",
+      "championships": 3,
+      "was_in_faction": true,
+      "finisher": "Panama Sunrise"
+    },
+    {
+      "id": 87,
+      "name": "Darby Allin",
+      "nationality": "American",
+      "height_weight": "1.78m / 75kg",
+      "style": "High-Flyer",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Last Ride"
+    },
+    {
+      "id": 88,
+      "name": "PAC",
+      "nationality": "British",
+      "height_weight": "1.78m / 90kg",
+      "style": "High-Flyer",
+      "championships": 2,
+      "was_in_faction": false,
+      "finisher": "Red Arrow"
+    },
+    {
+      "id": 89,
+      "name": "Pete Dunne",
+      "nationality": "British",
+      "height_weight": "1.80m / 95kg",
+      "style": "Technician",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Bitter End"
+    },
+    {
+      "id": 90,
+      "name": "Walter",
+      "nationality": "Austrian",
+      "height_weight": "2.00m / 130kg",
+      "style": "Powerhouse",
+      "championships": 3,
+      "was_in_faction": false,
+      "finisher": "Powerbomb"
+    },
+    {
+      "id": 91,
+      "name": "Bray Wyatt",
+      "nationality": "American",
+      "height_weight": "1.93m / 115kg",
+      "style": "Psychological",
+      "championships": 3,
+      "was_in_faction": true,
+      "finisher": "Sister Abigail"
+    },
+    {
+      "id": 92,
+      "name": "Karrion Kross",
+      "nationality": "American",
+      "height_weight": "1.93m / 110kg",
+      "style": "Powerhouse",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Kross Jacket"
+    },
+    {
+      "id": 93,
+      "name": "Baron Corbin",
+      "nationality": "American",
+      "height_weight": "1.98m / 124kg",
+      "style": "Powerhouse",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "End of Days"
+    },
+    {
+      "id": 94,
+      "name": "Otis",
+      "nationality": "American",
+      "height_weight": "2.03m / 154kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "The Smash"
+    },
+    {
+      "id": 95,
+      "name": "Al Snow",
+      "nationality": "American",
+      "height_weight": "1.85m / 104kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Phoenix Splash"
+    },
+    {
+      "id": 96,
+      "name": "Test",
+      "nationality": "American",
+      "height_weight": "1.88m / 104kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Bombs Away"
+    },
+    {
+      "id": 97,
+      "name": "Billy Kidman",
+      "nationality": "American",
+      "height_weight": "1.73m / 86kg",
+      "style": "High-Flyer",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Shooting Star Press"
+    },
+    {
+      "id": 98,
+      "name": "Lance Storm",
+      "nationality": "Canadian",
+      "height_weight": "1.78m / 85kg",
+      "style": "Technician",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Storm Driver"
+    },
+    {
+      "id": 99,
+      "name": "Aleister Black",
+      "nationality": "American",
+      "height_weight": "1.80m / 98kg",
+      "style": "Brawler/Technician",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Black Mass"
+    },
+    {
+      "id": 100,
+      "name": "Sami Zayn",
+      "nationality": "Canadian",
+      "height_weight": "1.80m / 86kg",
+      "style": "High-Flyer",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Helluva Kick"
+    },
+    {
+      "id": 101,
+      "name": "Tetsuya Naito",
+      "nationality": "Japanese",
+      "height_weight": "1.83m / 93kg",
+      "style": "Luchador/Technician",
+      "championships": 3,
+      "was_in_faction": true,
+      "finisher": "Destino"
+    },
+    {
+      "id": 102,
+      "name": "Kazuchika Okada",
+      "nationality": "Japanese",
+      "height_weight": "1.88m / 107kg",
+      "style": "Technician",
+      "championships": 5,
+      "was_in_faction": false,
+      "finisher": "Rainmaker"
+    },
+    {
+      "id": 103,
+      "name": "Hiromu Takahashi",
+      "nationality": "Japanese",
+      "height_weight": "1.73m / 83kg",
+      "style": "High-Flyer",
+      "championships": 2,
+      "was_in_faction": true,
+      "finisher": "Phoenix Splash"
+    },
+    {
+      "id": 104,
+      "name": "Jay White",
+      "nationality": "New Zealander",
+      "height_weight": "1.80m / 95kg",
+      "style": "Technician",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Blade Runner"
+    },
+    {
+      "id": 105,
+      "name": "Kenny Omega",
+      "nationality": "Canadian",
+      "height_weight": "1.78m / 90kg",
+      "style": "High-Flyer/Technician",
+      "championships": 4,
+      "was_in_faction": true,
+      "finisher": "One-Winged Angel"
+    },
+    {
+      "id": 106,
+      "name": "Adam Cole",
+      "nationality": "American",
+      "height_weight": "1.83m / 91kg",
+      "style": "Technician",
+      "championships": 3,
+      "was_in_faction": true,
+      "finisher": "Panama Sunrise"
+    },
+    {
+      "id": 107,
+      "name": "MJF",
+      "nationality": "American",
+      "height_weight": "1.80m / 85kg",
+      "style": "Brawler/Technician",
+      "championships": 2,
+      "was_in_faction": false,
+      "finisher": "Signature Mic Move"
+    },
+    {
+      "id": 108,
+      "name": "Eddie Kingston",
+      "nationality": "American",
+      "height_weight": "1.80m / 95kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Backbreaker"
+    },
+    {
+      "id": 109,
+      "name": "Orange Cassidy",
+      "nationality": "American",
+      "height_weight": "1.80m / 83kg",
+      "style": "Lethargic/Surprise",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Orange Punch"
+    },
+    {
+      "id": 110,
+      "name": "Sami Callihan",
+      "nationality": "American",
+      "height_weight": "1.80m / 88kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Canadian Destroyer"
+    },
+    {
+      "id": 111,
+      "name": "Nick Gage",
+      "nationality": "American",
+      "height_weight": "1.78m / 80kg",
+      "style": "Hardcore",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Ladder Shot"
+    },
+    {
+      "id": 112,
+      "name": "Tommy Dreamer",
+      "nationality": "American",
+      "height_weight": "1.80m / 90kg",
+      "style": "Hardcore",
+      "championships": 2,
+      "was_in_faction": true,
+      "finisher": "Dreamer Bomb"
+    },
+    {
+      "id": 113,
+      "name": "Terry Funk",
+      "nationality": "American",
+      "height_weight": "1.85m / 102kg",
+      "style": "Hardcore",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Piledriver"
+    },
+    {
+      "id": 114,
+      "name": "Bugsy McGraw",
+      "nationality": "American",
+      "height_weight": "1.83m / 110kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Signature Superkick"
+    },
+    {
+      "id": 115,
+      "name": "Bushwhacker Butch",
+      "nationality": "American",
+      "height_weight": "1.83m / 102kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Butch Bomb"
+    },
+    {
+      "id": 116,
+      "name": "Bushwhacker Luke",
+      "nationality": "American",
+      "height_weight": "1.83m / 102kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Big Splash"
+    },
+    {
+      "id": 117,
+      "name": "Demolition Ax",
+      "nationality": "American",
+      "height_weight": "2.03m / 125kg",
+      "style": "Powerhouse",
+      "championships": 2,
+      "was_in_faction": true,
+      "finisher": "Demolition Device"
+    },
+    {
+      "id": 118,
+      "name": "Demolition Smash",
+      "nationality": "American",
+      "height_weight": "2.03m / 125kg",
+      "style": "Powerhouse",
+      "championships": 2,
+      "was_in_faction": true,
+      "finisher": "Demolition Crash"
+    },
+    {
+      "id": 119,
+      "name": "Jim Duggan",
+      "nationality": "American",
+      "height_weight": "1.85m / 107kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Hoo-Ya!"
+    },
+    {
+      "id": 120,
+      "name": "The Iron Sheik",
+      "nationality": "Iranian",
+      "height_weight": "1.88m / 120kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Camel Clutch"
+    },
+    {
+      "id": 121,
+      "name": "Big Daddy (Shirley Crabtree)",
+      "nationality": "British",
+      "height_weight": "2.10m / 180kg",
+      "style": "Powerhouse",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Big Splash"
+    },
+    {
+      "id": 122,
+      "name": "Dynamite Kid",
+      "nationality": "British",
+      "height_weight": "1.73m / 85kg",
+      "style": "High-Flyer/Technician",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Suplex Splash"
+    },
+    {
+      "id": 123,
+      "name": "Davey Boy Smith",
+      "nationality": "British",
+      "height_weight": "1.88m / 110kg",
+      "style": "Powerhouse",
+      "championships": 3,
+      "was_in_faction": true,
+      "finisher": "Piledriver"
+    },
+    {
+      "id": 124,
+      "name": "The British Bulldog",
+      "nationality": "British",
+      "height_weight": "1.83m / 104kg",
+      "style": "Powerhouse",
+      "championships": 2,
+      "was_in_faction": true,
+      "finisher": "Running Powerslam"
+    },
+    {
+      "id": 125,
+      "name": "Mr. Perfect",
+      "nationality": "American",
+      "height_weight": "1.85m / 104kg",
+      "style": "Technician",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Perfect Plex"
+    },
+    {
+      "id": 126,
+      "name": "Owen Hart",
+      "nationality": "Canadian",
+      "height_weight": "1.75m / 95kg",
+      "style": "Technician",
+      "championships": 3,
+      "was_in_faction": true,
+      "finisher": "Sharpshooter"
+    },
+    {
+      "id": 127,
+      "name": "Scott Steiner",
+      "nationality": "American",
+      "height_weight": "1.98m / 130kg",
+      "style": "Powerhouse",
+      "championships": 3,
+      "was_in_faction": true,
+      "finisher": "Steiner Recliner"
+    },
+    {
+      "id": 128,
+      "name": "Christian",
+      "nationality": "American",
+      "height_weight": "1.78m / 95kg",
+      "style": "High-Flyer",
+      "championships": 2,
+      "was_in_faction": true,
+      "finisher": "Knee Trembler"
+    },
+    {
+      "id": 129,
+      "name": "Rhyno",
+      "nationality": "American",
+      "height_weight": "1.85m / 110kg",
+      "style": "Powerhouse",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Gore"
+    },
+    {
+      "id": 130,
+      "name": "Steve Blackman",
+      "nationality": "American",
+      "height_weight": "1.78m / 90kg",
+      "style": "Martial Arts",
+      "championships": 0,
+      "was_in_faction": false,
+      "finisher": "Roundhouse Kick"
+    },
+    {
+      "id": 131,
+      "name": "Nunzio",
+      "nationality": "American",
+      "height_weight": "1.70m / 75kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Superkick"
+    },
+    {
+      "id": 132,
+      "name": "Chris Kanyon",
+      "nationality": "American",
+      "height_weight": "1.80m / 91kg",
+      "style": "Technician",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Kanyon Driver"
+    },
+    {
+      "id": 133,
+      "name": "Mil Muertes",
+      "nationality": "Mexican",
+      "height_weight": "1.75m / 95kg",
+      "style": "Luchador",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Rayo de Muerte"
+    },
+    {
+      "id": 134,
+      "name": "El Hijo del Perro Aguayo",
+      "nationality": "Mexican",
+      "height_weight": "1.70m / 85kg",
+      "style": "Luchador",
+      "championships": 2,
+      "was_in_faction": true,
+      "finisher": "Diving Headbutt"
+    },
+    {
+      "id": 135,
+      "name": "Ultimo Guerrero",
+      "nationality": "Mexican",
+      "height_weight": "1.80m / 98kg",
+      "style": "Luchador/Technician",
+      "championships": 5,
+      "was_in_faction": true,
+      "finisher": "Guerrero Driver"
+    },
+    {
+      "id": 136,
+      "name": "Mistico",
+      "nationality": "Mexican",
+      "height_weight": "1.73m / 75kg",
+      "style": "Luchador",
+      "championships": 2,
+      "was_in_faction": false,
+      "finisher": "Hurricanrana"
+    },
+    {
+      "id": 137,
+      "name": "La Sombra (Andrade)",
+      "nationality": "Mexican",
+      "height_weight": "1.85m / 95kg",
+      "style": "Technician",
+      "championships": 3,
+      "was_in_faction": true,
+      "finisher": "Cross Rhodes"
+    },
+    {
+      "id": 138,
+      "name": "Teddy Hart",
+      "nationality": "Canadian",
+      "height_weight": "1.70m / 70kg",
+      "style": "High-Flyer",
+      "championships": 0,
+      "was_in_faction": false,
+      "finisher": "Hart Attack"
+    },
+    {
+      "id": 139,
+      "name": "Tyson Kidd",
+      "nationality": "Canadian",
+      "height_weight": "1.83m / 95kg",
+      "style": "Technician",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Kidd Clutch"
+    },
+    {
+      "id": 140,
+      "name": "Natalya",
+      "nationality": "Canadian",
+      "height_weight": "1.65m / 57kg",
+      "style": "Technician",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Sharpshooter"
+    },
+    {
+      "id": 141,
+      "name": "Trish Stratus",
+      "nationality": "Canadian",
+      "height_weight": "1.70m / 59kg",
+      "style": "Technician",
+      "championships": 7,
+      "was_in_faction": false,
+      "finisher": "Stratusfaction"
+    },
+    {
+      "id": 142,
+      "name": "Lita",
+      "nationality": "American",
+      "height_weight": "1.68m / 52kg",
+      "style": "High-Flyer",
+      "championships": 4,
+      "was_in_faction": false,
+      "finisher": "Litasault"
+    },
+    {
+      "id": 143,
+      "name": "Chyna",
+      "nationality": "American",
+      "height_weight": "1.73m / 63kg",
+      "style": "Powerhouse",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Chyna Bomb"
+    },
+    {
+      "id": 144,
+      "name": "Beth Phoenix",
+      "nationality": "American",
+      "height_weight": "1.73m / 67kg",
+      "style": "Powerhouse",
+      "championships": 3,
+      "was_in_faction": false,
+      "finisher": "Glam Slam"
+    },
+    {
+      "id": 145,
+      "name": "Stacy Keibler",
+      "nationality": "American",
+      "height_weight": "1.78m / 57kg",
+      "style": "High-Flyer",
+      "championships": 0,
+      "was_in_faction": false,
+      "finisher": "Superkick"
+    },
+    {
+      "id": 146,
+      "name": "Becky Lynch",
+      "nationality": "Irish",
+      "height_weight": "1.70m / 65kg",
+      "style": "Brawler",
+      "championships": 4,
+      "was_in_faction": false,
+      "finisher": "Dis-Arm-Her"
+    },
+    {
+      "id": 147,
+      "name": "Charlotte Flair",
+      "nationality": "American",
+      "height_weight": "1.83m / 75kg",
+      "style": "Technician",
+      "championships": 14,
+      "was_in_faction": false,
+      "finisher": "Figure-Four Leglock"
+    },
+    {
+      "id": 148,
+      "name": "Sasha Banks",
+      "nationality": "American",
+      "height_weight": "1.68m / 59kg",
+      "style": "High-Flyer",
+      "championships": 4,
+      "was_in_faction": true,
+      "finisher": "Bank Statement"
+    },
+    {
+      "id": 149,
+      "name": "Bayley",
+      "nationality": "American",
+      "height_weight": "1.63m / 55kg",
+      "style": "Brawler",
+      "championships": 4,
+      "was_in_faction": true,
+      "finisher": "Bayley-to-Back Suplex"
+    },
+    {
+      "id": 150,
+      "name": "Alexa Bliss",
+      "nationality": "American",
+      "height_weight": "1.63m / 50kg",
+      "style": "Brawler",
+      "championships": 3,
+      "was_in_faction": true,
+      "finisher": "Twisted Bliss"
+    },
+    {
+      "id": 151,
+      "name": "Asuka",
+      "nationality": "Japanese",
+      "height_weight": "1.68m / 61kg",
+      "style": "Striker",
+      "championships": 3,
+      "was_in_faction": false,
+      "finisher": "Asuka Lock"
+    },
+    {
+      "id": 152,
+      "name": "Bianca Belair",
+      "nationality": "American",
+      "height_weight": "1.78m / 65kg",
+      "style": "Athletic",
+      "championships": 2,
+      "was_in_faction": false,
+      "finisher": "KOD (Kiss of Death)"
+    },
+    {
+      "id": 153,
+      "name": "Ronda Rousey",
+      "nationality": "American",
+      "height_weight": "1.68m / 61kg",
+      "style": "Striker",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Armbar"
+    },
+    {
+      "id": 154,
+      "name": "Naomi",
+      "nationality": "American",
+      "height_weight": "1.73m / 57kg",
+      "style": "High-Flyer",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "In Your House"
+    },
+    {
+      "id": 155,
+      "name": "Io Shirai",
+      "nationality": "Japanese",
+      "height_weight": "1.68m / 55kg",
+      "style": "High-Flyer",
+      "championships": 2,
+      "was_in_faction": false,
+      "finisher": "Moonsault"
+    },
+    {
+      "id": 156,
+      "name": "Rhea Ripley",
+      "nationality": "Australian",
+      "height_weight": "1.78m / 70kg",
+      "style": "Powerhouse",
+      "championships": 2,
+      "was_in_faction": false,
+      "finisher": "Riptide"
+    },
+    {
+      "id": 157,
+      "name": "Tamina",
+      "nationality": "American",
+      "height_weight": "1.80m / 72kg",
+      "style": "Powerhouse",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Tamina Slam"
+    },
+    {
+      "id": 158,
+      "name": "Carmella",
+      "nationality": "American",
+      "height_weight": "1.63m / 50kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Carmella Crush"
+    },
+    {
+      "id": 159,
+      "name": "Nia Jax",
+      "nationality": "American",
+      "height_weight": "1.85m / 125kg",
+      "style": "Powerhouse",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Samoan Drop"
+    },
+    {
+      "id": 160,
+      "name": "Lacey Evans",
+      "nationality": "American",
+      "height_weight": "1.78m / 63kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Evans Execution"
+    },
+    {
+      "id": 161,
+      "name": "Candice LeRae",
+      "nationality": "American",
+      "height_weight": "1.63m / 53kg",
+      "style": "High-Flyer",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "LeRae Lariat"
+    },
+    {
+      "id": 162,
+      "name": "Shayna Baszler",
+      "nationality": "American",
+      "height_weight": "1.68m / 61kg",
+      "style": "Brawler",
+      "championships": 2,
+      "was_in_faction": false,
+      "finisher": "Shayna Lock"
+    },
+    {
+      "id": 163,
+      "name": "Peyton Royce",
+      "nationality": "Australian",
+      "height_weight": "1.70m / 55kg",
+      "style": "Brawler",
+      "championships": 0,
+      "was_in_faction": true,
+      "finisher": "Royce Rumble"
+    },
+    {
+      "id": 164,
+      "name": "Toni Storm",
+      "nationality": "Australian",
+      "height_weight": "1.70m / 60kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Stormbreaker"
+    },
+    {
+      "id": 165,
+      "name": "Britt Baker",
+      "nationality": "American",
+      "height_weight": "1.63m / 57kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Lockjaw"
+    },
+    {
+      "id": 166,
+      "name": "Thunder Rosa",
+      "nationality": "American",
+      "height_weight": "1.70m / 65kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Lariat"
+    },
+    {
+      "id": 167,
+      "name": "Jade Cargill",
+      "nationality": "American",
+      "height_weight": "1.85m / 95kg",
+      "style": "Powerhouse",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Cargill Crash"
+    },
+    {
+      "id": 168,
+      "name": "Meiko Satomura",
+      "nationality": "Japanese",
+      "height_weight": "1.68m / 60kg",
+      "style": "Technician",
+      "championships": 3,
+      "was_in_faction": false,
+      "finisher": "Satomura Lock"
+    },
+    {
+      "id": 169,
+      "name": "Awesome Kong",
+      "nationality": "American",
+      "height_weight": "1.83m / 115kg",
+      "style": "Powerhouse",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Kong Slam"
+    },
+    {
+      "id": 170,
+      "name": "Serena Deeb",
+      "nationality": "American",
+      "height_weight": "1.68m / 60kg",
+      "style": "Technician",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Deeb Drop"
+    },
+    {
+      "id": 171,
+      "name": "Riho",
+      "nationality": "Japanese",
+      "height_weight": "1.60m / 52kg",
+      "style": "High-Flyer",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Riho Rocket"
+    },
+    {
+      "id": 172,
+      "name": "Mayu Iwatani",
+      "nationality": "Japanese",
+      "height_weight": "1.65m / 55kg",
+      "style": "High-Flyer",
+      "championships": 2,
+      "was_in_faction": false,
+      "finisher": "Iwatani Splash"
+    },
+    {
+      "id": 173,
+      "name": "Syuri",
+      "nationality": "Japanese",
+      "height_weight": "1.68m / 60kg",
+      "style": "Striker",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Syuri Kick"
+    },
+    {
+      "id": 174,
+      "name": "Minoru Suzuki",
+      "nationality": "Japanese",
+      "height_weight": "1.75m / 100kg",
+      "style": "Striker/Submission",
+      "championships": 5,
+      "was_in_faction": false,
+      "finisher": "Crossface Hold"
+    },
+    {
+      "id": 175,
+      "name": "Cody Rhodes",
+      "nationality": "American",
+      "height_weight": "1.85m / 102kg",
+      "style": "Brawler",
+      "championships": 5,
+      "was_in_faction": true,
+      "finisher": "Cross Rhodes"
+    },
+    {
+      "id": 176,
+      "name": "Dax Harwood",
+      "nationality": "American",
+      "height_weight": "1.80m / 95kg",
+      "style": "Technician",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Harwood Hammer"
+    },
+    {
+      "id": 177,
+      "name": "Tully Blanchard",
+      "nationality": "American",
+      "height_weight": "1.83m / 104kg",
+      "style": "Brawler",
+      "championships": 3,
+      "was_in_faction": true,
+      "finisher": "T-Blast"
+    },
+    {
+      "id": 178,
+      "name": "Arn Anderson",
+      "nationality": "American",
+      "height_weight": "1.80m / 97kg",
+      "style": "Technician",
+      "championships": 4,
+      "was_in_faction": true,
+      "finisher": "Diving Elbow Drop"
+    },
+    {
+      "id": 179,
+      "name": "Lex Luger",
+      "nationality": "American",
+      "height_weight": "1.93m / 118kg",
+      "style": "Powerhouse",
+      "championships": 5,
+      "was_in_faction": true,
+      "finisher": "Torture Rack"
+    },
+    {
+      "id": 180,
+      "name": "Sid Vicious",
+      "nationality": "American",
+      "height_weight": "2.03m / 141kg",
+      "style": "Powerhouse",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Sid Slam"
+    },
+    {
+      "id": 181,
+      "name": "Shane McMahon",
+      "nationality": "American",
+      "height_weight": "1.78m / 77kg",
+      "style": "High-Flyer",
+      "championships": 0,
+      "was_in_faction": true,
+      "finisher": "Street Fight"
+    },
+    {
+      "id": 182,
+      "name": "Vince McMahon",
+      "nationality": "American",
+      "height_weight": "1.88m / 105kg",
+      "style": "Brawler/Authority",
+      "championships": 0,
+      "was_in_faction": true,
+      "finisher": "Chair Shot"
+    },
+    {
+      "id": 183,
+      "name": "Paul Heyman",
+      "nationality": "American",
+      "height_weight": "1.78m / 75kg",
+      "style": "Manager",
+      "championships": 0,
+      "was_in_faction": true,
+      "finisher": "Mic Drop"
+    },
+    {
+      "id": 184,
+      "name": "Drew McIntyre",
+      "nationality": "Scottish",
+      "height_weight": "1.93m / 120kg",
+      "style": "Powerhouse",
+      "championships": 4,
+      "was_in_faction": false,
+      "finisher": "Claymore Kick"
+    },
+    {
+      "id": 185,
+      "name": "Daniel Bryan",
+      "nationality": "American",
+      "height_weight": "1.80m / 90kg",
+      "style": "Technical",
+      "championships": 5,
+      "was_in_faction": false,
+      "finisher": "Yes Lock"
+    },
+    {
+      "id": 186,
+      "name": "MJF",
+      "nationality": "American",
+      "height_weight": "1.80m / 85kg",
+      "style": "Brawler/Technician",
+      "championships": 2,
+      "was_in_faction": false,
+      "finisher": "Signature Mic Move"
+    },
+    {
+      "id": 187,
+      "name": "Eddie Kingston",
+      "nationality": "American",
+      "height_weight": "1.80m / 95kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Backbreaker"
+    },
+    {
+      "id": 188,
+      "name": "Orange Cassidy",
+      "nationality": "American",
+      "height_weight": "1.80m / 83kg",
+      "style": "Lethargic/Surprise",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Orange Punch"
+    },
+    {
+      "id": 189,
+      "name": "Sami Callihan",
+      "nationality": "American",
+      "height_weight": "1.80m / 88kg",
+      "style": "Brawler",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Canadian Destroyer"
+    },
+    {
+      "id": 190,
+      "name": "Nick Gage",
+      "nationality": "American",
+      "height_weight": "1.78m / 80kg",
+      "style": "Hardcore",
+      "championships": 1,
+      "was_in_faction": false,
+      "finisher": "Ladder Shot"
+    },
+    {
+      "id": 191,
+      "name": "Cody Rhodes",
+      "nationality": "American",
+      "height_weight": "1.85m / 102kg",
+      "style": "Brawler",
+      "championships": 5,
+      "was_in_faction": true,
+      "finisher": "Cross Rhodes"
+    },
+    {
+      "id": 192,
+      "name": "Dax Harwood",
+      "nationality": "American",
+      "height_weight": "1.80m / 95kg",
+      "style": "Technician",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Harwood Hammer"
+    },
+    {
+      "id": 193,
+      "name": "Tully Blanchard",
+      "nationality": "American",
+      "height_weight": "1.83m / 104kg",
+      "style": "Brawler",
+      "championships": 3,
+      "was_in_faction": true,
+      "finisher": "T-Blast"
+    },
+    {
+      "id": 194,
+      "name": "Arn Anderson",
+      "nationality": "American",
+      "height_weight": "1.80m / 97kg",
+      "style": "Technician",
+      "championships": 4,
+      "was_in_faction": true,
+      "finisher": "Diving Elbow Drop"
+    },
+    {
+      "id": 195,
+      "name": "Lex Luger",
+      "nationality": "American",
+      "height_weight": "1.93m / 118kg",
+      "style": "Powerhouse",
+      "championships": 5,
+      "was_in_faction": true,
+      "finisher": "Torture Rack"
+    },
+    {
+      "id": 196,
+      "name": "Sid Vicious",
+      "nationality": "American",
+      "height_weight": "2.03m / 141kg",
+      "style": "Powerhouse",
+      "championships": 1,
+      "was_in_faction": true,
+      "finisher": "Sid Slam"
+    },
+    {
+      "id": 197,
+      "name": "Shane McMahon",
+      "nationality": "American",
+      "height_weight": "1.78m / 77kg",
+      "style": "High-Flyer",
+      "championships": 0,
+      "was_in_faction": true,
+      "finisher": "Street Fight"
+    },
+    {
+      "id": 198,
+      "name": "Vince McMahon",
+      "nationality": "American",
+      "height_weight": "1.88m / 105kg",
+      "style": "Brawler/Authority",
+      "championships": 0,
+      "was_in_faction": true,
+      "finisher": "Chair Shot"
+    },
+    {
+      "id": 199,
+      "name": "Paul Heyman",
+      "nationality": "American",
+      "height_weight": "1.78m / 75kg",
+      "style": "Manager",
+      "championships": 0,
+      "was_in_faction": true,
+      "finisher": "Mic Drop"
+    },
+    {
+      "id": 200,
+      "name": "Drew McIntyre",
+      "nationality": "Scottish",
+      "height_weight": "1.93m / 120kg",
+      "style": "Powerhouse",
+      "championships": 4,
+      "was_in_faction": false,
+      "finisher": "Claymore Kick"
+    }
+  ]
+}

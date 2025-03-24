@@ -53,7 +53,7 @@ const categories = [
     value: 'wwe',
     label: 'المصارعة',
     icon: <Sword className="w-6 h-6" />,
-    bgImage: '../public/Images/WWE.webp'
+    bgImage: '../public/Images/WWE.jpg'
   }
 ];
 

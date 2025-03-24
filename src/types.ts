@@ -1,25 +1,6 @@
-export type MainCategory = 'anime' | 'tv' | 'movies' | 'games' | 'football' | 'countries';
+export type Category = 'anime' | 'tv' | 'movies' | 'games' | 'football' | 'countries';
 
-export type SubCategory = 
-  | 'anime-series' 
-  | 'anime-characters' 
-  | 'anime-movies'
-  | 'tv-series' 
-  | 'tv-characters'
-  | 'movie-titles' 
-  | 'movie-actors' 
-  | 'movie-directors'
-  | 'game-titles' 
-  | 'game-characters' 
-  | 'game-companies'
-  | 'football-players' 
-  | 'football-teams' 
-  | 'football-stadiums'
-  | 'countries-general' 
-  | 'countries-capitals' 
-  | 'countries-landmarks';
-
-export type Category = MainCategory | SubCategory;
+export type Difficulty = 'normal' | 'hard';
 
 export interface Detail {
   label: string;
@@ -33,7 +14,7 @@ export interface GameItem {
   name: string;
   details: Detail[];
 }
-
+// Removed duplicate DIFFICULTY_HINTS declaration
 export interface Team {
   id: string;
   name: string;
@@ -45,6 +26,7 @@ export interface GameState {
   teams: Team[];
   currentItem: GameItem | null;
   selectedCategory: Category | null;
+  selectedDifficulty: Difficulty | null;
   round: number;
   maxRounds: number;
   answerRevealed: boolean;
@@ -58,5 +40,20 @@ export interface CategoryOption {
   label: string;
   icon: React.ReactNode;
   bgImage: string;
-  subcategories?: CategoryOption[];
 }
+
+export const DIFFICULTY_POINTS = {
+  normal: 10,
+  hard: 20
+} as const;
+
+export const DIFFICULTY_HINTS = {
+  anime: {
+    normal: 6,
+    hard: 3
+  },
+  default: {
+    normal: 6,
+    hard: 3
+  }
+} as const;

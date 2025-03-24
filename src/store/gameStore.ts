@@ -1,11 +1,12 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { GameState, Team, GameItem, Category } from '../types';
+import { GameState, Team, GameItem, Category, Difficulty, DIFFICULTY_POINTS } from '../types';
 
 interface GameStore extends GameState {
   initializeGame: (teams: string[]) => void;
   setCurrentItem: (item: GameItem) => void;
   setCategory: (category: Category) => void;
+  setDifficulty: (difficulty: Difficulty) => void;
   revealDetail: (detailIndex: number) => void;
   makeGuess: (teamId: string, guess: string) => boolean;
   nextTurn: () => void;
@@ -17,13 +18,11 @@ interface GameStore extends GameState {
   clearCategoryUsedItems: (category: Category) => void;
 }
 
-const POINTS_PER_INFO = 10;
-const MIN_POINTS = 10; // Minimum points awarded for a correct guess
-
 const initialState: GameState = {
   teams: [],
   currentItem: null,
   selectedCategory: null,
+  selectedDifficulty: null,
   round: 1,
   maxRounds: 5,
   answerRevealed: false,
@@ -49,30 +48,29 @@ export const useGameStore = create<GameStore>()(
           answerRevealed: false,
           currentItem: null,
           selectedCategory: null,
+          selectedDifficulty: null,
           usedItems: new Set(),
           categoryUsedItems: {},
         });
       },
       setCurrentItem: (item) => {
-        const { usedItems, categoryUsedItems } = get();
-        // Add the item to both global and category-specific used items sets
-        const newUsedItems = new Set(usedItems);
-        newUsedItems.add(item.id);
-
-        const newCategoryUsedItems = { ...categoryUsedItems };
-        if (!newCategoryUsedItems[item.category]) {
-          newCategoryUsedItems[item.category] = new Set();
-        }
-        newCategoryUsedItems[item.category].add(item.id);
-
-        set({ 
-          currentItem: item, 
-          answerRevealed: false,
-          usedItems: newUsedItems,
-          categoryUsedItems: newCategoryUsedItems
+        set((state) => {
+          const newCategoryUsedItems = { ...state.categoryUsedItems };
+          if (!newCategoryUsedItems[item.category]) {
+            newCategoryUsedItems[item.category] = new Set();
+          }
+          
+          newCategoryUsedItems[item.category].add(item.id);
+          
+          return {
+            currentItem: item,
+            usedItems: new Set([...state.usedItems, item.id]),
+            categoryUsedItems: newCategoryUsedItems
+          };
         });
       },
       setCategory: (category) => set({ selectedCategory: category }),
+      setDifficulty: (difficulty) => set({ selectedDifficulty: difficulty }),
       revealDetail: (detailIndex) => {
         const { currentItem } = get();
         if (!currentItem) return;
@@ -88,8 +86,8 @@ export const useGameStore = create<GameStore>()(
         });
       },
       makeGuess: (teamId, guess) => {
-        const { currentItem, teams } = get();
-        if (!currentItem || !guess) return false;
+        const { currentItem, teams, selectedDifficulty } = get();
+        if (!currentItem || !guess || !selectedDifficulty) return false;
 
         const normalizeString = (str: string) => 
           str.toLowerCase()
@@ -104,8 +102,8 @@ export const useGameStore = create<GameStore>()(
 
         if (isCorrect) {
           const unrevealedCount = currentItem.details.filter(d => !d.revealed).length;
-          // Calculate points based on unrevealed details, with a minimum of MIN_POINTS
-          const points = Math.max(unrevealedCount * POINTS_PER_INFO, MIN_POINTS);
+          const basePoints = DIFFICULTY_POINTS[selectedDifficulty];
+          const points = unrevealedCount * basePoints;
 
           const updatedTeams = teams.map((team) =>
             team.id === teamId
@@ -150,7 +148,8 @@ export const useGameStore = create<GameStore>()(
       backToCategories: () => {
         set({ 
           currentItem: null, 
-          selectedCategory: null, 
+          selectedCategory: null,
+          selectedDifficulty: null,
           answerRevealed: false 
         });
       },

@@ -10,6 +10,7 @@ import {
   Search
 } from 'lucide-react';
 
+
 interface GameBoardProps {
   onBackToCategories: () => void;
   onResetGame: () => void;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { GameSetup } from './components/GameSetup';
 import { GameBoard } from './components/GameBoard';
 import { CategorySelection } from './components/CategorySelection';
@@ -18,7 +18,9 @@ function App() {
   const { 
     initializeGame, 
     setCurrentItem, 
-    setCategory, 
+    setCategory,
+    selectedDifficulty,
+    selectedCategory,
     usedItems, 
     categoryUsedItems,
     clearUsedItems, 
@@ -37,61 +39,44 @@ function App() {
     setCategorySelected(false);
   };
 
+  const fetchItemForCategory = async (category: Category): Promise<GameItem | null> => {
+    switch (category) {
+      case 'anime':
+        if (selectedDifficulty) {
+          return await fetchRandomAnime(category, selectedDifficulty);
+        }
+        throw new Error('Difficulty is not selected');
+      case 'tv':
+        return await fetchRandomTVShow(category);
+      case 'movies':
+        return await fetchRandomMovie(category);
+      case 'games':
+        return await fetchRandomGame();
+      case 'football':
+        return await fetchRandomFootballItem(category);
+      case 'countries':
+        return await fetchRandomCountry(category);
+      default:
+        return null;
+    }
+  };
+
   const handleCategorySelect = async (category: Category) => {
     setLoading(true);
     setCategory(category);
+    clearCategoryUsedItems(category); // Clear used items when selecting new category
 
     try {
       let item: GameItem | null = null;
       let attempts = 0;
       const maxAttempts = 5;
 
-      // Get the used items for this category
-      const categoryItems = categoryUsedItems[category] || new Set();
-
       while (!item && attempts < maxAttempts) {
-        let fetchedItem: GameItem | null = null;
+        const fetchedItem = await fetchItemForCategory(category);
         
-        // Handle subcategories
-        if (category.startsWith('anime-')) {
-          fetchedItem = await fetchRandomAnime(category);
-        } else if (category.startsWith('tv-')) {
-          fetchedItem = await fetchRandomTVShow(category);
-        } else if (category.startsWith('movie-')) {
-          fetchedItem = await fetchRandomMovie(category);
-        } else if (category.startsWith('game-')) {
-          fetchedItem = await fetchRandomGame(category);
-        } else if (category.startsWith('football-')) {
-          fetchedItem = await fetchRandomFootballItem(category);
-        } else if (category.startsWith('countries-')) {
-          fetchedItem = await fetchRandomCountry(category);
-        } else {
-          // Handle main categories
-          switch (category) {
-            case 'anime':
-              fetchedItem = await fetchRandomAnime('anime-series');
-              break;
-            case 'tv':
-              fetchedItem = await fetchRandomTVShow('tv-series');
-              break;
-            case 'movies':
-              fetchedItem = await fetchRandomMovie('movie-titles');
-              break;
-            case 'games':
-              fetchedItem = await fetchRandomGame('game-titles');
-              break;
-            case 'football':
-              fetchedItem = await fetchRandomFootballItem('football-players');
-              break;
-            case 'countries':
-              fetchedItem = await fetchRandomCountry('countries-general');
-              break;
-          }
-        }
-
-        // Check if this item has been used in this category
-        if (fetchedItem && !categoryItems.has(fetchedItem.id)) {
+        if (fetchedItem && (!categoryUsedItems[category] || !categoryUsedItems[category].has(fetchedItem.id))) {
           item = fetchedItem;
+          break;
         }
         attempts++;
       }
@@ -100,15 +85,7 @@ function App() {
         setCurrentItem(item);
         setCategorySelected(true);
       } else {
-        // If we couldn't get a new item after max attempts, clear the category history and try again
-        clearCategoryUsedItems(category);
-        const newItem = await fetchRandomAnime(category);
-        if (newItem) {
-          setCurrentItem(newItem);
-          setCategorySelected(true);
-        } else {
-          throw new Error('Failed to fetch new item');
-        }
+        throw new Error('No suitable items found after multiple attempts');
       }
     } catch (error) {
       console.error('Error setting up game:', error);
@@ -117,6 +94,13 @@ function App() {
       setLoading(false);
     }
   };
+
+  // Refetch when difficulty changes
+  useEffect(() => {
+    if (categorySelected && selectedDifficulty && selectedCategory) {
+      handleCategorySelect(selectedCategory);
+    }
+  }, [selectedDifficulty, selectedCategory, categorySelected]);
 
   const handleBackToCategories = () => {
     setCategorySelected(false);

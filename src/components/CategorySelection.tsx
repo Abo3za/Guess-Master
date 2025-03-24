@@ -72,7 +72,7 @@ const difficulties: { value: Difficulty; label: string; icon: JSX.Element }[] = 
 ];
 
 export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, onResetGame }) => {
-  const { teams, adjustScore, usedItems, initializeGame, setDifficulty, endGame } = useGameStore();
+  const { teams, adjustScore, usedItems, initializeGame, setDifficulty, endGame, round } = useGameStore();
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
   
   const activeTeam = teams.find(team => team.isActive);
@@ -86,12 +86,33 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
   };
 
   const handleDifficultySelect = (difficulty: Difficulty) => {
+    if (!selectedCategory) return;
     setDifficulty(difficulty);
-    onSelect(selectedCategory!);
+    // Add a small delay to ensure the difficulty is set before proceeding
+    setTimeout(() => {
+      onSelect(selectedCategory);
+    }, 0);
+  };
+
+  const handleEndGame = () => {
+    if (window.confirm('هل أنت متأكد من إنهاء اللعبة الآن؟')) {
+      const winner = teams.reduce((prev, current) => 
+        (prev.score > current.score) ? prev : current
+      );
+      alert(`🎉 مبروك! الفريق ${winner.name} فاز بمجموع ${winner.score} نقطة`);
+      endGame();
+      onResetGame();
+    }
   };
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4 sm:px-6" dir="rtl">
+      <div className="text-center mb-6">
+        <p className="text-xl font-bold text-gray-300">
+          الجولة {round}
+        </p>
+      </div>
+      
       <div className="mb-6 sm:mb-8">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4">
           <div className="flex gap-2 w-full sm:w-auto">
@@ -103,11 +124,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
               فرق جديدة
             </button>
             <button
-              onClick={() => {
-                if (window.confirm('هل أنت متأكد من إنهاء اللعبة الآن؟')) {
-                  endGame();
-                }
-              }}
+              onClick={handleEndGame}
               className="danger-button flex-1 sm:flex-initial"
             >
               <X className="w-5 h-5" />
@@ -170,7 +187,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
           {categories.map((category) => (
             <button
               key={category.value}
-              onClick={() => handleCategorySelect(category.value)}
+              onClick={() => handleCategorySelect(category)}
               className="category-card"
               style={{
                 backgroundImage: `url(${category.bgImage})`,

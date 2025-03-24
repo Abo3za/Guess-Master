@@ -99,7 +99,1906 @@
       "goals": 50,
       "trophies": 7,
       "highlight": "PFA Player of the Year 2019"
+    },
+    {
+      "id": 11,
+      "name": "Sergio Ramos",
+      "nationality": "Spain",
+      "position": "Defender",
+      "club": "Paris Saint-Germain (ex-Real Madrid)",
+      "goals": 100,
+      "trophies": 26,
+      "highlight": "Renowned for leadership and aerial prowess"
+    },
+    {
+      "id": 12,
+      "name": "Karim Benzema",
+      "nationality": "France",
+      "position": "Forward",
+      "club": "Real Madrid",
+      "goals": 350,
+      "trophies": 20,
+      "highlight": "Champions League top scorer on multiple occasions"
+    },
+    {
+      "id": 13,
+      "name": "Paulo Dybala",
+      "nationality": "Argentina",
+      "position": "Forward",
+      "club": "Juventus (now AS Roma)",
+      "goals": 150,
+      "trophies": 10,
+      "highlight": "Creative playmaker with excellent dribbling"
+    },
+    {
+      "id": 14,
+      "name": "Eden Hazard",
+      "nationality": "Belgium",
+      "position": "Winger",
+      "club": "Real Madrid",
+      "goals": 120,
+      "trophies": 12,
+      "highlight": "Exceptional dribbler and creative force"
+    },
+    {
+      "id": 15,
+      "name": "Romelu Lukaku",
+      "nationality": "Belgium",
+      "position": "Striker",
+      "club": "Inter Milan",
+      "goals": 300,
+      "trophies": 15,
+      "highlight": "Powerful striker with prolific scoring record"
+    },
+    {
+      "id": 16,
+      "name": "Sadio Mané",
+      "nationality": "Senegal",
+      "position": "Winger",
+      "club": "Bayern Munich (ex-Liverpool)",
+      "goals": 180,
+      "trophies": 10,
+      "highlight": "Speed and scoring ability on the wing"
+    },
+    {
+      "id": 17,
+      "name": "N'Golo Kanté",
+      "nationality": "France",
+      "position": "Midfielder",
+      "club": "Chelsea",
+      "goals": 40,
+      "trophies": 15,
+      "highlight": "Exceptional defensive midfielder with unmatched work rate"
+    },
+    {
+      "id": 18,
+      "name": "Frenkie de Jong",
+      "nationality": "Netherlands",
+      "position": "Midfielder",
+      "club": "Barcelona",
+      "goals": 30,
+      "trophies": 5,
+      "highlight": "Key playmaker with excellent ball-winning skills"
+    },
+    {
+      "id": 19,
+      "name": "Bernardo Silva",
+      "nationality": "Portugal",
+      "position": "Midfielder/Winger",
+      "club": "Manchester City",
+      "goals": 50,
+      "trophies": 8,
+      "highlight": "Versatile and skillful midfielder"
+    },
+    {
+      "id": 20,
+      "name": "Riyad Mahrez",
+      "nationality": "Algeria",
+      "position": "Winger",
+      "club": "Manchester City",
+      "goals": 80,
+      "trophies": 7,
+      "highlight": "Creative winger with silky dribbling ability"
+    },
+    {
+      "id": 21,
+      "name": "Manuel Neuer",
+      "nationality": "Germany",
+      "position": "Goalkeeper",
+      "club": "Bayern Munich",
+      "goals": 10,
+      "trophies": 25,
+      "highlight": "World-class shot-stopper and sweeper-keeper"
+    },
+    {
+      "id": 22,
+      "name": "Jan Oblak",
+      "nationality": "Slovenia",
+      "position": "Goalkeeper",
+      "club": "Atletico Madrid",
+      "goals": 5,
+      "trophies": 15,
+      "highlight": "Consistently one of the best goalkeepers in Europe"
+    },
+    {
+      "id": 23,
+      "name": "Marc-André ter Stegen",
+      "nationality": "Germany",
+      "position": "Goalkeeper",
+      "club": "Barcelona",
+      "goals": 5,
+      "trophies": 18,
+      "highlight": "Outstanding reflexes and distribution"
+    },
+    {
+      "id": 24,
+      "name": "Ederson",
+      "nationality": "Brazil",
+      "position": "Goalkeeper",
+      "club": "Manchester City",
+      "goals": 5,
+      "trophies": 12,
+      "highlight": "Renowned for his precise long passes"
+    },
+    {
+      "id": 25,
+      "name": "Antoine Griezmann",
+      "nationality": "France",
+      "position": "Forward/Attacking Midfielder",
+      "club": "Atletico Madrid",
+      "goals": 200,
+      "trophies": 15,
+      "highlight": "Versatile forward with creative playmaking skills"
+    },
+    {
+      "id": 26,
+      "name": "Luis Suárez",
+      "nationality": "Uruguay",
+      "position": "Striker",
+      "club": "Atletico Madrid (ex-Barcelona)",
+      "goals": 500,
+      "trophies": 20,
+      "highlight": "Prolific goal scorer and fierce competitor"
+    },
+    {
+      "id": 27,
+      "name": "Gareth Bale",
+      "nationality": "Wales",
+      "position": "Winger",
+      "club": "Real Madrid (ex-Tottenham)",
+      "goals": 180,
+      "trophies": 15,
+      "highlight": "Notable for his explosive pace and powerful shot"
+    },
+    {
+      "id": 28,
+      "name": "Paul Pogba",
+      "nationality": "France",
+      "position": "Midfielder",
+      "club": "Juventus (ex-Manchester United)",
+      "goals": 80,
+      "trophies": 10,
+      "highlight": "Dynamic midfielder with flair and creativity"
+    },
+    {
+      "id": 29,
+      "name": "Sergio Busquets",
+      "nationality": "Spain",
+      "position": "Midfielder",
+      "club": "Barcelona",
+      "goals": 30,
+      "trophies": 20,
+      "highlight": "Defensive maestro anchoring the midfield"
+    },
+    {
+      "id": 30,
+      "name": "Thiago Alcantara",
+      "nationality": "Spain",
+      "position": "Midfielder",
+      "club": "Liverpool",
+      "goals": 40,
+      "trophies": 15,
+      "highlight": "Exceptional passing and technique"
+    },
+    {
+      "id": 31,
+      "name": "Casemiro",
+      "nationality": "Brazil",
+      "position": "Defensive Midfielder",
+      "club": "Manchester United (ex-Real Madrid)",
+      "goals": 60,
+      "trophies": 18,
+      "highlight": "Stalwart in midfield with excellent defensive skills"
+    },
+    {
+      "id": 32,
+      "name": "Joshua Kimmich",
+      "nationality": "Germany",
+      "position": "Midfielder/Defender",
+      "club": "Bayern Munich",
+      "goals": 50,
+      "trophies": 20,
+      "highlight": "Versatile and intelligent, key to his team’s structure"
+    },
+    {
+      "id": 33,
+      "name": "Marco Verratti",
+      "nationality": "Italy",
+      "position": "Midfielder",
+      "club": "Paris Saint-Germain",
+      "goals": 30,
+      "trophies": 12,
+      "highlight": "Excellent ball control and passing ability"
+    },
+    {
+      "id": 34,
+      "name": "Jorginho",
+      "nationality": "Italy",
+      "position": "Midfielder",
+      "club": "Chelsea",
+      "goals": 20,
+      "trophies": 12,
+      "highlight": "Key playmaker with superb passing range"
+    },
+    {
+      "id": 35,
+      "name": "Toni Kroos",
+      "nationality": "Germany",
+      "position": "Midfielder",
+      "club": "Real Madrid",
+      "goals": 60,
+      "trophies": 20,
+      "highlight": "Master of midfield passing and control"
+    },
+    {
+      "id": 36,
+      "name": "Angel Di Maria",
+      "nationality": "Argentina",
+      "position": "Winger/Midfielder",
+      "club": "Juventus (ex-PSG)",
+      "goals": 150,
+      "trophies": 18,
+      "highlight": "Creative winger with excellent vision"
+    },
+    {
+      "id": 37,
+      "name": "Mauro Icardi",
+      "nationality": "Argentina",
+      "position": "Striker",
+      "club": "Galatasaray",
+      "goals": 250,
+      "trophies": 10,
+      "highlight": "Prolific goal scorer in Serie A"
+    },
+    {
+      "id": 38,
+      "name": "Lautaro Martinez",
+      "nationality": "Argentina",
+      "position": "Striker",
+      "club": "Inter Milan",
+      "goals": 150,
+      "trophies": 8,
+      "highlight": "Rising star with superb finishing"
+    },
+    {
+      "id": 39,
+      "name": "Dries Mertens",
+      "nationality": "Belgium",
+      "position": "Forward",
+      "club": "Napoli",
+      "goals": 200,
+      "trophies": 12,
+      "highlight": "Record goal scorer for Napoli"
+    },
+    {
+      "id": 40,
+      "name": "Lorenzo Insigne",
+      "nationality": "Italy",
+      "position": "Forward",
+      "club": "Napoli",
+      "goals": 150,
+      "trophies": 10,
+      "highlight": "Skillful winger with creative flair"
+    },
+    {
+      "id": 41,
+      "name": "Ciro Immobile",
+      "nationality": "Italy",
+      "position": "Striker",
+      "club": "Lazio",
+      "goals": 300,
+      "trophies": 12,
+      "highlight": "Serie A top scorer on multiple occasions"
+    },
+    {
+      "id": 42,
+      "name": "Heung-Min Son",
+      "nationality": "South Korea",
+      "position": "Forward",
+      "club": "Tottenham Hotspur",
+      "goals": 150,
+      "trophies": 10,
+      "highlight": "Explosive pace and clinical finishing"
+    },
+    {
+      "id": 43,
+      "name": "Harry Kane",
+      "nationality": "England",
+      "position": "Striker",
+      "club": "Tottenham Hotspur",
+      "goals": 250,
+      "trophies": 12,
+      "highlight": "Premier League top scorer repeatedly"
+    },
+    {
+      "id": 44,
+      "name": "Raheem Sterling",
+      "nationality": "England",
+      "position": "Forward",
+      "club": "Chelsea",
+      "goals": 200,
+      "trophies": 10,
+      "highlight": "Fast and skillful winger with great impact"
+    },
+    {
+      "id": 45,
+      "name": "Jadon Sancho",
+      "nationality": "England",
+      "position": "Winger",
+      "club": "Manchester United",
+      "goals": 80,
+      "trophies": 5,
+      "highlight": "Promising young talent with flair"
+    },
+    {
+      "id": 46,
+      "name": "Phil Foden",
+      "nationality": "England",
+      "position": "Midfielder",
+      "club": "Manchester City",
+      "goals": 50,
+      "trophies": 8,
+      "highlight": "Bright prospect in midfield with creativity"
+    },
+    {
+      "id": 47,
+      "name": "Jack Grealish",
+      "nationality": "England",
+      "position": "Midfielder/Forward",
+      "club": "Manchester City",
+      "goals": 70,
+      "trophies": 6,
+      "highlight": "Creative attacking midfielder with excellent dribbling"
+    },
+    {
+      "id": 48,
+      "name": "Mason Mount",
+      "nationality": "England",
+      "position": "Midfielder",
+      "club": "Chelsea",
+      "goals": 60,
+      "trophies": 8,
+      "highlight": "Energetic midfielder known for work rate"
+    },
+    {
+      "id": 49,
+      "name": "Declan Rice",
+      "nationality": "England",
+      "position": "Defensive Midfielder",
+      "club": "Arsenal",
+      "goals": 30,
+      "trophies": 5,
+      "highlight": "Solid and reliable defensive presence"
+    },
+    {
+      "id": 50,
+      "name": "Kalvin Phillips",
+      "nationality": "England",
+      "position": "Midfielder",
+      "club": "Manchester City",
+      "goals": 20,
+      "trophies": 6,
+      "highlight": "Key figure in defensive midfield"
+    },
+    {
+      "id": 51,
+      "name": "Trent Alexander-Arnold",
+      "nationality": "England",
+      "position": "Right-back",
+      "club": "Liverpool",
+      "goals": 30,
+      "trophies": 8,
+      "highlight": "Exceptional crosser and playmaker from defense"
+    },
+    {
+      "id": 52,
+      "name": "Andrew Robertson",
+      "nationality": "Scotland",
+      "position": "Left-back",
+      "club": "Liverpool",
+      "goals": 20,
+      "trophies": 8,
+      "highlight": "Dynamic full-back known for his assists"
+    },
+    {
+      "id": 53,
+      "name": "Kalidou Koulibaly",
+      "nationality": "Senegal",
+      "position": "Centre-back",
+      "club": "Chelsea",
+      "goals": 30,
+      "trophies": 10,
+      "highlight": "Renowned for strength and defensive mastery"
+    },
+    {
+      "id": 54,
+      "name": "Aymeric Laporte",
+      "nationality": "France",
+      "position": "Centre-back",
+      "club": "Manchester City",
+      "goals": 15,
+      "trophies": 8,
+      "highlight": "Reliable defender with excellent positioning"
+    },
+    {
+      "id": 55,
+      "name": "Raphaël Varane",
+      "nationality": "France",
+      "position": "Centre-back",
+      "club": "Manchester United",
+      "goals": 25,
+      "trophies": 15,
+      "highlight": "Elegant and speedy defender with great vision"
+    },
+    {
+      "id": 56,
+      "name": "Dani Carvajal",
+      "nationality": "Spain",
+      "position": "Right-back",
+      "club": "Real Madrid",
+      "goals": 20,
+      "trophies": 18,
+      "highlight": "Hard-working defender with attacking flair"
+    },
+    {
+      "id": 57,
+      "name": "Thiago Silva",
+      "nationality": "Brazil",
+      "position": "Centre-back",
+      "club": "Chelsea",
+      "goals": 40,
+      "trophies": 20,
+      "highlight": "Veteran leader known for his reading of the game"
+    },
+    {
+      "id": 58,
+      "name": "Giorgio Chiellini",
+      "nationality": "Italy",
+      "position": "Centre-back",
+      "club": "Juventus",
+      "goals": 30,
+      "trophies": 18,
+      "highlight": "Iconic Italian defender with grit and determination"
+    },
+    {
+      "id": 59,
+      "name": "Leonardo Bonucci",
+      "nationality": "Italy",
+      "position": "Centre-back",
+      "club": "Juventus",
+      "goals": 25,
+      "trophies": 18,
+      "highlight": "Experienced defender and leader at the back"
+    },
+    {
+      "id": 60,
+      "name": "Marquinhos",
+      "nationality": "Brazil",
+      "position": "Centre-back",
+      "club": "Paris Saint-Germain",
+      "goals": 20,
+      "trophies": 15,
+      "highlight": "Key figure in PSG's defensive line"
+    },
+    {
+      "id": 61,
+      "name": "David Alaba",
+      "nationality": "Austria",
+      "position": "Defender/Midfielder",
+      "club": "Real Madrid",
+      "goals": 50,
+      "trophies": 20,
+      "highlight": "Versatile player known for technical skills"
+    },
+    {
+      "id": 62,
+      "name": "Marcelo",
+      "nationality": "Brazil",
+      "position": "Left-back",
+      "club": "Real Madrid",
+      "goals": 40,
+      "trophies": 20,
+      "highlight": "Attacking full-back with creative ability"
+    },
+    {
+      "id": 63,
+      "name": "Ferland Mendy",
+      "nationality": "France",
+      "position": "Left-back",
+      "club": "Real Madrid",
+      "goals": 15,
+      "trophies": 10,
+      "highlight": "Strong, fast, and defensively solid"
+    },
+    {
+      "id": 64,
+      "name": "Kieran Trippier",
+      "nationality": "England",
+      "position": "Right-back",
+      "club": "Newcastle United",
+      "goals": 15,
+      "trophies": 10,
+      "highlight": "Expert free-kick taker and leader at full-back"
+    },
+    {
+      "id": 65,
+      "name": "Achraf Hakimi",
+      "nationality": "Morocco",
+      "position": "Right-back",
+      "club": "Paris Saint-Germain",
+      "goals": 30,
+      "trophies": 10,
+      "highlight": "Explosive pace and versatility on the flank"
+    },
+    {
+      "id": 66,
+      "name": "Marco Reus",
+      "nationality": "Germany",
+      "position": "Forward/Midfielder",
+      "club": "Borussia Dortmund",
+      "goals": 150,
+      "trophies": 10,
+      "highlight": "Dynamic attacker with creative skills"
+    },
+    {
+      "id": 67,
+      "name": "Thomas Müller",
+      "nationality": "Germany",
+      "position": "Forward/Midfielder",
+      "club": "Bayern Munich",
+      "goals": 200,
+      "trophies": 20,
+      "highlight": "Exceptional positioning and team play"
+    },
+    {
+      "id": 68,
+      "name": "Christian Eriksen",
+      "nationality": "Denmark",
+      "position": "Midfielder",
+      "club": "Manchester United",
+      "goals": 80,
+      "trophies": 8,
+      "highlight": "Visionary playmaker with remarkable passing"
+    },
+    {
+      "id": 69,
+      "name": "Bruno Fernandes",
+      "nationality": "Portugal",
+      "position": "Midfielder",
+      "club": "Manchester United",
+      "goals": 100,
+      "trophies": 5,
+      "highlight": "Key creative force in midfield"
+    },
+    {
+      "id": 70,
+      "name": "Miralem Pjanic",
+      "nationality": "Bosnia and Herzegovina",
+      "position": "Midfielder",
+      "club": "Barcelona",
+      "goals": 70,
+      "trophies": 10,
+      "highlight": "Excellent passer and set-piece specialist"
+    },
+    {
+      "id": 71,
+      "name": "Leon Goretzka",
+      "nationality": "Germany",
+      "position": "Midfielder",
+      "club": "Bayern Munich",
+      "goals": 80,
+      "trophies": 10,
+      "highlight": "Powerful box-to-box midfielder"
+    },
+    {
+      "id": 72,
+      "name": "Timo Werner",
+      "nationality": "Germany",
+      "position": "Forward",
+      "club": "RB Leipzig",
+      "goals": 150,
+      "trophies": 8,
+      "highlight": "Pace and clinical finishing in attack"
+    },
+    {
+      "id": 73,
+      "name": "Edinson Cavani",
+      "nationality": "Uruguay",
+      "position": "Striker",
+      "club": "Napoli (ex-PSG)",
+      "goals": 300,
+      "trophies": 18,
+      "highlight": "Clinical finisher with vast experience"
+    },
+    {
+      "id": 74,
+      "name": "Gonzalo Higuaín",
+      "nationality": "Argentina",
+      "position": "Striker",
+      "club": "Inter Miami (ex-Real Madrid)",
+      "goals": 250,
+      "trophies": 15,
+      "highlight": "Known for powerful and precise finishing"
+    },
+    {
+      "id": 75,
+      "name": "Zlatan Ibrahimović",
+      "nationality": "Sweden",
+      "position": "Striker",
+      "club": "AC Milan",
+      "goals": 500,
+      "trophies": 20,
+      "highlight": "Iconic striker with remarkable technique and personality"
+    },
+    {
+      "id": 76,
+      "name": "Wayne Rooney",
+      "nationality": "England",
+      "position": "Forward",
+      "club": "Derby County (ex-Manchester United)",
+      "goals": 350,
+      "trophies": 20,
+      "highlight": "England's all-time top scorer and leader"
+    },
+    {
+      "id": 77,
+      "name": "David Villa",
+      "nationality": "Spain",
+      "position": "Forward",
+      "club": "Vissel Kobe (ex-Barcelona)",
+      "goals": 300,
+      "trophies": 20,
+      "highlight": "Prolific striker with a decorated career"
+    },
+    {
+      "id": 78,
+      "name": "Thierry Henry",
+      "nationality": "France",
+      "position": "Forward",
+      "club": "Arsenal",
+      "goals": 350,
+      "trophies": 25,
+      "highlight": "Legendary forward and creative genius"
+    },
+    {
+      "id": 79,
+      "name": "Ronaldinho",
+      "nationality": "Brazil",
+      "position": "Forward",
+      "club": "AC Milan (ex-Barcelona)",
+      "goals": 200,
+      "trophies": 20,
+      "highlight": "Mesmerizing dribbler and playmaker"
+    },
+    {
+      "id": 80,
+      "name": "Zinedine Zidane",
+      "nationality": "France",
+      "position": "Midfielder/Forward",
+      "club": "Real Madrid (ex-Juventus)",
+      "goals": 125,
+      "trophies": 30,
+      "highlight": "World Cup winner and elegant playmaker"
+    },
+    {
+      "id": 81,
+      "name": "Andrea Pirlo",
+      "nationality": "Italy",
+      "position": "Midfielder",
+      "club": "Juventus (ex-AC Milan)",
+      "goals": 100,
+      "trophies": 25,
+      "highlight": "Master of free-kicks and long passes"
+    },
+    {
+      "id": 82,
+      "name": "Xavi Hernandez",
+      "nationality": "Spain",
+      "position": "Midfielder",
+      "club": "Barcelona",
+      "goals": 85,
+      "trophies": 30,
+      "highlight": "Engine of Barcelona’s tiki-taka era"
+    },
+    {
+      "id": 83,
+      "name": "Andrés Iniesta",
+      "nationality": "Spain",
+      "position": "Midfielder",
+      "club": "Vissel Kobe (ex-Barcelona)",
+      "goals": 100,
+      "trophies": 30,
+      "highlight": "Scored the winning goal in the 2010 World Cup final"
+    },
+    {
+      "id": 84,
+      "name": "David Silva",
+      "nationality": "Spain",
+      "position": "Midfielder",
+      "club": "Real Sociedad (ex-Manchester City)",
+      "goals": 80,
+      "trophies": 20,
+      "highlight": "Creative playmaker with outstanding vision"
+    },
+    {
+      "id": 85,
+      "name": "Edin Džeko",
+      "nationality": "Bosnia",
+      "position": "Striker",
+      "club": "Inter",
+      "goals": 250,
+      "trophies": 15,
+      "highlight": "Consistent goal scorer in European competitions"
+    },
+    {
+      "id": 86,
+      "name": "Sergio Agüero",
+      "nationality": "Argentina",
+      "position": "Striker",
+      "club": "Barcelona (ex-Manchester City)",
+      "goals": 260,
+      "trophies": 20,
+      "highlight": "Premier League record goal scorer for Manchester City"
+    },
+    {
+      "id": 87,
+      "name": "Mario Götze",
+      "nationality": "Germany",
+      "position": "Midfielder/Forward",
+      "club": "PSV Eindhoven (ex-Borussia Dortmund)",
+      "goals": 150,
+      "trophies": 15,
+      "highlight": "Scored the winning goal in the 2014 World Cup final"
+    },
+    {
+      "id": 88,
+      "name": "Mesut Özil",
+      "nationality": "Germany",
+      "position": "Midfielder",
+      "club": "Fenerbahçe (ex-Arsenal)",
+      "goals": 100,
+      "trophies": 15,
+      "highlight": "Renowned for his exceptional assists"
+    },
+    {
+      "id": 89,
+      "name": "Ilkay Gündogan",
+      "nationality": "Germany",
+      "position": "Midfielder",
+      "club": "Manchester City",
+      "goals": 80,
+      "trophies": 12,
+      "highlight": "Versatile midfielder with a knack for scoring"
+    },
+    {
+      "id": 90,
+      "name": "Christian Pulisic",
+      "nationality": "USA",
+      "position": "Forward",
+      "club": "Chelsea",
+      "goals": 80,
+      "trophies": 8,
+      "highlight": "Key figure for the US Men’s National Team"
+    },
+    {
+      "id": 91,
+      "name": "Weston McKennie",
+      "nationality": "USA",
+      "position": "Midfielder",
+      "club": "Juventus",
+      "goals": 50,
+      "trophies": 5,
+      "highlight": "Dynamic box-to-box midfielder"
+    },
+    {
+      "id": 92,
+      "name": "Giovanni Reyna",
+      "nationality": "USA",
+      "position": "Midfielder",
+      "club": "Borussia Dortmund",
+      "goals": 40,
+      "trophies": 3,
+      "highlight": "Promising young talent with creativity"
+    },
+    {
+      "id": 93,
+      "name": "Alphonso Davies",
+      "nationality": "Canada",
+      "position": "Left-back",
+      "club": "Bayern Munich",
+      "goals": 20,
+      "trophies": 8,
+      "highlight": "Remarkable pace and attacking prowess from defense"
+    },
+    {
+      "id": 94,
+      "name": "Jonathan David",
+      "nationality": "Canada",
+      "position": "Forward",
+      "club": "Lille",
+      "goals": 90,
+      "trophies": 4,
+      "highlight": "Emerging talent making waves in Europe"
+    },
+    {
+      "id": 95,
+      "name": "Cyle Larin",
+      "nationality": "Canada",
+      "position": "Striker",
+      "club": "West Bromwich Albion",
+      "goals": 80,
+      "trophies": 3,
+      "highlight": "Prolific striker in both MLS and Europe"
+    },
+    {
+      "id": 96,
+      "name": "Lucas Hernandez",
+      "nationality": "France",
+      "position": "Defender",
+      "club": "Bayern Munich (ex-Atletico Madrid)",
+      "goals": 30,
+      "trophies": 10,
+      "highlight": "Versatile and strong defensive presence"
+    },
+    {
+      "id": 97,
+      "name": "Presnel Kimpembe",
+      "nationality": "France",
+      "position": "Defender",
+      "club": "Paris Saint-Germain",
+      "goals": 25,
+      "trophies": 10,
+      "highlight": "Solid central defender with great tackling ability"
+    },
+    {
+      "id": 98,
+      "name": "Kyle Walker",
+      "nationality": "England",
+      "position": "Right-back",
+      "club": "Manchester City",
+      "goals": 20,
+      "trophies": 8,
+      "highlight": "Fast and reliable defender with attacking support"
+    },
+    {
+      "id": 99,
+      "name": "João Cancelo",
+      "nationality": "Portugal",
+      "position": "Full-back",
+      "club": "Manchester City",
+      "goals": 30,
+      "trophies": 10,
+      "highlight": "Versatile full-back with excellent attacking skills"
+    },
+    {
+      "id": 100,
+      "name": "David Luiz",
+      "nationality": "Brazil",
+      "position": "Defender",
+      "club": "Flamengo (ex-Chelsea)",
+      "goals": 40,
+      "trophies": 15,
+      "highlight": "Known for technical skills and leadership"
+    },
+    {
+      "id": 101,
+      "name": "Gerard Piqué",
+      "nationality": "Spain",
+      "position": "Defender",
+      "club": "FC Barcelona (retired)",
+      "goals": 50,
+      "trophies": 20,
+      "highlight": "Key figure in Barcelona's dominant era"
+    },
+    {
+      "id": 102,
+      "name": "Iker Casillas",
+      "nationality": "Spain",
+      "position": "Goalkeeper",
+      "club": "Porto (ex-Real Madrid)",
+      "goals": 0,
+      "trophies": 30,
+      "highlight": "One of the greatest goalkeepers of all time"
+    },
+    {
+      "id": 103,
+      "name": "Oliver Kahn",
+      "nationality": "Germany",
+      "position": "Goalkeeper",
+      "club": "Bayern Munich",
+      "goals": 0,
+      "trophies": 25,
+      "highlight": "Iconic shot-stopper and fierce leader"
+    },
+    {
+      "id": 104,
+      "name": "Edwin van der Sar",
+      "nationality": "Netherlands",
+      "position": "Goalkeeper",
+      "club": "Ajax / Manchester United",
+      "goals": 0,
+      "trophies": 30,
+      "highlight": "Legendary keeper with a remarkable career"
+    },
+    {
+      "id": 105,
+      "name": "Peter Schmeichel",
+      "nationality": "Denmark",
+      "position": "Goalkeeper",
+      "club": "Manchester United",
+      "goals": 0,
+      "trophies": 20,
+      "highlight": "One of the best goalkeepers in Premier League history"
+    },
+    {
+      "id": 106,
+      "name": "Gianluigi Buffon",
+      "nationality": "Italy",
+      "position": "Goalkeeper",
+      "club": "Juventus (ex-Parma)",
+      "goals": 0,
+      "trophies": 25,
+      "highlight": "World Cup winner and enduring legend"
+    },
+    {
+      "id": 107,
+      "name": "Sergio Busquets",
+      "nationality": "Spain",
+      "position": "Midfielder",
+      "club": "Barcelona",
+      "goals": 30,
+      "trophies": 20,
+      "highlight": "Defensive midfield anchor with great tactical sense"
+    },
+    {
+      "id": 108,
+      "name": "Marcelo Vieira",
+      "nationality": "Brazil",
+      "position": "Left-back",
+      "club": "Real Madrid",
+      "goals": 40,
+      "trophies": 20,
+      "highlight": "Attacking full-back known for his flair"
+    },
+    {
+      "id": 109,
+      "name": "Leonardo Bonucci",
+      "nationality": "Italy",
+      "position": "Centre-back",
+      "club": "Juventus",
+      "goals": 25,
+      "trophies": 18,
+      "highlight": "Experienced defender and leader"
+    },
+    {
+      "id": 110,
+      "name": "Manuel Neuer",
+      "nationality": "Germany",
+      "position": "Goalkeeper",
+      "club": "Bayern Munich",
+      "goals": 10,
+      "trophies": 25,
+      "highlight": "Revolutionized the role of goalkeeper"
+    },
+    {
+      "id": 111,
+      "name": "Sadio Mané",
+      "nationality": "Senegal",
+      "position": "Forward",
+      "club": "Bayern Munich (ex-Liverpool)",
+      "goals": 180,
+      "trophies": 10,
+      "highlight": "Combines speed with clinical finishing"
+    },
+    {
+      "id": 112,
+      "name": "Kalidou Koulibaly",
+      "nationality": "Senegal",
+      "position": "Centre-back",
+      "club": "Chelsea",
+      "goals": 30,
+      "trophies": 10,
+      "highlight": "A rock in defense with superb physicality"
+    },
+    {
+      "id": 113,
+      "name": "Leonardo Bonucci",
+      "nationality": "Italy",
+      "position": "Centre-back",
+      "club": "Juventus",
+      "goals": 25,
+      "trophies": 18,
+      "highlight": "Known for his leadership and game reading"
+    },
+    {
+      "id": 114,
+      "name": "Raphaël Varane",
+      "nationality": "France",
+      "position": "Centre-back",
+      "club": "Manchester United",
+      "goals": 25,
+      "trophies": 15,
+      "highlight": "Elegant defender with tremendous pace"
+    },
+    {
+      "id": 115,
+      "name": "Trent Alexander-Arnold",
+      "nationality": "England",
+      "position": "Right-back",
+      "club": "Liverpool",
+      "goals": 30,
+      "trophies": 8,
+      "highlight": "Exceptional crosser and modern full-back icon"
+    },
+    {
+      "id": 116,
+      "name": "Andrew Robertson",
+      "nationality": "Scotland",
+      "position": "Left-back",
+      "club": "Liverpool",
+      "goals": 20,
+      "trophies": 8,
+      "highlight": "Dynamic and tireless in defense and attack"
+    },
+    {
+      "id": 117,
+      "name": "Kyle Walker",
+      "nationality": "England",
+      "position": "Right-back",
+      "club": "Manchester City",
+      "goals": 20,
+      "trophies": 8,
+      "highlight": "Speed and reliability on the right flank"
+    },
+    {
+      "id": 118,
+      "name": "João Cancelo",
+      "nationality": "Portugal",
+      "position": "Full-back",
+      "club": "Manchester City",
+      "goals": 30,
+      "trophies": 10,
+      "highlight": "Versatile defender with an attacking mindset"
+    },
+    {
+      "id": 119,
+      "name": "David Luiz",
+      "nationality": "Brazil",
+      "position": "Defender",
+      "club": "Flamengo (ex-Chelsea)",
+      "goals": 40,
+      "trophies": 15,
+      "highlight": "Known for his technical ability and leadership"
+    },
+    {
+      "id": 120,
+      "name": "Gerard Piqué",
+      "nationality": "Spain",
+      "position": "Centre-back",
+      "club": "FC Barcelona (retired)",
+      "goals": 50,
+      "trophies": 20,
+      "highlight": "A pillar of Barcelona's golden era"
+    },
+    {
+      "id": 121,
+      "name": "Iker Casillas",
+      "nationality": "Spain",
+      "position": "Goalkeeper",
+      "club": "Porto (ex-Real Madrid)",
+      "goals": 0,
+      "trophies": 30,
+      "highlight": "Legendary keeper with a storied career"
+    },
+    {
+      "id": 122,
+      "name": "Oliver Kahn",
+      "nationality": "Germany",
+      "position": "Goalkeeper",
+      "club": "Bayern Munich",
+      "goals": 0,
+      "trophies": 25,
+      "highlight": "Iconic shot-stopper and passionate leader"
+    },
+    {
+      "id": 123,
+      "name": "Edwin van der Sar",
+      "nationality": "Netherlands",
+      "position": "Goalkeeper",
+      "club": "Ajax / Manchester United",
+      "goals": 0,
+      "trophies": 30,
+      "highlight": "A symbol of consistency and class between the sticks"
+    },
+    {
+      "id": 124,
+      "name": "Peter Schmeichel",
+      "nationality": "Denmark",
+      "position": "Goalkeeper",
+      "club": "Manchester United",
+      "goals": 0,
+      "trophies": 20,
+      "highlight": "One of the greatest keepers in Premier League history"
+    },
+    {
+      "id": 125,
+      "name": "Gianluigi Buffon",
+      "nationality": "Italy",
+      "position": "Goalkeeper",
+      "club": "Juventus (ex-Parma)",
+      "goals": 0,
+      "trophies": 25,
+      "highlight": "A World Cup winner and enduring legend"
+    },
+    {
+      "id": 126,
+      "name": "Sergio Busquets",
+      "nationality": "Spain",
+      "position": "Midfielder",
+      "club": "Barcelona",
+      "goals": 30,
+      "trophies": 20,
+      "highlight": "Key to Barcelona’s midfield balance"
+    },
+    {
+      "id": 127,
+      "name": "Marcelo Vieira",
+      "nationality": "Brazil",
+      "position": "Left-back",
+      "club": "Real Madrid",
+      "goals": 40,
+      "trophies": 20,
+      "highlight": "An attacking full-back with creative spark"
+    },
+    {
+      "id": 128,
+      "name": "Manuel Neuer",
+      "nationality": "Germany",
+      "position": "Goalkeeper",
+      "club": "Bayern Munich",
+      "goals": 10,
+      "trophies": 25,
+      "highlight": "Redefined the modern goalkeeper role"
+    },
+    {
+      "id": 129,
+      "name": "Sergio Ramos",
+      "nationality": "Spain",
+      "position": "Defender",
+      "club": "Paris Saint-Germain (ex-Real Madrid)",
+      "goals": 100,
+      "trophies": 26,
+      "highlight": "A fierce competitor with leadership qualities"
+    },
+    {
+      "id": 130,
+      "name": "Karim Benzema",
+      "nationality": "France",
+      "position": "Forward",
+      "club": "Real Madrid",
+      "goals": 350,
+      "trophies": 20,
+      "highlight": "A complete forward with excellent link-up play"
+    },
+    {
+      "id": 131,
+      "name": "Cristiano Ronaldo",
+      "nationality": "Portugal",
+      "position": "Forward",
+      "club": "Al-Nassr (ex-Real Madrid)",
+      "goals": 850,
+      "trophies": 35,
+      "highlight": "An icon of goal scoring and athleticism"
+    },
+    {
+      "id": 132,
+      "name": "Lionel Messi",
+      "nationality": "Argentina",
+      "position": "Forward",
+      "club": "Inter Miami (ex-Barcelona)",
+      "goals": 800,
+      "trophies": 40,
+      "highlight": "Winner of the 2022 World Cup with unmatched skill"
+    },
+    {
+      "id": 133,
+      "name": "Neymar Jr",
+      "nationality": "Brazil",
+      "position": "Forward",
+      "club": "Al Hilal (ex-PSG)",
+      "goals": 450,
+      "trophies": 25,
+      "highlight": "One of the most skillful dribblers in football"
+    },
+    {
+      "id": 134,
+      "name": "Kylian Mbappe",
+      "nationality": "France",
+      "position": "Forward",
+      "club": "Paris Saint-Germain",
+      "goals": 300,
+      "trophies": 15,
+      "highlight": "A World Cup winner with explosive pace"
+    },
+    {
+      "id": 135,
+      "name": "Erling Haaland",
+      "nationality": "Norway",
+      "position": "Forward",
+      "club": "Manchester City",
+      "goals": 200,
+      "trophies": 5,
+      "highlight": "Revolutionized scoring in every competition"
+    },
+    {
+      "id": 136,
+      "name": "Luka Modric",
+      "nationality": "Croatia",
+      "position": "Midfielder",
+      "club": "Real Madrid",
+      "goals": 100,
+      "trophies": 25,
+      "highlight": "Elegant playmaker with vision and composure"
+    },
+    {
+      "id": 137,
+      "name": "Kevin De Bruyne",
+      "nationality": "Belgium",
+      "position": "Midfielder",
+      "club": "Manchester City",
+      "goals": 120,
+      "trophies": 10,
+      "highlight": "Arguably the best playmaker in modern football"
+    },
+    {
+      "id": 138,
+      "name": "Mohamed Salah",
+      "nationality": "Egypt",
+      "position": "Forward",
+      "club": "Liverpool",
+      "goals": 300,
+      "trophies": 6,
+      "highlight": "A lethal winger with consistent goal scoring"
+    },
+    {
+      "id": 139,
+      "name": "Robert Lewandowski",
+      "nationality": "Poland",
+      "position": "Striker",
+      "club": "Barcelona",
+      "goals": 600,
+      "trophies": 25,
+      "highlight": "One of the most prolific strikers in history"
+    },
+    {
+      "id": 140,
+      "name": "Virgil van Dijk",
+      "nationality": "Netherlands",
+      "position": "Defender",
+      "club": "Liverpool",
+      "goals": 50,
+      "trophies": 7,
+      "highlight": "Transformed Liverpool's defense with his leadership"
+    },
+    {
+      "id": 141,
+      "name": "Sergio Ramos",
+      "nationality": "Spain",
+      "position": "Defender",
+      "club": "Paris Saint-Germain (ex-Real Madrid)",
+      "goals": 100,
+      "trophies": 26,
+      "highlight": "A commanding presence in defense"
+    },
+    {
+      "id": 142,
+      "name": "Jan Oblak",
+      "nationality": "Slovenia",
+      "position": "Goalkeeper",
+      "club": "Atletico Madrid",
+      "goals": 5,
+      "trophies": 15,
+      "highlight": "Consistently one of the world's best keepers"
+    },
+    {
+      "id": 143,
+      "name": "Marc-André ter Stegen",
+      "nationality": "Germany",
+      "position": "Goalkeeper",
+      "club": "Barcelona",
+      "goals": 5,
+      "trophies": 18,
+      "highlight": "Outstanding reflexes and calm under pressure"
+    },
+    {
+      "id": 144,
+      "name": "Ederson",
+      "nationality": "Brazil",
+      "position": "Goalkeeper",
+      "club": "Manchester City",
+      "goals": 5,
+      "trophies": 12,
+      "highlight": "Renowned for his distribution and composure"
+    },
+    {
+      "id": 145,
+      "name": "Antoine Griezmann",
+      "nationality": "France",
+      "position": "Forward/Attacking Midfielder",
+      "club": "Atletico Madrid",
+      "goals": 200,
+      "trophies": 15,
+      "highlight": "Creative and versatile in attack"
+    },
+    {
+      "id": 146,
+      "name": "Luis Suárez",
+      "nationality": "Uruguay",
+      "position": "Striker",
+      "club": "Atletico Madrid (ex-Barcelona)",
+      "goals": 500,
+      "trophies": 20,
+      "highlight": "Ferocious striker with an eye for goal"
+    },
+    {
+      "id": 147,
+      "name": "Paulo Dybala",
+      "nationality": "Argentina",
+      "position": "Forward",
+      "club": "Juventus (now AS Roma)",
+      "goals": 150,
+      "trophies": 10,
+      "highlight": "Known for his dribbling and creative flair"
+    },
+    {
+      "id": 148,
+      "name": "Eden Hazard",
+      "nationality": "Belgium",
+      "position": "Winger",
+      "club": "Real Madrid",
+      "goals": 120,
+      "trophies": 12,
+      "highlight": "Mesmerizing dribbler with flair"
+    },
+    {
+      "id": 149,
+      "name": "Kylian Mbappe",
+      "nationality": "France",
+      "position": "Forward",
+      "club": "Paris Saint-Germain",
+      "goals": 300,
+      "trophies": 15,
+      "highlight": "A World Cup winner with blistering pace"
+    },
+    {
+      "id": 150,
+      "name": "Erling Haaland",
+      "nationality": "Norway",
+      "position": "Forward",
+      "club": "Manchester City",
+      "goals": 200,
+      "trophies": 5,
+      "highlight": "Redefined goal scoring in modern football"
+    },
+    {
+      "id": 151,
+      "name": "Luka Modric",
+      "nationality": "Croatia",
+      "position": "Midfielder",
+      "club": "Real Madrid",
+      "goals": 100,
+      "trophies": 25,
+      "highlight": "Elegant maestro controlling the tempo"
+    },
+    {
+      "id": 152,
+      "name": "Kevin De Bruyne",
+      "nationality": "Belgium",
+      "position": "Midfielder",
+      "club": "Manchester City",
+      "goals": 120,
+      "trophies": 10,
+      "highlight": "Visionary playmaker with unmatched passing range"
+    },
+    {
+      "id": 153,
+      "name": "Mohamed Salah",
+      "nationality": "Egypt",
+      "position": "Forward",
+      "club": "Liverpool",
+      "goals": 300,
+      "trophies": 6,
+      "highlight": "A constant threat with pace and precision"
+    },
+    {
+      "id": 154,
+      "name": "Robert Lewandowski",
+      "nationality": "Poland",
+      "position": "Striker",
+      "club": "Barcelona",
+      "goals": 600,
+      "trophies": 25,
+      "highlight": "One of the most prolific goal scorers ever"
+    },
+    {
+      "id": 155,
+      "name": "Virgil van Dijk",
+      "nationality": "Netherlands",
+      "position": "Defender",
+      "club": "Liverpool",
+      "goals": 50,
+      "trophies": 7,
+      "highlight": "Transformed Liverpool’s defense with his presence"
+    },
+    {
+      "id": 156,
+      "name": "Sergio Ramos",
+      "nationality": "Spain",
+      "position": "Defender",
+      "club": "Paris Saint-Germain (ex-Real Madrid)",
+      "goals": 100,
+      "trophies": 26,
+      "highlight": "A leader known for decisive goals and defense"
+    },
+    {
+      "id": 157,
+      "name": "Jan Oblak",
+      "nationality": "Slovenia",
+      "position": "Goalkeeper",
+      "club": "Atletico Madrid",
+      "goals": 5,
+      "trophies": 15,
+      "highlight": "Renowned for his shot-stopping and consistency"
+    },
+    {
+      "id": 158,
+      "name": "Marc-André ter Stegen",
+      "nationality": "Germany",
+      "position": "Goalkeeper",
+      "club": "Barcelona",
+      "goals": 5,
+      "trophies": 18,
+      "highlight": "Outstanding reflexes and calm distribution"
+    },
+    {
+      "id": 159,
+      "name": "Ederson",
+      "nationality": "Brazil",
+      "position": "Goalkeeper",
+      "club": "Manchester City",
+      "goals": 5,
+      "trophies": 12,
+      "highlight": "Noted for his accurate long passes"
+    },
+    {
+      "id": 160,
+      "name": "Antoine Griezmann",
+      "nationality": "France",
+      "position": "Forward/Attacking Midfielder",
+      "club": "Atletico Madrid",
+      "goals": 200,
+      "trophies": 15,
+      "highlight": "Combines creativity with effective finishing"
+    },
+    {
+      "id": 161,
+      "name": "Luis Suárez",
+      "nationality": "Uruguay",
+      "position": "Striker",
+      "club": "Atletico Madrid (ex-Barcelona)",
+      "goals": 500,
+      "trophies": 20,
+      "highlight": "A fierce competitor with exceptional goal instincts"
+    },
+    {
+      "id": 162,
+      "name": "Paulo Dybala",
+      "nationality": "Argentina",
+      "position": "Forward",
+      "club": "Juventus (now AS Roma)",
+      "goals": 150,
+      "trophies": 10,
+      "highlight": "Elegant dribbler and creative forward"
+    },
+    {
+      "id": 163,
+      "name": "Eden Hazard",
+      "nationality": "Belgium",
+      "position": "Winger",
+      "club": "Real Madrid",
+      "goals": 120,
+      "trophies": 12,
+      "highlight": "Mesmerizing skill and dazzling dribbles"
+    },
+    {
+      "id": 164,
+      "name": "Kylian Mbappe",
+      "nationality": "France",
+      "position": "Forward",
+      "club": "Paris Saint-Germain",
+      "goals": 300,
+      "trophies": 15,
+      "highlight": "Young superstar with explosive speed"
+    },
+    {
+      "id": 165,
+      "name": "Erling Haaland",
+      "nationality": "Norway",
+      "position": "Forward",
+      "club": "Manchester City",
+      "goals": 200,
+      "trophies": 5,
+      "highlight": "A generational talent in front of goal"
+    },
+    {
+      "id": 166,
+      "name": "Luka Modric",
+      "nationality": "Croatia",
+      "position": "Midfielder",
+      "club": "Real Madrid",
+      "goals": 100,
+      "trophies": 25,
+      "highlight": "The engine of midfield with refined technique"
+    },
+    {
+      "id": 167,
+      "name": "Kevin De Bruyne",
+      "nationality": "Belgium",
+      "position": "Midfielder",
+      "club": "Manchester City",
+      "goals": 120,
+      "trophies": 10,
+      "highlight": "One of the finest passers and creative minds"
+    },
+    {
+      "id": 168,
+      "name": "Mohamed Salah",
+      "nationality": "Egypt",
+      "position": "Forward",
+      "club": "Liverpool",
+      "goals": 300,
+      "trophies": 6,
+      "highlight": "A constant goal threat with blistering pace"
+    },
+    {
+      "id": 169,
+      "name": "Robert Lewandowski",
+      "nationality": "Poland",
+      "position": "Striker",
+      "club": "Barcelona",
+      "goals": 600,
+      "trophies": 25,
+      "highlight": "A machine in front of goal with unrivaled consistency"
+    },
+    {
+      "id": 170,
+      "name": "Virgil van Dijk",
+      "nationality": "Netherlands",
+      "position": "Defender",
+      "club": "Liverpool",
+      "goals": 50,
+      "trophies": 7,
+      "highlight": "Transformed defensive standards at club level"
+    },
+    {
+      "id": 171,
+      "name": "Sergio Ramos",
+      "nationality": "Spain",
+      "position": "Defender",
+      "club": "Paris Saint-Germain (ex-Real Madrid)",
+      "goals": 100,
+      "trophies": 26,
+      "highlight": "Known for crucial goals and leadership"
+    },
+    {
+      "id": 172,
+      "name": "Jan Oblak",
+      "nationality": "Slovenia",
+      "position": "Goalkeeper",
+      "club": "Atletico Madrid",
+      "goals": 5,
+      "trophies": 15,
+      "highlight": "One of the most consistent keepers in Europe"
+    },
+    {
+      "id": 173,
+      "name": "Marc-André ter Stegen",
+      "nationality": "Germany",
+      "position": "Goalkeeper",
+      "club": "Barcelona",
+      "goals": 5,
+      "trophies": 18,
+      "highlight": "Distinguished for his reflexes and composure"
+    },
+    {
+      "id": 174,
+      "name": "Ederson",
+      "nationality": "Brazil",
+      "position": "Goalkeeper",
+      "club": "Manchester City",
+      "goals": 5,
+      "trophies": 12,
+      "highlight": "Noted for his distribution and reliability"
+    },
+    {
+      "id": 175,
+      "name": "Antoine Griezmann",
+      "nationality": "France",
+      "position": "Forward/Attacking Midfielder",
+      "club": "Atletico Madrid",
+      "goals": 200,
+      "trophies": 15,
+      "highlight": "A creative force with excellent finishing skills"
+    },
+    {
+      "id": 176,
+      "name": "Luis Suárez",
+      "nationality": "Uruguay",
+      "position": "Striker",
+      "club": "Atletico Madrid (ex-Barcelona)",
+      "goals": 500,
+      "trophies": 20,
+      "highlight": "Fearless in attack with remarkable scoring instinct"
+    },
+    {
+      "id": 177,
+      "name": "Paulo Dybala",
+      "nationality": "Argentina",
+      "position": "Forward",
+      "club": "Juventus (now AS Roma)",
+      "goals": 150,
+      "trophies": 10,
+      "highlight": "Combines elegance with lethal finishing"
+    },
+    {
+      "id": 178,
+      "name": "Eden Hazard",
+      "nationality": "Belgium",
+      "position": "Winger",
+      "club": "Real Madrid",
+      "goals": 120,
+      "trophies": 12,
+      "highlight": "A magician on the ball with extraordinary dribbling"
+    },
+    {
+      "id": 179,
+      "name": "Kylian Mbappe",
+      "nationality": "France",
+      "position": "Forward",
+      "club": "Paris Saint-Germain",
+      "goals": 300,
+      "trophies": 15,
+      "highlight": "Combines youth, pace, and finishing in one package"
+    },
+    {
+      "id": 180,
+      "name": "Erling Haaland",
+      "nationality": "Norway",
+      "position": "Forward",
+      "club": "Manchester City",
+      "goals": 200,
+      "trophies": 5,
+      "highlight": "A generational talent with an eye for goal"
+    },
+    {
+      "id": 181,
+      "name": "Luka Modric",
+      "nationality": "Croatia",
+      "position": "Midfielder",
+      "club": "Real Madrid",
+      "goals": 100,
+      "trophies": 25,
+      "highlight": "Master of tempo and exquisite passing"
+    },
+    {
+      "id": 182,
+      "name": "Kevin De Bruyne",
+      "nationality": "Belgium",
+      "position": "Midfielder",
+      "club": "Manchester City",
+      "goals": 120,
+      "trophies": 10,
+      "highlight": "The epitome of a modern playmaker"
+    },
+    {
+      "id": 183,
+      "name": "Mohamed Salah",
+      "nationality": "Egypt",
+      "position": "Forward",
+      "club": "Liverpool",
+      "goals": 300,
+      "trophies": 6,
+      "highlight": "Consistently among the top scorers in the league"
+    },
+    {
+      "id": 184,
+      "name": "Robert Lewandowski",
+      "nationality": "Poland",
+      "position": "Striker",
+      "club": "Barcelona",
+      "goals": 600,
+      "trophies": 25,
+      "highlight": "A benchmark for striking efficiency in football"
+    },
+    {
+      "id": 185,
+      "name": "Virgil van Dijk",
+      "nationality": "Netherlands",
+      "position": "Defender",
+      "club": "Liverpool",
+      "goals": 50,
+      "trophies": 7,
+      "highlight": "A transformative defender with unmatched presence"
+    },
+    {
+      "id": 186,
+      "name": "Sergio Ramos",
+      "nationality": "Spain",
+      "position": "Defender",
+      "club": "Paris Saint-Germain (ex-Real Madrid)",
+      "goals": 100,
+      "trophies": 26,
+      "highlight": "A fierce competitor with a knack for decisive goals"
+    },
+    {
+      "id": 187,
+      "name": "Jan Oblak",
+      "nationality": "Slovenia",
+      "position": "Goalkeeper",
+      "club": "Atletico Madrid",
+      "goals": 5,
+      "trophies": 15,
+      "highlight": "Renowned worldwide for his consistency and reflexes"
+    },
+    {
+      "id": 188,
+      "name": "Marc-André ter Stegen",
+      "nationality": "Germany",
+      "position": "Goalkeeper",
+      "club": "Barcelona",
+      "goals": 5,
+      "trophies": 18,
+      "highlight": "A modern keeper with superb shot-stopping ability"
+    },
+    {
+      "id": 189,
+      "name": "Ederson",
+      "nationality": "Brazil",
+      "position": "Goalkeeper",
+      "club": "Manchester City",
+      "goals": 5,
+      "trophies": 12,
+      "highlight": "Noted for his exceptional distribution and calmness"
+    },
+    {
+      "id": 190,
+      "name": "Antoine Griezmann",
+      "nationality": "France",
+      "position": "Forward/Attacking Midfielder",
+      "club": "Atletico Madrid",
+      "goals": 200,
+      "trophies": 15,
+      "highlight": "Combines technical skill with a creative spark"
+    },
+    {
+      "id": 191,
+      "name": "Luis Suárez",
+      "nationality": "Uruguay",
+      "position": "Striker",
+      "club": "Atletico Madrid (ex-Barcelona)",
+      "goals": 500,
+      "trophies": 20,
+      "highlight": "A fierce competitor and consummate goal scorer"
+    },
+    {
+      "id": 192,
+      "name": "Paulo Dybala",
+      "nationality": "Argentina",
+      "position": "Forward",
+      "club": "Juventus (now AS Roma)",
+      "goals": 150,
+      "trophies": 10,
+      "highlight": "Elegant dribbler with a brilliant eye for goal"
+    },
+    {
+      "id": 193,
+      "name": "Eden Hazard",
+      "nationality": "Belgium",
+      "position": "Winger",
+      "club": "Real Madrid",
+      "goals": 120,
+      "trophies": 12,
+      "highlight": "A magician on the ball with dazzling skill"
+    },
+    {
+      "id": 194,
+      "name": "Kylian Mbappe",
+      "nationality": "France",
+      "position": "Forward",
+      "club": "Paris Saint-Germain",
+      "goals": 300,
+      "trophies": 15,
+      "highlight": "A dynamic forward with incredible acceleration"
+    },
+    {
+      "id": 195,
+      "name": "Erling Haaland",
+      "nationality": "Norway",
+      "position": "Forward",
+      "club": "Manchester City",
+      "goals": 200,
+      "trophies": 5,
+      "highlight": "A goal machine setting records in every league"
+    },
+    {
+      "id": 196,
+      "name": "Luka Modric",
+      "nationality": "Croatia",
+      "position": "Midfielder",
+      "club": "Real Madrid",
+      "goals": 100,
+      "trophies": 25,
+      "highlight": "A midfield maestro with vision and elegance"
+    },
+    {
+      "id": 197,
+      "name": "Kevin De Bruyne",
+      "nationality": "Belgium",
+      "position": "Midfielder",
+      "club": "Manchester City",
+      "goals": 120,
+      "trophies": 10,
+      "highlight": "Widely regarded as one of the best passers in the world"
+    },
+    {
+      "id": 198,
+      "name": "Mohamed Salah",
+      "nationality": "Egypt",
+      "position": "Forward",
+      "club": "Liverpool",
+      "goals": 300,
+      "trophies": 6,
+      "highlight": "Consistently among the top scorers in world football"
+    },
+    {
+      "id": 199,
+      "name": "Robert Lewandowski",
+      "nationality": "Poland",
+      "position": "Striker",
+      "club": "Barcelona",
+      "goals": 600,
+      "trophies": 25,
+      "highlight": "A benchmark for striking excellence over a long career"
+    },
+    {
+      "id": 200,
+      "name": "Virgil van Dijk",
+      "nationality": "Netherlands",
+      "position": "Defender",
+      "club": "Liverpool",
+      "goals": 50,
+      "trophies": 7,
+      "highlight": "A transformative defender whose leadership changed Liverpool’s fortunes"
     }
   ]
-
 }

@@ -14,15 +14,8 @@ import { fetchRandomTVShow } from './services/tvSeriesApi';
 import { Gamepad2 } from 'lucide-react';
 
 function App() {
-  const [gameStarted, setGameStarted] = useState(() => {
+  const [gameStarted, setGameStarted] = useState(false);
     // التحقق من وجود بيانات محفوظة
-    const stored = localStorage.getItem('game-storage');
-    if (stored) {
-      const { state } = JSON.parse(stored);
-      return Boolean(state.gameStarted);
-    }
-    return false;
-  });
   const [categorySelected, setCategorySelected] = useState(false);
   const [loading, setLoading] = useState(false);
   const { 

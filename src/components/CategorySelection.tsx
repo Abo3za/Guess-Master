@@ -3,7 +3,7 @@ import { Category, Difficulty, DIFFICULTY_POINTS, DIFFICULTY_HINTS } from '../ty
 import { 
   Gamepad2, Tv, Film, FolderRoot as Football, 
   BookOpen, Globe2, Trash2, Users, Plus, Minus,
-  Sparkles, Target, Zap, Sword
+  Sparkles, Target, Zap, Sword, ArrowLeft, X  // إضافة أيقونة X
 } from 'lucide-react';
 import { useGameStore } from '../store/gameStore';
 
@@ -47,7 +47,7 @@ const categories = [
     value: 'wwe',
     label: 'المصارعة',
     icon: <Sword className="w-6 h-6" />,
-    bgImage: '../public/Images/WWE.jpg'
+    bgImage: 'https://images.unsplash.com/photo-1488656711237-487ce1cc53b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   }
 ];
 
@@ -72,7 +72,7 @@ const difficulties: { value: Difficulty; label: string; icon: JSX.Element }[] = 
 ];
 
 export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, onResetGame }) => {
-  const { teams, adjustScore, usedItems, initializeGame, setDifficulty } = useGameStore();
+  const { teams, adjustScore, usedItems, initializeGame, setDifficulty, endGame } = useGameStore();
   const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
   
   const activeTeam = teams.find(team => team.isActive);
@@ -94,13 +94,26 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
     <div className="w-full max-w-4xl mx-auto px-4 sm:px-6" dir="rtl">
       <div className="mb-6 sm:mb-8">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4">
-          <button
-            onClick={onResetGame}
-            className="secondary-button w-full sm:w-auto"
-          >
-            <Users className="w-5 h-5" />
-            فرق جديدة
-          </button>
+          <div className="flex gap-2 w-full sm:w-auto">
+            <button
+              onClick={onResetGame}
+              className="secondary-button flex-1 sm:flex-initial"
+            >
+              <Users className="w-5 h-5" />
+              فرق جديدة
+            </button>
+            <button
+              onClick={() => {
+                if (window.confirm('هل أنت متأكد من إنهاء اللعبة الآن؟')) {
+                  endGame();
+                }
+              }}
+              className="danger-button flex-1 sm:flex-initial"
+            >
+              <X className="w-5 h-5" />
+              إنهاء اللعبة
+            </button>
+          </div>
           <button
             onClick={handleClearSession}
             className="secondary-button w-full sm:w-auto"
@@ -175,26 +188,38 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {difficulties.map((difficulty) => (
+        <div>
+          <div className="flex justify-between items-center mb-6">
             <button
-              key={difficulty.value}
-              onClick={() => handleDifficultySelect(difficulty.value)}
-              className="difficulty-card glass-card p-6 hover:bg-white/[0.06] transition-all duration-300"
+              onClick={() => setSelectedCategory(null)}
+              className="secondary-button"
             >
-              <div className="flex flex-col items-center gap-4">
-                <div className="category-icon">
-                  {difficulty.icon}
-                </div>
-                <div className="text-center">
-                  <h3 className="text-xl font-bold mb-2">{difficulty.label}</h3>
-                  <p className="text-sm text-gray-300">
-                    {getDifficultyDescription(difficulty.value, selectedCategory)}
-                  </p>
-                </div>
-              </div>
+              <ArrowLeft className="w-5 h-5" />
+              عودة للفئات
             </button>
-          ))}
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            {difficulties.map((difficulty) => (
+              <button
+                key={difficulty.value}
+                onClick={() => handleDifficultySelect(difficulty.value)}
+                className="difficulty-card glass-card p-6 hover:bg-white/[0.06] transition-all duration-300"
+              >
+                <div className="flex flex-col items-center gap-4">
+                  <div className="category-icon">
+                    {difficulty.icon}
+                  </div>
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold mb-2">{difficulty.label}</h3>
+                    <p className="text-sm text-gray-300">
+                      {getDifficultyDescription(difficulty.value, selectedCategory)}
+                    </p>
+                  </div>
+                </div>
+              </button>
+            ))}
+          </div>
         </div>
       )}
     </div>

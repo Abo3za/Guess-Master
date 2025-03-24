@@ -33,6 +33,7 @@ export interface GameState {
   isLoading: boolean;
   usedItems: Set<string>;
   categoryUsedItems: Record<Category, Set<string>>;
+  gameEnded: boolean;
 }
 
 export interface CategoryOption {

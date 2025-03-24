@@ -16,6 +16,7 @@ interface GameStore extends GameState {
   adjustScore: (teamId: string, amount: number) => void;
   clearUsedItems: () => void;
   clearCategoryUsedItems: (category: Category) => void;
+  endGame: () => void;
 }
 
 const initialState: GameState = {
@@ -24,11 +25,12 @@ const initialState: GameState = {
   selectedCategory: null,
   selectedDifficulty: null,
   round: 1,
-  maxRounds: 5,
+  maxRounds: 10, // تعديل عدد الجولات إلى 10
   answerRevealed: false,
   isLoading: false,
   usedItems: new Set(),
   categoryUsedItems: {} as Record<Category, Set<string>>,
+  gameEnded: false, // إضافة حالة جديدة
 };
 
 export const useGameStore = create<GameStore>()(
@@ -86,7 +88,7 @@ export const useGameStore = create<GameStore>()(
         });
       },
       makeGuess: (teamId, guess) => {
-        const { currentItem, teams, selectedDifficulty } = get();
+        const { currentItem, teams, selectedDifficulty, round, maxRounds } = get();
         if (!currentItem || !guess || !selectedDifficulty) return false;
 
         const normalizeString = (str: string) => 
@@ -118,10 +120,21 @@ export const useGameStore = create<GameStore>()(
               : team
           );
           
-          set({ 
-            teams: updatedTeams,
-            answerRevealed: false
-          });
+          // التحقق من انتهاء الجولات
+          const isLastRound = round >= maxRounds;
+          if (isLastRound) {
+            set({ 
+              teams: updatedTeams,
+              answerRevealed: false,
+              gameEnded: true
+            });
+          } else {
+            set({ 
+              teams: updatedTeams,
+              answerRevealed: false,
+              round: round + 1
+            });
+          }
         }
 
         return isCorrect;
@@ -168,7 +181,10 @@ export const useGameStore = create<GameStore>()(
         const newCategoryUsedItems = { ...categoryUsedItems };
         newCategoryUsedItems[category] = new Set();
         set({ categoryUsedItems: newCategoryUsedItems });
-      }
+      },
+      endGame: () => {
+        set({ gameEnded: true });
+      },
     }),
     {
       name: 'game-storage',
@@ -176,6 +192,8 @@ export const useGameStore = create<GameStore>()(
         teams: state.teams,
         round: state.round,
         maxRounds: state.maxRounds,
+        gameEnded: state.gameEnded,
+        gameStarted: true,  // إضافة لحفظ حالة بدء اللعبة
         usedItems: Array.from(state.usedItems),
         categoryUsedItems: Object.fromEntries(
           Object.entries(state.categoryUsedItems).map(([category, items]) => [

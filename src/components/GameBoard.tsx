@@ -6,7 +6,6 @@ import {
   ArrowLeft, 
   Users,
   Check,
-  X,
   Search
 } from 'lucide-react';
 
@@ -49,10 +48,17 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories, onRese
     currentItem,
     round,
     maxRounds,
+    gameEnded,
     revealDetail,
     makeGuess,
     nextTurn,
   } = useGameStore();
+
+  const getWinningTeam = () => {
+    return teams.reduce((prev, current) => 
+      (prev.score > current.score) ? prev : current
+    );
+  };
 
   const [answerRevealed, setAnswerRevealed] = useState(false);
   const activeTeam = teams.find((team) => team.isActive);
@@ -70,6 +76,35 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories, onRese
     nextTurn(); // انتقل للفريق التالي بعد انتهاء الدور
     onBackToCategories();
   };
+
+  if (gameEnded) {
+    const winner = getWinningTeam();
+    return (
+      <div className="max-w-4xl mx-auto">
+        <div className="glass-card rounded-xl p-8 text-center">
+          <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            انتهت اللعبة!
+          </h2>
+          <div className="mb-6">
+            <h3 className="text-2xl font-bold text-white mb-2">
+              الفائز: {winner.name}
+            </h3>
+            <p className="text-lg text-white/80">
+              بمجموع نقاط: {winner.score}
+            </p>
+          </div>
+          <div className="flex gap-4 justify-center">
+            <button
+              onClick={onResetGame}
+              className="primary-button"
+            >
+              لعبة جديدة
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (!currentItem || !activeTeam) return null;
 

@@ -1,6 +1,6 @@
 {
-  "games": [
-    {
+    "games": [
+      {
         "id": 1,
         "title": "The Legend of Zelda: Breath of the Wild",
         "release_year": 2017,
@@ -9,8 +9,8 @@
         "platform": "Nintendo Switch",
         "mode": "Single-player",
         "rating": 9.5
-    },
-    {
+      },
+      {
         "id": 2,
         "title": "The Witcher 3: Wild Hunt",
         "release_year": 2015,
@@ -19,8 +19,8 @@
         "platform": "PC, PS4, Xbox One",
         "mode": "Single-player",
         "rating": 9.3
-    },
-    {
+      },
+      {
         "id": 3,
         "title": "Minecraft",
         "release_year": 2011,
@@ -29,8 +29,8 @@
         "platform": "Multi-platform",
         "mode": "Single & Multiplayer",
         "rating": 8.9
-    },
-    {
+      },
+      {
         "id": 4,
         "title": "God of War (2018)",
         "release_year": 2018,
@@ -39,8 +39,8 @@
         "platform": "PS4",
         "mode": "Single-player",
         "rating": 9.6
-    },
-    {
+      },
+      {
         "id": 5,
         "title": "Red Dead Redemption 2",
         "release_year": 2018,
@@ -49,8 +49,8 @@
         "platform": "PC, PS4, Xbox One",
         "mode": "Single & Multiplayer",
         "rating": 9.7
-    },
-    {
+      },
+      {
         "id": 6,
         "title": "Elden Ring",
         "release_year": 2022,
@@ -59,8 +59,8 @@
         "platform": "PC, PS5, Xbox",
         "mode": "Single & Multiplayer",
         "rating": 9.4
-    },
-    {
+      },
+      {
         "id": 7,
         "title": "Overwatch",
         "release_year": 2016,
@@ -69,8 +69,8 @@
         "platform": "PC, Console",
         "mode": "Multiplayer",
         "rating": 8.5
-    },
-    {
+      },
+      {
         "id": 8,
         "title": "Fortnite",
         "release_year": 2017,
@@ -79,8 +79,8 @@
         "platform": "Multi-platform",
         "mode": "Multiplayer",
         "rating": 8.0
-    },
-    {
+      },
+      {
         "id": 9,
         "title": "Hollow Knight",
         "release_year": 2017,
@@ -89,8 +89,8 @@
         "platform": "PC, Switch",
         "mode": "Single-player",
         "rating": 9.0
-    },
-    {
+      },
+      {
         "id": 10,
         "title": "Resident Evil 4 Remake",
         "release_year": 2023,
@@ -99,6 +99,1907 @@
         "platform": "PC, PS5, Xbox",
         "mode": "Single-player",
         "rating": 9.1
-    }
-  ]
-}
+      },
+      {
+        "id": 11,
+        "title": "Super Mario Odyssey",
+        "release_year": 2017,
+        "genre": "Platformer",
+        "developer": "Nintendo",
+        "platform": "Nintendo Switch",
+        "mode": "Single-player",
+        "rating": 9.7
+      },
+      {
+        "id": 12,
+        "title": "Halo: Combat Evolved",
+        "release_year": 2001,
+        "genre": "Shooter",
+        "developer": "Bungie",
+        "platform": "PC, Xbox",
+        "mode": "Single-player, Multiplayer",
+        "rating": 9.0
+      },
+      {
+        "id": 13,
+        "title": "Portal 2",
+        "release_year": 2011,
+        "genre": "Puzzle",
+        "developer": "Valve",
+        "platform": "PC, PS3, Xbox 360",
+        "mode": "Single-player, Multiplayer",
+        "rating": 9.5
+      },
+      {
+        "id": 14,
+        "title": "Uncharted 4: A Thief's End",
+        "release_year": 2016,
+        "genre": "Action-Adventure",
+        "developer": "Naughty Dog",
+        "platform": "PS4",
+        "mode": "Single-player",
+        "rating": 9.3
+      },
+      {
+        "id": 15,
+        "title": "God of War II",
+        "release_year": 2007,
+        "genre": "Action",
+        "developer": "Santa Monica Studio",
+        "platform": "PS2",
+        "mode": "Single-player",
+        "rating": 9.4
+      },
+      {
+        "id": 16,
+        "title": "Half-Life 2",
+        "release_year": 2004,
+        "genre": "Shooter",
+        "developer": "Valve",
+        "platform": "PC",
+        "mode": "Single-player",
+        "rating": 9.6
+      },
+      {
+        "id": 17,
+        "title": "Metal Gear Solid V: The Phantom Pain",
+        "release_year": 2015,
+        "genre": "Stealth",
+        "developer": "Kojima Productions",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 9.2
+      },
+      {
+        "id": 18,
+        "title": "The Elder Scrolls V: Skyrim",
+        "release_year": 2011,
+        "genre": "RPG",
+        "developer": "Bethesda",
+        "platform": "Multi-platform",
+        "mode": "Single-player",
+        "rating": 9.3
+      },
+      {
+        "id": 19,
+        "title": "BioShock",
+        "release_year": 2007,
+        "genre": "Shooter",
+        "developer": "Irrational Games",
+        "platform": "PC, PS3, Xbox 360",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 20,
+        "title": "Dark Souls",
+        "release_year": 2011,
+        "genre": "Action RPG",
+        "developer": "FromSoftware",
+        "platform": "PC, PS3, Xbox 360",
+        "mode": "Single-player",
+        "rating": 9.1
+      },
+      {
+        "id": 21,
+        "title": "Super Smash Bros. Ultimate",
+        "release_year": 2018,
+        "genre": "Fighting",
+        "developer": "Nintendo",
+        "platform": "Nintendo Switch",
+        "mode": "Multiplayer",
+        "rating": 9.2
+      },
+      {
+        "id": 22,
+        "title": "Call of Duty 4: Modern Warfare",
+        "release_year": 2007,
+        "genre": "Shooter",
+        "developer": "Infinity Ward",
+        "platform": "PC, PS3, Xbox 360",
+        "mode": "Multiplayer",
+        "rating": 9.1
+      },
+      {
+        "id": 23,
+        "title": "Assassin's Creed IV: Black Flag",
+        "release_year": 2013,
+        "genre": "Action-Adventure",
+        "developer": "Ubisoft",
+        "platform": "PC, PS3, Xbox 360",
+        "mode": "Single-player",
+        "rating": 8.9
+      },
+      {
+        "id": 24,
+        "title": "Grand Theft Auto V",
+        "release_year": 2013,
+        "genre": "Action-Adventure",
+        "developer": "Rockstar Games",
+        "platform": "Multi-platform",
+        "mode": "Single & Multiplayer",
+        "rating": 9.8
+      },
+      {
+        "id": 25,
+        "title": "Overwatch 2",
+        "release_year": 2022,
+        "genre": "Shooter",
+        "developer": "Blizzard Entertainment",
+        "platform": "PC, Console",
+        "mode": "Multiplayer",
+        "rating": 8.5
+      },
+      {
+        "id": 26,
+        "title": "FIFA 23",
+        "release_year": 2022,
+        "genre": "Sports",
+        "developer": "EA Sports",
+        "platform": "Multi-platform",
+        "mode": "Multiplayer",
+        "rating": 8.0
+      },
+      {
+        "id": 27,
+        "title": "NBA 2K23",
+        "release_year": 2022,
+        "genre": "Sports",
+        "developer": "2K Sports",
+        "platform": "Multi-platform",
+        "mode": "Multiplayer",
+        "rating": 8.2
+      },
+      {
+        "id": 28,
+        "title": "The Last of Us",
+        "release_year": 2013,
+        "genre": "Action-Adventure",
+        "developer": "Naughty Dog",
+        "platform": "PS3",
+        "mode": "Single-player",
+        "rating": 9.8
+      },
+      {
+        "id": 29,
+        "title": "The Last of Us Part II",
+        "release_year": 2020,
+        "genre": "Action-Adventure",
+        "developer": "Naughty Dog",
+        "platform": "PS4",
+        "mode": "Single-player",
+        "rating": 9.5
+      },
+      {
+        "id": 30,
+        "title": "Resident Evil 2 Remake",
+        "release_year": 2019,
+        "genre": "Survival Horror",
+        "developer": "Capcom",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 9.1
+      },
+      {
+        "id": 31,
+        "title": "Resident Evil 7: Biohazard",
+        "release_year": 2017,
+        "genre": "Survival Horror",
+        "developer": "Capcom",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 8.5
+      },
+      {
+        "id": 32,
+        "title": "Sekiro: Shadows Die Twice",
+        "release_year": 2019,
+        "genre": "Action-Adventure",
+        "developer": "FromSoftware",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 9.2
+      },
+      {
+        "id": 33,
+        "title": "Forza Horizon 5",
+        "release_year": 2021,
+        "genre": "Racing",
+        "developer": "Playground Games",
+        "platform": "PC, Xbox Series X",
+        "mode": "Multiplayer",
+        "rating": 9.3
+      },
+      {
+        "id": 34,
+        "title": "Gran Turismo 7",
+        "release_year": 2022,
+        "genre": "Racing",
+        "developer": "Polyphony Digital",
+        "platform": "PS5",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 35,
+        "title": "Need for Speed: Most Wanted",
+        "release_year": 2005,
+        "genre": "Racing",
+        "developer": "EA",
+        "platform": "PC, PS2, Xbox",
+        "mode": "Single-player",
+        "rating": 8.0
+      },
+      {
+        "id": 36,
+        "title": "Mass Effect 2",
+        "release_year": 2010,
+        "genre": "RPG",
+        "developer": "BioWare",
+        "platform": "PC, Xbox 360, PS3",
+        "mode": "Single-player",
+        "rating": 9.5
+      },
+      {
+        "id": 37,
+        "title": "Mass Effect 3",
+        "release_year": 2012,
+        "genre": "RPG",
+        "developer": "BioWare",
+        "platform": "PC, Xbox 360, PS3",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 38,
+        "title": "Dragon Age: Inquisition",
+        "release_year": 2014,
+        "genre": "RPG",
+        "developer": "BioWare",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 8.8
+      },
+      {
+        "id": 39,
+        "title": "Fallout 4",
+        "release_year": 2015,
+        "genre": "RPG",
+        "developer": "Bethesda",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 8.5
+      },
+      {
+        "id": 40,
+        "title": "Cyberpunk 2077",
+        "release_year": 2020,
+        "genre": "RPG",
+        "developer": "CD Projekt Red",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 7.8
+      },
+      {
+        "id": 41,
+        "title": "Among Us",
+        "release_year": 2018,
+        "genre": "Party",
+        "developer": "InnerSloth",
+        "platform": "Multi-platform",
+        "mode": "Multiplayer",
+        "rating": 8.0
+      },
+      {
+        "id": 42,
+        "title": "Rocket League",
+        "release_year": 2015,
+        "genre": "Sports",
+        "developer": "Psyonix",
+        "platform": "Multi-platform",
+        "mode": "Multiplayer",
+        "rating": 8.5
+      },
+      {
+        "id": 43,
+        "title": "Doom Eternal",
+        "release_year": 2020,
+        "genre": "Shooter",
+        "developer": "id Software",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 9.1
+      },
+      {
+        "id": 44,
+        "title": "Quake Champions",
+        "release_year": 2017,
+        "genre": "Shooter",
+        "developer": "id Software",
+        "platform": "PC",
+        "mode": "Multiplayer",
+        "rating": 7.5
+      },
+      {
+        "id": 45,
+        "title": "Star Wars Jedi: Fallen Order",
+        "release_year": 2019,
+        "genre": "Action-Adventure",
+        "developer": "Respawn Entertainment",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 8.7
+      },
+      {
+        "id": 46,
+        "title": "Fall Guys: Ultimate Knockout",
+        "release_year": 2020,
+        "genre": "Party",
+        "developer": "Mediatonic",
+        "platform": "Multi-platform",
+        "mode": "Multiplayer",
+        "rating": 7.8
+      },
+      {
+        "id": 47,
+        "title": "Apex Legends",
+        "release_year": 2019,
+        "genre": "Battle Royale",
+        "developer": "Respawn Entertainment",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Multiplayer",
+        "rating": 8.6
+      },
+      {
+        "id": 48,
+        "title": "Valorant",
+        "release_year": 2020,
+        "genre": "Shooter",
+        "developer": "Riot Games",
+        "platform": "PC",
+        "mode": "Multiplayer",
+        "rating": 8.3
+      },
+      {
+        "id": 49,
+        "title": "Rainbow Six Siege",
+        "release_year": 2015,
+        "genre": "Shooter",
+        "developer": "Ubisoft",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Multiplayer",
+        "rating": 8.4
+      },
+      {
+        "id": 50,
+        "title": "Counter-Strike: Global Offensive",
+        "release_year": 2012,
+        "genre": "Shooter",
+        "developer": "Valve",
+        "platform": "PC",
+        "mode": "Multiplayer",
+        "rating": 9.0
+      },
+      {
+        "id": 51,
+        "title": "Dota 2",
+        "release_year": 2013,
+        "genre": "MOBA",
+        "developer": "Valve",
+        "platform": "PC",
+        "mode": "Multiplayer",
+        "rating": 9.0
+      },
+      {
+        "id": 52,
+        "title": "League of Legends",
+        "release_year": 2009,
+        "genre": "MOBA",
+        "developer": "Riot Games",
+        "platform": "PC",
+        "mode": "Multiplayer",
+        "rating": 9.0
+      },
+      {
+        "id": 53,
+        "title": "Smite",
+        "release_year": 2014,
+        "genre": "MOBA",
+        "developer": "Hi-Rez Studios",
+        "platform": "PC, Console",
+        "mode": "Multiplayer",
+        "rating": 7.8
+      },
+      {
+        "id": 54,
+        "title": "World of Warcraft",
+        "release_year": 2004,
+        "genre": "MMORPG",
+        "developer": "Blizzard Entertainment",
+        "platform": "PC",
+        "mode": "Multiplayer",
+        "rating": 9.2
+      },
+      {
+        "id": 55,
+        "title": "Final Fantasy VII",
+        "release_year": 1997,
+        "genre": "RPG",
+        "developer": "Square",
+        "platform": "PS1",
+        "mode": "Single-player",
+        "rating": 9.4
+      },
+      {
+        "id": 56,
+        "title": "Final Fantasy X",
+        "release_year": 2001,
+        "genre": "RPG",
+        "developer": "Square",
+        "platform": "PS2",
+        "mode": "Single-player",
+        "rating": 9.3
+      },
+      {
+        "id": 57,
+        "title": "Final Fantasy XV",
+        "release_year": 2016,
+        "genre": "RPG",
+        "developer": "Square Enix",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 58,
+        "title": "Chrono Trigger",
+        "release_year": 1995,
+        "genre": "RPG",
+        "developer": "Square",
+        "platform": "SNES",
+        "mode": "Single-player",
+        "rating": 9.6
+      },
+      {
+        "id": 59,
+        "title": "Persona 5",
+        "release_year": 2016,
+        "genre": "RPG",
+        "developer": "Atlus",
+        "platform": "PS4",
+        "mode": "Single-player",
+        "rating": 9.2
+      },
+      {
+        "id": 60,
+        "title": "Dragon Quest XI",
+        "release_year": 2017,
+        "genre": "RPG",
+        "developer": "Square Enix",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 61,
+        "title": "Super Metroid",
+        "release_year": 1994,
+        "genre": "Action-Adventure",
+        "developer": "Nintendo",
+        "platform": "SNES",
+        "mode": "Single-player",
+        "rating": 9.7
+      },
+      {
+        "id": 62,
+        "title": "Castlevania: Symphony of the Night",
+        "release_year": 1997,
+        "genre": "Action-Adventure",
+        "developer": "Konami",
+        "platform": "PlayStation",
+        "mode": "Single-player",
+        "rating": 9.5
+      },
+      {
+        "id": 63,
+        "title": "Resident Evil",
+        "release_year": 1996,
+        "genre": "Survival Horror",
+        "developer": "Capcom",
+        "platform": "PlayStation",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 64,
+        "title": "Silent Hill 2",
+        "release_year": 2001,
+        "genre": "Survival Horror",
+        "developer": "Konami",
+        "platform": "PS2, PC",
+        "mode": "Single-player",
+        "rating": 9.3
+      },
+      {
+        "id": 65,
+        "title": "Devil May Cry 5",
+        "release_year": 2019,
+        "genre": "Action",
+        "developer": "Capcom",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 9.1
+      },
+      {
+        "id": 66,
+        "title": "Tekken 7",
+        "release_year": 2015,
+        "genre": "Fighting",
+        "developer": "Bandai Namco",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Multiplayer",
+        "rating": 8.4
+      },
+      {
+        "id": 67,
+        "title": "Street Fighter V",
+        "release_year": 2016,
+        "genre": "Fighting",
+        "developer": "Capcom",
+        "platform": "PC, PS4",
+        "mode": "Multiplayer",
+        "rating": 8.3
+      },
+      {
+        "id": 68,
+        "title": "Mortal Kombat 11",
+        "release_year": 2019,
+        "genre": "Fighting",
+        "developer": "NetherRealm Studios",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Multiplayer",
+        "rating": 8.5
+      },
+      {
+        "id": 69,
+        "title": "Soulcalibur VI",
+        "release_year": 2018,
+        "genre": "Fighting",
+        "developer": "Bandai Namco",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Multiplayer",
+        "rating": 8.2
+      },
+      {
+        "id": 70,
+        "title": "Gears 5",
+        "release_year": 2019,
+        "genre": "Shooter",
+        "developer": "The Coalition",
+        "platform": "PC, Xbox One",
+        "mode": "Multiplayer",
+        "rating": 8.4
+      },
+      {
+        "id": 71,
+        "title": "For Honor",
+        "release_year": 2017,
+        "genre": "Action",
+        "developer": "Ubisoft",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Multiplayer",
+        "rating": 7.9
+      },
+      {
+        "id": 72,
+        "title": "Monster Hunter: World",
+        "release_year": 2018,
+        "genre": "Action RPG",
+        "developer": "Capcom",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 8.7
+      },
+      {
+        "id": 73,
+        "title": "Devil May Cry 3: Special Edition",
+        "release_year": 2005,
+        "genre": "Action",
+        "developer": "Capcom",
+        "platform": "PC, PS2, Xbox",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 74,
+        "title": "Bayonetta",
+        "release_year": 2009,
+        "genre": "Action",
+        "developer": "PlatinumGames",
+        "platform": "PC, PS3, Xbox 360",
+        "mode": "Single-player",
+        "rating": 8.8
+      },
+      {
+        "id": 75,
+        "title": "StarCraft II",
+        "release_year": 2010,
+        "genre": "Strategy",
+        "developer": "Blizzard Entertainment",
+        "platform": "PC",
+        "mode": "Multiplayer",
+        "rating": 9.0
+      },
+      {
+        "id": 76,
+        "title": "Command & Conquer: Red Alert 2",
+        "release_year": 2000,
+        "genre": "Strategy",
+        "developer": "Westwood Studios",
+        "platform": "PC",
+        "mode": "Single-player, Multiplayer",
+        "rating": 8.7
+      },
+      {
+        "id": 77,
+        "title": "Civilization VI",
+        "release_year": 2016,
+        "genre": "Strategy",
+        "developer": "Firaxis Games",
+        "platform": "PC",
+        "mode": "Single-player",
+        "rating": 9.2
+      },
+      {
+        "id": 78,
+        "title": "XCOM 2",
+        "release_year": 2016,
+        "genre": "Strategy",
+        "developer": "Firaxis Games",
+        "platform": "PC",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 79,
+        "title": "Age of Empires II: Definitive Edition",
+        "release_year": 2019,
+        "genre": "Strategy",
+        "developer": "Forgotten Empires",
+        "platform": "PC",
+        "mode": "Single-player, Multiplayer",
+        "rating": 8.8
+      },
+      {
+        "id": 80,
+        "title": "Sid Meier's Civilization V",
+        "release_year": 2010,
+        "genre": "Strategy",
+        "developer": "Firaxis Games",
+        "platform": "PC",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 81,
+        "title": "SimCity",
+        "release_year": 2013,
+        "genre": "Simulation",
+        "developer": "Maxis",
+        "platform": "PC",
+        "mode": "Single-player",
+        "rating": 7.5
+      },
+      {
+        "id": 82,
+        "title": "The Sims 4",
+        "release_year": 2014,
+        "genre": "Simulation",
+        "developer": "Maxis",
+        "platform": "PC",
+        "mode": "Single-player",
+        "rating": 8.2
+      },
+      {
+        "id": 83,
+        "title": "Planet Coaster",
+        "release_year": 2016,
+        "genre": "Simulation",
+        "developer": "Frontier Developments",
+        "platform": "PC",
+        "mode": "Single-player",
+        "rating": 8.5
+      },
+      {
+        "id": 84,
+        "title": "Cities: Skylines",
+        "release_year": 2015,
+        "genre": "Simulation",
+        "developer": "Colossal Order",
+        "platform": "PC",
+        "mode": "Single-player",
+        "rating": 8.7
+      },
+      {
+        "id": 85,
+        "title": "Stardew Valley",
+        "release_year": 2016,
+        "genre": "Simulation",
+        "developer": "ConcernedApe",
+        "platform": "PC, Switch, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 86,
+        "title": "Animal Crossing: New Horizons",
+        "release_year": 2020,
+        "genre": "Simulation",
+        "developer": "Nintendo",
+        "platform": "Nintendo Switch",
+        "mode": "Multiplayer",
+        "rating": 9.1
+      },
+      {
+        "id": 87,
+        "title": "The Witcher 2: Assassins of Kings",
+        "release_year": 2011,
+        "genre": "RPG",
+        "developer": "CD Projekt Red",
+        "platform": "PC, Xbox 360",
+        "mode": "Single-player",
+        "rating": 8.9
+      },
+      {
+        "id": 88,
+        "title": "Dishonored",
+        "release_year": 2012,
+        "genre": "Action-Adventure",
+        "developer": "Arkane Studios",
+        "platform": "PC, PS3, Xbox 360",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 89,
+        "title": "Prey",
+        "release_year": 2017,
+        "genre": "Action-Adventure",
+        "developer": "Arkane Studios",
+        "platform": "PC, PS4",
+        "mode": "Single-player",
+        "rating": 8.2
+      },
+      {
+        "id": 90,
+        "title": "Hitman 3",
+        "release_year": 2021,
+        "genre": "Stealth",
+        "developer": "IO Interactive",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 8.4
+      },
+      {
+        "id": 91,
+        "title": "Control",
+        "release_year": 2019,
+        "genre": "Action-Adventure",
+        "developer": "Remedy Entertainment",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 8.5
+      },
+      {
+        "id": 92,
+        "title": "Watch Dogs 2",
+        "release_year": 2016,
+        "genre": "Action-Adventure",
+        "developer": "Ubisoft",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 8.0
+      },
+      {
+        "id": 93,
+        "title": "Assassin's Creed Odyssey",
+        "release_year": 2018,
+        "genre": "Action-Adventure",
+        "developer": "Ubisoft",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 8.3
+      },
+      {
+        "id": 94,
+        "title": "Assassin's Creed Valhalla",
+        "release_year": 2020,
+        "genre": "Action-Adventure",
+        "developer": "Ubisoft",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 8.4
+      },
+      {
+        "id": 95,
+        "title": "Far Cry 5",
+        "release_year": 2018,
+        "genre": "Shooter",
+        "developer": "Ubisoft",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 8.2
+      },
+      {
+        "id": 96,
+        "title": "Far Cry 3",
+        "release_year": 2012,
+        "genre": "Shooter",
+        "developer": "Ubisoft",
+        "platform": "PC, PS3, Xbox 360",
+        "mode": "Single-player",
+        "rating": 8.0
+      },
+      {
+        "id": 97,
+        "title": "Hitman 2",
+        "release_year": 2018,
+        "genre": "Stealth",
+        "developer": "IO Interactive",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 8.6
+      },
+      {
+        "id": 98,
+        "title": "The Division 2",
+        "release_year": 2019,
+        "genre": "Shooter",
+        "developer": "Ubisoft",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Multiplayer",
+        "rating": 8.0
+      },
+      {
+        "id": 99,
+        "title": "Dirt 5",
+        "release_year": 2020,
+        "genre": "Racing",
+        "developer": "Codemasters",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Multiplayer",
+        "rating": 8.3
+      },
+      {
+        "id": 100,
+        "title": "F1 2021",
+        "release_year": 2021,
+        "genre": "Racing",
+        "developer": "Codemasters",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 8.5
+      },
+      {
+        "id": 101,
+        "title": "Control II",
+        "release_year": 2023,
+        "genre": "Action-Adventure",
+        "developer": "Remedy Entertainment",
+        "platform": "PC, PS5, Xbox Series X",
+        "mode": "Single-player",
+        "rating": 8.7
+      },
+      {
+        "id": 102,
+        "title": "Alan Wake 2",
+        "release_year": 2023,
+        "genre": "Action-Adventure",
+        "developer": "Remedy Entertainment",
+        "platform": "PC, PS5, Xbox Series X",
+        "mode": "Single-player",
+        "rating": 8.4
+      },
+      {
+        "id": 103,
+        "title": "Forza Motorsport 7",
+        "release_year": 2017,
+        "genre": "Racing",
+        "developer": "Turn 10 Studios",
+        "platform": "Xbox One, PC",
+        "mode": "Multiplayer",
+        "rating": 8.9
+      },
+      {
+        "id": 104,
+        "title": "Gran Turismo Sport",
+        "release_year": 2017,
+        "genre": "Racing",
+        "developer": "Polyphony Digital",
+        "platform": "PS4",
+        "mode": "Multiplayer",
+        "rating": 8.0
+      },
+      {
+        "id": 105,
+        "title": "Mortal Kombat 1",
+        "release_year": 2023,
+        "genre": "Fighting",
+        "developer": "NetherRealm Studios",
+        "platform": "PC, PS5, Xbox Series X",
+        "mode": "Multiplayer",
+        "rating": 8.8
+      },
+      {
+        "id": 106,
+        "title": "Returnal",
+        "release_year": 2021,
+        "genre": "Shooter",
+        "developer": "Housemarque",
+        "platform": "PS5",
+        "mode": "Single-player",
+        "rating": 8.5
+      },
+      {
+        "id": 107,
+        "title": "It Takes Two",
+        "release_year": 2021,
+        "genre": "Platformer",
+        "developer": "Hazelight Studios",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Co-op",
+        "rating": 8.7
+      },
+      {
+        "id": 108,
+        "title": "Psychonauts 2",
+        "release_year": 2021,
+        "genre": "Platformer",
+        "developer": "Double Fine Productions",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 109,
+        "title": "Hades",
+        "release_year": 2020,
+        "genre": "Roguelike",
+        "developer": "Supergiant Games",
+        "platform": "PC, Switch, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 9.2
+      },
+      {
+        "id": 110,
+        "title": "Celeste",
+        "release_year": 2018,
+        "genre": "Platformer",
+        "developer": "Matt Makes Games",
+        "platform": "PC, Switch, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 9.1
+      }
+      ,
+      {
+        "id": 111,
+        "title": "Super Mario Galaxy",
+        "release_year": 2007,
+        "genre": "Platformer",
+        "developer": "Nintendo",
+        "platform": "Wii",
+        "mode": "Single-player",
+        "rating": 9.5
+      },
+      {
+        "id": 112,
+        "title": "The Legend of Zelda: Ocarina of Time",
+        "release_year": 1998,
+        "genre": "Action-Adventure",
+        "developer": "Nintendo",
+        "platform": "Nintendo 64",
+        "mode": "Single-player",
+        "rating": 9.7
+      },
+      {
+        "id": 113,
+        "title": "Metal Gear Solid",
+        "release_year": 1998,
+        "genre": "Stealth",
+        "developer": "Konami",
+        "platform": "PlayStation",
+        "mode": "Single-player",
+        "rating": 9.3
+      },
+      {
+        "id": 114,
+        "title": "Resident Evil",
+        "release_year": 1996,
+        "genre": "Survival Horror",
+        "developer": "Capcom",
+        "platform": "PlayStation",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 115,
+        "title": "Final Fantasy VII",
+        "release_year": 1997,
+        "genre": "RPG",
+        "developer": "Square",
+        "platform": "PS1",
+        "mode": "Single-player",
+        "rating": 9.4
+      },
+      {
+        "id": 116,
+        "title": "Half-Life",
+        "release_year": 1998,
+        "genre": "Shooter",
+        "developer": "Valve",
+        "platform": "PC",
+        "mode": "Single-player",
+        "rating": 9.2
+      },
+      {
+        "id": 117,
+        "title": "Portal",
+        "release_year": 2007,
+        "genre": "Puzzle",
+        "developer": "Valve",
+        "platform": "PC, PS3, Xbox 360",
+        "mode": "Single-player",
+        "rating": 9.3
+      },
+      {
+        "id": 118,
+        "title": "BioShock Infinite",
+        "release_year": 2013,
+        "genre": "Shooter",
+        "developer": "Irrational Games",
+        "platform": "PC, PS3, Xbox 360",
+        "mode": "Single-player",
+        "rating": 9.1
+      },
+      {
+        "id": 119,
+        "title": "The Witcher 2: Assassins of Kings",
+        "release_year": 2011,
+        "genre": "RPG",
+        "developer": "CD Projekt Red",
+        "platform": "PC, Xbox 360",
+        "mode": "Single-player",
+        "rating": 8.7
+      },
+      {
+        "id": 120,
+        "title": "Mass Effect",
+        "release_year": 2007,
+        "genre": "RPG",
+        "developer": "BioWare",
+        "platform": "PC, Xbox 360",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 121,
+        "title": "God of War",
+        "release_year": 2005,
+        "genre": "Action",
+        "developer": "Santa Monica Studio",
+        "platform": "PS2",
+        "mode": "Single-player",
+        "rating": 9.4
+      },
+      {
+        "id": 122,
+        "title": "Shadow of the Colossus",
+        "release_year": 2005,
+        "genre": "Action-Adventure",
+        "developer": "Team Ico",
+        "platform": "PS2",
+        "mode": "Single-player",
+        "rating": 9.5
+      },
+      {
+        "id": 123,
+        "title": "Uncharted: Drake's Fortune",
+        "release_year": 2007,
+        "genre": "Action-Adventure",
+        "developer": "Naughty Dog",
+        "platform": "PS3",
+        "mode": "Single-player",
+        "rating": 8.8
+      },
+      {
+        "id": 124,
+        "title": "Uncharted 2: Among Thieves",
+        "release_year": 2009,
+        "genre": "Action-Adventure",
+        "developer": "Naughty Dog",
+        "platform": "PS3",
+        "mode": "Single-player",
+        "rating": 9.3
+      },
+      {
+        "id": 125,
+        "title": "Uncharted 3: Drake's Deception",
+        "release_year": 2011,
+        "genre": "Action-Adventure",
+        "developer": "Naughty Dog",
+        "platform": "PS3",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 126,
+        "title": "Gears of War",
+        "release_year": 2006,
+        "genre": "Shooter",
+        "developer": "Epic Games",
+        "platform": "Xbox 360",
+        "mode": "Single-player, Multiplayer",
+        "rating": 9.1
+      },
+      {
+        "id": 127,
+        "title": "Gears of War 2",
+        "release_year": 2008,
+        "genre": "Shooter",
+        "developer": "Epic Games",
+        "platform": "Xbox 360",
+        "mode": "Single-player, Multiplayer",
+        "rating": 9.0
+      },
+      {
+        "id": 128,
+        "title": "Gears of War 3",
+        "release_year": 2011,
+        "genre": "Shooter",
+        "developer": "Epic Games",
+        "platform": "Xbox 360",
+        "mode": "Single-player, Multiplayer",
+        "rating": 9.0
+      },
+      {
+        "id": 129,
+        "title": "Halo 3",
+        "release_year": 2007,
+        "genre": "Shooter",
+        "developer": "Bungie",
+        "platform": "Xbox 360",
+        "mode": "Single-player, Multiplayer",
+        "rating": 9.2
+      },
+      {
+        "id": 130,
+        "title": "Halo: Reach",
+        "release_year": 2010,
+        "genre": "Shooter",
+        "developer": "Bungie",
+        "platform": "Xbox 360",
+        "mode": "Single-player, Multiplayer",
+        "rating": 9.0
+      },
+      {
+        "id": 131,
+        "title": "Halo 4",
+        "release_year": 2012,
+        "genre": "Shooter",
+        "developer": "343 Industries",
+        "platform": "Xbox 360, Xbox One",
+        "mode": "Single-player, Multiplayer",
+        "rating": 8.8
+      },
+      {
+        "id": 132,
+        "title": "Halo 5: Guardians",
+        "release_year": 2015,
+        "genre": "Shooter",
+        "developer": "343 Industries",
+        "platform": "Xbox One",
+        "mode": "Multiplayer",
+        "rating": 8.5
+      },
+      {
+        "id": 133,
+        "title": "Call of Duty: Modern Warfare 2",
+        "release_year": 2009,
+        "genre": "Shooter",
+        "developer": "Infinity Ward",
+        "platform": "PC, Xbox 360, PS3",
+        "mode": "Single-player, Multiplayer",
+        "rating": 9.1
+      },
+      {
+        "id": 134,
+        "title": "Call of Duty: Black Ops",
+        "release_year": 2010,
+        "genre": "Shooter",
+        "developer": "Treyarch",
+        "platform": "PC, Xbox 360, PS3",
+        "mode": "Single-player, Multiplayer",
+        "rating": 8.9
+      },
+      {
+        "id": 135,
+        "title": "Call of Duty: Black Ops II",
+        "release_year": 2012,
+        "genre": "Shooter",
+        "developer": "Treyarch",
+        "platform": "PC, Xbox 360, PS3",
+        "mode": "Single-player, Multiplayer",
+        "rating": 8.7
+      },
+      {
+        "id": 136,
+        "title": "Battlefield 3",
+        "release_year": 2011,
+        "genre": "Shooter",
+        "developer": "DICE",
+        "platform": "PC, Xbox 360, PS3",
+        "mode": "Multiplayer",
+        "rating": 8.5
+      },
+      {
+        "id": 137,
+        "title": "Battlefield 4",
+        "release_year": 2013,
+        "genre": "Shooter",
+        "developer": "DICE",
+        "platform": "PC, Xbox 360, PS4",
+        "mode": "Multiplayer",
+        "rating": 8.4
+      },
+      {
+        "id": 138,
+        "title": "Splinter Cell: Chaos Theory",
+        "release_year": 2005,
+        "genre": "Stealth",
+        "developer": "Ubisoft",
+        "platform": "PC, Xbox",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 139,
+        "title": "Assassin's Creed II",
+        "release_year": 2009,
+        "genre": "Action-Adventure",
+        "developer": "Ubisoft",
+        "platform": "PC, PS3, Xbox 360",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 140,
+        "title": "Assassin's Creed Brotherhood",
+        "release_year": 2010,
+        "genre": "Action-Adventure",
+        "developer": "Ubisoft",
+        "platform": "PC, PS3, Xbox 360",
+        "mode": "Single-player",
+        "rating": 9.1
+      },
+      {
+        "id": 141,
+        "title": "Assassin's Creed III",
+        "release_year": 2012,
+        "genre": "Action-Adventure",
+        "developer": "Ubisoft",
+        "platform": "PC, PS3, Xbox 360",
+        "mode": "Single-player",
+        "rating": 8.7
+      },
+      {
+        "id": 142,
+        "title": "Assassin's Creed Origins",
+        "release_year": 2017,
+        "genre": "Action-Adventure",
+        "developer": "Ubisoft",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 8.8
+      },
+      {
+        "id": 143,
+        "title": "Assassin's Creed Odyssey",
+        "release_year": 2018,
+        "genre": "Action-Adventure",
+        "developer": "Ubisoft",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 8.3
+      },
+      {
+        "id": 144,
+        "title": "Resident Evil 5",
+        "release_year": 2009,
+        "genre": "Survival Horror",
+        "developer": "Capcom",
+        "platform": "PC, PS3, Xbox 360",
+        "mode": "Single-player",
+        "rating": 8.7
+      },
+      {
+        "id": 145,
+        "title": "Tekken 3",
+        "release_year": 1998,
+        "genre": "Fighting",
+        "developer": "Namco",
+        "platform": "PlayStation",
+        "mode": "Single-player",
+        "rating": 9.2
+      },
+      {
+        "id": 146,
+        "title": "Street Fighter II",
+        "release_year": 1991,
+        "genre": "Fighting",
+        "developer": "Capcom",
+        "platform": "Arcade, SNES",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 147,
+        "title": "SoulCalibur",
+        "release_year": 1998,
+        "genre": "Fighting",
+        "developer": "Namco",
+        "platform": "Arcade, Dreamcast",
+        "mode": "Single-player, Multiplayer",
+        "rating": 9.0
+      },
+      {
+        "id": 148,
+        "title": "Final Fantasy VIII",
+        "release_year": 1999,
+        "genre": "RPG",
+        "developer": "Square",
+        "platform": "PS1",
+        "mode": "Single-player",
+        "rating": 9.1
+      },
+      {
+        "id": 149,
+        "title": "Final Fantasy IX",
+        "release_year": 2000,
+        "genre": "RPG",
+        "developer": "Square",
+        "platform": "PS1",
+        "mode": "Single-player",
+        "rating": 9.2
+      },
+      {
+        "id": 150,
+        "title": "Persona 4",
+        "release_year": 2008,
+        "genre": "RPG",
+        "developer": "Atlus",
+        "platform": "PS2",
+        "mode": "Single-player",
+        "rating": 9.3
+      },
+      {
+        "id": 151,
+        "title": "Persona 5 Royal",
+        "release_year": 2019,
+        "genre": "RPG",
+        "developer": "Atlus",
+        "platform": "PS4",
+        "mode": "Single-player",
+        "rating": 9.4
+      },
+      {
+        "id": 152,
+        "title": "Dragon Quest VIII",
+        "release_year": 2004,
+        "genre": "RPG",
+        "developer": "Square Enix",
+        "platform": "PS2",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 153,
+        "title": "Dragon Quest XI S: Echoes of an Elusive Age",
+        "release_year": 2019,
+        "genre": "RPG",
+        "developer": "Square Enix",
+        "platform": "Multi-platform",
+        "mode": "Single-player",
+        "rating": 9.1
+      },
+      {
+        "id": 154,
+        "title": "Bayonetta 2",
+        "release_year": 2014,
+        "genre": "Action",
+        "developer": "PlatinumGames",
+        "platform": "Wii U, Switch",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 155,
+        "title": "Nier: Automata",
+        "release_year": 2017,
+        "genre": "Action RPG",
+        "developer": "PlatinumGames",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 9.2
+      },
+      {
+        "id": 156,
+        "title": "Metal Gear Solid: Ground Zeroes",
+        "release_year": 2014,
+        "genre": "Stealth",
+        "developer": "Kojima Productions",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 8.7
+      },
+      {
+        "id": 157,
+        "title": "Call of Duty: Modern Warfare",
+        "release_year": 2019,
+        "genre": "Shooter",
+        "developer": "Infinity Ward",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player, Multiplayer",
+        "rating": 9.0
+      },
+      {
+        "id": 158,
+        "title": "DOOM (2016)",
+        "release_year": 2016,
+        "genre": "Shooter",
+        "developer": "id Software",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 9.1
+      },
+      {
+        "id": 159,
+        "title": "Dishonored 2",
+        "release_year": 2016,
+        "genre": "Action-Adventure",
+        "developer": "Arkane Studios",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 8.8
+      },
+      {
+        "id": 160,
+        "title": "Alan Wake",
+        "release_year": 2010,
+        "genre": "Action-Adventure",
+        "developer": "Remedy Entertainment",
+        "platform": "PC, Xbox 360",
+        "mode": "Single-player",
+        "rating": 8.5
+      },
+      {
+        "id": 161,
+        "title": "Left 4 Dead 2",
+        "release_year": 2009,
+        "genre": "Shooter",
+        "developer": "Valve",
+        "platform": "PC, Xbox 360",
+        "mode": "Multiplayer",
+        "rating": 9.0
+      },
+      {
+        "id": 162,
+        "title": "Team Fortress 2",
+        "release_year": 2007,
+        "genre": "Shooter",
+        "developer": "Valve",
+        "platform": "PC",
+        "mode": "Multiplayer",
+        "rating": 8.8
+      },
+      {
+        "id": 163,
+        "title": "Counter-Strike",
+        "release_year": 2000,
+        "genre": "Shooter",
+        "developer": "Valve",
+        "platform": "PC",
+        "mode": "Multiplayer",
+        "rating": 9.0
+      },
+      {
+        "id": 164,
+        "title": "Heroes of the Storm",
+        "release_year": 2015,
+        "genre": "MOBA",
+        "developer": "Blizzard Entertainment",
+        "platform": "PC",
+        "mode": "Multiplayer",
+        "rating": 7.5
+      },
+      {
+        "id": 165,
+        "title": "StarCraft II: Wings of Liberty",
+        "release_year": 2010,
+        "genre": "Strategy",
+        "developer": "Blizzard Entertainment",
+        "platform": "PC",
+        "mode": "Multiplayer",
+        "rating": 9.2
+      },
+      {
+        "id": 166,
+        "title": "Age of Empires III",
+        "release_year": 2005,
+        "genre": "Strategy",
+        "developer": "Ensemble Studios",
+        "platform": "PC",
+        "mode": "Single-player, Multiplayer",
+        "rating": 8.5
+      },
+      {
+        "id": 167,
+        "title": "Company of Heroes",
+        "release_year": 2006,
+        "genre": "Strategy",
+        "developer": "Relic Entertainment",
+        "platform": "PC",
+        "mode": "Single-player, Multiplayer",
+        "rating": 9.0
+      },
+      {
+        "id": 168,
+        "title": "Total War: Three Kingdoms",
+        "release_year": 2019,
+        "genre": "Strategy",
+        "developer": "Creative Assembly",
+        "platform": "PC",
+        "mode": "Single-player",
+        "rating": 8.8
+      },
+      {
+        "id": 169,
+        "title": "FIFA 22",
+        "release_year": 2021,
+        "genre": "Sports",
+        "developer": "EA Sports",
+        "platform": "Multi-platform",
+        "mode": "Multiplayer",
+        "rating": 8.0
+      },
+      {
+        "id": 170,
+        "title": "NBA 2K22",
+        "release_year": 2021,
+        "genre": "Sports",
+        "developer": "2K Sports",
+        "platform": "Multi-platform",
+        "mode": "Multiplayer",
+        "rating": 8.2
+      },
+      {
+        "id": 171,
+        "title": "Madden NFL 22",
+        "release_year": 2021,
+        "genre": "Sports",
+        "developer": "EA Sports",
+        "platform": "Multi-platform",
+        "mode": "Multiplayer",
+        "rating": 8.0
+      },
+      {
+        "id": 172,
+        "title": "Gran Turismo 6",
+        "release_year": 2013,
+        "genre": "Racing",
+        "developer": "Polyphony Digital",
+        "platform": "PS3",
+        "mode": "Single-player",
+        "rating": 8.8
+      },
+      {
+        "id": 173,
+        "title": "Need for Speed: Underground 2",
+        "release_year": 2004,
+        "genre": "Racing",
+        "developer": "EA Black Box",
+        "platform": "PC, PS2, Xbox",
+        "mode": "Single-player",
+        "rating": 8.5
+      },
+      {
+        "id": 174,
+        "title": "The Sims 3",
+        "release_year": 2009,
+        "genre": "Simulation",
+        "developer": "Maxis",
+        "platform": "PC, Xbox 360, PS3",
+        "mode": "Single-player",
+        "rating": 8.7
+      },
+      {
+        "id": 175,
+        "title": "SimCity 4",
+        "release_year": 2003,
+        "genre": "Simulation",
+        "developer": "Maxis",
+        "platform": "PC",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 176,
+        "title": "Football Manager 2021",
+        "release_year": 2020,
+        "genre": "Simulation",
+        "developer": "Sports Interactive",
+        "platform": "PC",
+        "mode": "Single-player",
+        "rating": 8.5
+      },
+      {
+        "id": 177,
+        "title": "Harvest Moon: Light of Hope",
+        "release_year": 2017,
+        "genre": "Simulation",
+        "developer": "Natsume",
+        "platform": "Multi-platform",
+        "mode": "Single-player",
+        "rating": 7.8
+      },
+      {
+        "id": 178,
+        "title": "My Time at Portia",
+        "release_year": 2019,
+        "genre": "Simulation",
+        "developer": "Pathea Games",
+        "platform": "PC, Switch",
+        "mode": "Single-player",
+        "rating": 8.0
+      },
+      {
+        "id": 179,
+        "title": "The Legend of Zelda: Majora's Mask",
+        "release_year": 2000,
+        "genre": "Action-Adventure",
+        "developer": "Nintendo",
+        "platform": "Nintendo 64",
+        "mode": "Single-player",
+        "rating": 9.3
+      },
+      {
+        "id": 180,
+        "title": "Super Smash Bros. Melee",
+        "release_year": 2001,
+        "genre": "Fighting",
+        "developer": "Nintendo",
+        "platform": "GameCube",
+        "mode": "Multiplayer",
+        "rating": 9.4
+      },
+      {
+        "id": 181,
+        "title": "Super Smash Bros. Brawl",
+        "release_year": 2008,
+        "genre": "Fighting",
+        "developer": "Nintendo",
+        "platform": "Wii",
+        "mode": "Multiplayer",
+        "rating": 9.0
+      },
+      {
+        "id": 182,
+        "title": "Guitar Hero III: Legends of Rock",
+        "release_year": 2007,
+        "genre": "Rhythm",
+        "developer": "Neversoft",
+        "platform": "Multi-platform",
+        "mode": "Single-player, Multiplayer",
+        "rating": 8.0
+      },
+      {
+        "id": 183,
+        "title": "Rock Band",
+        "release_year": 2007,
+        "genre": "Rhythm",
+        "developer": "Harmonix",
+        "platform": "Multi-platform",
+        "mode": "Multiplayer",
+        "rating": 8.5
+      },
+      {
+        "id": 184,
+        "title": "Dance Dance Revolution",
+        "release_year": 1998,
+        "genre": "Rhythm",
+        "developer": "Konami",
+        "platform": "Arcade, Multi-platform",
+        "mode": "Multiplayer",
+        "rating": 8.0
+      },
+      {
+        "id": 185,
+        "title": "Metal Gear Solid 2: Sons of Liberty",
+        "release_year": 2001,
+        "genre": "Stealth",
+        "developer": "Konami",
+        "platform": "PS2",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 186,
+        "title": "Metal Gear Solid 3: Snake Eater",
+        "release_year": 2004,
+        "genre": "Stealth",
+        "developer": "Konami",
+        "platform": "PS2",
+        "mode": "Single-player",
+        "rating": 9.5
+      },
+      {
+        "id": 187,
+        "title": "The Last Guardian",
+        "release_year": 2016,
+        "genre": "Action-Adventure",
+        "developer": "Sony Interactive Entertainment",
+        "platform": "PS4",
+        "mode": "Single-player",
+        "rating": 8.0
+      },
+      {
+        "id": 188,
+        "title": "Journey",
+        "release_year": 2012,
+        "genre": "Adventure",
+        "developer": "Thatgamecompany",
+        "platform": "PS3, PS4",
+        "mode": "Single-player",
+        "rating": 9.2
+      },
+      {
+        "id": 189,
+        "title": "Flower",
+        "release_year": 2009,
+        "genre": "Adventure",
+        "developer": "Thatgamecompany",
+        "platform": "PS3",
+        "mode": "Single-player",
+        "rating": 8.5
+      },
+      {
+        "id": 190,
+        "title": "Abzû",
+        "release_year": 2016,
+        "genre": "Adventure",
+        "developer": "Giant Squid",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 8.0
+      },
+      {
+        "id": 191,
+        "title": "No Man's Sky",
+        "release_year": 2016,
+        "genre": "Adventure",
+        "developer": "Hello Games",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Multiplayer",
+        "rating": 8.0
+      },
+      {
+        "id": 192,
+        "title": "Subnautica",
+        "release_year": 2018,
+        "genre": "Adventure",
+        "developer": "Unknown Worlds",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 193,
+        "title": "The Outer Worlds",
+        "release_year": 2019,
+        "genre": "RPG",
+        "developer": "Obsidian Entertainment",
+        "platform": "PC, PS4, Xbox One",
+        "mode": "Single-player",
+        "rating": 8.5
+      },
+      {
+        "id": 194,
+        "title": "Disco Elysium",
+        "release_year": 2019,
+        "genre": "RPG",
+        "developer": "ZA/UM",
+        "platform": "PC, PS4, Switch",
+        "mode": "Single-player",
+        "rating": 9.2
+      },
+      {
+        "id": 195,
+        "title": "Horizon Zero Dawn",
+        "release_year": 2017,
+        "genre": "Action RPG",
+        "developer": "Guerrilla Games",
+        "platform": "PS4, PC",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 196,
+        "title": "Death Stranding",
+        "release_year": 2019,
+        "genre": "Action",
+        "developer": "Kojima Productions",
+        "platform": "PS4, PC",
+        "mode": "Single-player",
+        "rating": 8.5
+      },
+      {
+        "id": 197,
+        "title": "Bloodborne",
+        "release_year": 2015,
+        "genre": "Action RPG",
+        "developer": "FromSoftware",
+        "platform": "PS4",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 198,
+        "title": "Nioh",
+        "release_year": 2017,
+        "genre": "Action RPG",
+        "developer": "Team Ninja",
+        "platform": "PS4, PC",
+        "mode": "Single-player",
+        "rating": 8.8
+      },
+      {
+        "id": 199,
+        "title": "Devil May Cry 3",
+        "release_year": 2005,
+        "genre": "Action",
+        "developer": "Capcom",
+        "platform": "PC, PS2, Xbox",
+        "mode": "Single-player",
+        "rating": 9.0
+      },
+      {
+        "id": 200,
+        "title": "Bayonetta 3",
+        "release_year": 2022,
+        "genre": "Action",
+        "developer": "PlatinumGames",
+        "platform": "PC, PS5, Xbox Series X",
+        "mode": "Single-player",
+        "rating": 9.0
+      }
+    ]
+  }

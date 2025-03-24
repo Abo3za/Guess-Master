@@ -44,7 +44,7 @@ export interface CategoryOption {
 
 export const DIFFICULTY_POINTS = {
   normal: 10,
-  hard: 20
+  hard: 30
 } as const;
 
 export const DIFFICULTY_HINTS = {

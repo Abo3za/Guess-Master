@@ -12,54 +12,25 @@ function shuffleArray<T>(array: T[]): T[] {
 }
 
 // Helper function to format genres
-function formatGenres(genres: string[]): string {
-  if (!genres || !Array.isArray(genres)) return 'Unknown';
-  return genres.join(', ');
+function formatGenres(genre: string): string {
+  if (!genre) return 'Unknown';
+  return genre;
 }
 
 function getDetailsForCategory(data: any, difficulty: Difficulty = 'normal'): any[] {
   const allDetails = [
     { label: 'سنة الإصدار', value: data.release_year?.toString() || 'Unknown', revealed: false },
-    { label: 'الاستوديو', value: data.studio || 'Unknown', revealed: false },
-    { label: 'عدد الحلقات', value: data.episodes?.toString() || 'Unknown', revealed: false },
+    { label: 'المخرج', value: data.director || 'Unknown', revealed: false },
+    { label: 'الممثل الرئيسي', value: data.main_actor || 'Unknown', revealed: false },
     { label: 'التقييم', value: data.rating?.toString() + '/10' || 'Unknown', revealed: false },
     { label: 'التصنيف', value: formatGenres(data.genre), revealed: false },
-    { label: 'الشخصية الرئيسية', value: data.main_character || 'Unknown', revealed: false }
+    { label: 'معلومة مميزة', value: data.highlight || 'Unknown', revealed: false }
   ];
 
   if (difficulty === 'hard') {
     return shuffleArray([...allDetails]).slice(0, 3);
   }
   return allDetails;
-}
-
-export async function fetchRandomAnime(category: Category, difficulty: Difficulty): Promise<GameItem> {
-  try {
-    const randomAnime = moviesDB[Math.floor(Math.random() * moviesDB.length)];
-    if (!randomAnime) {
-      throw new Error('No anime data available');
-    }
-    
-    const details = getDetailsForCategory(randomAnime, difficulty);
-    return {
-      id: randomAnime.id.toString(),
-      category,
-      name: randomAnime.title,
-      details,
-    };
-  } catch (error) {
-    console.error('Error fetching anime data:', error);
-    
-    const fallbackAnime = moviesDB[0];
-    const details = getDetailsForCategory(fallbackAnime, difficulty);
-    
-    return {
-      id: fallbackAnime.id.toString(),
-      category,
-      name: fallbackAnime.title,
-      details: details
-    };
-  }
 }
 
 export async function fetchRandomMovie(category: Category = 'movies', difficulty: Difficulty = 'normal'): Promise<GameItem> {

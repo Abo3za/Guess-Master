@@ -102,8 +102,15 @@ export const useGameStore = create<GameStore>()(
 
         if (isCorrect) {
           const unrevealedCount = currentItem.details.filter(d => !d.revealed).length;
-          const basePoints = DIFFICULTY_POINTS[selectedDifficulty];
-          const points = unrevealedCount * basePoints;
+          const allDetailsRevealed = unrevealedCount === 0;
+          let points;
+
+          if (allDetailsRevealed) {
+            points = 10; // فقط 10 نقاط إذا تم كشف كل التلميحات
+          } else {
+            const basePoints = DIFFICULTY_POINTS[selectedDifficulty];
+            points = unrevealedCount * basePoints;
+          }
 
           const updatedTeams = teams.map((team) =>
             team.id === teamId

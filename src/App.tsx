@@ -3,7 +3,7 @@ import { GameSetup } from './components/GameSetup';
 import { GameBoard } from './components/GameBoard';
 import { CategorySelection } from './components/CategorySelection';
 import { useGameStore } from './store/gameStore';
-import { Category, GameItem } from './types';
+import { Category, GameItem, Team, Difficulty } from './types';
 import { fetchRandomGame } from './services/rawgApi';
 import { fetchRandomMovie, } from './services/omdbApi';
 import { fetchRandomAnime } from './services/jikanApi';
@@ -15,7 +15,6 @@ import { Gamepad2 } from 'lucide-react';
 
 function App() {
   const [gameStarted, setGameStarted] = useState(() => {
-    // التحقق من وجود بيانات محفوظة
     const stored = localStorage.getItem('game-storage');
     if (stored) {
       const { state } = JSON.parse(stored);
@@ -29,16 +28,12 @@ function App() {
     initializeGame, 
     setCurrentItem, 
     setCategory,
-    selectedDifficulty,
-    selectedCategory,
-    usedItems, 
-    categoryUsedItems,
-    clearUsedItems, 
     clearCategoryUsedItems,
     resetGame,
     round,
     maxRounds,
-    gameEnded 
+    gameEnded,
+    selectedDifficulty 
   } = useGameStore();
 
   const handleGameStart = (teams: string[]) => {
@@ -53,25 +48,21 @@ function App() {
   };
 
   const fetchItemForCategory = async (category: Category): Promise<GameItem | null> => {
-    if (!selectedDifficulty) {
-      throw new Error('Difficulty is not selected');
-    }
-
     switch (category) {
       case 'anime':
-        return await fetchRandomAnime(category, selectedDifficulty);
+        return await fetchRandomAnime(category);
       case 'tv':
-        return await fetchRandomTVShow(category, selectedDifficulty);
+        return await fetchRandomTVShow(category);
       case 'movies':
-        return await fetchRandomMovie(category, selectedDifficulty);
+        return await fetchRandomMovie(category);
       case 'games':
-        return await fetchRandomGame(category, selectedDifficulty);
+        return await fetchRandomGame(category);
       case 'football':
-        return await fetchRandomFootballItem(category, selectedDifficulty);
+        return await fetchRandomFootballItem(category);
       case 'countries':
-        return await fetchRandomCountry(category, selectedDifficulty);
+        return await fetchRandomCountry(category);
       case 'wwe':
-        return await fetchRandomWrestler(category, selectedDifficulty);
+        return await fetchRandomWrestler(category);
       default:
         return null;
     }
@@ -80,7 +71,7 @@ function App() {
   const handleCategorySelect = async (category: Category) => {
     setLoading(true);
     setCategory(category);
-    clearCategoryUsedItems(category); // Clear used items when selecting new category
+    clearCategoryUsedItems(category);
 
     try {
       let item: GameItem | null = null;
@@ -90,7 +81,7 @@ function App() {
       while (!item && attempts < maxAttempts) {
         const fetchedItem = await fetchItemForCategory(category);
         
-        if (fetchedItem && (!categoryUsedItems[category] || !categoryUsedItems[category].has(fetchedItem.id))) {
+        if (fetchedItem) {
           item = fetchedItem;
           break;
         }
@@ -111,13 +102,6 @@ function App() {
     }
   };
 
-  // Refetch when difficulty changes
-  useEffect(() => {
-    if (categorySelected && selectedDifficulty && selectedCategory) {
-      handleCategorySelect(selectedCategory);
-    }
-  }, [selectedDifficulty, selectedCategory, categorySelected]);
-
   const handleBackToCategories = () => {
     setCategorySelected(false);
   };
@@ -127,8 +111,8 @@ function App() {
       const stored = localStorage.getItem('game-storage');
       if (stored) {
         const { state } = JSON.parse(stored);
-        const teams = state.teams;
-        const winner = teams.reduce((prev: any, current: any) => 
+        const teams: Team[] = state.teams;
+        const winner = teams.reduce((prev: Team, current: Team) => 
           (prev.score > current.score) ? prev : current
         );
         alert(`انتهت اللعبة! الفائز هو ${winner.name} بـ ${winner.score} نقطة`);

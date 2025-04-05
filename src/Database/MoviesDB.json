@@ -58,6 +58,146 @@
     "main_actor": "Brad Pitt",
     "rating": 8.8,
     "highlight": "The first rule is: You do not talk about Fight Club"
+  },
+  {
+    "id": 7,
+    "title": "Pulp Fiction",
+    "release_year": 1994,
+    "genre": "Crime, Drama",
+    "director": "Quentin Tarantino",
+    "main_actor": "John Travolta",
+    "rating": 8.9,
+    "highlight": "Non-linear storytelling masterpiece"
+  },
+  {
+    "id": 8,
+    "title": "The Matrix",
+    "release_year": 1999,
+    "genre": "Sci-Fi, Action",
+    "director": "Lana Wachowski, Lilly Wachowski",
+    "main_actor": "Keanu Reeves",
+    "rating": 8.7,
+    "highlight": "Red pill or blue pill?"
+  },
+  {
+    "id": 9,
+    "title": "Goodfellas",
+    "release_year": 1990,
+    "genre": "Crime, Drama",
+    "director": "Martin Scorsese",
+    "main_actor": "Robert De Niro",
+    "rating": 8.7,
+    "highlight": "As far back as I can remember, I always wanted to be a gangster"
+  },
+  {
+    "id": 10,
+    "title": "The Silence of the Lambs",
+    "release_year": 1991,
+    "genre": "Crime, Thriller",
+    "director": "Jonathan Demme",
+    "main_actor": "Jodie Foster",
+    "rating": 8.6,
+    "highlight": "Hannibal Lecter's iconic character"
+  },
+  {
+    "id": 11,
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "release_year": 2001,
+    "genre": "Adventure, Fantasy",
+    "director": "Peter Jackson",
+    "main_actor": "Elijah Wood",
+    "rating": 8.8,
+    "highlight": "One ring to rule them all"
+  },
+  {
+    "id": 12,
+    "title": "Interstellar",
+    "release_year": 2014,
+    "genre": "Sci-Fi, Adventure",
+    "director": "Christopher Nolan",
+    "main_actor": "Matthew McConaughey",
+    "rating": 8.6,
+    "highlight": "Love transcends time and space"
+  },
+  {
+    "id": 13,
+    "title": "The Departed",
+    "release_year": 2006,
+    "genre": "Crime, Drama",
+    "director": "Martin Scorsese",
+    "main_actor": "Leonardo DiCaprio",
+    "rating": 8.5,
+    "highlight": "Undercover agents in Boston's criminal underworld"
+  },
+  {
+    "id": 14,
+    "title": "Gladiator",
+    "release_year": 2000,
+    "genre": "Action, Drama",
+    "director": "Ridley Scott",
+    "main_actor": "Russell Crowe",
+    "rating": 8.5,
+    "highlight": "Are you not entertained?"
+  },
+  {
+    "id": 15,
+    "title": "The Prestige",
+    "release_year": 2006,
+    "genre": "Drama, Mystery",
+    "director": "Christopher Nolan",
+    "main_actor": "Christian Bale",
+    "rating": 8.5,
+    "highlight": "Are you watching closely?"
+  },
+  {
+    "id": 16,
+    "title": "The Green Mile",
+    "release_year": 1999,
+    "genre": "Drama, Fantasy",
+    "director": "Frank Darabont",
+    "main_actor": "Tom Hanks",
+    "rating": 8.6,
+    "highlight": "Miracles happen in the most unexpected places"
+  },
+  {
+    "id": 17,
+    "title": "The Usual Suspects",
+    "release_year": 1995,
+    "genre": "Crime, Mystery",
+    "director": "Bryan Singer",
+    "main_actor": "Kevin Spacey",
+    "rating": 8.5,
+    "highlight": "The greatest trick the devil ever pulled"
+  },
+  {
+    "id": 18,
+    "title": "Se7en",
+    "release_year": 1995,
+    "genre": "Crime, Drama",
+    "director": "David Fincher",
+    "main_actor": "Brad Pitt",
+    "rating": 8.6,
+    "highlight": "What's in the box?"
+  },
+  {
+    "id": 19,
+    "title": "The Lion King",
+    "release_year": 1994,
+    "genre": "Animation, Adventure",
+    "director": "Roger Allers, Rob Minkoff",
+    "main_actor": "Matthew Broderick",
+    "rating": 8.5,
+    "highlight": "Hakuna Matata"
+  },
+  {
+    "id": 20,
+    "title": "The Sixth Sense",
+    "release_year": 1999,
+    "genre": "Drama, Mystery",
+    "director": "M. Night Shyamalan",
+    "main_actor": "Bruce Willis",
+    "rating": 8.2,
+    "highlight": "I see dead people"
   }
-  ]
+]
 

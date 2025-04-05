@@ -1,4 +1,4 @@
-import { GameItem } from '../types';
+import { GameItem, Category, Difficulty } from '../types';
 
 interface Country {
   id: number;
@@ -145,10 +145,12 @@ function formatArea(area: number): string {
   }
 }
 
-function getDetailsForCategory(data: Country, category: Category): any[] {
+function getDetailsForCategory(data: Country, category: Category, difficulty: Difficulty = 'normal'): any[] {
+  let details: any[] = [];
+  
   switch (category) {
     case 'countries-general':
-      return [
+      details = [
         { label: 'Continent', value: data.continent, revealed: false },
         { label: 'Region', value: data.region, revealed: false },
         { label: 'Official Language', value: data.official_language, revealed: false },
@@ -156,36 +158,44 @@ function getDetailsForCategory(data: Country, category: Category): any[] {
         { label: 'Area', value: formatArea(data.area), revealed: false },
         { label: 'Famous For', value: data.famous_for, revealed: false }
       ];
+      break;
 
     case 'countries-capitals':
-      return [
+      details = [
         { label: 'Continent', value: data.continent, revealed: false },
         { label: 'Population', value: data.capital_population?.toString() || 'Unknown', revealed: false },
         { label: 'Founded', value: data.capital_founded || 'Unknown', revealed: false },
         { label: 'Notable Landmarks', value: data.capital_landmarks?.join(', ') || 'Unknown', revealed: false },
         { label: 'Climate', value: data.capital_climate || 'Unknown', revealed: false }
       ];
+      break;
 
     case 'countries-landmarks':
-      return [
+      details = [
         { label: 'Location', value: data.landmark_location || 'Unknown', revealed: false },
         { label: 'Built', value: data.landmark_built || 'Unknown', revealed: false },
         { label: 'Type', value: data.landmark_type || 'Unknown', revealed: false },
         { label: 'UNESCO Status', value: data.unesco_status || 'Unknown', revealed: false },
         { label: 'Visitors/Year', value: data.annual_visitors || 'Unknown', revealed: false }
       ];
+      break;
 
     default:
-      return [
+      details = [
         { label: 'Continent', value: data.continent, revealed: false },
         { label: 'Official Language', value: data.official_language, revealed: false },
         { label: 'Currency', value: data.currency, revealed: false },
         { label: 'Famous For', value: data.famous_for, revealed: false }
       ];
   }
+
+  if (difficulty === 'hard') {
+    return shuffleArray(details).slice(0, 3);
+  }
+  return details;
 }
 
-export async function fetchRandomCountry(category: Category = 'countries-general'): Promise<GameItem> {
+export async function fetchRandomCountry(category: Category): Promise<GameItem> {
   try {
     const randomCountry = countries[Math.floor(Math.random() * countries.length)];
     
@@ -193,19 +203,20 @@ export async function fetchRandomCountry(category: Category = 'countries-general
       throw new Error('No country data available');
     }
 
-    // Get category-specific details
-    const details = getDetailsForCategory(randomCountry, category);
-
-    // Randomly select 4-5 details
-    const numberOfDetails = Math.floor(Math.random() * 2) + 4;
-    const shuffledDetails = shuffleArray(details);
-    const selectedDetails = shuffledDetails.slice(0, numberOfDetails);
+    const details = [
+      { label: 'Continent', value: randomCountry.continent, revealed: false },
+      { label: 'Region', value: randomCountry.region, revealed: false },
+      { label: 'Official Language', value: randomCountry.official_language, revealed: false },
+      { label: 'Currency', value: randomCountry.currency, revealed: false },
+      { label: 'Area', value: formatArea(randomCountry.area), revealed: false },
+      { label: 'Famous For', value: randomCountry.famous_for, revealed: false }
+    ];
 
     return {
       id: randomCountry.id.toString(),
       category: category,
       name: randomCountry.country_name,
-      details: selectedDetails
+      details
     };
   } catch (error) {
     console.error('Error with country data:', error);

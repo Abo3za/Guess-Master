@@ -78,7 +78,7 @@ import React, { useState } from 'react';
            <div className="flex items-center gap-4">
              <button
                onClick={onBackToCategories}
-               className="secondary-button"
+               className="primary-button bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600"
              >
                <ArrowLeft className="w-5 h-5" />
                عودة للفئات

@@ -3,7 +3,7 @@ import { Category, Difficulty, DIFFICULTY_POINTS, DIFFICULTY_HINTS } from '../ty
 import { 
   Gamepad2, Tv, Film, FolderRoot as Football, 
   BookOpen, Globe2, Trash2, Users, Plus, Minus,
-  Sparkles, Target, Zap, Sword, Flag
+  Sparkles, Target, Zap, Sword, Flag, ArrowLeft
 } from 'lucide-react';
 import { useGameStore } from '../store/gameStore';
 
@@ -201,6 +201,15 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="col-span-2 mb-4">
+            <button
+              onClick={() => setSelectedCategory(null)}
+              className="primary-button bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600"
+            >
+              <ArrowLeft className="w-5 h-5" />
+              عودة للفئات
+            </button>
+          </div>
           {difficulties.map((difficulty) => (
             <button
               key={difficulty.value}

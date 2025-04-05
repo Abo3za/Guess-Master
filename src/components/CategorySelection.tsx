@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Category, Difficulty, DIFFICULTY_POINTS, DIFFICULTY_HINTS } from '../types';
+import React from 'react';
+import { Category } from '../types';
 import { 
   Gamepad2, Tv, Film, FolderRoot as Football, 
-  BookOpen, Globe2, Trash2, Users, Plus, Minus,
-  Sparkles, Target, Zap, Sword, Flag, ArrowLeft
+  BookOpen, Users, Plus, Minus,
+  Sword, Flag
 } from 'lucide-react';
 import { useGameStore } from '../store/gameStore';
 
@@ -50,29 +50,9 @@ const categories = [
     bgImage: 'https://images.unsplash.com/photo-1488656711237-487ce1cc53b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   }
 ];
-const getDifficultyDescription = (difficulty: Difficulty, category: Category | null) => {
-  const hints = category === 'anime' 
-    ? DIFFICULTY_HINTS.anime[difficulty]
-    : DIFFICULTY_HINTS.default[difficulty];
-  return `${hints} تلميحات - ${DIFFICULTY_POINTS[difficulty]} نقاط لكل تلميح`;
-};
-
-const difficulties: { value: Difficulty; label: string; icon: JSX.Element }[] = [
-  {
-    value: 'normal',
-    label: 'عادي',
-    icon: <Target className="w-6 h-6" />
-  },
-  {
-    value: 'hard',
-    label: 'صعب',
-    icon: <Zap className="w-6 h-6" />
-  }
-];
 
 export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, onResetGame }) => {
-  const { teams, adjustScore, initializeGame, setDifficulty, round, maxRounds, endGame } = useGameStore();
-  const [selectedCategory, setSelectedCategory] = useState<Category | null>(null);
+  const { teams, adjustScore, initializeGame, round, maxRounds, endGame, categorySelectionCounts } = useGameStore();
 
   const activeTeam = teams.find(team => team.isActive);
 
@@ -94,13 +74,23 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
   };
 
   const handleCategorySelect = (category: Category) => {
-    setSelectedCategory(category);
+    const selectionCount = categorySelectionCounts[category] || 0;
+    if (selectionCount >= 3) {
+      alert('تم اختيار هذه الفئة 3 مرات! الرجاء اختيار فئة أخرى');
+      return;
+    }
+    onSelect(category);
   };
 
-  const handleDifficultySelect = (difficulty: Difficulty) => {
-    setDifficulty(difficulty);
-    onSelect(selectedCategory!);
-  };
+  // Check if all categories have been selected 3 times
+  const allCategoriesUsed = categories.every(category => 
+    (categorySelectionCounts[category.value as Category] || 0) >= 3
+  );
+
+  if (allCategoriesUsed) {
+    handleEndGame();
+    return null;
+  }
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4 sm:px-6" dir="rtl">
@@ -171,19 +161,23 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
             دور {activeTeam?.name}
           </h2>
           <p className="text-gray-300 text-sm sm:text-base mt-2">
-            {selectedCategory ? 'حدد مستوى الصعوبة للبدء' : 'اختر الفئة التي تريد'}
+            اختر الفئة التي تريد
           </p>
         </div>
       </div>
 
-      {/* Rest of the component (categories and difficulties) */}
-      {!selectedCategory ? (
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-6">
-          {categories.map((category) => (
+      {/* Categories Grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-6">
+        {categories.map((category) => {
+          const selectionCount = categorySelectionCounts[category.value as Category] || 0;
+          const isDisabled = selectionCount >= 3;
+          
+          return (
             <button
               key={category.value}
-              onClick={() => handleCategorySelect(category.value)}
-              className="category-card"
+              onClick={() => handleCategorySelect(category.value as Category)}
+              disabled={isDisabled}
+              className={`category-card ${isDisabled ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105'}`}
               style={{
                 backgroundImage: `url(${category.bgImage})`,
                 backgroundSize: 'cover',
@@ -195,42 +189,19 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
                   {category.icon}
                 </div>
                 <h3 className="text-lg sm:text-2xl font-bold">{category.label}</h3>
-              </div>
-            </button>
-          ))}
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="col-span-2 mb-4">
-            <button
-              onClick={() => setSelectedCategory(null)}
-              className="primary-button bg-gradient-to-r from-purple-500 to-indigo-500 hover:from-purple-600 hover:to-indigo-600"
-            >
-              <ArrowLeft className="w-5 h-5" />
-              عودة للفئات
-            </button>
-          </div>
-          {difficulties.map((difficulty) => (
-            <button
-              key={difficulty.value}
-              onClick={() => handleDifficultySelect(difficulty.value)}
-              className="difficulty-card glass-card p-6 hover:bg-white/[0.06] transition-all duration-300"
-            >
-              <div className="flex flex-col items-center gap-4">
-                <div className="category-icon">
-                  {difficulty.icon}
-                </div>
-                <div className="text-center">
-                  <h3 className="text-xl font-bold mb-2">{difficulty.label}</h3>
-                  <p className="text-sm text-gray-300">
-                    {getDifficultyDescription(difficulty.value, selectedCategory)}
-                  </p>
+                <div className="mt-2 flex items-center gap-1">
+                  <span className="text-sm text-white/80">
+                    {selectionCount}/3
+                  </span>
+                  {isDisabled && (
+                    <span className="text-sm text-white/80">تم اختيارها</span>
+                  )}
                 </div>
               </div>
             </button>
-          ))}
-        </div>
-      )}
+          );
+        })}
+      </div>
     </div>
   );
 };

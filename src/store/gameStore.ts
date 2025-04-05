@@ -1,12 +1,11 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
-import { GameState, Team, GameItem, Category, Difficulty, DIFFICULTY_POINTS } from '../types';
+import { GameState, Team, GameItem, Category } from '../types';
 
 interface GameStore extends GameState {
   initializeGame: (teams: string[]) => void;
   setCurrentItem: (item: GameItem) => void;
   setCategory: (category: Category) => void;
-  setDifficulty: (difficulty: Difficulty) => void;
   revealDetail: (detailIndex: number) => void;
   makeGuess: (teamId: string, guess: string) => boolean;
   nextTurn: () => void;
@@ -23,14 +22,14 @@ const initialState: GameState = {
   teams: [],
   currentItem: null,
   selectedCategory: null,
-  selectedDifficulty: null,
   round: 1,
-  maxRounds: 10, // تعديل عدد الجولات إلى 10
+  maxRounds: 10,
   answerRevealed: false,
   isLoading: false,
   usedItems: new Set(),
   categoryUsedItems: {} as Record<Category, Set<string>>,
-  gameEnded: false, // إضافة حالة جديدة
+  gameEnded: false,
+  categorySelectionCounts: {} as Record<Category, number>,
 };
 
 export const useGameStore = create<GameStore>()(
@@ -50,9 +49,9 @@ export const useGameStore = create<GameStore>()(
           answerRevealed: false,
           currentItem: null,
           selectedCategory: null,
-          selectedDifficulty: null,
           usedItems: new Set(),
           categoryUsedItems: {},
+          categorySelectionCounts: {},
         });
       },
       setCurrentItem: (item) => {
@@ -71,8 +70,16 @@ export const useGameStore = create<GameStore>()(
           };
         });
       },
-      setCategory: (category) => set({ selectedCategory: category }),
-      setDifficulty: (difficulty) => set({ selectedDifficulty: difficulty }),
+      setCategory: (category) => set((state) => {
+        const currentCount = state.categorySelectionCounts[category] || 0;
+        return {
+          selectedCategory: category,
+          categorySelectionCounts: {
+            ...state.categorySelectionCounts,
+            [category]: currentCount + 1
+          }
+        };
+      }),
       revealDetail: (detailIndex) => {
         const { currentItem } = get();
         if (!currentItem) return;
@@ -88,8 +95,8 @@ export const useGameStore = create<GameStore>()(
         });
       },
       makeGuess: (teamId, guess) => {
-        const { currentItem, teams, selectedDifficulty, round, maxRounds } = get();
-        if (!currentItem || !guess || !selectedDifficulty) return false;
+        const { currentItem, teams, round, maxRounds } = get();
+        if (!currentItem || !guess) return false;
 
         const normalizeString = (str: string) => 
           str.toLowerCase()
@@ -105,14 +112,7 @@ export const useGameStore = create<GameStore>()(
         if (isCorrect) {
           const unrevealedCount = currentItem.details.filter(d => !d.revealed).length;
           const allDetailsRevealed = unrevealedCount === 0;
-          let points;
-
-          if (allDetailsRevealed) {
-            points = 10; // فقط 10 نقاط إذا تم كشف كل التلميحات
-          } else {
-            const basePoints = DIFFICULTY_POINTS[selectedDifficulty];
-            points = unrevealedCount * basePoints;
-          }
+          const points = allDetailsRevealed ? 10 : unrevealedCount * 5;
 
           const updatedTeams = teams.map((team) =>
             team.id === teamId
@@ -120,7 +120,6 @@ export const useGameStore = create<GameStore>()(
               : team
           );
           
-          // التحقق من انتهاء الجولات - نحذف زيادة الجولة هنا لأنها ستتم في nextTurn
           const isLastRound = round >= maxRounds;
           if (isLastRound) {
             set({ 
@@ -152,7 +151,6 @@ export const useGameStore = create<GameStore>()(
         const currentActiveIndex = teams.findIndex((team) => team.isActive);
         const nextActiveIndex = (currentActiveIndex + 1) % teams.length;
         
-        // زيادة الجولة فقط عندما نعود للفريق الأول
         const shouldIncrementRound = nextActiveIndex === 0;
         const nextRound = shouldIncrementRound ? round + 1 : round;
 
@@ -176,7 +174,6 @@ export const useGameStore = create<GameStore>()(
         set({ 
           currentItem: null, 
           selectedCategory: null,
-          selectedDifficulty: null,
           answerRevealed: false 
         });
       },
@@ -199,15 +196,9 @@ export const useGameStore = create<GameStore>()(
         teams: state.teams,
         round: state.round,
         maxRounds: state.maxRounds,
-        gameEnded: state.gameEnded,
-        gameStarted: true,  // إضافة لحفظ حالة بدء اللعبة
-        usedItems: Array.from(state.usedItems),
-        categoryUsedItems: Object.fromEntries(
-          Object.entries(state.categoryUsedItems).map(([category, items]) => [
-            category,
-            Array.from(items)
-          ])
-        )
+        usedItems: state.usedItems,
+        categoryUsedItems: state.categoryUsedItems,
+        categorySelectionCounts: state.categorySelectionCounts,
       })
     }
   )

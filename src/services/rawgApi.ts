@@ -33,39 +33,32 @@ function getDetailsForCategory(game: any, difficulty: Difficulty = 'normal'): an
   return allDetails;
 }
 
-export async function fetchRandomGame(category: Category, difficulty: Difficulty): Promise<GameItem> {
-  if (!gamesDB?.games?.length) {
-    throw new Error('Games database is empty or invalid');
-  }
-
+export async function fetchRandomGame(category: Category): Promise<GameItem> {
   try {
     const randomGame = gamesDB.games[Math.floor(Math.random() * gamesDB.games.length)];
+    
     if (!randomGame) {
       throw new Error('No game data available');
     }
-    
-    const details = getDetailsForCategory(randomGame, difficulty);
+
+    const details = [
+      { label: 'Genre', value: randomGame.genre, revealed: false },
+      { label: 'Platform', value: randomGame.platform, revealed: false },
+      { label: 'Release Year', value: randomGame.release_year.toString(), revealed: false },
+      { label: 'Developer', value: randomGame.developer, revealed: false },
+      { label: 'Publisher', value: randomGame.publisher, revealed: false },
+      { label: 'Famous For', value: randomGame.famous_for, revealed: false }
+    ];
+
     return {
       id: randomGame.id.toString(),
-      category,
+      category: category,
       name: randomGame.title,
-      details,
-    };
-  } catch (error) {
-    console.error('Error fetching game data:', error);
-    
-    const fallbackGame = gamesDB.games[0];
-    if (!fallbackGame) {
-      throw new Error('No fallback game data available');
-    }
-    const details = getDetailsForCategory(fallbackGame, difficulty);
-    
-    return {
-      id: fallbackGame.id.toString(),
-      category,
-      name: fallbackGame.title,
       details
     };
+  } catch (error) {
+    console.error('Error with game data:', error);
+    return getFallbackGameData(category);
   }
 }
 

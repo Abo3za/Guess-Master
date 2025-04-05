@@ -33,31 +33,51 @@ function getDetailsForCategory(data: any, difficulty: Difficulty = 'normal'): an
   return allDetails;
 }
 
-export async function fetchRandomMovie(category: Category = 'movies', difficulty: Difficulty = 'normal'): Promise<GameItem> {
-  if (!Array.isArray(moviesDB) || moviesDB.length === 0) {
-    throw new Error('Movies database is empty or invalid');
-  }
+function getFallbackMovieData(category: Category): GameItem {
+  return {
+    id: 'fallback-1',
+    category: category,
+    name: 'The Shawshank Redemption',
+    details: [
+      { label: 'Genre', value: 'Drama', revealed: false },
+      { label: 'Director', value: 'Frank Darabont', revealed: false },
+      { label: 'Release Year', value: '1994', revealed: false },
+      { label: 'Actors', value: 'Tim Robbins, Morgan Freeman', revealed: false },
+      { label: 'Plot', value: 'Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.', revealed: false },
+      { label: 'Awards', value: 'Nominated for 7 Oscars', revealed: false }
+    ]
+  };
+}
 
+export async function fetchRandomMovie(category: Category): Promise<GameItem> {
   try {
+    if (!Array.isArray(moviesDB) || moviesDB.length === 0) {
+      throw new Error('Movies database is empty or invalid');
+    }
+
     const randomMovie = moviesDB[Math.floor(Math.random() * moviesDB.length)];
-    const details = getDetailsForCategory(randomMovie, difficulty);
+    
+    if (!randomMovie) {
+      throw new Error('No movie data available');
+    }
+
+    const details = [
+      { label: 'Genre', value: randomMovie.genre, revealed: false },
+      { label: 'Director', value: randomMovie.director, revealed: false },
+      { label: 'Release Year', value: randomMovie.release_year.toString(), revealed: false },
+      { label: 'Main Actor', value: randomMovie.main_actor, revealed: false },
+      { label: 'Rating', value: randomMovie.rating.toString() + '/10', revealed: false },
+      { label: 'Highlight', value: randomMovie.highlight, revealed: false }
+    ];
+
     return {
       id: randomMovie.id.toString(),
-      category,
+      category: category,
       name: randomMovie.title,
       details
     };
   } catch (error) {
-    console.error('Error fetching movie:', error);
-    if (!moviesDB[0]) {
-      throw new Error('No fallback movie data available');
-    }
-    const details = getDetailsForCategory(moviesDB[0], difficulty);
-    return {
-      id: moviesDB[0].id.toString(),
-      category,
-      name: moviesDB[0].title,
-      details
-    };
+    console.error('Error with movie data:', error);
+    return getFallbackMovieData(category);
   }
 }

@@ -1,20 +1,23 @@
-export type Category = 'anime' | 'tv' | 'movies' | 'games' | 'football' | 'countries' | 'wwe';
-
-export type Difficulty = 'normal' | 'hard';
-
-export interface Detail {
-  label: string;
-  value: string;
-  revealed: boolean;
-}
+export type Category = 
+  | 'anime'
+  | 'tv'
+  | 'movies'
+  | 'games'
+  | 'football'
+  | 'countries'
+  | 'wwe';
 
 export interface GameItem {
   id: string;
   category: Category;
   name: string;
-  details: Detail[];
+  details: {
+    label: string;
+    value: string;
+    revealed: boolean;
+  }[];
 }
-// Removed duplicate DIFFICULTY_HINTS declaration
+
 export interface Team {
   id: string;
   name: string;
@@ -26,7 +29,6 @@ export interface GameState {
   teams: Team[];
   currentItem: GameItem | null;
   selectedCategory: Category | null;
-  selectedDifficulty: Difficulty | null;
   round: number;
   maxRounds: number;
   answerRevealed: boolean;
@@ -34,6 +36,7 @@ export interface GameState {
   usedItems: Set<string>;
   categoryUsedItems: Record<Category, Set<string>>;
   gameEnded: boolean;
+  categorySelectionCounts: Record<Category, number>;
 }
 
 export interface CategoryOption {

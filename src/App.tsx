@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import WelcomePage from './components/WelcomePage';
 import { AboutPage } from './components/AboutPage';
 import { ContactPage } from './components/ContactPage';
@@ -19,6 +19,7 @@ import { fetchRandomCountry } from './services/countriesApi';
 
 function AppRoutes() {
   const navigate = useNavigate();
+  const location = useLocation();
   const { 
     isGameActive,
     initializeGame,
@@ -28,6 +29,8 @@ function AppRoutes() {
     resetGame,
     setCurrentItem
   } = useGameStore();
+
+  const shouldHideNav = isGameActive && (location.pathname === '/categories' || location.pathname === '/game');
 
   const handleGameStart = (teams: string[]) => {
     initializeGame(teams);
@@ -89,7 +92,7 @@ function AppRoutes() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <NavigationBar />
-      <main className="pt-28">
+      <main className={shouldHideNav ? "" : "pt-28"}>
         <Routes>
           <Route path="/" element={<WelcomePage />} />
           <Route path="/about" element={<AboutPage />} />

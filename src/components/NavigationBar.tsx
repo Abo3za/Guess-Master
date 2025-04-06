@@ -1,8 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Home, Info, MessageSquare } from 'lucide-react';
+import { useGameStore } from '../store/gameStore';
 
 const NavigationBar: React.FC = () => {
+  const { isGameActive } = useGameStore();
+  const location = useLocation();
+  const shouldHideNav = isGameActive && (location.pathname === '/categories' || location.pathname === '/game');
+
+  if (shouldHideNav) return null;
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-lg border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4">

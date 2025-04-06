@@ -17,11 +17,57 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
     gameEnded,
     adjustScore,
     setActiveTeam,
-    selectedCategory
+    selectedCategory,
+    isGameActive,
+    setCurrentItem
   } = useGameStore();
 
   const [showAnswer, setShowAnswer] = useState(false);
   const [selectedTeam, setSelectedTeam] = useState<number | null>(null);
+
+  useEffect(() => {
+    const savedGameState = localStorage.getItem('gameState');
+    if (savedGameState) {
+      const state = JSON.parse(savedGameState);
+      if (state.showAnswer !== undefined) {
+        setShowAnswer(state.showAnswer);
+      }
+      if (state.selectedTeam !== undefined) {
+        setSelectedTeam(state.selectedTeam);
+      }
+      if (state.currentItem) {
+        setCurrentItem(state.currentItem);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
+    if (isGameActive && currentItem) {
+      const gameState = {
+        isGameActive,
+        teams,
+        currentItem,
+        showAnswer,
+        selectedTeam,
+        selectedCategory
+      };
+      localStorage.setItem('gameState', JSON.stringify(gameState));
+    }
+  }, [isGameActive, teams, currentItem, showAnswer, selectedTeam, selectedCategory]);
+
+  useEffect(() => {
+    if (!isGameActive || !currentItem) {
+      const savedGameState = localStorage.getItem('gameState');
+      if (savedGameState) {
+        const state = JSON.parse(savedGameState);
+        if (!state.isGameActive) {
+          navigate('/');
+        }
+      } else {
+        navigate('/');
+      }
+    }
+  }, [isGameActive, currentItem, navigate]);
 
   useEffect(() => {
     if (gameEnded) {
@@ -41,7 +87,7 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
   }, []);
 
   const handleReveal = (index: number) => {
-    if (!currentItem) return;
+    if (!currentItem || showAnswer) return;
     revealDetail(index);
   };
 
@@ -72,14 +118,18 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
     if (checkWinCondition()) {
       navigate('/win');
     } else {
-      onBackToCategories();
+      navigate('/categories');
     }
-  }, [currentItem, teams, adjustScore, setActiveTeam, checkWinCondition, navigate, onBackToCategories, selectedTeam]);
+  }, [currentItem, teams, adjustScore, setActiveTeam, checkWinCondition, navigate, selectedTeam]);
 
   // إعادة تعيين selectedTeam عند تغيير currentItem
   useEffect(() => {
     setSelectedTeam(null);
   }, [currentItem]);
+
+  const handleBackToCategories = () => {
+    navigate('/categories');
+  };
 
   if (!currentItem) return null;
 
@@ -91,7 +141,7 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
     <div className="min-h-screen bg-gray-900 py-12 px-4 relative" dir="rtl">
       {/* زر العودة */}
       <button
-        onClick={onBackToCategories}
+        onClick={handleBackToCategories}
         className="secondary-button mb-8 flex items-center gap-2 absolute top-4 right-4"
       >
         <ArrowRight className="w-5 h-5" />

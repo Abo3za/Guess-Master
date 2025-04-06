@@ -105,14 +105,6 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
     <div className="min-h-screen bg-gray-900 fixed inset-0 overflow-auto">
       <div className="h-full px-4 py-8" dir="rtl">
         <div className="flex justify-between items-center gap-4 mb-8">
-          <button
-            onClick={onResetGame}
-            className="secondary-button px-6 py-3 flex items-center gap-2 text-lg"
-          >
-            <Users className="w-6 h-6" />
-            فرق جديدة
-          </button>
-          
           <div className="text-center bg-blue-500/10 px-6 py-3 rounded-xl border border-blue-500/20">
             <span className="text-xl font-bold text-blue-400 flex items-center gap-2">
               <Trophy className="w-6 h-6" />
@@ -154,7 +146,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
                   backgroundPosition: 'center',
                 }}
               >
-                <div className="absolute inset-0 bg-gray-900/70"></div>
+                <div className="absolute inset-0 bg-gray-900/50"></div>
                 <div className="relative z-10 p-6">
                   <div className="flex items-center justify-center gap-2 mb-6">
                     <h3 className="text-4xl font-bold text-white">{team.name}</h3>
@@ -198,20 +190,14 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
                         backgroundPosition: 'center',
                       }}
                     >
-                      <div className="relative z-10 h-full flex flex-col items-center justify-between p-8">
-                        <h3 className="text-3xl font-bold text-white drop-shadow-lg">
+                      <div className="absolute inset-0 bg-gray-900/50"></div>
+                      <div className="relative z-10 p-6">
+                        <h3 className="text-3xl font-bold text-white mb-4">
                           {category.label}
                         </h3>
-                        <div className="flex items-center gap-3 bg-black/60 backdrop-blur-sm px-6 py-3 rounded-xl">
-                          <span className="text-xl text-white font-semibold drop-shadow-md">
-                            {selectionCount}/3
-                          </span>
-                          {isDisabled && (
-                            <span className="text-xl text-white font-semibold drop-shadow-md">
-                              تم اختيارها
-                            </span>
-                          )}
-                        </div>
+                        <p className="text-lg text-gray-300">
+                          تم اختيارها {selectionCount} مرة من 3
+                        </p>
                       </div>
                     </button>
                   </div>
@@ -234,7 +220,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
                   backgroundPosition: 'center',
                 }}
               >
-                <div className="absolute inset-0 bg-gray-900/70"></div>
+                <div className="absolute inset-0 bg-gray-900/50"></div>
                 <div className="relative z-10 p-6">
                   <div className="flex items-center justify-center gap-2 mb-6">
                     <h3 className="text-4xl font-bold text-white">{team.name}</h3>

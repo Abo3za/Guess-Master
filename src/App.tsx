@@ -16,6 +16,11 @@ import { fetchRandomFootballItem } from './services/footballApi';
 import { fetchRandomWrestler } from './services/wweApi';
 import { WinPage } from './components/WinPage';
 import WelcomePage from './components/WelcomePage';
+import SignUp from './components/SignUp';
+import Login from './components/Login';
+import UserProfile from './components/UserProfile';
+import ProtectedRoute from './components/ProtectedRoute';
+import { Toaster } from 'react-hot-toast';
 
 function AppRoutes() {
   const navigate = useNavigate();
@@ -28,13 +33,59 @@ function AppRoutes() {
     backToCategories,
     resetGame,
     setCurrentItem,
-    gameEnded
+    gameEnded,
+    teams,
+    winningPoints,
+    hideHints,
+    selectedCategories,
+    currentItem
   } = useGameStore();
 
-  // Reset game state when app loads
+  // استرجاع حالة اللعبة عند تحميل التطبيق
   useEffect(() => {
-    resetGame();
-  }, [resetGame]);
+    const savedGameState = localStorage.getItem('gameState');
+    if (savedGameState) {
+      const state = JSON.parse(savedGameState);
+      if (state.isGameActive) {
+        // استرجاع حالة اللعبة كاملة
+        initializeGame(
+          state.teams,
+          state.winningPoints || 200,
+          state.hideHints || false,
+          state.selectedCategories || []
+        );
+
+        if (state.currentItem) {
+          setCurrentItem(state.currentItem);
+        }
+
+        // توجيه المستخدم إلى الصفحة المناسبة
+        if (location.pathname === '/') {
+          if (state.currentItem) {
+            navigate('/game');
+          } else {
+            navigate('/categories');
+          }
+        }
+      }
+    }
+  }, []);
+
+  // حفظ حالة اللعبة عند أي تغيير
+  useEffect(() => {
+    if (isGameActive) {
+      const gameState = {
+        isGameActive,
+        teams,
+        winningPoints,
+        hideHints,
+        selectedCategories,
+        currentItem,
+        lastUpdated: new Date().toISOString()
+      };
+      localStorage.setItem('gameState', JSON.stringify(gameState));
+    }
+  }, [isGameActive, teams, winningPoints, hideHints, selectedCategories, currentItem]);
 
   const shouldHideNav = isGameActive && (location.pathname === '/play' || location.pathname === '/game') && !gameEnded;
 
@@ -45,7 +96,7 @@ function AppRoutes() {
     selectedCategories: string[]
   ) => {
     initializeGame(teams, winningPoints, hideHints, selectedCategories);
-    navigate('/play');
+    navigate('/categories');
   };
 
   const handleCategorySelect = async (category: Category) => {
@@ -127,33 +178,71 @@ function AppRoutes() {
     <div className="min-h-screen bg-gray-900 text-white">
       {!shouldHideNav && <NavigationBar />}
       <main className={shouldHideNav ? "" : "pt-28"}>
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          toastOptions={{
+            duration: 3000,
+            style: {
+              background: '#1F2937',
+              color: '#fff',
+              fontSize: '16px',
+            },
+            success: {
+              iconTheme: {
+                primary: '#10B981',
+                secondary: '#fff',
+              },
+            },
+            error: {
+              iconTheme: {
+                primary: '#EF4444',
+                secondary: '#fff',
+              },
+            },
+          }}
+        />
         <Routes>
+          {/* Public Routes */}
           <Route path="/" element={<WelcomePage />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/setup" element={<GameSetup onStart={handleGameStart} />} />
-          <Route path="/win" element={<WinPage onPlayAgain={handleResetGame} />} />
-          {isGameActive && !gameEnded ? (
-            <>
-              <Route 
-                path="/play" 
-                element={
-                  <CategorySelection 
-                    onSelect={handleCategorySelect} 
-                    onResetGame={handleResetGame} 
-                  />
-                } 
+
+          {/* Protected Routes */}
+          <Route path="/setup" element={
+            <ProtectedRoute>
+              <GameSetup onStart={handleGameStart} />
+            </ProtectedRoute>
+          } />
+          <Route path="/categories" element={
+            <ProtectedRoute>
+              <CategorySelection 
+                onSelect={handleCategorySelect} 
+                onResetGame={handleResetGame} 
               />
-              <Route 
-                path="/game" 
-                element={
-                  <GameBoard 
-                    onBackToCategories={handleBackToCategories} 
-                  />
-                } 
+            </ProtectedRoute>
+          } />
+          <Route path="/game" element={
+            <ProtectedRoute>
+              <GameBoard 
+                onBackToCategories={handleBackToCategories} 
               />
-            </>
-          ) : null}
+            </ProtectedRoute>
+          } />
+          <Route path="/profile" element={
+            <ProtectedRoute>
+              <UserProfile />
+            </ProtectedRoute>
+          } />
+          <Route path="/win" element={
+            <ProtectedRoute>
+              <WinPage onPlayAgain={handleResetGame} />
+            </ProtectedRoute>
+          } />
+
+          {/* Fallback Route */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
@@ -164,7 +253,33 @@ function AppRoutes() {
 function App() {
   return (
     <Router>
-      <AppRoutes />
+      <div dir="rtl">
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          toastOptions={{
+            duration: 3000,
+            style: {
+              background: '#1F2937',
+              color: '#fff',
+              fontSize: '16px',
+            },
+            success: {
+              iconTheme: {
+                primary: '#10B981',
+                secondary: '#fff',
+              },
+            },
+            error: {
+              iconTheme: {
+                primary: '#EF4444',
+                secondary: '#fff',
+              },
+            },
+          }}
+        />
+        <AppRoutes />
+      </div>
     </Router>
   );
 }

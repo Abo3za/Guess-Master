@@ -168,7 +168,7 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
     ];
 
     onStart(gameTeams, winningPoints, false, selectedCategories);
-    navigate('/play');
+    navigate('/categories');
   };
 
   return (

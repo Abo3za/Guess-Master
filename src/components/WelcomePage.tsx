@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Users, Play } from 'lucide-react';
+import { auth } from '../services/firebase';
+import { onAuthStateChanged } from 'firebase/auth';
 
 const WelcomePage: React.FC = () => {
   const navigate = useNavigate();
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setIsAuthenticated(!!user);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  const handleStartGame = () => {
+    if (isAuthenticated) {
+      navigate('/setup');
+    } else {
+      navigate('/login');
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -19,12 +38,17 @@ const WelcomePage: React.FC = () => {
             اختبر معلوماتك في مختلف المجالات
           </p>
           <button
-            onClick={() => navigate('/setup')}
+            onClick={handleStartGame}
             className="primary-button text-xl px-12 py-5 flex items-center gap-2 mx-auto hover:scale-105 transition-transform"
           >
             <Play className="w-6 h-6" />
-            ابدأ اللعبة
+            {isAuthenticated ? 'ابدأ اللعبة' : 'تسجيل الدخول للعب'}
           </button>
+          {!isAuthenticated && (
+            <p className="mt-4 text-gray-400">
+              يجب تسجيل الدخول للمشاركة في اللعبة
+            </p>
+          )}
         </div>
       </div>
 

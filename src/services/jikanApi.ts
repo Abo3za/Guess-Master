@@ -1,4 +1,4 @@
-import { GameItem, Category, Difficulty, DIFFICULTY_HINTS } from '../types';
+import { GameItem, Category } from '../types';
 import animeDB from '../Database/AnimeDB.json';
 
 // Helper function to shuffle array
@@ -17,7 +17,7 @@ function formatGenres(genres: string[]): string {
   return genres.join(', ');
 }
 
-function getDetailsForCategory(data: any, difficulty: Difficulty = 'normal'): any[] {
+function getDetailsForCategory(data: any): any[] {
   const allDetails = [
     { label: 'سنة الإصدار', value: data.release_year?.toString() || 'Unknown', revealed: false },
     { label: 'الاستوديو', value: data.studio || 'Unknown', revealed: false },
@@ -27,20 +27,17 @@ function getDetailsForCategory(data: any, difficulty: Difficulty = 'normal'): an
     { label: 'الشخصية الرئيسية', value: data.main_character || 'Unknown', revealed: false }
   ];
 
-  if (difficulty === 'hard') {
-    return shuffleArray([...allDetails]).slice(0, 3);
-  }
   return allDetails;
 }
 
-export async function fetchRandomAnime(category: Category, difficulty: Difficulty): Promise<GameItem> {
+export async function fetchRandomAnime(category: Category): Promise<GameItem> {
   try {
     const randomAnime = animeDB[Math.floor(Math.random() * animeDB.length)];
     if (!randomAnime) {
       throw new Error('No anime data available');
     }
     
-    const details = getDetailsForCategory(randomAnime, difficulty);
+    const details = getDetailsForCategory(randomAnime);
     return {
       id: randomAnime.id.toString(),
       category,
@@ -51,7 +48,7 @@ export async function fetchRandomAnime(category: Category, difficulty: Difficult
     console.error('Error fetching anime data:', error);
     
     const fallbackAnime = animeDB[0];
-    const details = getDetailsForCategory(fallbackAnime, difficulty);
+    const details = getDetailsForCategory(fallbackAnime);
     
     return {
       id: fallbackAnime.id.toString(),

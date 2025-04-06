@@ -16,7 +16,6 @@ interface GameStore extends GameState {
   clearUsedItems: () => void;
   clearCategoryUsedItems: (category: Category) => void;
   endGame: () => void;
-  getRemainingRounds: () => number;
   checkWinCondition: () => boolean;
 }
 
@@ -33,8 +32,6 @@ const initialState: GameState = {
   isGameActive: false,
 };
 
-const TOTAL_CATEGORIES = 10; // Total number of categories
-const SELECTIONS_PER_CATEGORY = 3; // Maximum selections per category
 const WINNING_SCORE = 200; // Points needed to win
 
 export const useGameStore = create<GameStore>()(
@@ -57,6 +54,7 @@ export const useGameStore = create<GameStore>()(
           categoryUsedItems: {} as Record<Category, Set<string>>,
           categorySelectionCounts: {},
           isGameActive: true,
+          gameEnded: false,
         });
       },
       setCurrentItem: (item) => {
@@ -147,7 +145,8 @@ export const useGameStore = create<GameStore>()(
           if (hasWinner) {
             return { 
               teams: updatedTeams,
-              isGameActive: false 
+              isGameActive: false,
+              gameEnded: true
             };
           }
 
@@ -173,6 +172,9 @@ export const useGameStore = create<GameStore>()(
         }));
       },
       resetGame: () => {
+        // Clear the persisted state
+        localStorage.removeItem('game-storage');
+        // Reset to initial state
         set(initialState);
       },
       backToCategories: () => {
@@ -193,27 +195,29 @@ export const useGameStore = create<GameStore>()(
         });
       },
       endGame: () => {
-        set({ isGameActive: false });
-      },
-      getRemainingRounds: () => {
-        const state = get();
-        const usedRounds = Object.values(state.categorySelectionCounts).reduce(
-          (sum, count) => sum + count,
-          0
-        );
-        return state.maxRounds - usedRounds;
+        set({ 
+          isGameActive: false,
+          gameEnded: true
+        });
       },
       checkWinCondition: () => {
-        const state = get();
-        return state.teams.some(team => team.score >= WINNING_SCORE);
-      },
+        const { teams } = get();
+        return teams.some(team => team.score >= WINNING_SCORE);
+      }
     }),
     {
       name: 'game-storage',
       partialize: (state) => ({
         teams: state.teams,
+        currentItem: state.currentItem,
+        selectedCategory: state.selectedCategory,
+        answerRevealed: state.answerRevealed,
+        usedItems: state.usedItems,
+        categoryUsedItems: state.categoryUsedItems,
         categorySelectionCounts: state.categorySelectionCounts,
-      }),
+        isGameActive: state.isGameActive,
+        gameEnded: state.gameEnded
+      })
     }
   )
 );

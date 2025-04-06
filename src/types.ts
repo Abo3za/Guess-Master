@@ -29,14 +29,13 @@ export interface GameState {
   teams: Team[];
   currentItem: GameItem | null;
   selectedCategory: Category | null;
-  round: number;
-  maxRounds: number;
   answerRevealed: boolean;
   isLoading: boolean;
   usedItems: Set<string>;
   categoryUsedItems: Record<Category, Set<string>>;
   gameEnded: boolean;
   categorySelectionCounts: Record<Category, number>;
+  isGameActive: boolean;
 }
 
 export interface CategoryOption {
@@ -45,19 +44,3 @@ export interface CategoryOption {
   icon: React.ReactNode;
   bgImage: string;
 }
-
-export const DIFFICULTY_POINTS = {
-  normal: 10,
-  hard: 30
-} as const;
-
-export const DIFFICULTY_HINTS = {
-  anime: {
-    normal: 6,
-    hard: 3
-  },
-  default: {
-    normal: 6,
-    hard: 3
-  }
-} as const;

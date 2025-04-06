@@ -56,7 +56,6 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories, onRese
 
   const handleReveal = (index: number) => {
     revealDetail(index);
-    // إزالة nextTurn() لأننا لا نريد التناوب عند فتح التلميحات
   };
 
   const handleTeamSelect = (teamId: string) => {
@@ -64,9 +63,10 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories, onRese
       makeGuess(teamId, currentItem.name);
     }
     setAnswerRevealed(false);
-    nextTurn(); // انتقل للفريق التالي بعد انتهاء الدور
+    nextTurn();
     onBackToCategories();
   };
+
   if (!currentItem || !activeTeam) return null;
 
   return (

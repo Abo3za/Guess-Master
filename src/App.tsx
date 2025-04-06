@@ -1,173 +1,129 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import WelcomePage from './components/WelcomePage';
+import { AboutPage } from './components/AboutPage';
+import { ContactPage } from './components/ContactPage';
+import NavigationBar from './components/NavigationBar';
 import { GameSetup } from './components/GameSetup';
-import { GameBoard } from './components/GameBoard';
 import { CategorySelection } from './components/CategorySelection';
+import { GameBoard } from './components/GameBoard';
 import { useGameStore } from './store/gameStore';
-import { Category, GameItem, Team, Difficulty } from './types';
-import { fetchRandomGame } from './services/rawgApi';
-import { fetchRandomMovie, } from './services/omdbApi';
+import { Category } from './types';
 import { fetchRandomAnime } from './services/jikanApi';
-import { fetchRandomFootballItem } from './services/footballApi';
-import { fetchRandomCountry } from './services/countriesApi';
-import { fetchRandomWrestler } from './services/wweApi';
+import { fetchRandomMovie } from './services/omdbApi';
 import { fetchRandomTVShow } from './services/tvSeriesApi';
-import { Gamepad2 } from 'lucide-react';
+import { fetchRandomGame } from './services/rawgApi';
+import { fetchRandomFootballItem } from './services/footballApi';
+import { fetchRandomWrestler } from './services/wweApi';
+import { fetchRandomCountry } from './services/countriesApi';
 
-function App() {
-  const [gameStarted, setGameStarted] = useState(() => {
-    const stored = localStorage.getItem('game-storage');
-    if (stored) {
-      const { state } = JSON.parse(stored);
-      return Boolean(state.gameStarted);
-    }
-    return false;
-  });
-  const [categorySelected, setCategorySelected] = useState(false);
-  const [loading, setLoading] = useState(false);
+function AppRoutes() {
+  const navigate = useNavigate();
   const { 
-    initializeGame, 
-    setCurrentItem, 
+    isGameActive,
+    initializeGame,
     setCategory,
     clearCategoryUsedItems,
+    backToCategories,
     resetGame,
-    round,
-    maxRounds,
-    gameEnded,
-    selectedDifficulty 
+    setCurrentItem
   } = useGameStore();
 
   const handleGameStart = (teams: string[]) => {
     initializeGame(teams);
-    setGameStarted(true);
-  };
-
-  const handleResetGame = () => {
-    resetGame();
-    setGameStarted(false);
-    setCategorySelected(false);
-  };
-
-  const fetchItemForCategory = async (category: Category): Promise<GameItem | null> => {
-    switch (category) {
-      case 'anime':
-        return await fetchRandomAnime(category);
-      case 'tv':
-        return await fetchRandomTVShow(category);
-      case 'movies':
-        return await fetchRandomMovie(category);
-      case 'games':
-        return await fetchRandomGame(category);
-      case 'football':
-        return await fetchRandomFootballItem(category);
-      case 'countries':
-        return await fetchRandomCountry(category);
-      case 'wwe':
-        return await fetchRandomWrestler(category);
-      default:
-        return null;
-    }
+    navigate('/categories');
   };
 
   const handleCategorySelect = async (category: Category) => {
-    setLoading(true);
     setCategory(category);
     clearCategoryUsedItems(category);
-
+    
+    let item;
     try {
-      let item: GameItem | null = null;
-      let attempts = 0;
-      const maxAttempts = 5;
-
-      while (!item && attempts < maxAttempts) {
-        const fetchedItem = await fetchItemForCategory(category);
-        
-        if (fetchedItem) {
-          item = fetchedItem;
+      switch (category) {
+        case 'anime':
+          item = await fetchRandomAnime(category);
           break;
-        }
-        attempts++;
+        case 'movies':
+          item = await fetchRandomMovie(category);
+          break;
+        case 'tv':
+          item = await fetchRandomTVShow(category);
+          break;
+        case 'games':
+          item = await fetchRandomGame(category);
+          break;
+        case 'football':
+          item = await fetchRandomFootballItem(category);
+          break;
+        case 'wwe':
+          item = await fetchRandomWrestler(category);
+          break;
+        case 'countries':
+          item = await fetchRandomCountry(category);
+          break;
+        default:
+          throw new Error(`Unknown category: ${category}`);
       }
 
       if (item) {
         setCurrentItem(item);
-        setCategorySelected(true);
-      } else {
-        throw new Error('No suitable items found after multiple attempts');
+        navigate('/game');
       }
     } catch (error) {
-      console.error('Error setting up game:', error);
-      setCategorySelected(false);
-    } finally {
-      setLoading(false);
+      console.error('Error fetching item:', error);
+      // Handle error appropriately
     }
   };
 
   const handleBackToCategories = () => {
-    setCategorySelected(false);
+    backToCategories();
+    navigate('/categories');
   };
 
-  useEffect(() => {
-    if (round > maxRounds) {
-      const stored = localStorage.getItem('game-storage');
-      if (stored) {
-        const { state } = JSON.parse(stored);
-        const teams: Team[] = state.teams;
-        const winner = teams.reduce((prev: Team, current: Team) => 
-          (prev.score > current.score) ? prev : current
-        );
-        alert(`انتهت اللعبة! الفائز هو ${winner.name} بـ ${winner.score} نقطة`);
-        handleResetGame();
-      }
-    }
-  }, [round, maxRounds]);
-
-  useEffect(() => {
-    if (gameEnded) {
-      handleResetGame();
-    }
-  }, [gameEnded]);
+  const handleResetGame = () => {
+    resetGame();
+    navigate('/');
+  };
 
   return (
-    <div className="min-h-screen bg-[#0f0a1e] text-gray-100 relative overflow-hidden" dir="rtl">
-      {/* Animated background gradients */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-radial from-blue-500/5 to-transparent animate-pulse-subtle" style={{ animationDelay: '0s' }} />
-        <div className="absolute inset-0 bg-gradient-radial from-purple-500/5 to-transparent animate-pulse-subtle" style={{ animationDelay: '0.5s' }} />
-        <div className="absolute inset-0 bg-gradient-radial from-indigo-500/5 to-transparent animate-pulse-subtle" style={{ animationDelay: '1s' }} />
-      </div>
-
-      <header className="app-header relative z-10">
-        <div className="max-w-7xl mx-auto py-4 px-6">
-          <div className="flex items-center gap-3">
-            <div className="bg-gradient-to-br from-blue-500 to-indigo-500 p-2 rounded-lg">
-              <Gamepad2 className="w-6 h-6 text-white" />
-            </div>
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-              لعبة التخمين
-            </h1>
-          </div>
-        </div>
-      </header>
-
-      <main className="relative z-10 max-w-7xl mx-auto py-8 px-6">
-        {!gameStarted ? (
-          <GameSetup onStart={handleGameStart} />
-        ) : !categorySelected ? (
-          <CategorySelection onSelect={handleCategorySelect} onResetGame={handleResetGame} />
-        ) : (
-          <GameBoard onBackToCategories={handleBackToCategories} onResetGame={handleResetGame} />
-        )}
-        
-        {loading && (
-          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50">
-            <div className="bg-white/5 backdrop-blur-xl p-8 rounded-xl border border-white/10">
-              <div className="loading-spinner h-12 w-12 mx-auto"></div>
-              <p className="mt-4 text-white/80">جاري تحميل البيانات...</p>
-            </div>
-          </div>
-        )}
+    <div className="min-h-screen bg-gray-900 text-white">
+      <NavigationBar />
+      <main className="pt-16">
+        <Routes>
+          <Route path="/" element={<WelcomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/setup" element={<GameSetup onStart={handleGameStart} />} />
+          {isGameActive ? (
+            <>
+              <Route path="/categories" element={
+                <CategorySelection 
+                  onSelect={handleCategorySelect} 
+                  onResetGame={handleResetGame} 
+                />
+              } />
+              <Route path="/game" element={
+                <GameBoard 
+                  onBackToCategories={handleBackToCategories} 
+                  onResetGame={handleResetGame} 
+                />
+              } />
+            </>
+          ) : (
+            <Route path="*" element={<Navigate to="/setup" replace />} />
+          )}
+        </Routes>
       </main>
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppRoutes />
+    </Router>
   );
 }
 

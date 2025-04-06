@@ -1,4 +1,4 @@
-import { GameItem, Category, Difficulty } from '../types';
+import { GameItem, Category } from '../types';
 import footballDB from '../Database/FootballDB.json';
 
 function shuffleArray<T>(array: T[]): T[] {
@@ -10,7 +10,7 @@ function shuffleArray<T>(array: T[]): T[] {
   return newArray;
 }
 
-function getDetailsForCategory(player: any, difficulty: Difficulty = 'normal'): any[] {
+function getDetailsForCategory(player: any): any[] {
   if (!player) {
     throw new Error('Invalid player data');
   }
@@ -24,13 +24,10 @@ function getDetailsForCategory(player: any, difficulty: Difficulty = 'normal'): 
     { label: 'الإنجاز الأبرز', value: player.highlight || 'Unknown', revealed: false }
   ];
 
-  if (difficulty === 'hard') {
-    return shuffleArray([...allDetails]).slice(0, 3);
-  }
   return allDetails;
 }
 
-export async function fetchRandomFootballItem(category: Category, difficulty: Difficulty): Promise<GameItem> {
+export async function fetchRandomFootballItem(category: Category): Promise<GameItem> {
   if (!footballDB?.players?.length) {
     throw new Error('Football database is empty or invalid');
   }
@@ -41,7 +38,7 @@ export async function fetchRandomFootballItem(category: Category, difficulty: Di
       throw new Error('No player data available');
     }
     
-    const details = getDetailsForCategory(randomPlayer, difficulty);
+    const details = getDetailsForCategory(randomPlayer);
     return {
       id: randomPlayer.id.toString(),
       category,
@@ -56,7 +53,7 @@ export async function fetchRandomFootballItem(category: Category, difficulty: Di
       throw new Error('No fallback player data available');
     }
     
-    const details = getDetailsForCategory(fallbackPlayer, difficulty);
+    const details = getDetailsForCategory(fallbackPlayer);
     return {
       id: fallbackPlayer.id.toString(),
       category,

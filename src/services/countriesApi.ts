@@ -198,42 +198,31 @@ function getDetailsForCategory(data: Country, category: Category, difficulty: Di
 export async function fetchRandomCountry(category: Category): Promise<GameItem> {
   try {
     const randomCountry = countries[Math.floor(Math.random() * countries.length)];
-    
     if (!randomCountry) {
       throw new Error('No country data available');
     }
-
-    const details = [
-      { label: 'Continent', value: randomCountry.continent, revealed: false },
-      { label: 'Region', value: randomCountry.region, revealed: false },
-      { label: 'Official Language', value: randomCountry.official_language, revealed: false },
-      { label: 'Currency', value: randomCountry.currency, revealed: false },
-      { label: 'Area', value: formatArea(randomCountry.area), revealed: false },
-      { label: 'Famous For', value: randomCountry.famous_for, revealed: false }
-    ];
-
+    
+    const details = getDetailsForCategory(randomCountry, category);
     return {
       id: randomCountry.id.toString(),
-      category: category,
+      category,
       name: randomCountry.country_name,
       details
     };
   } catch (error) {
-    console.error('Error with country data:', error);
+    console.error('Error fetching country data:', error);
     return getFallbackCountryData(category);
   }
 }
 
 function getFallbackCountryData(category: Category): GameItem {
+  const fallbackCountry = countries[0];
+  const details = getDetailsForCategory(fallbackCountry, category);
+  
   return {
-    id: 'fallback-1',
-    category: category,
-    name: 'Japan',
-    details: [
-      { label: 'Continent', value: 'Asia', revealed: false },
-      { label: 'Official Language', value: 'Japanese', revealed: false },
-      { label: 'Currency', value: 'JPY', revealed: false },
-      { label: 'Famous For', value: 'Technology, Cherry Blossoms', revealed: false }
-    ]
+    id: fallbackCountry.id.toString(),
+    category,
+    name: fallbackCountry.country_name,
+    details
   };
 }

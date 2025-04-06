@@ -1,4 +1,4 @@
-import { GameItem, Category, Difficulty } from '../types';
+import { GameItem, Category } from '../types';
 import wweDB from '../Database/WWEDB.json';
 
 function shuffleArray<T>(array: T[]): T[] {
@@ -14,7 +14,7 @@ function formatYesNo(value: boolean): string {
   return value ? 'نعم' : 'لا';
 }
 
-function getDetailsForWrestler(wrestler: any, difficulty: Difficulty = 'normal'): any[] {
+function getDetailsForWrestler(wrestler: any): any[] {
   const allDetails = [
     { label: 'الجنسية', value: wrestler.nationality || 'غير معروف', revealed: false },
     { label: 'الأسلوب القتالي', value: wrestler.style || 'غير معروف', revealed: false },
@@ -24,13 +24,10 @@ function getDetailsForWrestler(wrestler: any, difficulty: Difficulty = 'normal')
     { label: 'انضم لفريق', value: formatYesNo(wrestler.was_in_faction), revealed: false }
   ];
 
-  if (difficulty === 'hard') {
-    return shuffleArray(allDetails).slice(0, 3);
-  }
   return allDetails;
 }
 
-export async function fetchRandomWrestler(category: Category, difficulty: Difficulty): Promise<GameItem> {
+export async function fetchRandomWrestler(category: Category): Promise<GameItem> {
   if (!wweDB.players || !Array.isArray(wweDB.players) || wweDB.players.length === 0) {
     throw new Error('قاعدة بيانات المصارعة فارغة أو غير صالحة');
   }
@@ -43,7 +40,7 @@ export async function fetchRandomWrestler(category: Category, difficulty: Diffic
       throw new Error('لم يتم العثور على بيانات المصارع');
     }
 
-    const details = getDetailsForWrestler(randomWrestler, difficulty);
+    const details = getDetailsForWrestler(randomWrestler);
     return {
       id: randomWrestler.id.toString(),
       category,

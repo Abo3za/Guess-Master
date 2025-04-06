@@ -261,4 +261,30 @@
   .difficulty-card:hover {
     @apply transform scale-[1.02];
   }
+
+  /* Welcome Page Styles */
+  .feature-card {
+    @apply bg-gray-800/50 p-6 rounded-xl backdrop-blur-sm hover:bg-gray-800/70 transition-all duration-300;
+  }
+
+  .step-card {
+    @apply bg-gray-700/50 p-6 rounded-xl backdrop-blur-sm text-center;
+  }
+
+  .step-number {
+    @apply w-12 h-12 bg-blue-500/20 text-blue-400 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    @apply relative h-screen flex items-center justify-center;
+  }
+
+  .hero-overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-black/50 to-black/80 z-10;
+  }
+
+  .hero-content {
+    @apply relative z-20 text-center px-4;
+  }
 }

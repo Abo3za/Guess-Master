@@ -1,4 +1,4 @@
-import { GameItem, Category, Difficulty } from '../types';
+import { GameItem, Category } from '../types';
 import tvSeriesDB from '../Database/TVSeries.json';
 
 function shuffleArray<T>(array: T[]): T[] {
@@ -10,7 +10,7 @@ function shuffleArray<T>(array: T[]): T[] {
   return newArray;
 }
 
-function getDetailsForTVShow(show: any, difficulty: Difficulty = 'normal'): any[] {
+function getDetailsForTVShow(show: any): any[] {
   const allDetails = [
     { label: 'سنة الإصدار', value: show.release_year?.toString() || 'غير معروف', revealed: false },
     { label: 'عدد المواسم', value: show.seasons?.toString() || 'غير معروف', revealed: false },
@@ -20,20 +20,17 @@ function getDetailsForTVShow(show: any, difficulty: Difficulty = 'normal'): any[
     { label: 'المنصة', value: show.platform || 'غير معروف', revealed: false }
   ];
 
-  if (difficulty === 'hard') {
-    return shuffleArray(allDetails).slice(0, 3);
-  }
   return allDetails;
 }
 
-export async function fetchRandomTVShow(category: Category, difficulty: Difficulty): Promise<GameItem> {
+export async function fetchRandomTVShow(category: Category): Promise<GameItem> {
   if (!Array.isArray(tvSeriesDB.shows) || tvSeriesDB.shows.length === 0) {
     throw new Error('قاعدة بيانات المسلسلات فارغة أو غير صالحة');
   }
 
   try {
     const randomShow = tvSeriesDB.shows[Math.floor(Math.random() * tvSeriesDB.shows.length)];
-    const details = getDetailsForTVShow(randomShow, difficulty);
+    const details = getDetailsForTVShow(randomShow);
     
     return {
       id: randomShow.id.toString(),

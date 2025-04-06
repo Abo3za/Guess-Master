@@ -3,7 +3,11 @@ import { Trophy, AlertCircle, Users, Star, Award, Home, Gamepad2 } from 'lucide-
 import { useNavigate } from 'react-router-dom';
 import { useGameStore } from '../store/gameStore';
 
-export const WinPage: React.FC = () => {
+interface WinPageProps {
+  onPlayAgain: () => void;
+}
+
+export const WinPage: React.FC<WinPageProps> = ({ onPlayAgain }) => {
   const navigate = useNavigate();
   const { teams, winningPoints, gameEnded } = useGameStore();
 
@@ -20,6 +24,7 @@ export const WinPage: React.FC = () => {
   };
 
   const handleNewGameClick = () => {
+    onPlayAgain();
     navigate('/setup');
   };
 

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom';
-import WelcomePage from './components/WelcomePage';
 import { AboutPage } from './components/AboutPage';
 import { ContactPage } from './components/ContactPage';
 import NavigationBar from './components/NavigationBar';
@@ -15,8 +14,8 @@ import { fetchRandomTVShow } from './services/tvSeriesApi';
 import { fetchRandomGame } from './services/rawgApi';
 import { fetchRandomFootballItem } from './services/footballApi';
 import { fetchRandomWrestler } from './services/wweApi';
-import { fetchRandomCountry } from './services/countriesApi';
 import { WinPage } from './components/WinPage';
+import WelcomePage from './components/WelcomePage';
 
 function AppRoutes() {
   const navigate = useNavigate();
@@ -32,11 +31,16 @@ function AppRoutes() {
     gameEnded
   } = useGameStore();
 
-  const shouldHideNav = isGameActive && (location.pathname === '/categories' || location.pathname === '/game');
+  const shouldHideNav = isGameActive && (location.pathname === '/play' || location.pathname === '/game') && !gameEnded;
 
-  const handleGameStart = (teams: string[], winningPoints: number, hideHints: boolean) => {
-    initializeGame(teams, winningPoints, hideHints);
-    navigate('/categories');
+  const handleGameStart = (
+    teams: { id: number; name: string; score: number; isActive: boolean }[], 
+    winningPoints: number, 
+    hideHints: boolean,
+    selectedCategories: string[]
+  ) => {
+    initializeGame(teams, winningPoints, hideHints, selectedCategories);
+    navigate('/play');
   };
 
   const handleCategorySelect = async (category: Category) => {
@@ -64,8 +68,24 @@ function AppRoutes() {
         case 'wwe':
           item = await fetchRandomWrestler(category);
           break;
-        case 'countries':
-          item = await fetchRandomCountry(category);
+        // For demo categories, use placeholder data
+        case 'music':
+        case 'sports':
+        case 'tech':
+        case 'history':
+        case 'geography':
+        case 'science':
+          // Use placeholder data for demo categories
+          item = {
+            id: `demo-${category}-${Date.now()}`,
+            name: 'عنصر تجريبي',
+            category: category,
+            details: [
+              { label: 'تلميح 1', value: 'معلومة تجريبية 1', revealed: false },
+              { label: 'تلميح 2', value: 'معلومة تجريبية 2', revealed: false },
+              { label: 'تلميح 3', value: 'معلومة تجريبية 3', revealed: false },
+            ]
+          };
           break;
         default:
           throw new Error(`Unknown category: ${category}`);
@@ -83,7 +103,7 @@ function AppRoutes() {
 
   const handleBackToCategories = () => {
     backToCategories();
-    navigate('/categories');
+    navigate('/play');
   };
 
   const handleResetGame = () => {
@@ -91,42 +111,45 @@ function AppRoutes() {
     navigate('/');
   };
 
-  // Redirect to win page if game has ended and we're in a game-related page
+  // Redirect to win page if game has ended
   useEffect(() => {
-    if (gameEnded && 
-        (location.pathname === '/categories' || location.pathname === '/game')) {
+    if (gameEnded && location.pathname !== '/win') {
       navigate('/win');
     }
   }, [gameEnded, location.pathname, navigate]);
 
   return (
     <div className="min-h-screen bg-gray-900 text-white">
-      <NavigationBar />
+      {!shouldHideNav && <NavigationBar />}
       <main className={shouldHideNav ? "" : "pt-28"}>
         <Routes>
           <Route path="/" element={<WelcomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/setup" element={<GameSetup onStart={handleGameStart} />} />
-          <Route path="/win" element={<WinPage />} />
-          {!gameEnded && isGameActive ? (
+          <Route path="/win" element={<WinPage onPlayAgain={handleResetGame} />} />
+          {isGameActive && !gameEnded ? (
             <>
-              <Route path="/categories" element={
-                <CategorySelection 
-                  onSelect={handleCategorySelect} 
-                  onResetGame={handleResetGame} 
-                />
-              } />
-              <Route path="/game" element={
-                <GameBoard 
-                  onBackToCategories={handleBackToCategories} 
-                  onResetGame={handleResetGame} 
-                />
-              } />
+              <Route 
+                path="/play" 
+                element={
+                  <CategorySelection 
+                    onSelect={handleCategorySelect} 
+                    onResetGame={handleResetGame} 
+                  />
+                } 
+              />
+              <Route 
+                path="/game" 
+                element={
+                  <GameBoard 
+                    onBackToCategories={handleBackToCategories} 
+                  />
+                } 
+              />
             </>
-          ) : (
-            !gameEnded && <Route path="*" element={<Navigate to="/setup" replace />} />
-          )}
+          ) : null}
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
     </div>

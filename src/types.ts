@@ -4,13 +4,18 @@ export type Category =
   | 'movies'
   | 'games'
   | 'football'
-  | 'countries'
-  | 'wwe';
+  | 'wwe'
+  | 'music'
+  | 'sports'
+  | 'tech'
+  | 'history'
+  | 'geography'
+  | 'science';
 
 export interface GameItem {
   id: string;
-  category: Category;
   name: string;
+  category: Category;
   details: {
     label: string;
     value: string;
@@ -19,7 +24,7 @@ export interface GameItem {
 }
 
 export interface Team {
-  id: string;
+  id: number;
   name: string;
   score: number;
   isActive: boolean;
@@ -36,6 +41,9 @@ export interface GameState {
   gameEnded: boolean;
   categorySelectionCounts: Record<Category, number>;
   isGameActive: boolean;
+  winningPoints: number;
+  hideHints: boolean;
+  selectedCategories: string[];
 }
 
 export interface CategoryOption {

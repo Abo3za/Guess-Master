@@ -3,22 +3,23 @@ import { persist } from 'zustand/middleware';
 import { GameState, Team, GameItem, Category } from '../types';
 
 interface GameStore extends GameState {
-  initializeGame: (teams: string[], winningPoints: number, hideHints: boolean) => void;
+  initializeGame: (teams: Team[], winningPoints: number, hideHints: boolean, selectedCategories: string[]) => void;
   setCurrentItem: (item: GameItem) => void;
   setCategory: (category: Category) => void;
   revealDetail: (detailIndex: number) => void;
-  makeGuess: (teamId: string, guess: string) => boolean;
+  makeGuess: (teamId: number, guess: string) => boolean;
   nextTurn: () => void;
   revealAnswer: () => void;
   resetGame: () => void;
   backToCategories: () => void;
-  adjustScore: (teamId: string, amount: number) => void;
+  adjustScore: (teamId: number, amount: number) => void;
   clearUsedItems: () => void;
   clearCategoryUsedItems: (category: Category) => void;
   endGame: () => void;
   checkWinCondition: () => boolean;
   winningPoints: number;
   hideHints: boolean;
+  selectedCategories: string[];
 }
 
 const initialState: GameState = {
@@ -34,19 +35,14 @@ const initialState: GameState = {
   isGameActive: false,
   winningPoints: 200,
   hideHints: false,
+  selectedCategories: [],
 };
 
 export const useGameStore = create<GameStore>()(
   persist(
     (set, get) => ({
       ...initialState,
-      initializeGame: (teamNames, winningPoints, hideHints) => {
-        const teams: Team[] = teamNames.map((name, index) => ({
-          id: `team-${index + 1}`,
-          name,
-          score: 0,
-          isActive: index === 0,
-        }));
+      initializeGame: (teams, winningPoints, hideHints, selectedCategories) => {
         set({ 
           teams, 
           answerRevealed: false,
@@ -59,6 +55,7 @@ export const useGameStore = create<GameStore>()(
           gameEnded: false,
           winningPoints,
           hideHints,
+          selectedCategories,
         });
       },
       setCurrentItem: (item) => {
@@ -89,11 +86,19 @@ export const useGameStore = create<GameStore>()(
       }),
       revealDetail: (index) => {
         set((state) => {
-          if (!state.currentItem) return state;
+          if (!state.currentItem) {
+            console.log('No current item to reveal details for');
+            return state;
+          }
+          
+          console.log('Revealing detail at index:', index);
+          console.log('Current details:', state.currentItem.details);
           
           const updatedDetails = state.currentItem.details.map((detail, i) => 
             i === index ? { ...detail, revealed: true } : detail
           );
+          
+          console.log('Updated details:', updatedDetails);
           
           return {
             currentItem: {
@@ -137,7 +142,7 @@ export const useGameStore = create<GameStore>()(
 
         return isCorrect;
       },
-      adjustScore: (teamId: string, amount: number) => {
+      adjustScore: (teamId: number, amount: number) => {
         set((state) => {
           const updatedTeams = state.teams.map((team) =>
             team.id === teamId
@@ -180,7 +185,11 @@ export const useGameStore = create<GameStore>()(
         // Clear the persisted state
         localStorage.removeItem('game-storage');
         // Reset to initial state
-        set(initialState);
+        set({
+          ...initialState,
+          isGameActive: false,
+          gameEnded: false
+        });
       },
       backToCategories: () => {
         set({ 
@@ -200,12 +209,9 @@ export const useGameStore = create<GameStore>()(
         });
       },
       endGame: () => {
-        set((state) => ({ 
+        set((state) => ({
           isGameActive: false,
-          gameEnded: true,
-          currentItem: null,
-          selectedCategory: null,
-          answerRevealed: false
+          gameEnded: true
         }));
       },
       checkWinCondition: () => {

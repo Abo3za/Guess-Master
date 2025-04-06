@@ -29,10 +29,10 @@ export const getRandomItem = (category: Category): GameItem | null => {
     category,
     name: item.title || item.name,
     details: [
-      { label: 'Year', value: item.release_year?.toString() || '', revealed: false },
-      { label: 'Genre', value: Array.isArray(item.genre) ? item.genre.join(', ') : item.genre || '', revealed: false },
-      { label: 'Studio', value: item.studio || '', revealed: false },
-      { label: 'Main Character', value: item.main_character || '', revealed: false }
+      { label: 'سنة الإصدار', value: item.release_year?.toString() || '', revealed: false },
+      { label: 'التصنيف', value: Array.isArray(item.genre) ? item.genre.join(', ') : item.genre || '', revealed: false },
+      { label: 'الاستوديو', value: item.studio || '', revealed: false },
+      { label: 'الشخصية الرئيسية', value: item.main_character || '', revealed: false }
     ].filter(detail => detail.value) // Only include details that have values
   };
 }; 

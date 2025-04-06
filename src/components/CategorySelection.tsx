@@ -6,13 +6,14 @@ import {
   AlertCircle
 } from 'lucide-react';
 import { useGameStore } from '../store/gameStore';
+import { useNavigate } from 'react-router-dom';
 
 interface CategorySelectionProps {
   onSelect: (category: Category) => void;
   onResetGame: () => void;
 }
 
-const categories = [
+const allCategories = [
   {
     value: 'anime',
     label: 'أنمي',
@@ -46,9 +47,22 @@ const categories = [
 ];
 
 export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, onResetGame }) => {
-  const { teams, adjustScore, endGame, categorySelectionCounts, checkWinCondition, winningPoints, gameEnded } = useGameStore();
+  const navigate = useNavigate();
+  const { 
+    teams, 
+    adjustScore, 
+    endGame, 
+    categorySelectionCounts, 
+    checkWinCondition, 
+    winningPoints, 
+    gameEnded,
+    selectedCategories 
+  } = useGameStore();
 
   const activeTeam = teams.find(team => team.isActive);
+
+  // Filter categories to only show selected ones
+  const categories = allCategories.filter(cat => selectedCategories.includes(cat.value));
 
   // Check if all categories have reached their limit
   const checkAllCategoriesUsed = () => {
@@ -56,6 +70,12 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
       (categorySelectionCounts[category.value as Category] || 0) >= 3
     );
   };
+
+  useEffect(() => {
+    if (gameEnded) {
+      navigate('/win');
+    }
+  }, [gameEnded, navigate]);
 
   useEffect(() => {
     if (!gameEnded) {
@@ -77,6 +97,10 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
     onSelect(category);
   };
 
+  const handleEndGame = () => {
+    endGame();
+  };
+
   return (
     <div className="min-h-screen bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 py-8" dir="rtl">
@@ -92,7 +116,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
               </button>
               
               <button
-                onClick={endGame}
+                onClick={handleEndGame}
                 className="primary-button bg-red-500 hover:bg-red-600 px-6 py-3 flex items-center gap-2 text-lg"
               >
                 <Flag className="w-6 h-6" />

@@ -42,12 +42,12 @@ export async function fetchRandomGame(category: Category): Promise<GameItem> {
     }
 
     const details = [
-      { label: 'Genre', value: randomGame.genre, revealed: false },
-      { label: 'Platform', value: randomGame.platform, revealed: false },
-      { label: 'Release Year', value: randomGame.release_year.toString(), revealed: false },
-      { label: 'Developer', value: randomGame.developer, revealed: false },
-      { label: 'Publisher', value: randomGame.publisher, revealed: false },
-      { label: 'Famous For', value: randomGame.famous_for, revealed: false }
+      { label: 'التصنيف', value: randomGame.genre, revealed: false },
+      { label: 'المنصة', value: randomGame.platform, revealed: false },
+      { label: 'سنة الإصدار', value: randomGame.release_year.toString(), revealed: false },
+      { label: 'المطور', value: randomGame.developer, revealed: false },
+      { label: 'الناشر', value: randomGame.publisher, revealed: false },
+      { label: 'مشهور بـ', value: randomGame.famous_for, revealed: false }
     ];
 
     return {

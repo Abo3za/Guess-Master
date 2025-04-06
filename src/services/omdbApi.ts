@@ -62,12 +62,12 @@ export async function fetchRandomMovie(category: Category): Promise<GameItem> {
     }
 
     const details = [
-      { label: 'Genre', value: randomMovie.genre, revealed: false },
-      { label: 'Director', value: randomMovie.director, revealed: false },
-      { label: 'Release Year', value: randomMovie.release_year.toString(), revealed: false },
-      { label: 'Main Actor', value: randomMovie.main_actor, revealed: false },
-      { label: 'Rating', value: randomMovie.rating.toString() + '/10', revealed: false },
-      { label: 'Highlight', value: randomMovie.highlight, revealed: false }
+      { label: 'التصنيف', value: randomMovie.genre, revealed: false },
+      { label: 'المخرج', value: randomMovie.director, revealed: false },
+      { label: 'سنة الإصدار', value: randomMovie.release_year.toString(), revealed: false },
+      { label: 'الممثل الرئيسي', value: randomMovie.main_actor, revealed: false },
+      { label: 'التقييم', value: randomMovie.rating.toString() + '/10', revealed: false },
+      { label: 'معلومة مميزة', value: randomMovie.highlight, revealed: false }
     ];
 
     return {

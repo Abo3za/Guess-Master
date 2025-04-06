@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Users, Gamepad2, Brain, Trophy, Target, Settings } from 'lucide-react';
+import { Users, Gamepad2, Brain, Trophy, Target, Settings, Eye, EyeOff } from 'lucide-react';
 
 interface GameSetupProps {
-  onStart: (teams: string[], winningPoints: number) => void;
+  onStart: (teams: string[], winningPoints: number, hideHints: boolean) => void;
 }
 
 const RECOMMENDED_POINTS = [
@@ -15,11 +15,12 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
   const [teams, setTeams] = useState(['الفريق 1', 'الفريق 2']);
   const [winningPoints, setWinningPoints] = useState(200);
   const [customPoints, setCustomPoints] = useState(false);
+  const [hideHints, setHideHints] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (teams.every(team => team.trim())) {
-      onStart(teams, winningPoints);
+      onStart(teams, winningPoints, hideHints);
     }
   };
 
@@ -175,6 +176,46 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
                   </div>
                 </div>
               )}
+            </div>
+
+            {/* Hint Visibility Toggle */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-2">
+                <Eye className="w-5 h-5 text-blue-400" />
+                <h3 className="text-lg font-semibold text-white">نمط التلميحات</h3>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <button
+                  type="button"
+                  onClick={() => setHideHints(false)}
+                  className={`p-3 rounded-lg border-2 transition-all ${
+                    !hideHints
+                      ? 'border-blue-500 bg-blue-500/10'
+                      : 'border-white/10 hover:border-white/20'
+                  }`}
+                >
+                  <div className="flex items-center justify-center gap-2">
+                    <Eye className="w-5 h-5" />
+                    <span className="text-lg font-bold text-white">عادي</span>
+                  </div>
+                  <div className="text-sm text-gray-400 mt-1">عرض نوع التلميح</div>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setHideHints(true)}
+                  className={`p-3 rounded-lg border-2 transition-all ${
+                    hideHints
+                      ? 'border-blue-500 bg-blue-500/10'
+                      : 'border-white/10 hover:border-white/20'
+                  }`}
+                >
+                  <div className="flex items-center justify-center gap-2">
+                    <EyeOff className="w-5 h-5" />
+                    <span className="text-lg font-bold text-white">مخفي</span>
+                  </div>
+                  <div className="text-sm text-gray-400 mt-1">إخفاء نوع التلميح</div>
+                </button>
+              </div>
             </div>
 
             <button

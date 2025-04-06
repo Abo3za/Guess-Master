@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useGameStore } from '../store/gameStore';
 import { 
   Eye, 
@@ -15,6 +15,16 @@ interface GameBoardProps {
   onBackToCategories: () => void;
   onResetGame: () => void;
 }
+
+// Shuffle array helper function
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
 
 const getCategoryPrompt = (category: string): string => {
   switch (category) {
@@ -50,13 +60,31 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories, onRese
     revealDetail,
     makeGuess,
     nextTurn,
+    hideHints,
   } = useGameStore();
   const [answerRevealed, setAnswerRevealed] = useState(false);
+  const [shuffledIndices, setShuffledIndices] = useState<number[]>([]);
   const activeTeam = teams.find((team) => team.isActive);
+  const currentItemRef = useRef<string | null>(null);
 
-  const handleReveal = (index: number) => {
-    if (!answerRevealed) {
-      revealDetail(index);
+  // Initialize shuffled indices only when currentItem changes and hideHints is true
+  useEffect(() => {
+    if (currentItem && currentItem.id !== currentItemRef.current && hideHints) {
+      currentItemRef.current = currentItem.id;
+      const indices = Array.from({ length: currentItem.details.length }, (_, i) => i);
+      setShuffledIndices(shuffleArray(indices));
+    } else if (!hideHints) {
+      // If hints are not hidden, use original order
+      setShuffledIndices(Array.from({ length: currentItem?.details.length || 0 }, (_, i) => i));
+    }
+  }, [currentItem?.id, hideHints]);
+
+  const handleReveal = (displayIndex: number) => {
+    if (!answerRevealed && currentItem) {
+      const originalIndex = shuffledIndices[displayIndex];
+      if (!currentItem.details[originalIndex].revealed) {
+        revealDetail(originalIndex);
+      }
     }
   };
 
@@ -69,7 +97,7 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories, onRese
     onBackToCategories();
   };
 
-  if (!currentItem || !activeTeam) return null;
+  if (!currentItem || !activeTeam || shuffledIndices.length === 0) return null;
 
   return (
     <div className="max-w-4xl mx-auto">
@@ -164,27 +192,32 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories, onRese
         )}
 
         <div className="grid grid-cols-2 gap-4">
-          {currentItem.details.map((detail, index) => (
-            <div
-              key={index}
-              className={`game-detail-card ${answerRevealed ? 'opacity-75' : ''}`}
-            >
-              <div className="flex justify-between items-center">
-                <span className="font-medium text-white/90">{detail.label}</span>
-                {!detail.revealed && !answerRevealed && (
-                  <button
-                    onClick={() => handleReveal(index)}
-                    className="text-blue-400 hover:text-blue-300 flex items-center gap-1"
-                  >
-                    <Eye className="w-4 h-4" /> كشف
-                  </button>
-                )}
+          {shuffledIndices.map((originalIndex, displayIndex) => {
+            const detail = currentItem.details[originalIndex];
+            return (
+              <div
+                key={originalIndex}
+                className={`game-detail-card ${answerRevealed ? 'opacity-75' : ''}`}
+              >
+                <div className="flex justify-between items-center">
+                  <span className="font-medium text-white/90">
+                    {detail.revealed || answerRevealed || !hideHints ? detail.label : `تلميح ${displayIndex + 1}`}
+                  </span>
+                  {!detail.revealed && !answerRevealed && (
+                    <button
+                      onClick={() => handleReveal(displayIndex)}
+                      className="text-blue-400 hover:text-blue-300 flex items-center gap-1"
+                    >
+                      <Eye className="w-4 h-4" /> كشف
+                    </button>
+                  )}
+                </div>
+                <p className="mt-2 text-white text-right">
+                  {detail.revealed || answerRevealed ? detail.value : '???'}
+                </p>
               </div>
-              <p className="mt-2 text-white text-right">
-                {detail.revealed || answerRevealed ? detail.value : '???'}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

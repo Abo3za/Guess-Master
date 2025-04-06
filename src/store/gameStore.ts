@@ -3,7 +3,7 @@ import { persist } from 'zustand/middleware';
 import { GameState, Team, GameItem, Category } from '../types';
 
 interface GameStore extends GameState {
-  initializeGame: (teams: string[], winningPoints: number) => void;
+  initializeGame: (teams: string[], winningPoints: number, hideHints: boolean) => void;
   setCurrentItem: (item: GameItem) => void;
   setCategory: (category: Category) => void;
   revealDetail: (detailIndex: number) => void;
@@ -18,6 +18,7 @@ interface GameStore extends GameState {
   endGame: () => void;
   checkWinCondition: () => boolean;
   winningPoints: number;
+  hideHints: boolean;
 }
 
 const initialState: GameState = {
@@ -32,13 +33,14 @@ const initialState: GameState = {
   categorySelectionCounts: {} as Record<Category, number>,
   isGameActive: false,
   winningPoints: 200,
+  hideHints: false,
 };
 
 export const useGameStore = create<GameStore>()(
   persist(
     (set, get) => ({
       ...initialState,
-      initializeGame: (teamNames, winningPoints) => {
+      initializeGame: (teamNames, winningPoints, hideHints) => {
         const teams: Team[] = teamNames.map((name, index) => ({
           id: `team-${index + 1}`,
           name,
@@ -56,6 +58,7 @@ export const useGameStore = create<GameStore>()(
           isGameActive: true,
           gameEnded: false,
           winningPoints,
+          hideHints,
         });
       },
       setCurrentItem: (item) => {
@@ -88,8 +91,9 @@ export const useGameStore = create<GameStore>()(
         set((state) => {
           if (!state.currentItem) return state;
           
-          const updatedDetails = [...state.currentItem.details];
-          updatedDetails[index] = { ...updatedDetails[index], revealed: true };
+          const updatedDetails = state.currentItem.details.map((detail, i) => 
+            i === index ? { ...detail, revealed: true } : detail
+          );
           
           return {
             currentItem: {

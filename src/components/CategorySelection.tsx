@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Category } from '../types';
 import { 
-  Gamepad2, Tv, Film, FolderRoot as Football, 
-  BookOpen, Users, Plus, Minus,
-  Sword, Flag
+  Users, Plus, Minus,
+  Flag, Trophy, Crown
 } from 'lucide-react';
 import { useGameStore } from '../store/gameStore';
 import { GameEndNotification } from './GameEndNotification';
@@ -17,38 +16,32 @@ const categories = [
   {
     value: 'anime',
     label: 'أنمي',
-    icon: <BookOpen className="w-6 h-6" />,
-    bgImage: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&q=80&w=800'
+    bgImage: '/Images/AnimesCard.png'
   },
   {
     value: 'tv',
     label: 'مسلسلات',
-    icon: <Tv className="w-6 h-6" />,
-    bgImage: 'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?auto=format&fit=crop&q=80&w=800'
+    bgImage: '/Images/SeriesCard.png'
   },
   {
     value: 'movies',
     label: 'أفلام',
-    icon: <Film className="w-6 h-6" />,
-    bgImage: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&q=80&w=800'
+    bgImage: '/Images/MoviesCard.png'
   },
   {
     value: 'games',
     label: 'ألعاب',
-    icon: <Gamepad2 className="w-6 h-6" />,
-    bgImage: 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&q=80&w=800'
+    bgImage: '/Images/GamesCard.png'
   },
   {
     value: 'football',
     label: 'كرة القدم',
-    icon: <Football className="w-6 h-6" />,
-    bgImage: 'https://images.unsplash.com/photo-1556056504-5c7696c4c28d?auto=format&fit=crop&q=80&w=800'
+    bgImage: '/Images/FootballCard.png'
   },
   {
     value: 'wwe',
     label: 'المصارعة',
-    icon: <Sword className="w-6 h-6" />,
-    bgImage: 'https://images.unsplash.com/photo-1488656711237-487ce1cc53b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+    bgImage: '/Images/WrestlingCard.png'
   }
 ];
 
@@ -94,57 +87,63 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
 
   return (
     <div className="min-h-screen bg-gray-900">
-      <div className="max-w-6xl mx-auto px-4 py-6" dir="rtl">
-        <div className="mb-6">
-          <div className="flex flex-wrap justify-between items-center gap-4 mb-4">
-            <div className="flex items-center gap-2">
+      <div className="max-w-7xl mx-auto px-4 py-8" dir="rtl">
+        <div className="mb-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
+            <div className="flex items-center gap-3">
               <button
                 onClick={onResetGame}
-                className="secondary-button"
+                className="secondary-button px-6 py-3 flex items-center gap-2 text-lg"
               >
-                <Users className="w-5 h-5" />
+                <Users className="w-6 h-6" />
                 فرق جديدة
               </button>
               
               <button
                 onClick={handleEndGame}
-                className="primary-button bg-red-500 hover:bg-red-600"
+                className="primary-button bg-red-500 hover:bg-red-600 px-6 py-3 flex items-center gap-2 text-lg"
               >
-                <Flag className="w-5 h-5" />
+                <Flag className="w-6 h-6" />
                 إنهاء اللعبة
               </button>
             </div>
 
-            <div className="text-center">
-              <span className="text-lg font-bold text-purple-400">
+            <div className="text-center bg-blue-500/10 px-6 py-3 rounded-xl border border-blue-500/20">
+              <span className="text-xl font-bold text-blue-400 flex items-center gap-2">
+                <Trophy className="w-6 h-6" />
                 أول فريق يصل إلى 200 نقطة يفوز
               </span>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {teams.map((team) => (
               <div
                 key={team.id}
-                className="team-card"
+                className={`team-card ${team.isActive ? 'ring-2 ring-blue-500' : ''} transition-all duration-300`}
               >
-                <div className="flex justify-between items-center mb-2">
-                  <h3 className="font-semibold text-white">{team.name}</h3>
-                  <p className="text-white/90">النقاط: {team.score}</p>
+                <div className="flex justify-between items-center mb-4">
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-xl font-bold text-white">{team.name}</h3>
+                    {team.isActive && <Crown className="w-5 h-5 text-yellow-400" />}
+                  </div>
+                  <div className="text-2xl font-bold text-blue-400">
+                    {team.score}
+                  </div>
                 </div>
-                <div className="flex gap-2">
+                <div className="flex gap-3">
                   <button
                     onClick={() => adjustScore(team.id, -10)}
-                    className="danger-button flex-1 py-1.5 flex items-center justify-center gap-1"
+                    className="danger-button flex-1 py-2 flex items-center justify-center gap-2 text-lg"
                   >
-                    <Minus className="w-4 h-4" />
+                    <Minus className="w-5 h-5" />
                     -10
                   </button>
                   <button
                     onClick={() => adjustScore(team.id, 10)}
-                    className="success-button flex-1 py-1.5 flex items-center justify-center gap-1"
+                    className="success-button flex-1 py-2 flex items-center justify-center gap-2 text-lg"
                   >
-                    <Plus className="w-4 h-4" />
+                    <Plus className="w-5 h-5" />
                     +10
                   </button>
                 </div>
@@ -152,48 +151,52 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
             ))}
           </div>
 
-          <div className="text-center mb-6">
-            <h2 className="text-3xl font-bold text-blue-400">
+          <div className="text-center mb-8">
+            <h2 className="text-4xl font-bold text-blue-400 mb-2">
               دور {activeTeam?.name}
             </h2>
-            <p className="text-gray-300 mt-1">
+            <p className="text-xl text-gray-300">
               اختر الفئة التي تريد
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-16 mb-8">
           {categories.map((category) => {
             const selectionCount = categorySelectionCounts[category.value as Category] || 0;
             const isDisabled = selectionCount >= 3;
             
             return (
-              <button
-                key={category.value}
-                onClick={() => handleCategorySelect(category.value as Category)}
-                disabled={isDisabled}
-                className={`category-card ${isDisabled ? 'opacity-50 cursor-not-allowed' : 'hover:scale-105'}`}
-                style={{
-                  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${category.bgImage})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              >
-                <div className="relative z-10 p-4 h-full flex flex-col items-center text-center min-h-[140px] justify-center">
-                  <div className="category-icon mb-2">
-                    {category.icon}
-                  </div>
-                  <h3 className="text-xl font-bold text-white">{category.label}</h3>
-                  <div className="mt-1 flex items-center gap-1">
-                    <span className="text-sm text-white/80">
-                      {selectionCount}/3
-                    </span>
-                    {isDisabled && (
-                      <span className="text-sm text-white/80">تم اختيارها</span>
-                    )}
+              <div key={category.value} className="relative group">
+                <div className="flex flex-col">
+                  <button
+                    onClick={() => handleCategorySelect(category.value as Category)}
+                    disabled={isDisabled}
+                    className={`category-card ${isDisabled ? 'opacity-50 cursor-not-allowed' : 'group-hover:scale-105'} transition-all duration-300 w-full aspect-[4/3] overflow-hidden rounded-t-2xl shadow-lg`}
+                    style={{
+                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url(${category.bgImage})`,
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                    }}
+                  >
+                    <div className="relative z-10 h-full flex flex-col items-center justify-end p-4">
+                      <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm px-4 py-2 rounded-xl">
+                        <span className="text-lg text-white font-semibold drop-shadow-md">
+                          {selectionCount}/3
+                        </span>
+                        {isDisabled && (
+                          <span className="text-lg text-white font-semibold drop-shadow-md">تم اختيارها</span>
+                        )}
+                      </div>
+                    </div>
+                  </button>
+                  <div className="bg-[#2F3640] w-full py-4 px-6 rounded-b-2xl shadow-lg">
+                    <div className="text-2xl font-bold text-white text-center">
+                      {category.label}
+                    </div>
                   </div>
                 </div>
-              </button>
+              </div>
             );
           })}
         </div>

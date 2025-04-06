@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Crown, Eye, Check, Lightbulb, X } from 'lucide-react';
-import { useGameStore } from '../store/gameStore';
+import { ArrowRight, Crown, Eye, Lightbulb, X } from 'lucide-react';
+import { useGameStore, CATEGORIES } from '../store/gameStore';
 import { useNavigate } from 'react-router-dom';
 
 interface GameBoardProps {
@@ -15,7 +15,9 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
     revealDetail,
     checkWinCondition,
     gameEnded,
-    adjustScore
+    adjustScore,
+    setActiveTeam,
+    selectedCategory
   } = useGameStore();
 
   const [showAnswer, setShowAnswer] = useState(false);
@@ -56,6 +58,14 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
       const points = allDetailsRevealed ? 10 : unrevealedCount * 10;
       adjustScore(teamId, points);
     }
+
+    // Always rotate to next team
+    const currentActiveTeam = teams.find(t => t.isActive);
+    if (currentActiveTeam) {
+      const currentTeamIndex = teams.findIndex(t => t.id === currentActiveTeam.id);
+      const nextTeamIndex = (currentTeamIndex + 1) % teams.length;
+      setActiveTeam(teams[nextTeamIndex].id);
+    }
     
     if (checkWinCondition()) {
       setTimeout(() => {
@@ -72,6 +82,10 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
 
   if (!currentItem) return null;
 
+  const categoryLabel = selectedCategory && CATEGORIES[selectedCategory] 
+    ? CATEGORIES[selectedCategory].label 
+    : '';
+
   return (
     <div className="min-h-screen bg-gray-900 py-12 px-4" dir="rtl">
       <div className="max-w-4xl mx-auto">
@@ -84,6 +98,19 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
         </button>
 
         <div className="bg-gray-800 rounded-xl p-8 shadow-xl mb-8">
+          <div className="flex justify-between items-center mb-6">
+            <div className="flex items-center gap-4">
+              <h2 className="text-2xl font-bold text-blue-400">التصنيف:</h2>
+              <span className="text-white font-bold text-xl">{categoryLabel}</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-gray-300">الفريق النشط:</span>
+              <span className="text-white font-bold">
+                {teams.find(t => t.isActive)?.name}
+              </span>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {currentItem.details.map((detail, index) => (
               <div

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Play } from 'lucide-react';
+import { Plus, X, Crown, Play } from 'lucide-react';
+import { useGameStore } from '../store/gameStore';
 import { useNavigate } from 'react-router-dom';
 
 interface GameSetupProps {
@@ -84,11 +85,26 @@ const allCategories = [
 
 export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
   const navigate = useNavigate();
-  const [team1Name, setTeam1Name] = useState('');
-  const [team2Name, setTeam2Name] = useState('');
+  const { teams, addTeam, removeTeam, setActiveTeam, resetGame } = useGameStore();
+  const [newTeamName, setNewTeamName] = useState('');
   const [winningPoints, setWinningPoints] = useState(200);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [error, setError] = useState('');
+
+  const handleAddTeam = () => {
+    if (newTeamName.trim() && teams.length < 6) {
+      addTeam(newTeamName.trim());
+      setNewTeamName('');
+    }
+  };
+
+  const handleRemoveTeam = (id: number) => {
+    removeTeam(id);
+  };
+
+  const handleSetActiveTeam = (id: number) => {
+    setActiveTeam(id);
+  };
 
   const handleCategoryToggle = (categoryValue: string) => {
     setSelectedCategories(prev => {
@@ -102,8 +118,8 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
   };
 
   const handleStartGame = () => {
-    if (!team1Name || !team2Name) {
-      setError('الرجاء إدخال أسماء الفريقين');
+    if (teams.length < 2) {
+      setError('الرجاء إضافة فريقين على الأقل');
       return;
     }
     if (selectedCategories.length !== 6) {
@@ -111,15 +127,7 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
       return;
     }
 
-    onStart(
-      [
-        { id: 1, name: team1Name, score: 0, isActive: true },
-        { id: 2, name: team2Name, score: 0, isActive: false }
-      ],
-      winningPoints,
-      false,
-      selectedCategories
-    );
+    onStart(teams, winningPoints, false, selectedCategories);
     navigate('/play');
   };
 
@@ -128,31 +136,66 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-blue-400 mb-4">إعداد اللعبة</h1>
-          <p className="text-gray-300 text-lg">أدخل أسماء الفريقين واختر التصنيفات</p>
+          <p className="text-gray-300 text-lg">أدخل أسماء الفرق واختر التصنيفات</p>
         </div>
 
         <div className="bg-gray-800 rounded-xl p-8 shadow-xl mb-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <div>
-              <label className="block text-gray-300 text-lg mb-2">الفريق الأول</label>
+          <div className="mb-8">
+            <div className="flex gap-4 mb-4">
               <input
                 type="text"
-                value={team1Name}
-                onChange={(e) => setTeam1Name(e.target.value)}
-                className="w-full bg-gray-700 text-white rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
-                placeholder="اسم الفريق الأول"
+                value={newTeamName}
+                onChange={(e) => setNewTeamName(e.target.value)}
+                placeholder="اسم الفريق الجديد"
+                className="flex-1 bg-gray-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                onKeyPress={(e) => e.key === 'Enter' && handleAddTeam()}
               />
+              <button
+                onClick={handleAddTeam}
+                disabled={!newTeamName.trim() || teams.length >= 6}
+                className="primary-button px-4 py-2"
+              >
+                إضافة فريق
+              </button>
             </div>
-            <div>
-              <label className="block text-gray-300 text-lg mb-2">الفريق الثاني</label>
-              <input
-                type="text"
-                value={team2Name}
-                onChange={(e) => setTeam2Name(e.target.value)}
-                className="w-full bg-gray-700 text-white rounded-lg px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none"
-                placeholder="اسم الفريق الثاني"
-              />
-            </div>
+            {teams.length >= 6 && (
+              <p className="text-red-400 text-center">لا يمكن إضافة أكثر من 6 فرق</p>
+            )}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            {teams.map((team) => (
+              <div
+                key={team.id}
+                className={`team-card ${team.isActive ? 'ring-2 ring-blue-500' : ''}`}
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <h3 className="text-xl font-bold text-white">{team.name}</h3>
+                    {team.isActive && <span className="text-yellow-400">👑</span>}
+                  </div>
+                  <button
+                    onClick={() => handleRemoveTeam(team.id)}
+                    className="text-red-400 hover:text-red-300"
+                  >
+                    ✕
+                  </button>
+                </div>
+                <div className="text-2xl font-bold text-blue-400">
+                  {team.score}
+                </div>
+                <button
+                  onClick={() => handleSetActiveTeam(team.id)}
+                  className={`mt-2 w-full py-2 rounded-lg ${
+                    team.isActive
+                      ? 'bg-blue-500 text-white'
+                      : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
+                  }`}
+                >
+                  {team.isActive ? 'الفريق النشط' : 'تعيين كنشط'}
+                </button>
+              </div>
+            ))}
           </div>
 
           <div className="mb-8">

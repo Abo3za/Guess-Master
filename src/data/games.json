@@ -1,0 +1,137 @@
+[
+  {
+    "id": "1",
+    "name": "Minecraft",
+    "category": "games",
+    "details": [
+      {
+        "label": "النوع",
+        "value": "لعبة بناء ومغامرات"
+      },
+      {
+        "label": "المطور",
+        "value": "Mojang Studios"
+      },
+      {
+        "label": "سنة الإصدار",
+        "value": "2011"
+      },
+      {
+        "label": "الناشر",
+        "value": "Microsoft"
+      },
+      {
+        "label": "مشهور بـ",
+        "value": "عالم مكعبات مفتوح، بناء، تعدين، حرف يدوية"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Fortnite",
+    "category": "games",
+    "details": [
+      {
+        "label": "النوع",
+        "value": "معركة ملكية، بقاء"
+      },
+      {
+        "label": "المطور",
+        "value": "Epic Games"
+      },
+      {
+        "label": "سنة الإصدار",
+        "value": "2017"
+      },
+      {
+        "label": "الناشر",
+        "value": "Epic Games"
+      },
+      {
+        "label": "مشهور بـ",
+        "value": "وضع المعركة الملكية، بناء، رقصات، شخصيات مشهورة"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Grand Theft Auto V",
+    "category": "games",
+    "details": [
+      {
+        "label": "النوع",
+        "value": "حركة، مغامرات، عالم مفتوح"
+      },
+      {
+        "label": "المطور",
+        "value": "Rockstar North"
+      },
+      {
+        "label": "سنة الإصدار",
+        "value": "2013"
+      },
+      {
+        "label": "الناشر",
+        "value": "Rockstar Games"
+      },
+      {
+        "label": "مشهور بـ",
+        "value": "عالم لوس سانتوس المفتوح، القصة متعددة الشخصيات، جرائم، سيارات"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "The Legend of Zelda: Breath of the Wild",
+    "category": "games",
+    "details": [
+      {
+        "label": "النوع",
+        "value": "مغامرات، أكشن، عالم مفتوح"
+      },
+      {
+        "label": "المطور",
+        "value": "Nintendo EPD"
+      },
+      {
+        "label": "سنة الإصدار",
+        "value": "2017"
+      },
+      {
+        "label": "الناشر",
+        "value": "Nintendo"
+      },
+      {
+        "label": "مشهور بـ",
+        "value": "عالم هايرول المفتوح، الفيزياء التفاعلية، الألغاز، القصة"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Among Us",
+    "category": "games",
+    "details": [
+      {
+        "label": "النوع",
+        "value": "اجتماعية، خيانة، استنتاج"
+      },
+      {
+        "label": "المطور",
+        "value": "InnerSloth"
+      },
+      {
+        "label": "سنة الإصدار",
+        "value": "2018"
+      },
+      {
+        "label": "الناشر",
+        "value": "InnerSloth"
+      },
+      {
+        "label": "مشهور بـ",
+        "value": "لعبة الخيانة، العمل الجماعي، التخفي، الاستنتاج"
+      }
+    ]
+  }
+] 

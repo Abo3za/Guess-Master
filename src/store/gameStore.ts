@@ -2,6 +2,22 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { GameState, Team, GameItem, Category } from '../types';
 
+export type Category = 'anime' | 'movies' | 'games' | 'books' | 'songs' | 'celebrities';
+
+interface CategoryInfo {
+  label: string;
+  icon: string;
+}
+
+export const CATEGORIES: Record<Category, CategoryInfo> = {
+  anime: { label: 'الأنمي', icon: '🎭' },
+  movies: { label: 'الأفلام', icon: '🎬' },
+  games: { label: 'الألعاب', icon: '🎮' },
+  books: { label: 'الكتب', icon: '📚' },
+  songs: { label: 'الأغاني', icon: '🎵' },
+  celebrities: { label: 'المشاهير', icon: '🌟' }
+};
+
 interface GameStore extends GameState {
   initializeGame: (teams: Team[], winningPoints: number, hideHints: boolean, selectedCategories: string[]) => void;
   setCurrentItem: (item: GameItem) => void;
@@ -20,6 +36,10 @@ interface GameStore extends GameState {
   winningPoints: number;
   hideHints: boolean;
   selectedCategories: string[];
+  addTeam: (name: string) => void;
+  removeTeam: (id: number) => void;
+  setActiveTeam: (id: number) => void;
+  addUsedCategory: (category: string) => void;
 }
 
 const initialState: GameState = {
@@ -36,6 +56,7 @@ const initialState: GameState = {
   winningPoints: 200,
   hideHints: false,
   selectedCategories: [],
+  usedCategories: [],
 };
 
 export const useGameStore = create<GameStore>()(
@@ -56,6 +77,7 @@ export const useGameStore = create<GameStore>()(
           winningPoints,
           hideHints,
           selectedCategories,
+          usedCategories: [],
         });
       },
       setCurrentItem: (item) => {
@@ -217,6 +239,35 @@ export const useGameStore = create<GameStore>()(
       checkWinCondition: () => {
         const { teams, winningPoints } = get();
         return teams.some(team => team.score >= winningPoints);
+      },
+      addTeam: (name: string) => {
+        const newTeam: Team = {
+          id: Date.now(),
+          name,
+          score: 0,
+          isActive: get().teams.length === 0
+        };
+        set((state) => ({
+          teams: [...state.teams, newTeam]
+        }));
+      },
+      removeTeam: (id: number) => {
+        set((state) => ({
+          teams: state.teams.filter((team) => team.id !== id)
+        }));
+      },
+      setActiveTeam: (id: number) => {
+        set((state) => ({
+          teams: state.teams.map((team) => ({
+            ...team,
+            isActive: team.id === id
+          }))
+        }));
+      },
+      addUsedCategory: (category: string) => {
+        set((state) => ({
+          usedCategories: [...state.usedCategories, category]
+        }));
       }
     }),
     {
@@ -231,7 +282,8 @@ export const useGameStore = create<GameStore>()(
         categorySelectionCounts: state.categorySelectionCounts,
         isGameActive: state.isGameActive,
         gameEnded: state.gameEnded,
-        winningPoints: state.winningPoints
+        winningPoints: state.winningPoints,
+        usedCategories: state.usedCategories
       })
     }
   )

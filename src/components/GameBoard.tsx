@@ -55,7 +55,9 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories, onRese
   const activeTeam = teams.find((team) => team.isActive);
 
   const handleReveal = (index: number) => {
-    revealDetail(index);
+    if (!answerRevealed) {
+      revealDetail(index);
+    }
   };
 
   const handleTeamSelect = (teamId: string) => {
@@ -148,6 +150,7 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories, onRese
                 ))}
                 <button
                   onClick={() => {
+                    setAnswerRevealed(false);
                     onBackToCategories();
                   }}
                   className="danger-button col-span-2"
@@ -164,11 +167,11 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories, onRese
           {currentItem.details.map((detail, index) => (
             <div
               key={index}
-              className="game-detail-card"
+              className={`game-detail-card ${answerRevealed ? 'opacity-75' : ''}`}
             >
               <div className="flex justify-between items-center">
                 <span className="font-medium text-white/90">{detail.label}</span>
-                {!detail.revealed && (
+                {!detail.revealed && !answerRevealed && (
                   <button
                     onClick={() => handleReveal(index)}
                     className="text-blue-400 hover:text-blue-300 flex items-center gap-1"
@@ -178,7 +181,7 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories, onRese
                 )}
               </div>
               <p className="mt-2 text-white text-right">
-                {detail.revealed ? detail.value : '???'}
+                {detail.revealed || answerRevealed ? detail.value : '???'}
               </p>
             </div>
           ))}

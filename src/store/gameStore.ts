@@ -64,8 +64,16 @@ export const useGameStore = create<GameStore>()(
     (set, get) => ({
       ...initialState,
       initializeGame: (teams, winningPoints, hideHints, selectedCategories) => {
+        // Ensure teams have proper structure and initial values
+        const initializedTeams = teams.map((team, index) => ({
+          ...team,
+          id: team.id || Date.now() + index,
+          score: 0,
+          isActive: index === 0
+        }));
+
         set({ 
-          teams, 
+          teams: initializedTeams, 
           answerRevealed: false,
           currentItem: null,
           selectedCategory: null,
@@ -147,30 +155,41 @@ export const useGameStore = create<GameStore>()(
 
         if (isCorrect) {
           const unrevealedCount = currentItem.details.filter(d => !d.revealed).length;
-          const allDetailsRevealed = unrevealedCount === 0;
-          const points = allDetailsRevealed ? 10 : unrevealedCount * 10;
+          const points = unrevealedCount * 10 + 10; // 10 نقاط إضافية للإجابة الصحيحة
 
-          const updatedTeams = teams.map((team) =>
-            team.id === teamId
-              ? { ...team, score: team.score + points }
-              : team
-          );
+          // Only update the score for the team that made the correct guess
+          const updatedTeams = teams.map((team) => {
+            if (team.id === teamId) {
+              console.log(`Adding ${points} points to team ${team.name}`);
+              return { ...team, score: team.score + points };
+            }
+            return team;
+          });
           
           set({ 
             teams: updatedTeams,
-            answerRevealed: false
+            answerRevealed: true
           });
+
+          // Check if the team has won
+          const winningTeam = updatedTeams.find(team => team.score >= get().winningPoints);
+          if (winningTeam) {
+            set({ gameEnded: true });
+          }
         }
 
         return isCorrect;
       },
       adjustScore: (teamId: number, amount: number) => {
         set((state) => {
-          const updatedTeams = state.teams.map((team) =>
-            team.id === teamId
-              ? { ...team, score: Math.max(0, team.score + amount) }
-              : team
-          );
+          // Only update the score for the specified team
+          const updatedTeams = state.teams.map((team) => {
+            if (team.id === teamId) {
+              console.log(`Adjusting score for team ${team.name} by ${amount}`);
+              return { ...team, score: Math.max(0, team.score + amount) };
+            }
+            return team;
+          });
 
           // Check if any team has reached the winning score
           const hasWinner = updatedTeams.some(team => team.score >= state.winningPoints);
@@ -204,13 +223,22 @@ export const useGameStore = create<GameStore>()(
         }));
       },
       resetGame: () => {
-        // Clear the persisted state
-        localStorage.removeItem('game-storage');
-        // Reset to initial state
         set({
           ...initialState,
+          teams: [],
+          currentItem: null,
+          selectedCategory: null,
+          answerRevealed: false,
+          isLoading: false,
+          usedItems: new Set<string>(),
+          categoryUsedItems: {} as Record<Category, Set<string>>,
+          gameEnded: false,
+          categorySelectionCounts: {} as Record<Category, number>,
           isGameActive: false,
-          gameEnded: false
+          winningPoints: 200,
+          hideHints: false,
+          selectedCategories: [],
+          usedCategories: [],
         });
       },
       backToCategories: () => {
@@ -272,19 +300,22 @@ export const useGameStore = create<GameStore>()(
     }),
     {
       name: 'game-storage',
+      version: 1,
       partialize: (state) => ({
-        teams: state.teams,
-        currentItem: state.currentItem,
-        selectedCategory: state.selectedCategory,
-        answerRevealed: state.answerRevealed,
-        usedItems: state.usedItems,
-        categoryUsedItems: state.categoryUsedItems,
-        categorySelectionCounts: state.categorySelectionCounts,
-        isGameActive: state.isGameActive,
-        gameEnded: state.gameEnded,
-        winningPoints: state.winningPoints,
-        usedCategories: state.usedCategories
-      })
+        ...state,
+        usedItems: Array.from(state.usedItems),
+        categoryUsedItems: Object.fromEntries(
+          Object.entries(state.categoryUsedItems).map(([k, v]) => [k, Array.from(v)])
+        ),
+      }),
+      onRehydrateStorage: () => (state) => {
+        if (state) {
+          state.usedItems = new Set(state.usedItems);
+          state.categoryUsedItems = Object.fromEntries(
+            Object.entries(state.categoryUsedItems).map(([k, v]) => [k, new Set(v)])
+          );
+        }
+      },
     }
   )
 );

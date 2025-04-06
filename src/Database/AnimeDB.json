@@ -1,1399 +1,3003 @@
 [
     {
-        "id": 1,
-        "title": "Attack on Titan",
-        "release_year": 2013,
-        "genre": [
-            "Action",
-            "Drama",
-            "Fantasy"
-        ],
-        "episodes": 75,
-        "studio": "Wit Studio",
-        "rating": 9.1,
-        "main_character": "Eren Yeager"
-    },
-    {
-        "id": 2,
-        "title": "Death Note",
-        "release_year": 2006,
-        "genre": [
-            "Mystery",
-            "Psychological",
-            "Supernatural"
-        ],
-        "episodes": 37,
-        "studio": "Madhouse",
-        "rating": 8.6,
-        "main_character": "Light Yagami"
-    },
-    {
-        "id": 3,
-        "title": "One Piece",
-        "release_year": 1999,
-        "genre": [
-            "Adventure",
-            "Action",
-            "Fantasy"
-        ],
-        "episodes": 1000,
-        "studio": "Toei Animation",
-        "rating": 8.8,
-        "main_character": "Monkey D. Luffy"
-    },
-    {
-        "id": 4,
-        "title": "Naruto",
-        "release_year": 2002,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Fantasy"
-        ],
-        "episodes": 220,
-        "studio": "Pierrot",
-        "rating": 8.0,
-        "main_character": "Naruto Uzumaki"
-    },
-    {
-        "id": 5,
-        "title": "Fullmetal Alchemist: Brotherhood",
-        "release_year": 2009,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Drama"
-        ],
-        "episodes": 64,
-        "studio": "Bones",
-        "rating": 9.2,
-        "main_character": "Edward Elric"
-    },
-    {
-        "id": 6,
-        "title": "Steins;Gate",
-        "release_year": 2011,
-        "genre": [
-            "Sci-Fi",
-            "Thriller",
-            "Drama"
-        ],
-        "episodes": 24,
-        "studio": "White Fox",
-        "rating": 9.1,
-        "main_character": "Rintarou Okabe"
-    },
-    {
-        "id": 7,
-        "title": "Hunter x Hunter",
-        "release_year": 2011,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Fantasy"
-        ],
-        "episodes": 148,
-        "studio": "Madhouse",
-        "rating": 9.0,
-        "main_character": "Gon Freecss"
-    },
-    {
-        "id": 8,
-        "title": "Code Geass",
-        "release_year": 2006,
-        "genre": [
-            "Action",
-            "Mecha",
-            "Psychological"
-        ],
-        "episodes": 50,
-        "studio": "Sunrise",
-        "rating": 8.7,
-        "main_character": "Lelouch Lamperouge"
-    },
-    {
-        "id": 9,
-        "title": "Demon Slayer",
-        "release_year": 2019,
-        "genre": [
-            "Action",
-            "Fantasy",
-            "Adventure"
-        ],
-        "episodes": 44,
-        "studio": "Ufotable",
-        "rating": 8.5,
-        "main_character": "Tanjiro Kamado"
-    },
-    {
-        "id": 10,
-        "title": "Jujutsu Kaisen",
-        "release_year": 2020,
-        "genre": [
-            "Action",
-            "Supernatural",
-            "Fantasy"
-        ],
-        "episodes": 47,
-        "studio": "MAPPA",
-        "rating": 8.7,
-        "main_character": "Yuji Itadori"
-    },
-    {
-        "id": 11,
-        "title": "Cowboy Bebop",
-        "release_year": 1998,
-        "genre": [
-            "Action",
-            "Sci-Fi",
-            "Space Western"
-        ],
-        "episodes": 26,
-        "studio": "Sunrise",
-        "rating": 8.9,
-        "main_character": "Spike Spiegel"
-    },
-    {
-        "id": 12,
-        "title": "Neon Genesis Evangelion",
-        "release_year": 1995,
-        "genre": [
-            "Mecha",
-            "Psychological",
-            "Drama"
-        ],
-        "episodes": 26,
-        "studio": "Gainax",
-        "rating": 8.5,
-        "main_character": "Shinji Ikari"
-    },
-    {
-        "id": 13,
-        "title": "Dragon Ball Z",
-        "release_year": 1989,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Martial Arts"
-        ],
-        "episodes": 291,
-        "studio": "Toei Animation",
-        "rating": 8.0,
-        "main_character": "Goku"
-    },
-    {
-        "id": 14,
-        "title": "Bleach",
-        "release_year": 2004,
-        "genre": [
-            "Action",
-            "Supernatural",
-            "Adventure"
-        ],
-        "episodes": 366,
-        "studio": "Studio Pierrot",
-        "rating": 7.9,
-        "main_character": "Ichigo Kurosaki"
-    },
-    {
-        "id": 15,
-        "title": "Fairy Tail",
-        "release_year": 2009,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Fantasy"
-        ],
-        "episodes": 328,
-        "studio": "A-1 Pictures",
-        "rating": 7.7,
-        "main_character": "Natsu Dragneel"
-    },
-    {
-        "id": 16,
-        "title": "One Punch Man",
-        "release_year": 2015,
-        "genre": [
-            "Action",
-            "Comedy",
-            "Superhero"
-        ],
-        "episodes": 12,
-        "studio": "Madhouse",
-        "rating": 8.8,
-        "main_character": "Saitama"
-    },
-    {
-        "id": 17,
-        "title": "Sword Art Online",
-        "release_year": 2012,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Fantasy"
-        ],
-        "episodes": 25,
-        "studio": "A-1 Pictures",
-        "rating": 7.6,
-        "main_character": "Kirito"
-    },
-    {
-        "id": 18,
-        "title": "Tokyo Ghoul",
-        "release_year": 2014,
-        "genre": [
-            "Action",
-            "Horror",
-            "Supernatural"
-        ],
-        "episodes": 12,
-        "studio": "Studio Pierrot",
-        "rating": 7.9,
-        "main_character": "Kaneki Ken"
-    },
-    {
-        "id": 19,
-        "title": "Black Clover",
-        "release_year": 2017,
-        "genre": [
-            "Action",
-            "Fantasy",
-            "Magic"
-        ],
-        "episodes": 170,
-        "studio": "Pierrot",
-        "rating": 7.8,
-        "main_character": "Asta"
-    },
-    {
-        "id": 20,
-        "title": "Re:Zero",
-        "release_year": 2016,
-        "genre": [
-            "Drama",
-            "Fantasy",
-            "Psychological"
-        ],
-        "episodes": 25,
-        "studio": "White Fox",
-        "rating": 8.3,
-        "main_character": "Subaru Natsuki"
-    },
-    {
-        "id": 21,
-        "title": "Mob Psycho 100",
-        "release_year": 2016,
-        "genre": [
-            "Action",
-            "Comedy",
-            "Supernatural"
-        ],
-        "episodes": 25,
-        "studio": "Bones",
-        "rating": 8.6,
-        "main_character": "Shigeo Kageyama"
-    },
-    {
-        "id": 22,
-        "title": "Akame ga Kill",
-        "release_year": 2014,
-        "genre": [
-            "Action",
-            "Fantasy",
-            "Drama"
-        ],
-        "episodes": 24,
-        "studio": "White Fox",
-        "rating": 7.7,
-        "main_character": "Tatsumi"
-    },
-    {
-        "id": 23,
-        "title": "Psycho-Pass",
-        "release_year": 2012,
-        "genre": [
-            "Action",
-            "Sci-Fi",
-            "Crime"
-        ],
-        "episodes": 22,
-        "studio": "Production I.G",
-        "rating": 8.2,
-        "main_character": "Akane Tsunemori"
-    },
-    {
-        "id": 24,
-        "title": "Your Lie in April",
-        "release_year": 2014,
-        "genre": [
-            "Drama",
-            "Music",
-            "Romance"
-        ],
-        "episodes": 22,
-        "studio": "A-1 Pictures",
-        "rating": 8.6,
-        "main_character": "Kousei Arima"
-    },
-    {
-        "id": 25,
-        "title": "Clannad",
-        "release_year": 2007,
-        "genre": [
-            "Drama",
-            "Romance",
-            "Slice of Life"
-        ],
-        "episodes": 23,
-        "studio": "Kyoto Animation",
-        "rating": 8.2,
-        "main_character": "Tomoya Okazaki"
-    },
-    {
-        "id": 26,
-        "title": "Spirited Away",
-        "release_year": 2001,
-        "genre": [
-            "Adventure",
-            "Fantasy"
-        ],
-        "episodes": 1,
-        "studio": "Studio Ghibli",
-        "rating": 8.6,
-        "main_character": "Chihiro Ogino"
-    },
-    {
-        "id": 27,
-        "title": "Howl's Moving Castle",
-        "release_year": 2004,
-        "genre": [
-            "Adventure",
-            "Fantasy"
-        ],
-        "episodes": 1,
-        "studio": "Studio Ghibli",
-        "rating": 8.2,
-        "main_character": "Sophie Hatter"
-    },
-    {
-        "id": 28,
-        "title": "My Hero Academia",
-        "release_year": 2016,
-        "genre": [
-            "Action",
-            "Comedy",
-            "Superhero"
-        ],
-        "episodes": 88,
-        "studio": "Bones",
-        "rating": 8.4,
-        "main_character": "Izuku Midoriya"
-    },
-    {
-        "id": 29,
-        "title": "Code:Breaker",
-        "release_year": 2012,
-        "genre": [
-            "Action",
-            "Supernatural",
-            "Drama"
-        ],
-        "episodes": 12,
-        "studio": "A-1 Pictures",
-        "rating": 7.3,
-        "main_character": "Rei Ogami"
-    },
-    {
-        "id": 30,
-        "title": "Shingeki no Bahamut: Genesis",
-        "release_year": 2014,
-        "genre": [
-            "Action",
-            "Fantasy"
-        ],
-        "episodes": 12,
-        "studio": "MAPPA",
-        "rating": 7.8,
-        "main_character": "Favaro Leone"
-    },
-    {
-        "id": 31,
-        "title": "Ergo Proxy",
-        "release_year": 2006,
-        "genre": [
-            "Sci-Fi",
-            "Mystery",
-            "Psychological"
-        ],
-        "episodes": 23,
-        "studio": "Manglobe",
-        "rating": 7.8,
-        "main_character": "Re-l Mayer"
-    },
-    {
-        "id": 32,
-        "title": "Soul Eater",
-        "release_year": 2008,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Supernatural"
-        ],
-        "episodes": 51,
-        "studio": "Bones",
-        "rating": 7.8,
-        "main_character": "Maka Albarn"
-    },
-    {
-        "id": 33,
-        "title": "Gurren Lagann",
-        "release_year": 2007,
-        "genre": [
-            "Action",
-            "Mecha",
-            "Adventure"
-        ],
-        "episodes": 27,
-        "studio": "Gainax",
-        "rating": 8.7,
-        "main_character": "Simon"
-    },
-    {
-        "id": 34,
-        "title": "Fate/Zero",
-        "release_year": 2011,
-        "genre": [
-            "Action",
-            "Fantasy",
-            "Supernatural"
-        ],
-        "episodes": 25,
-        "studio": "Ufotable",
-        "rating": 8.3,
-        "main_character": "Kiritsugu Emiya"
-    },
-    {
-        "id": 35,
-        "title": "Fate/stay night: Unlimited Blade Works",
-        "release_year": 2014,
-        "genre": [
-            "Action",
-            "Fantasy",
-            "Drama"
-        ],
-        "episodes": 25,
-        "studio": "Ufotable",
-        "rating": 8.1,
-        "main_character": "Shirou Emiya"
-    },
-    {
-        "id": 36,
-        "title": "Toradora!",
-        "release_year": 2008,
-        "genre": [
-            "Romance",
-            "Comedy",
-            "Slice of Life"
-        ],
-        "episodes": 25,
-        "studio": "J.C. Staff",
-        "rating": 8.1,
-        "main_character": "Ryuuji Takasu"
-    },
-    {
-        "id": 37,
-        "title": "K-On!",
-        "release_year": 2009,
-        "genre": [
-            "Music",
-            "Slice of Life",
-            "Comedy"
-        ],
-        "episodes": 13,
-        "studio": "Kyoto Animation",
-        "rating": 7.9,
-        "main_character": "Yui Hirasawa"
-    },
-    {
-        "id": 38,
-        "title": "Anohana: The Flower We Saw That Day",
-        "release_year": 2011,
-        "genre": [
-            "Drama",
-            "Supernatural",
-            "Slice of Life"
-        ],
-        "episodes": 11,
-        "studio": "A-1 Pictures",
-        "rating": 8.4,
-        "main_character": "Jinta Yadomi"
-    },
-    {
-        "id": 39,
-        "title": "Monster",
-        "release_year": 2004,
-        "genre": [
-            "Mystery",
-            "Thriller",
-            "Psychological"
-        ],
-        "episodes": 74,
-        "studio": "Madhouse",
-        "rating": 8.6,
-        "main_character": "Kenzo Tenma"
-    },
-    {
-        "id": 40,
-        "title": "Parasyte: The Maxim",
-        "release_year": 2014,
-        "genre": [
-            "Action",
-            "Horror",
-            "Sci-Fi"
-        ],
-        "episodes": 24,
-        "studio": "Madhouse",
-        "rating": 8.4,
-        "main_character": "Shinichi Izumi"
-    },
-    {
-        "id": 41,
-        "title": "Hellsing Ultimate",
-        "release_year": 2006,
-        "genre": [
-            "Action",
-            "Horror",
-            "Supernatural"
-        ],
-        "episodes": 10,
-        "studio": "Gonzo",
-        "rating": 8.4,
-        "main_character": "Alucard"
-    },
-    {
-        "id": 42,
-        "title": "Elfen Lied",
-        "release_year": 2004,
-        "genre": [
-            "Horror",
-            "Psychological",
-            "Drama"
-        ],
-        "episodes": 13,
-        "studio": "Arms",
-        "rating": 7.7,
-        "main_character": "Lucy"
-    },
-    {
-        "id": 43,
-        "title": "Black Lagoon",
-        "release_year": 2006,
-        "genre": [
-            "Action",
-            "Crime",
-            "Thriller"
-        ],
-        "episodes": 24,
-        "studio": "Madhouse",
-        "rating": 8.1,
-        "main_character": "Revy"
-    },
-    {
-        "id": 44,
-        "title": "Trigun",
-        "release_year": 1998,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Comedy"
-        ],
-        "episodes": 26,
-        "studio": "Madhouse",
-        "rating": 8.3,
-        "main_character": "Vash the Stampede"
-    },
-    {
-        "id": 45,
-        "title": "Samurai Champloo",
-        "release_year": 2004,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Historical"
-        ],
-        "episodes": 26,
-        "studio": "Manglobe",
-        "rating": 8.5,
-        "main_character": "Mugen"
-    },
-    {
-        "id": 46,
-        "title": "Vinland Saga",
-        "release_year": 2019,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Historical"
-        ],
-        "episodes": 24,
-        "studio": "Wit Studio",
-        "rating": 8.8,
-        "main_character": "Thorfinn"
-    },
-    {
-        "id": 47,
-        "title": "Dr. Stone",
-        "release_year": 2019,
-        "genre": [
-            "Adventure",
-            "Sci-Fi",
-            "Post-Apocalyptic"
-        ],
-        "episodes": 24,
-        "studio": "TMS Entertainment",
-        "rating": 8.4,
-        "main_character": "Senku Ishigami"
-    },
-    {
-        "id": 48,
-        "title": "The Promised Neverland",
-        "release_year": 2019,
-        "genre": [
-            "Thriller",
-            "Mystery",
-            "Horror"
-        ],
-        "episodes": 23,
-        "studio": "CloverWorks",
-        "rating": 8.6,
-        "main_character": "Emma"
-    },
-    {
-        "id": 49,
-        "title": "Mob Psycho 100 II",
-        "release_year": 2019,
-        "genre": [
-            "Action",
-            "Comedy",
-            "Supernatural"
-        ],
-        "episodes": 12,
-        "studio": "Bones",
-        "rating": 8.7,
-        "main_character": "Shigeo Kageyama"
-    },
-    {
-        "id": 50,
-        "title": "Dororo",
-        "release_year": 2019,
-        "genre": [
-            "Action",
-            "Historical",
-            "Demons"
-        ],
-        "episodes": 24,
-        "studio": "MAPPA",
-        "rating": 8.4,
-        "main_character": "Hyakkimaru"
-    },
-    {
-        "id": 51,
-        "title": "The Rising of the Shield Hero",
-        "release_year": 2019,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Fantasy"
-        ],
-        "episodes": 25,
-        "studio": "Kinema Citrus",
-        "rating": 8.0,
-        "main_character": "Naofumi Iwatani"
-    },
-    {
-        "id": 52,
-        "title": "Food Wars!: Shokugeki no Soma",
-        "release_year": 2015,
-        "genre": [
-            "Comedy",
-            "Drama",
-            "School"
-        ],
-        "episodes": 24,
-        "studio": "J.C.Staff",
-        "rating": 8.2,
-        "main_character": "Soma Yukihira"
-    },
-    {
-        "id": 53,
-        "title": "ReLIFE",
-        "release_year": 2016,
-        "genre": [
-            "Drama",
-            "Romance",
-            "Sci-Fi"
-        ],
-        "episodes": 13,
-        "studio": "TMS Entertainment",
-        "rating": 7.8,
-        "main_character": "Arata Kaizaki"
-    },
-    {
-        "id": 54,
-        "title": "Berserk",
-        "release_year": 1997,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Horror"
-        ],
-        "episodes": 25,
-        "studio": "OLM",
-        "rating": 8.3,
-        "main_character": "Guts"
-    },
-    {
-        "id": 55,
-        "title": "Inuyasha",
-        "release_year": 2000,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Fantasy"
-        ],
-        "episodes": 167,
-        "studio": "Sunrise",
-        "rating": 7.6,
-        "main_character": "Inuyasha"
-    },
-    {
-        "id": 56,
-        "title": "Rurouni Kenshin",
-        "release_year": 1996,
-        "genre": [
-            "Action",
-            "Historical",
-            "Romance"
-        ],
-        "episodes": 94,
-        "studio": "Studio Gallop",
-        "rating": 8.1,
-        "main_character": "Kenshin Himura"
-    },
-    {
-        "id": 57,
-        "title": "Yu Yu Hakusho",
-        "release_year": 1992,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Supernatural"
-        ],
-        "episodes": 112,
-        "studio": "Studio Pierrot",
-        "rating": 8.4,
-        "main_character": "Yusuke Urameshi"
-    },
-    {
-        "id": 58,
-        "title": "Slam Dunk",
-        "release_year": 1993,
-        "genre": [
-            "Sports",
-            "Comedy",
-            "Drama"
-        ],
-        "episodes": 101,
-        "studio": "Toei Animation",
-        "rating": 8.2,
-        "main_character": "Hanamichi Sakuragi"
-    },
-    {
-        "id": 59,
-        "title": "Haikyuu!!",
-        "release_year": 2014,
-        "genre": [
-            "Sports",
-            "Comedy",
-            "Drama"
-        ],
-        "episodes": 85,
-        "studio": "Production I.G",
-        "rating": 8.7,
-        "main_character": "Shoyo Hinata"
-    },
-    {
-        "id": 60,
-        "title": "Kuroko's Basketball",
-        "release_year": 2012,
-        "genre": [
-            "Sports",
-            "Comedy",
-            "Drama"
-        ],
-        "episodes": 75,
-        "studio": "Production I.G",
-        "rating": 8.0,
-        "main_character": "Tetsuya Kuroko"
-    },
-    {
-        "id": 61,
-        "title": "Attack on Titan: The Final Season",
-        "release_year": 2020,
-        "genre": [
-            "Action",
-            "Drama",
-            "Fantasy"
-        ],
-        "episodes": 16,
-        "studio": "MAPPA",
-        "rating": 8.9,
-        "main_character": "Eren Yeager"
-    },
-    {
-        "id": 62,
-        "title": "Fate/Apocrypha",
-        "release_year": 2017,
-        "genre": [
-            "Action",
-            "Fantasy",
-            "Supernatural"
-        ],
-        "episodes": 25,
-        "studio": "A-1 Pictures",
-        "rating": 7.6,
-        "main_character": "Sieg"
-    },
-    {
-        "id": 63,
-        "title": "Gintama",
-        "release_year": 2006,
-        "genre": [
-            "Action",
-            "Comedy",
-            "Historical"
-        ],
-        "episodes": 367,
-        "studio": "Sunrise",
-        "rating": 8.7,
-        "main_character": "Gintoki Sakata"
-    },
-    {
-        "id": 64,
-        "title": "Mushishi",
-        "release_year": 2005,
-        "genre": [
-            "Mystery",
-            "Supernatural",
-            "Drama"
-        ],
-        "episodes": 26,
-        "studio": "Artland",
-        "rating": 8.4,
-        "main_character": "Ginko"
-    },
-    {
-        "id": 65,
-        "title": "The Melancholy of Haruhi Suzumiya",
-        "release_year": 2006,
-        "genre": [
-            "Comedy",
-            "Mystery",
-            "Sci-Fi"
-        ],
-        "episodes": 14,
-        "studio": "Kyoto Animation",
-        "rating": 8.0,
-        "main_character": "Haruhi Suzumiya"
-    },
-    {
-        "id": 66,
-        "title": "Angel Beats!",
-        "release_year": 2010,
-        "genre": [
-            "Action",
-            "Comedy",
-            "Drama"
-        ],
-        "episodes": 13,
-        "studio": "P.A. Works",
-        "rating": 7.8,
-        "main_character": "Otonashi"
-    },
-    {
-        "id": 67,
-        "title": "Durarara!!",
-        "release_year": 2010,
-        "genre": [
-            "Action",
-            "Mystery",
-            "Supernatural"
-        ],
-        "episodes": 24,
-        "studio": "Brain's Base",
-        "rating": 8.1,
-        "main_character": "Mikado Ryuugamine"
-    },
-    {
-        "id": 68,
-        "title": "Assassination Classroom",
-        "release_year": 2015,
-        "genre": [
-            "Action",
-            "Comedy",
-            "Sci-Fi"
-        ],
-        "episodes": 22,
-        "studio": "Lerche",
-        "rating": 8.2,
-        "main_character": "Koro-sensei"
-    },
-    {
-        "id": 69,
-        "title": "Blue Exorcist",
-        "release_year": 2011,
-        "genre": [
-            "Action",
-            "Supernatural",
-            "Drama"
-        ],
-        "episodes": 25,
-        "studio": "A-1 Pictures",
-        "rating": 7.7,
-        "main_character": "Rin Okumura"
-    },
-    {
-        "id": 70,
-        "title": "Noragami",
-        "release_year": 2014,
-        "genre": [
-            "Action",
-            "Supernatural",
-            "Comedy"
-        ],
-        "episodes": 12,
-        "studio": "Bones",
-        "rating": 8.0,
-        "main_character": "Yato"
-    },
-    {
-        "id": 71,
-        "title": "JoJo's Bizarre Adventure",
-        "release_year": 2012,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Supernatural"
-        ],
-        "episodes": 26,
-        "studio": "David Production",
-        "rating": 8.5,
-        "main_character": "Jotaro Kujo"
-    },
-    {
-        "id": 72,
-        "title": "Higurashi When They Cry",
-        "release_year": 2006,
-        "genre": [
-            "Horror",
-            "Mystery",
-            "Thriller"
-        ],
-        "episodes": 26,
-        "studio": "Studio Deen",
-        "rating": 8.1,
-        "main_character": "Keiichi Maebara"
-    },
-    {
-        "id": 73,
-        "title": "Owarimonogatari",
-        "release_year": 2015,
-        "genre": [
-            "Mystery",
-            "Supernatural",
-            "Comedy"
-        ],
-        "episodes": 10,
-        "studio": "Shaft",
-        "rating": 8.1,
-        "main_character": "Koyomi Araragi"
-    },
-    {
-        "id": 74,
-        "title": "The Seven Deadly Sins",
-        "release_year": 2014,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Fantasy"
-        ],
-        "episodes": 24,
-        "studio": "A-1 Pictures",
-        "rating": 7.6,
-        "main_character": "Meliodas"
-    },
-    {
-        "id": 75,
-        "title": "Overlord",
-        "release_year": 2015,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Fantasy"
-        ],
-        "episodes": 13,
-        "studio": "Madhouse",
-        "rating": 7.8,
-        "main_character": "Momonga"
-    },
-    {
-        "id": 76,
-        "title": "Guilty Crown",
-        "release_year": 2011,
-        "genre": [
-            "Action",
-            "Drama",
-            "Sci-Fi"
-        ],
-        "episodes": 22,
-        "studio": "Production I.G",
-        "rating": 7.4,
-        "main_character": "Shu Ouma"
-    },
-    {
-        "id": 77,
-        "title": "Eureka Seven",
-        "release_year": 2005,
-        "genre": [
-            "Action",
-            "Mecha",
-            "Romance"
-        ],
-        "episodes": 50,
-        "studio": "Bones",
-        "rating": 7.8,
-        "main_character": "Renton Thurston"
-    },
-    {
-        "id": 78,
-        "title": "Clannad: After Story",
-        "release_year": 2008,
-        "genre": [
-            "Drama",
-            "Romance",
-            "Slice of Life"
-        ],
-        "episodes": 25,
-        "studio": "Kyoto Animation",
-        "rating": 8.9,
-        "main_character": "Tomoya Okazaki"
-    },
-    {
-        "id": 79,
-        "title": "Katekyo Hitman Reborn!",
-        "release_year": 2006,
-        "genre": [
-            "Action",
-            "Comedy",
-            "Supernatural"
-        ],
-        "episodes": 203,
-        "studio": "Artland",
-        "rating": 7.5,
-        "main_character": "Tsuna Sawada"
-    },
-    {
-        "id": 80,
-        "title": "Soul Eater Not!",
-        "release_year": 2014,
-        "genre": [
-            "Action",
-            "Comedy",
-            "Supernatural"
-        ],
-        "episodes": 25,
-        "studio": "Bones",
-        "rating": 7.1,
-        "main_character": "Tsugumi Harudori"
-    },
-    {
-        "id": 81,
-        "title": "Black Butler",
-        "release_year": 2008,
-        "genre": [
-            "Dark Fantasy",
-            "Mystery",
-            "Supernatural"
-        ],
-        "episodes": 24,
-        "studio": "A-1 Pictures",
-        "rating": 7.9,
-        "main_character": "Ciel Phantomhive"
-    },
-    {
-        "id": 82,
-        "title": "Hajime no Ippo",
-        "release_year": 2000,
-        "genre": [
-            "Sports",
-            "Drama",
-            "Martial Arts"
-        ],
-        "episodes": 75,
-        "studio": "Madhouse",
-        "rating": 8.0,
-        "main_character": "Ippo Makunouchi"
-    },
-    {
-        "id": 83,
-        "title": "Great Teacher Onizuka",
-        "release_year": 1999,
-        "genre": [
-            "Comedy",
-            "Drama",
-            "School"
-        ],
-        "episodes": 43,
-        "studio": "Studio Fuga",
-        "rating": 8.3,
-        "main_character": "Eikichi Onizuka"
-    },
-    {
-        "id": 84,
-        "title": "Code Geass: Lelouch of the Rebellion R2",
-        "release_year": 2008,
-        "genre": [
-            "Action",
-            "Mecha",
-            "Psychological"
-        ],
-        "episodes": 25,
-        "studio": "Sunrise",
-        "rating": 8.8,
-        "main_character": "Lelouch Lamperouge"
-    },
-    {
-        "id": 85,
-        "title": "Kakegurui",
-        "release_year": 2017,
-        "genre": [
-            "Drama",
-            "Psychological",
-            "Thriller"
-        ],
-        "episodes": 12,
-        "studio": "MAPPA",
-        "rating": 7.4,
-        "main_character": "Yumeko Jabami"
-    },
-    {
-        "id": 86,
-        "title": "Fruits Basket",
-        "release_year": 2019,
-        "genre": [
-            "Drama",
-            "Romance",
-            "Supernatural"
-        ],
-        "episodes": 25,
-        "studio": "TMS Entertainment",
-        "rating": 8.2,
-        "main_character": "Tohru Honda"
-    },
-    {
-        "id": 87,
-        "title": "Beastars",
-        "release_year": 2019,
-        "genre": [
-            "Drama",
-            "Mystery",
-            "Psychological"
-        ],
-        "episodes": 12,
-        "studio": "Orange",
-        "rating": 8.1,
-        "main_character": "Legoshi"
-    },
-    {
-        "id": 88,
-        "title": "My Teen Romantic Comedy SNAFU (Oregairu)",
-        "release_year": 2013,
-        "genre": [
-            "Comedy",
-            "Drama",
-            "Romance"
-        ],
-        "episodes": 13,
-        "studio": "Brain's Base",
-        "rating": 8.0,
-        "main_character": "Hachiman Hikigaya"
-    },
-    {
-        "id": 89,
-        "title": "Sakamoto desu ga?",
-        "release_year": 2016,
-        "genre": [
-            "Comedy",
-            "School",
-            "Slice of Life"
-        ],
-        "episodes": 12,
-        "studio": "Telecom Animation Film",
-        "rating": 7.9,
-        "main_character": "Sakamoto"
-    },
-    {
-        "id": 90,
-        "title": "Isekai Cheat Magician",
-        "release_year": 2019,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Fantasy"
-        ],
-        "episodes": 24,
-        "studio": "OLM",
-        "rating": 7.0,
-        "main_character": "Taichi Nishimura"
-    },
-    {
-        "id": 91,
-        "title": "The Devil is a Part-Timer!",
-        "release_year": 2013,
-        "genre": [
-            "Comedy",
-            "Fantasy",
-            "Slice of Life"
-        ],
-        "episodes": 13,
-        "studio": "White Fox",
-        "rating": 7.9,
-        "main_character": "Sadao Maou"
-    },
-    {
-        "id": 92,
-        "title": "Log Horizon",
-        "release_year": 2013,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Fantasy"
-        ],
-        "episodes": 25,
-        "studio": "Satelight",
-        "rating": 7.7,
-        "main_character": "Shiroe"
-    },
-    {
-        "id": 93,
-        "title": "No Game No Life",
-        "release_year": 2014,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Comedy"
-        ],
-        "episodes": 12,
-        "studio": "Madhouse",
-        "rating": 8.0,
-        "main_character": "Sora"
-    },
-    {
-        "id": 94,
-        "title": "Kiznaiver",
-        "release_year": 2016,
-        "genre": [
-            "Drama",
-            "Sci-Fi",
-            "Psychological"
-        ],
-        "episodes": 12,
-        "studio": "Trigger",
-        "rating": 7.4,
-        "main_character": "Katsuhira Agata"
-    },
-    {
-        "id": 95,
-        "title": "Yuri!!! on Ice",
-        "release_year": 2016,
-        "genre": [
-            "Sports",
-            "Drama",
-            "Romance"
-        ],
-        "episodes": 12,
-        "studio": "MAPPA",
-        "rating": 8.5,
-        "main_character": "Yuri Katsuki"
-    },
-    {
-        "id": 96,
-        "title": "Golden Kamuy",
-        "release_year": 2018,
-        "genre": [
-            "Action",
-            "Adventure",
-            "Historical"
-        ],
-        "episodes": 24,
-        "studio": "Geno Studio",
-        "rating": 8.4,
-        "main_character": "Saichi Sugimoto"
-    },
-    {
-        "id": 97,
-        "title": "Violet Evergarden",
-        "release_year": 2018,
-        "genre": [
-            "Drama",
-            "Fantasy",
-            "Slice of Life"
-        ],
-        "episodes": 13,
-        "studio": "Kyoto Animation",
-        "rating": 8.6,
-        "main_character": "Violet Evergarden"
-    },
-    {
-        "id": 98,
-        "title": "Beelzebub",
-        "release_year": 2011,
-        "genre": [
-            "Action",
-            "Comedy",
-            "Supernatural"
-        ],
-        "episodes": 60,
-        "studio": "Pierrot",
-        "rating": 7.4,
-        "main_character": "Tatsumi Oga"
-    },
-    {
-        "id": 99,
-        "title": "Boku dake ga Inai Machi (ERASED)",
-        "release_year": 2016,
-        "genre": [
-            "Mystery",
-            "Thriller",
-            "Supernatural"
-        ],
-        "episodes": 12,
-        "studio": "A-1 Pictures",
-        "rating": 8.5,
-        "main_character": "Satoru Fujinuma"
-    },
-    {
-        "id": 100,
-        "title": "Cells at Work!",
-        "release_year": 2018,
-        "genre": [
-            "Action",
-            "Educational",
-            "Comedy"
-        ],
-        "episodes": 13,
-        "studio": "David Production",
-        "rating": 7.8,
-        "main_character": "Cells"
+      "id": 1,
+      "title": "Attack on Titan",
+      "release_year": 2013,
+      "genre": ["Action", "Drama", "Fantasy"],
+      "episodes": 75,
+      "studio": "Wit Studio",
+      "rating": 9.1,
+      "main_character": "Eren Yeager"
+    },
+    {
+      "id": 2,
+      "title": "Death Note",
+      "release_year": 2006,
+      "genre": ["Mystery", "Psychological", "Supernatural"],
+      "episodes": 37,
+      "studio": "Madhouse",
+      "rating": 8.6,
+      "main_character": "Light Yagami"
+    },
+    {
+      "id": 3,
+      "title": "One Piece",
+      "release_year": 1999,
+      "genre": ["Adventure", "Action", "Fantasy"],
+      "episodes": 1000,
+      "studio": "Toei Animation",
+      "rating": 8.8,
+      "main_character": "Monkey D. Luffy"
+    },
+    {
+      "id": 4,
+      "title": "Naruto",
+      "release_year": 2002,
+      "genre": ["Adventure", "Action", "Martial Arts"],
+      "episodes": 220,
+      "studio": "Studio Pierrot",
+      "rating": 8.3,
+      "main_character": "Naruto Uzumaki"
+    },
+    {
+      "id": 5,
+      "title": "Dragon Ball Z",
+      "release_year": 1989,
+      "genre": ["Action", "Martial Arts", "Adventure"],
+      "episodes": 291,
+      "studio": "Toei Animation",
+      "rating": 8.7,
+      "main_character": "Goku"
+    },
+    {
+      "id": 6,
+      "title": "Fullmetal Alchemist: Brotherhood",
+      "release_year": 2009,
+      "genre": ["Action", "Adventure", "Fantasy"],
+      "episodes": 64,
+      "studio": "Bones",
+      "rating": 9.2,
+      "main_character": "Edward Elric"
+    },
+    {
+      "id": 7,
+      "title": "Bleach",
+      "release_year": 2004,
+      "genre": ["Action", "Supernatural", "Adventure"],
+      "episodes": 366,
+      "studio": "Studio Pierrot",
+      "rating": 8.1,
+      "main_character": "Ichigo Kurosaki"
+    },
+    {
+      "id": 8,
+      "title": "Sword Art Online",
+      "release_year": 2012,
+      "genre": ["Action", "Adventure", "Sci-Fi"],
+      "episodes": 25,
+      "studio": "A-1 Pictures",
+      "rating": 7.8,
+      "main_character": "Kirito"
+    },
+    {
+      "id": 9,
+      "title": "My Hero Academia",
+      "release_year": 2016,
+      "genre": ["Action", "Comedy", "Superhero"],
+      "episodes": 88,
+      "studio": "Bones",
+      "rating": 8.5,
+      "main_character": "Izuku Midoriya"
+    },
+    {
+      "id": 10,
+      "title": "Demon Slayer: Kimetsu no Yaiba",
+      "release_year": 2019,
+      "genre": ["Action", "Supernatural", "Historical"],
+      "episodes": 26,
+      "studio": "ufotable",
+      "rating": 8.7,
+      "main_character": "Tanjiro Kamado"
+    },
+    {
+      "id": 11,
+      "title": "Hunter x Hunter",
+      "release_year": 2011,
+      "genre": ["Adventure", "Fantasy", "Action"],
+      "episodes": 148,
+      "studio": "Madhouse",
+      "rating": 9.0,
+      "main_character": "Gon Freecss"
+    },
+    {
+      "id": 12,
+      "title": "Tokyo Ghoul",
+      "release_year": 2014,
+      "genre": ["Action", "Horror", "Supernatural"],
+      "episodes": 12,
+      "studio": "Studio Pierrot",
+      "rating": 7.9,
+      "main_character": "Kaneki Ken"
+    },
+    {
+      "id": 13,
+      "title": "One Punch Man",
+      "release_year": 2015,
+      "genre": ["Action", "Comedy", "Superhero"],
+      "episodes": 12,
+      "studio": "Madhouse",
+      "rating": 8.8,
+      "main_character": "Saitama"
+    },
+    {
+      "id": 14,
+      "title": "Fairy Tail",
+      "release_year": 2009,
+      "genre": ["Action", "Adventure", "Fantasy"],
+      "episodes": 175,
+      "studio": "A-1 Pictures",
+      "rating": 8.0,
+      "main_character": "Natsu Dragneel"
+    },
+    {
+      "id": 15,
+      "title": "Black Clover",
+      "release_year": 2017,
+      "genre": ["Action", "Fantasy", "Adventure"],
+      "episodes": 170,
+      "studio": "Studio Pierrot",
+      "rating": 7.8,
+      "main_character": "Asta"
+    },
+    {
+      "id": 16,
+      "title": "JoJo's Bizarre Adventure",
+      "release_year": 2012,
+      "genre": ["Action", "Adventure", "Supernatural"],
+      "episodes": 152,
+      "studio": "David Production",
+      "rating": 8.5,
+      "main_character": "Jotaro Kujo"
+    },
+    {
+      "id": 17,
+      "title": "Steins;Gate",
+      "release_year": 2011,
+      "genre": ["Sci-Fi", "Thriller", "Drama"],
+      "episodes": 24,
+      "studio": "White Fox",
+      "rating": 9.1,
+      "main_character": "Okabe Rintarou"
+    },
+    {
+      "id": 18,
+      "title": "Code Geass: Lelouch of the Rebellion",
+      "release_year": 2006,
+      "genre": ["Action", "Mecha", "Drama"],
+      "episodes": 50,
+      "studio": "Sunrise",
+      "rating": 8.8,
+      "main_character": "Lelouch Lamperouge"
+    },
+    {
+      "id": 19,
+      "title": "Cowboy Bebop",
+      "release_year": 1998,
+      "genre": ["Action", "Sci-Fi", "Drama"],
+      "episodes": 26,
+      "studio": "Sunrise",
+      "rating": 8.9,
+      "main_character": "Spike Spiegel"
+    },
+    {
+      "id": 20,
+      "title": "Neon Genesis Evangelion",
+      "release_year": 1995,
+      "genre": ["Mecha", "Psychological", "Drama"],
+      "episodes": 26,
+      "studio": "Gainax",
+      "rating": 8.5,
+      "main_character": "Shinji Ikari"
+    },
+    {
+      "id": 21,
+      "title": "Samurai Champloo",
+      "release_year": 2004,
+      "genre": ["Action", "Adventure", "Comedy"],
+      "episodes": 26,
+      "studio": "Manglobe",
+      "rating": 8.5,
+      "main_character": "Mugen"
+    },
+    {
+      "id": 22,
+      "title": "Gintama",
+      "release_year": 2006,
+      "genre": ["Action", "Comedy", "Sci-Fi"],
+      "episodes": 367,
+      "studio": "Sunrise",
+      "rating": 8.7,
+      "main_character": "Gintoki Sakata"
+    },
+    {
+      "id": 23,
+      "title": "Inuyasha",
+      "release_year": 2000,
+      "genre": ["Adventure", "Fantasy", "Romance"],
+      "episodes": 193,
+      "studio": "Sunrise",
+      "rating": 8.2,
+      "main_character": "Inuyasha"
+    },
+    {
+      "id": 24,
+      "title": "Yu Yu Hakusho",
+      "release_year": 1992,
+      "genre": ["Action", "Adventure", "Supernatural"],
+      "episodes": 112,
+      "studio": "Studio Pierrot",
+      "rating": 8.5,
+      "main_character": "Yusuke Urameshi"
+    },
+    {
+      "id": 25,
+      "title": "Re:Zero − Starting Life in Another World",
+      "release_year": 2016,
+      "genre": ["Fantasy", "Drama", "Psychological"],
+      "episodes": 25,
+      "studio": "White Fox",
+      "rating": 8.3,
+      "main_character": "Subaru Natsuki"
+    },
+    {
+      "id": 26,
+      "title": "No Game No Life",
+      "release_year": 2014,
+      "genre": ["Adventure", "Fantasy", "Comedy"],
+      "episodes": 12,
+      "studio": "Madhouse",
+      "rating": 8.0,
+      "main_character": "Sora"
+    },
+    {
+      "id": 27,
+      "title": "Kuroko's Basketball",
+      "release_year": 2012,
+      "genre": ["Sports", "Drama"],
+      "episodes": 75,
+      "studio": "Production I.G",
+      "rating": 8.0,
+      "main_character": "Tetsuya Kuroko"
+    },
+    {
+      "id": 28,
+      "title": "Haikyuu!!",
+      "release_year": 2014,
+      "genre": ["Sports", "Comedy", "Drama"],
+      "episodes": 85,
+      "studio": "Production I.G",
+      "rating": 8.7,
+      "main_character": "Shoyo Hinata"
+    },
+    {
+      "id": 29,
+      "title": "K-On!",
+      "release_year": 2009,
+      "genre": ["Music", "Slice of Life", "Comedy"],
+      "episodes": 39,
+      "studio": "Kyoto Animation",
+      "rating": 8.1,
+      "main_character": "Yui Hirasawa"
+    },
+    {
+      "id": 30,
+      "title": "Love Live! School Idol Project",
+      "release_year": 2013,
+      "genre": ["Music", "School", "Slice of Life"],
+      "episodes": 13,
+      "studio": "Sunrise",
+      "rating": 7.8,
+      "main_character": "Honoka Kōsaka"
+    },
+    {
+      "id": 31,
+      "title": "Fate/Zero",
+      "release_year": 2011,
+      "genre": ["Action", "Fantasy", "Drama"],
+      "episodes": 25,
+      "studio": "Ufotable",
+      "rating": 8.9,
+      "main_character": "Kiritsugu Emiya"
+    },
+    {
+      "id": 32,
+      "title": "Fate/stay night: Unlimited Blade Works",
+      "release_year": 2014,
+      "genre": ["Action", "Fantasy", "Romance"],
+      "episodes": 26,
+      "studio": "Ufotable",
+      "rating": 8.3,
+      "main_character": "Shirou Emiya"
+    },
+    {
+      "id": 33,
+      "title": "Puella Magi Madoka Magica",
+      "release_year": 2011,
+      "genre": ["Magic", "Psychological", "Drama"],
+      "episodes": 12,
+      "studio": "Shaft",
+      "rating": 8.5,
+      "main_character": "Madoka Kaname"
+    },
+    {
+      "id": 34,
+      "title": "Erased",
+      "release_year": 2016,
+      "genre": ["Mystery", "Thriller", "Drama"],
+      "episodes": 12,
+      "studio": "A-1 Pictures",
+      "rating": 8.6,
+      "main_character": "Satoru Fujinuma"
+    },
+    {
+      "id": 35,
+      "title": "Mob Psycho 100",
+      "release_year": 2016,
+      "genre": ["Action", "Comedy", "Supernatural"],
+      "episodes": 25,
+      "studio": "Bones",
+      "rating": 8.4,
+      "main_character": "Shigeo Kageyama"
+    },
+    {
+      "id": 36,
+      "title": "The Seven Deadly Sins",
+      "release_year": 2014,
+      "genre": ["Action", "Adventure", "Fantasy"],
+      "episodes": 24,
+      "studio": "A-1 Pictures",
+      "rating": 8.0,
+      "main_character": "Meliodas"
+    },
+    {
+      "id": 37,
+      "title": "Magi: The Labyrinth of Magic",
+      "release_year": 2012,
+      "genre": ["Adventure", "Fantasy", "Action"],
+      "episodes": 25,
+      "studio": "A-1 Pictures",
+      "rating": 8.2,
+      "main_character": "Aladdin"
+    },
+    {
+      "id": 38,
+      "title": "Dr. Stone",
+      "release_year": 2019,
+      "genre": ["Adventure", "Sci-Fi", "Action"],
+      "episodes": 24,
+      "studio": "TMS Entertainment",
+      "rating": 8.3,
+      "main_character": "Senku Ishigami"
+    },
+    {
+      "id": 39,
+      "title": "Assassination Classroom",
+      "release_year": 2015,
+      "genre": ["Action", "Comedy", "Sci-Fi"],
+      "episodes": 22,
+      "studio": "Lerche",
+      "rating": 8.2,
+      "main_character": "Koro-sensei"
+    },
+    {
+      "id": 40,
+      "title": "Vinland Saga",
+      "release_year": 2019,
+      "genre": ["Action", "Historical", "Drama"],
+      "episodes": 24,
+      "studio": "MAPPA",
+      "rating": 8.7,
+      "main_character": "Thorfinn"
+    },
+    {
+      "id": 41,
+      "title": "Berserk",
+      "release_year": 1997,
+      "genre": ["Action", "Adventure", "Horror"],
+      "episodes": 25,
+      "studio": "Manga adaptation Studio",
+      "rating": 8.4,
+      "main_character": "Guts"
+    },
+    {
+      "id": 42,
+      "title": "Hellsing Ultimate",
+      "release_year": 2006,
+      "genre": ["Action", "Horror", "Supernatural"],
+      "episodes": 10,
+      "studio": "Geneon Entertainment",
+      "rating": 8.5,
+      "main_character": "Alucard"
+    },
+    {
+      "id": 43,
+      "title": "Parasyte -the maxim-",
+      "release_year": 2014,
+      "genre": ["Action", "Sci-Fi", "Horror"],
+      "episodes": 24,
+      "studio": "Madhouse",
+      "rating": 8.4,
+      "main_character": "Shinichi Izumi"
+    },
+    {
+      "id": 44,
+      "title": "Soul Eater",
+      "release_year": 2008,
+      "genre": ["Action", "Supernatural", "Adventure"],
+      "episodes": 51,
+      "studio": "Bones",
+      "rating": 8.0,
+      "main_character": "Maka Albarn"
+    },
+    {
+      "id": 45,
+      "title": "Durarara!!",
+      "release_year": 2010,
+      "genre": ["Action", "Mystery", "Supernatural"],
+      "episodes": 24,
+      "studio": "Brain's Base",
+      "rating": 8.3,
+      "main_character": "Mikado Ryūgamine"
+    },
+    {
+      "id": 46,
+      "title": "Fruits Basket",
+      "release_year": 2001,
+      "genre": ["Drama", "Romance", "Fantasy"],
+      "episodes": 26,
+      "studio": "TV Tokyo",
+      "rating": 8.2,
+      "main_character": "Tohru Honda"
+    },
+    {
+      "id": 47,
+      "title": "Your Lie in April",
+      "release_year": 2014,
+      "genre": ["Drama", "Romance", "Music"],
+      "episodes": 22,
+      "studio": "A-1 Pictures",
+      "rating": 8.6,
+      "main_character": "Kousei Arima"
+    },
+    {
+      "id": 48,
+      "title": "Anohana: The Flower We Saw That Day",
+      "release_year": 2011,
+      "genre": ["Drama", "Supernatural", "Slice of Life"],
+      "episodes": 11,
+      "studio": "A-1 Pictures",
+      "rating": 8.4,
+      "main_character": "Jinta Yadomi"
+    },
+    {
+      "id": 49,
+      "title": "Clannad",
+      "release_year": 2007,
+      "genre": ["Drama", "Romance", "Slice of Life"],
+      "episodes": 23,
+      "studio": "Kyoto Animation",
+      "rating": 8.0,
+      "main_character": "Tomoya Okazaki"
+    },
+    {
+      "id": 50,
+      "title": "Kimi ni Todoke",
+      "release_year": 2009,
+      "genre": ["Romance", "Slice of Life", "Drama"],
+      "episodes": 39,
+      "studio": "Production I.G",
+      "rating": 7.9,
+      "main_character": "Sawako Kuronuma"
+    },
+    {
+      "id": 51,
+      "title": "Toradora!",
+      "release_year": 2008,
+      "genre": ["Romance", "Comedy", "Slice of Life"],
+      "episodes": 25,
+      "studio": "J.C.Staff",
+      "rating": 8.2,
+      "main_character": "Ryuuji Takasu"
+    },
+    {
+      "id": 52,
+      "title": "Nisekoi",
+      "release_year": 2014,
+      "genre": ["Romance", "Comedy", "Harem"],
+      "episodes": 20,
+      "studio": "Studio Shaft",
+      "rating": 7.7,
+      "main_character": "Raku Ichijou"
+    },
+    {
+      "id": 53,
+      "title": "Gurren Lagann",
+      "release_year": 2007,
+      "genre": ["Action", "Adventure", "Sci-Fi"],
+      "episodes": 27,
+      "studio": "Gainax",
+      "rating": 8.9,
+      "main_character": "Simon"
+    },
+    {
+      "id": 54,
+      "title": "Kill la Kill",
+      "release_year": 2013,
+      "genre": ["Action", "Comedy", "Sci-Fi"],
+      "episodes": 24,
+      "studio": "Trigger",
+      "rating": 8.2,
+      "main_character": "Ryuko Matoi"
+    },
+    {
+      "id": 55,
+      "title": "Overlord",
+      "release_year": 2015,
+      "genre": ["Action", "Fantasy", "Adventure"],
+      "episodes": 13,
+      "studio": "Madhouse",
+      "rating": 7.9,
+      "main_character": "Ainz Ooal Gown"
+    },
+    {
+      "id": 56,
+      "title": "Log Horizon",
+      "release_year": 2013,
+      "genre": ["Adventure", "Fantasy", "Sci-Fi"],
+      "episodes": 25,
+      "studio": "Satelight",
+      "rating": 7.8,
+      "main_character": "Shiroe"
+    },
+    {
+      "id": 57,
+      "title": "The Rising of the Shield Hero",
+      "release_year": 2019,
+      "genre": ["Action", "Fantasy", "Adventure"],
+      "episodes": 25,
+      "studio": "Kinema Citrus",
+      "rating": 7.8,
+      "main_character": "Naofumi Iwatani"
+    },
+    {
+      "id": 58,
+      "title": "Grimgar of Fantasy and Ash",
+      "release_year": 2016,
+      "genre": ["Action", "Adventure", "Fantasy"],
+      "episodes": 12,
+      "studio": "A-1 Pictures",
+      "rating": 7.5,
+      "main_character": "Haruto"
+    },
+    {
+      "id": 59,
+      "title": "That Time I Got Reincarnated as a Slime",
+      "release_year": 2018,
+      "genre": ["Action", "Adventure", "Fantasy"],
+      "episodes": 24,
+      "studio": "8bit",
+      "rating": 8.0,
+      "main_character": "Rimuru Tempest"
+    },
+    {
+      "id": 60,
+      "title": "Saga of Tanya the Evil",
+      "release_year": 2017,
+      "genre": ["Action", "Military", "Fantasy"],
+      "episodes": 12,
+      "studio": "NUT",
+      "rating": 8.1,
+      "main_character": "Tanya Degurechaff"
+    },
+    {
+      "id": 61,
+      "title": "Re:Creators",
+      "release_year": 2017,
+      "genre": ["Action", "Sci-Fi", "Fantasy"],
+      "episodes": 25,
+      "studio": "TNK",
+      "rating": 7.8,
+      "main_character": "Selesia"
+    },
+    {
+      "id": 62,
+      "title": "Kakegurui",
+      "release_year": 2017,
+      "genre": ["Psychological", "Drama", "Game"],
+      "episodes": 12,
+      "studio": "MAPPA",
+      "rating": 7.9,
+      "main_character": "Yumeko Jabami"
+    },
+    {
+      "id": 63,
+      "title": "Beastars",
+      "release_year": 2019,
+      "genre": ["Drama", "Mystery", "Romance"],
+      "episodes": 12,
+      "studio": "Orange",
+      "rating": 8.0,
+      "main_character": "Legoshi"
+    },
+    {
+      "id": 64,
+      "title": "The Promised Neverland",
+      "release_year": 2019,
+      "genre": ["Mystery", "Thriller", "Horror"],
+      "episodes": 12,
+      "studio": "CloverWorks",
+      "rating": 8.6,
+      "main_character": "Emma"
+    },
+    {
+      "id": 65,
+      "title": "Dororo",
+      "release_year": 2019,
+      "genre": ["Action", "Adventure", "Historical"],
+      "episodes": 24,
+      "studio": "MAPPA",
+      "rating": 8.3,
+      "main_character": "Hyakkimaru"
+    },
+    {
+      "id": 66,
+      "title": "Drifters",
+      "release_year": 2016,
+      "genre": ["Action", "Fantasy", "Historical"],
+      "episodes": 12,
+      "studio": "Lerche",
+      "rating": 7.8,
+      "main_character": "Shimazu Toyohisa"
+    },
+    {
+      "id": 67,
+      "title": "Hyouka",
+      "release_year": 2012,
+      "genre": ["Mystery", "Slice of Life", "School"],
+      "episodes": 22,
+      "studio": "Madhouse",
+      "rating": 8.2,
+      "main_character": "Houtarou Oreki"
+    },
+    {
+      "id": 68,
+      "title": "Shokugeki no Soma",
+      "release_year": 2015,
+      "genre": ["Cooking", "Comedy", "Drama"],
+      "episodes": 24,
+      "studio": "J.C.Staff",
+      "rating": 8.1,
+      "main_character": "Soma Yukihira"
+    },
+    {
+      "id": 69,
+      "title": "My Teen Romantic Comedy SNAFU",
+      "release_year": 2013,
+      "genre": ["Comedy", "Romance", "Slice of Life"],
+      "episodes": 13,
+      "studio": "Brain's Base",
+      "rating": 8.0,
+      "main_character": "Hachiman Hikigaya"
+    },
+    {
+      "id": 70,
+      "title": "March Comes in Like a Lion",
+      "release_year": 2016,
+      "genre": ["Drama", "Slice of Life", "Psychological"],
+      "episodes": 22,
+      "studio": "Studio Signpost",
+      "rating": 8.4,
+      "main_character": "Rei Kiriyama"
+    },
+    {
+      "id": 71,
+      "title": "Yuri on Ice",
+      "release_year": 2016,
+      "genre": ["Sports", "Drama", "Romance"],
+      "episodes": 12,
+      "studio": "MAPPA",
+      "rating": 8.5,
+      "main_character": "Yuri Katsuki"
+    },
+    {
+      "id": 72,
+      "title": "Cells at Work!",
+      "release_year": 2018,
+      "genre": ["Comedy", "Educational", "Action"],
+      "episodes": 13,
+      "studio": "Shaft",
+      "rating": 7.7,
+      "main_character": "Red Blood Cell"
+    },
+    {
+      "id": 73,
+      "title": "Golden Kamuy",
+      "release_year": 2018,
+      "genre": ["Action", "Adventure", "Historical"],
+      "episodes": 24,
+      "studio": "MAPPA",
+      "rating": 8.2,
+      "main_character": "Saichi Sugimoto"
+    },
+    {
+      "id": 74,
+      "title": "Gundam Wing",
+      "release_year": 1995,
+      "genre": ["Mecha", "Action", "Sci-Fi"],
+      "episodes": 49,
+      "studio": "Sunrise",
+      "rating": 8.0,
+      "main_character": "Heero Yuy"
+    },
+    {
+      "id": 75,
+      "title": "Mobile Suit Gundam",
+      "release_year": 1979,
+      "genre": ["Mecha", "Action", "Sci-Fi"],
+      "episodes": 43,
+      "studio": "Nagoya TV",
+      "rating": 8.1,
+      "main_character": "Amuro Ray"
+    },
+    {
+      "id": 76,
+      "title": "Space Dandy",
+      "release_year": 2014,
+      "genre": ["Comedy", "Sci-Fi", "Adventure"],
+      "episodes": 26,
+      "studio": "Madhouse",
+      "rating": 8.1,
+      "main_character": "Dandy"
+    },
+    {
+      "id": 77,
+      "title": "Slam Dunk",
+      "release_year": 1993,
+      "genre": ["Sports", "Comedy", "Drama"],
+      "episodes": 101,
+      "studio": "Toei Animation",
+      "rating": 8.6,
+      "main_character": "Hanamichi Sakuragi"
+    },
+    {
+      "id": 78,
+      "title": "Prince of Tennis",
+      "release_year": 2001,
+      "genre": ["Sports", "Comedy", "Drama"],
+      "episodes": 178,
+      "studio": "TMS Entertainment",
+      "rating": 7.9,
+      "main_character": "Ryoma Echizen"
+    },
+    {
+      "id": 79,
+      "title": "Yu-Gi-Oh!",
+      "release_year": 2000,
+      "genre": ["Adventure", "Fantasy", "Card Game"],
+      "episodes": 224,
+      "studio": "Gallop",
+      "rating": 7.8,
+      "main_character": "Yugi Muto"
+    },
+    {
+      "id": 80,
+      "title": "Beyblade",
+      "release_year": 2001,
+      "genre": ["Action", "Sports", "Adventure"],
+      "episodes": 51,
+      "studio": "TMS Entertainment",
+      "rating": 7.2,
+      "main_character": "Tyson Granger"
+    },
+    {
+      "id": 81,
+      "title": "Digimon Adventure",
+      "release_year": 1999,
+      "genre": ["Adventure", "Action", "Fantasy"],
+      "episodes": 54,
+      "studio": "Toei Animation",
+      "rating": 7.9,
+      "main_character": "Tai Kamiya"
+    },
+    {
+      "id": 82,
+      "title": "Pokemon",
+      "release_year": 1997,
+      "genre": ["Adventure", "Fantasy", "Comedy"],
+      "episodes": 276,
+      "studio": "OLM",
+      "rating": 8.0,
+      "main_character": "Ash Ketchum"
+    },
+    {
+      "id": 83,
+      "title": "Cardcaptor Sakura",
+      "release_year": 1998,
+      "genre": ["Magic", "Romance", "Adventure"],
+      "episodes": 70,
+      "studio": "Madhouse",
+      "rating": 8.1,
+      "main_character": "Sakura Kinomoto"
+    },
+    {
+      "id": 84,
+      "title": "Monster",
+      "release_year": 2004,
+      "genre": ["Mystery", "Thriller", "Drama"],
+      "episodes": 74,
+      "studio": "Madhouse",
+      "rating": 8.9,
+      "main_character": "Dr. Kenzo Tenma"
+    },
+    {
+      "id": 85,
+      "title": "Ergo Proxy",
+      "release_year": 2006,
+      "genre": ["Sci-Fi", "Mystery", "Psychological"],
+      "episodes": 23,
+      "studio": "Manglobe",
+      "rating": 8.0,
+      "main_character": "Re-l Mayer"
+    },
+    {
+      "id": 86,
+      "title": "Psycho-Pass",
+      "release_year": 2012,
+      "genre": ["Sci-Fi", "Crime", "Psychological"],
+      "episodes": 22,
+      "studio": "Production I.G",
+      "rating": 8.4,
+      "main_character": "Akane Tsunemori"
+    },
+    {
+      "id": 87,
+      "title": "Eureka Seven",
+      "release_year": 2005,
+      "genre": ["Action", "Adventure", "Sci-Fi"],
+      "episodes": 50,
+      "studio": "Bones",
+      "rating": 8.1,
+      "main_character": "Renton Thurston"
+    },
+    {
+      "id": 88,
+      "title": "Rurouni Kenshin",
+      "release_year": 1996,
+      "genre": ["Action", "Romance", "Historical"],
+      "episodes": 94,
+      "studio": "Studio Gallop",
+      "rating": 8.3,
+      "main_character": "Kenshin Himura"
+    },
+    {
+      "id": 89,
+      "title": "Katekyo Hitman Reborn!",
+      "release_year": 2006,
+      "genre": ["Action", "Comedy", "Supernatural"],
+      "episodes": 203,
+      "studio": "Artland",
+      "rating": 7.7,
+      "main_character": "Tsuna Sawada"
+    },
+    {
+      "id": 90,
+      "title": "Shaman King",
+      "release_year": 2001,
+      "genre": ["Action", "Adventure", "Supernatural"],
+      "episodes": 64,
+      "studio": "Studio Deen",
+      "rating": 7.9,
+      "main_character": "Yoh Asakura"
+    },
+    {
+      "id": 91,
+      "title": "High School DxD",
+      "release_year": 2012,
+      "genre": ["Action", "Comedy", "Supernatural"],
+      "episodes": 12,
+      "studio": "TNK",
+      "rating": 7.8,
+      "main_character": "Issei Hyoudou"
+    },
+    {
+      "id": 92,
+      "title": "Strike the Blood",
+      "release_year": 2013,
+      "genre": ["Action", "Supernatural", "Fantasy"],
+      "episodes": 24,
+      "studio": "Connect",
+      "rating": 7.5,
+      "main_character": "Kojo Akatsuki"
+    },
+    {
+      "id": 93,
+      "title": "D.Gray-man",
+      "release_year": 2006,
+      "genre": ["Action", "Supernatural", "Adventure"],
+      "episodes": 103,
+      "studio": "TMS Entertainment",
+      "rating": 7.9,
+      "main_character": "Allen Walker"
+    },
+    {
+      "id": 94,
+      "title": "Trinity Seven",
+      "release_year": 2014,
+      "genre": ["Action", "Fantasy", "Magic"],
+      "episodes": 12,
+      "studio": "Telecom Animation Film",
+      "rating": 7.2,
+      "main_character": "Arata Kasuga"
+    },
+    {
+      "id": 95,
+      "title": "Black Butler",
+      "release_year": 2008,
+      "genre": ["Mystery", "Supernatural", "Drama"],
+      "episodes": 24,
+      "studio": "A-1 Pictures",
+      "rating": 8.0,
+      "main_character": "Ciel Phantomhive"
+    },
+    {
+      "id": 96,
+      "title": "Noragami",
+      "release_year": 2014,
+      "genre": ["Action", "Comedy", "Supernatural"],
+      "episodes": 12,
+      "studio": "Bones",
+      "rating": 8.1,
+      "main_character": "Yato"
+    },
+    {
+      "id": 97,
+      "title": "Blue Exorcist",
+      "release_year": 2011,
+      "genre": ["Action", "Supernatural", "Drama"],
+      "episodes": 25,
+      "studio": "A-1 Pictures",
+      "rating": 8.0,
+      "main_character": "Rin Okumura"
+    },
+    {
+      "id": 98,
+      "title": "Seraph of the End",
+      "release_year": 2015,
+      "genre": ["Action", "Horror", "Fantasy"],
+      "episodes": 24,
+      "studio": "Wit Studio",
+      "rating": 7.8,
+      "main_character": "Yuuichirou Hyakuya"
+    },
+    {
+      "id": 99,
+      "title": "Akame ga Kill!",
+      "release_year": 2014,
+      "genre": ["Action", "Adventure", "Fantasy"],
+      "episodes": 24,
+      "studio": "White Fox",
+      "rating": 7.7,
+      "main_character": "Akame"
+    },
+    {
+      "id": 100,
+      "title": "Future Diary",
+      "release_year": 2011,
+      "genre": ["Action", "Thriller", "Mystery"],
+      "episodes": 26,
+      "studio": "Asread",
+      "rating": 7.9,
+      "main_character": "Yukiteru Amano"
+    },
+    {
+      "id": 101,
+      "title": "Fate/Apocrypha",
+      "release_year": 2017,
+      "genre": ["Action", "Fantasy"],
+      "episodes": 25,
+      "studio": "A-1 Pictures",
+      "rating": 7.1,
+      "main_character": "Jeanne d'Arc"
+    },
+    {
+      "id": 102,
+      "title": "The Melancholy of Haruhi Suzumiya",
+      "release_year": 2006,
+      "genre": ["Comedy", "Sci-Fi", "Slice of Life"],
+      "episodes": 14,
+      "studio": "Kyoto Animation",
+      "rating": 8.0,
+      "main_character": "Haruhi Suzumiya"
+    },
+    {
+      "id": 103,
+      "title": "Lucky Star",
+      "release_year": 2007,
+      "genre": ["Comedy", "Slice of Life"],
+      "episodes": 24,
+      "studio": "Kyoto Animation",
+      "rating": 7.3,
+      "main_character": "Konata Izumi"
+    },
+    {
+      "id": 104,
+      "title": "Nichijou",
+      "release_year": 2011,
+      "genre": ["Comedy", "Slice of Life"],
+      "episodes": 26,
+      "studio": "Kyoto Animation",
+      "rating": 8.2,
+      "main_character": "Yuuko Aioi"
+    },
+    {
+      "id": 105,
+      "title": "Angel Beats!",
+      "release_year": 2010,
+      "genre": ["Action", "Drama", "Comedy"],
+      "episodes": 13,
+      "studio": "P.A. Works",
+      "rating": 7.8,
+      "main_character": "Otonashi"
+    },
+    {
+      "id": 106,
+      "title": "Clannad: After Story",
+      "release_year": 2008,
+      "genre": ["Drama", "Romance", "Slice of Life"],
+      "episodes": 24,
+      "studio": "Kyoto Animation",
+      "rating": 9.0,
+      "main_character": "Tomoya Okazaki"
+    },
+    {
+      "id": 107,
+      "title": "Steins;Gate 0",
+      "release_year": 2018,
+      "genre": ["Sci-Fi", "Drama", "Thriller"],
+      "episodes": 23,
+      "studio": "White Fox",
+      "rating": 8.2,
+      "main_character": "Okabe Rintarou"
+    },
+    {
+      "id": 108,
+      "title": "Samurai 7",
+      "release_year": 2004,
+      "genre": ["Action", "Sci-Fi", "Drama"],
+      "episodes": 26,
+      "studio": "Gonzo",
+      "rating": 7.4,
+      "main_character": "Kikuchiyo"
+    },
+    {
+      "id": 109,
+      "title": "Baccano!",
+      "release_year": 2007,
+      "genre": ["Action", "Mystery", "Supernatural"],
+      "episodes": 16,
+      "studio": "Brain's Base",
+      "rating": 8.4,
+      "main_character": "Firo Prochainezo"
+    },
+    {
+      "id": 110,
+      "title": "Bakemonogatari",
+      "release_year": 2009,
+      "genre": ["Mystery", "Supernatural", "Comedy"],
+      "episodes": 15,
+      "studio": "Shaft",
+      "rating": 8.1,
+      "main_character": "Koyomi Araragi"
+    },
+    {
+      "id": 111,
+      "title": "Nisemonogatari",
+      "release_year": 2012,
+      "genre": ["Mystery", "Supernatural", "Comedy"],
+      "episodes": 11,
+      "studio": "Shaft",
+      "rating": 7.9,
+      "main_character": "Koyomi Araragi"
+    },
+    {
+      "id": 112,
+      "title": "Zankyou no Terror",
+      "release_year": 2014,
+      "genre": ["Thriller", "Mystery", "Drama"],
+      "episodes": 11,
+      "studio": "MAPPA",
+      "rating": 8.0,
+      "main_character": "Nine"
+    },
+    {
+      "id": 113,
+      "title": "Paranoia Agent",
+      "release_year": 2004,
+      "genre": ["Psychological", "Mystery", "Thriller"],
+      "episodes": 13,
+      "studio": "Madhouse",
+      "rating": 8.0,
+      "main_character": "Tsukiko Sagi"
+    },
+    {
+      "id": 114,
+      "title": "Black Lagoon",
+      "release_year": 2006,
+      "genre": ["Action", "Crime", "Thriller"],
+      "episodes": 24,
+      "studio": "Madhouse",
+      "rating": 8.1,
+      "main_character": "Revy"
+    },
+    {
+      "id": 115,
+      "title": "Gungrave",
+      "release_year": 2003,
+      "genre": ["Action", "Crime", "Sci-Fi"],
+      "episodes": 26,
+      "studio": "Madhouse",
+      "rating": 7.9,
+      "main_character": "Brandon Heat"
+    },
+    {
+      "id": 116,
+      "title": "Space Brothers",
+      "release_year": 2012,
+      "genre": ["Drama", "Sci-Fi", "Slice of Life"],
+      "episodes": 99,
+      "studio": "Bones",
+      "rating": 8.4,
+      "main_character": "Mutta Nanba"
+    },
+    {
+      "id": 117,
+      "title": "Planetes",
+      "release_year": 2003,
+      "genre": ["Sci-Fi", "Drama", "Mystery"],
+      "episodes": 26,
+      "studio": "Sunrise",
+      "rating": 8.0,
+      "main_character": "Hachimaki"
+    },
+    {
+      "id": 118,
+      "title": "Eden of the East",
+      "release_year": 2009,
+      "genre": ["Mystery", "Thriller", "Romance"],
+      "episodes": 11,
+      "studio": "Production I.G",
+      "rating": 7.9,
+      "main_character": "Akira Takizawa"
+    },
+    {
+      "id": 119,
+      "title": "Gankutsuou: The Count of Monte Cristo",
+      "release_year": 2004,
+      "genre": ["Drama", "Sci-Fi", "Mystery"],
+      "episodes": 24,
+      "studio": "Gonzo",
+      "rating": 8.2,
+      "main_character": "The Count"
+    },
+    {
+      "id": 120,
+      "title": "The Tatami Galaxy",
+      "release_year": 2010,
+      "genre": ["Comedy", "Psychological", "Slice of Life"],
+      "episodes": 11,
+      "studio": "Madhouse",
+      "rating": 8.5,
+      "main_character": "Watashi"
+    },
+    {
+      "id": 121,
+      "title": "Mushishi",
+      "release_year": 2005,
+      "genre": ["Mystery", "Supernatural", "Historical"],
+      "episodes": 26,
+      "studio": "Artland",
+      "rating": 8.5,
+      "main_character": "Ginko"
+    },
+    {
+      "id": 122,
+      "title": "Serial Experiments Lain",
+      "release_year": 1998,
+      "genre": ["Psychological", "Mystery", "Sci-Fi"],
+      "episodes": 13,
+      "studio": "Triangle Staff",
+      "rating": 8.0,
+      "main_character": "Lain Iwakura"
+    },
+    {
+      "id": 123,
+      "title": "Haibane Renmei",
+      "release_year": 2002,
+      "genre": ["Fantasy", "Mystery", "Drama"],
+      "episodes": 13,
+      "studio": "Radix Ace Entertainment",
+      "rating": 8.1,
+      "main_character": "Rakka"
+    },
+    {
+      "id": 124,
+      "title": "No. 6",
+      "release_year": 2011,
+      "genre": ["Sci-Fi", "Drama", "Mystery"],
+      "episodes": 11,
+      "studio": "Bones",
+      "rating": 7.8,
+      "main_character": "Shion"
+    },
+    {
+      "id": 125,
+      "title": "Shiki",
+      "release_year": 2010,
+      "genre": ["Horror", "Mystery", "Drama"],
+      "episodes": 22,
+      "studio": "Daume",
+      "rating": 7.8,
+      "main_character": "Natsuno Yuuki"
+    },
+    {
+      "id": 126,
+      "title": "Another",
+      "release_year": 2012,
+      "genre": ["Horror", "Mystery", "Thriller"],
+      "episodes": 12,
+      "studio": "P.A. Works",
+      "rating": 7.5,
+      "main_character": "Kouichi Sakakibara"
+    },
+    {
+      "id": 127,
+      "title": "Revolutionary Girl Utena",
+      "release_year": 1997,
+      "genre": ["Psychological", "Fantasy", "Drama"],
+      "episodes": 39,
+      "studio": "J.C.Staff",
+      "rating": 8.1,
+      "main_character": "Utena Tenjou"
+    },
+    {
+      "id": 128,
+      "title": "Basilisk",
+      "release_year": 2005,
+      "genre": ["Action", "Drama", "Historical"],
+      "episodes": 24,
+      "studio": "Gonzo",
+      "rating": 7.8,
+      "main_character": "Gennosuke Kouga"
+    },
+    {
+      "id": 129,
+      "title": "Shinsekai Yori (From the New World)",
+      "release_year": 2012,
+      "genre": ["Sci-Fi", "Horror", "Drama"],
+      "episodes": 25,
+      "studio": "A-1 Pictures",
+      "rating": 8.4,
+      "main_character": "Saki Watanabe"
+    },
+    {
+      "id": 130,
+      "title": "The Devil is a Part-Timer!",
+      "release_year": 2013,
+      "genre": ["Comedy", "Fantasy", "Slice of Life"],
+      "episodes": 13,
+      "studio": "White Fox",
+      "rating": 7.8,
+      "main_character": "Sadao Maou"
+    },
+    {
+      "id": 131,
+      "title": "Soul Eater Not!",
+      "release_year": 2014,
+      "genre": ["Action", "Comedy", "Supernatural"],
+      "episodes": 12,
+      "studio": "Bones",
+      "rating": 7.3,
+      "main_character": "Tsugumi Harudori"
+    },
+    {
+      "id": 132,
+      "title": "Hozuki's Coolheadedness",
+      "release_year": 2014,
+      "genre": ["Comedy", "Supernatural", "Slice of Life"],
+      "episodes": 12,
+      "studio": "Wit Studio",
+      "rating": 8.0,
+      "main_character": "Hozuki"
+    },
+    {
+      "id": 133,
+      "title": "Arakawa Under the Bridge",
+      "release_year": 2010,
+      "genre": ["Comedy", "Romance", "Slice of Life"],
+      "episodes": 13,
+      "studio": "Shaft",
+      "rating": 7.8,
+      "main_character": "Nino"
+    },
+    {
+      "id": 134,
+      "title": "Golden Time",
+      "release_year": 2013,
+      "genre": ["Romance", "Drama", "Comedy"],
+      "episodes": 24,
+      "studio": "J.C.Staff",
+      "rating": 7.7,
+      "main_character": "Banri Tada"
+    },
+    {
+      "id": 135,
+      "title": "Fruits Basket (2019)",
+      "release_year": 2019,
+      "genre": ["Drama", "Romance", "Fantasy"],
+      "episodes": 63,
+      "studio": "TMS Entertainment",
+      "rating": 8.0,
+      "main_character": "Tohru Honda"
+    },
+    {
+      "id": 136,
+      "title": "Barakamon",
+      "release_year": 2014,
+      "genre": ["Slice of Life", "Comedy", "Drama"],
+      "episodes": 12,
+      "studio": "Kinema Citrus",
+      "rating": 8.2,
+      "main_character": "Seishuu Handa"
+    },
+    {
+      "id": 137,
+      "title": "Great Teacher Onizuka (GTO)",
+      "release_year": 1999,
+      "genre": ["Comedy", "Drama", "School"],
+      "episodes": 43,
+      "studio": "Studio Comet",
+      "rating": 8.2,
+      "main_character": "Eikichi Onizuka"
+    },
+    {
+      "id": 138,
+      "title": "Beck",
+      "release_year": 2004,
+      "genre": ["Music", "Drama", "Slice of Life"],
+      "episodes": 26,
+      "studio": "Madhouse",
+      "rating": 8.2,
+      "main_character": "Koyuki"
+    },
+    {
+      "id": 139,
+      "title": "Paradise Kiss",
+      "release_year": 2005,
+      "genre": ["Romance", "Drama", "Slice of Life"],
+      "episodes": 12,
+      "studio": "Madhouse",
+      "rating": 7.8,
+      "main_character": "Yukari Hayasaka"
+    },
+    {
+      "id": 140,
+      "title": "Kids on the Slope",
+      "release_year": 2012,
+      "genre": ["Music", "Drama", "Romance"],
+      "episodes": 12,
+      "studio": "MAPPA",
+      "rating": 8.4,
+      "main_character": "Kaoru Nishimi"
+    },
+    {
+      "id": 141,
+      "title": "Nana",
+      "release_year": 2006,
+      "genre": ["Drama", "Romance", "Music"],
+      "episodes": 47,
+      "studio": "Madhouse",
+      "rating": 8.1,
+      "main_character": "Nana Osaki"
+    },
+    {
+      "id": 142,
+      "title": "Beelzebub",
+      "release_year": 2011,
+      "genre": ["Action", "Comedy", "Supernatural"],
+      "episodes": 60,
+      "studio": "Pierrot",
+      "rating": 7.6,
+      "main_character": "Oga Tatsumi"
+    },
+    {
+      "id": 143,
+      "title": "Sakamoto Desu Ga?",
+      "release_year": 2016,
+      "genre": ["Comedy", "Slice of Life"],
+      "episodes": 12,
+      "studio": "Silver Link",
+      "rating": 7.8,
+      "main_character": "Sakamoto"
+    },
+    {
+      "id": 144,
+      "title": "Toriko",
+      "release_year": 2011,
+      "genre": ["Action", "Adventure", "Comedy"],
+      "episodes": 147,
+      "studio": "Sunrise",
+      "rating": 7.2,
+      "main_character": "Toriko"
+    },
+    {
+      "id": 145,
+      "title": "Idolish7",
+      "release_year": 2017,
+      "genre": ["Music", "Drama", "Slice of Life"],
+      "episodes": 12,
+      "studio": "Sunrise",
+      "rating": 7.0,
+      "main_character": "Iori Izumi"
+    },
+    {
+      "id": 146,
+      "title": "Uta no Prince-sama",
+      "release_year": 2011,
+      "genre": ["Music", "Romance", "Comedy"],
+      "episodes": 26,
+      "studio": "A-1 Pictures",
+      "rating": 7.2,
+      "main_character": "Otoya Ittoki"
+    },
+    {
+      "id": 147,
+      "title": "Gundam 00",
+      "release_year": 2007,
+      "genre": ["Mecha", "Action", "Drama"],
+      "episodes": 50,
+      "studio": "Sunrise",
+      "rating": 8.0,
+      "main_character": "Setsuna F. Seiei"
+    },
+    {
+      "id": 148,
+      "title": "Gundam Unicorn",
+      "release_year": 2010,
+      "genre": ["Mecha", "Action", "Drama"],
+      "episodes": 86,
+      "studio": "Sunrise",
+      "rating": 8.5,
+      "main_character": "Banagher Links"
+    },
+    {
+      "id": 149,
+      "title": "Eureka Seven: AO",
+      "release_year": 2012,
+      "genre": ["Mecha", "Action", "Drama"],
+      "episodes": 24,
+      "studio": "Bones",
+      "rating": 7.5,
+      "main_character": "Ao Fukai"
+    },
+    {
+      "id": 150,
+      "title": "Macross Frontier",
+      "release_year": 2008,
+      "genre": ["Mecha", "Music", "Drama"],
+      "episodes": 25,
+      "studio": "Satelight",
+      "rating": 8.0,
+      "main_character": "Alto Saotome"
+    },
+    {
+      "id": 151,
+      "title": "Macross Delta",
+      "release_year": 2016,
+      "genre": ["Mecha", "Music", "Drama"],
+      "episodes": 26,
+      "studio": "Satelight",
+      "rating": 7.8,
+      "main_character": "Freyja Wion"
+    },
+    {
+      "id": 152,
+      "title": "Code:Breaker",
+      "release_year": 2012,
+      "genre": ["Action", "Supernatural", "Drama"],
+      "episodes": 25,
+      "studio": "A-1 Pictures",
+      "rating": 7.0,
+      "main_character": "Rei Ogami"
+    },
+    {
+      "id": 153,
+      "title": "Darker than Black",
+      "release_year": 2007,
+      "genre": ["Action", "Supernatural", "Mystery"],
+      "episodes": 25,
+      "studio": "Bones",
+      "rating": 7.8,
+      "main_character": "Hei"
+    },
+    {
+      "id": 154,
+      "title": "Darker than Black: Gemini of the Meteor",
+      "release_year": 2009,
+      "genre": ["Action", "Supernatural", "Mystery"],
+      "episodes": 12,
+      "studio": "Bones",
+      "rating": 7.3,
+      "main_character": "Hei"
+    },
+    {
+      "id": 155,
+      "title": "RahXephon",
+      "release_year": 2002,
+      "genre": ["Mecha", "Drama", "Mystery"],
+      "episodes": 26,
+      "studio": "Bones",
+      "rating": 8.0,
+      "main_character": "Ayato Kamina"
+    },
+    {
+      "id": 156,
+      "title": "Violet Evergarden",
+      "release_year": 2018,
+      "genre": ["Drama", "Fantasy", "Slice of Life"],
+      "episodes": 13,
+      "studio": "Kyoto Animation",
+      "rating": 8.6,
+      "main_character": "Violet Evergarden"
+    },
+    {
+      "id": 157,
+      "title": "Kino's Journey",
+      "release_year": 2003,
+      "genre": ["Adventure", "Drama", "Slice of Life"],
+      "episodes": 13,
+      "studio": "A.C.G.T",
+      "rating": 7.8,
+      "main_character": "Kino"
+    },
+    {
+      "id": 158,
+      "title": "Hellsing",
+      "release_year": 2001,
+      "genre": ["Action", "Horror", "Supernatural"],
+      "episodes": 13,
+      "studio": "Gonzo",
+      "rating": 7.5,
+      "main_character": "Alucard"
+    },
+    {
+      "id": 159,
+      "title": "Trigun",
+      "release_year": 1998,
+      "genre": ["Action", "Comedy", "Sci-Fi"],
+      "episodes": 26,
+      "studio": "Madhouse",
+      "rating": 8.2,
+      "main_character": "Vash the Stampede"
+    },
+    {
+      "id": 160,
+      "title": "R.O.D the TV",
+      "release_year": 2003,
+      "genre": ["Action", "Adventure", "Sci-Fi"],
+      "episodes": 26,
+      "studio": "Studio Deen",
+      "rating": 7.5,
+      "main_character": "Yomiko Readman"
+    },
+    {
+      "id": 161,
+      "title": "Bungo Stray Dogs",
+      "release_year": 2016,
+      "genre": ["Action", "Mystery", "Supernatural"],
+      "episodes": 24,
+      "studio": "Bones",
+      "rating": 8.0,
+      "main_character": "Atsushi Nakajima"
+    },
+    {
+      "id": 162,
+      "title": "Noragami Aragoto",
+      "release_year": 2015,
+      "genre": ["Action", "Comedy", "Supernatural"],
+      "episodes": 12,
+      "studio": "Bones",
+      "rating": 7.9,
+      "main_character": "Yato"
+    },
+    {
+      "id": 163,
+      "title": "The Quintessential Quintuplets",
+      "release_year": 2019,
+      "genre": ["Romance", "Comedy", "Slice of Life"],
+      "episodes": 12,
+      "studio": "Bibury Animation Studios",
+      "rating": 7.4,
+      "main_character": "Futaro Uesugi"
+    },
+    {
+      "id": 164,
+      "title": "Dr. Stone: Stone Wars",
+      "release_year": 2021,
+      "genre": ["Adventure", "Sci-Fi", "Action"],
+      "episodes": 11,
+      "studio": "TMS Entertainment",
+      "rating": 8.1,
+      "main_character": "Senku Ishigami"
+    },
+    {
+      "id": 165,
+      "title": "KonoSuba: God's Blessing on this Wonderful World!",
+      "release_year": 2016,
+      "genre": ["Comedy", "Fantasy", "Adventure"],
+      "episodes": 10,
+      "studio": "Studio Deen",
+      "rating": 7.8,
+      "main_character": "Kazuma Satou"
+    },
+    {
+      "id": 166,
+      "title": "Kabaneri of the Iron Fortress",
+      "release_year": 2016,
+      "genre": ["Action", "Horror", "Sci-Fi"],
+      "episodes": 12,
+      "studio": "Wit Studio",
+      "rating": 7.8,
+      "main_character": "Ikoma"
+    },
+    {
+      "id": 167,
+      "title": "Land of the Lustrous",
+      "release_year": 2017,
+      "genre": ["Action", "Adventure", "Fantasy"],
+      "episodes": 12,
+      "studio": "Orange",
+      "rating": 7.8,
+      "main_character": "Phos"
+    },
+    {
+      "id": 168,
+      "title": "Aggretsuko",
+      "release_year": 2018,
+      "genre": ["Comedy", "Slice of Life", "Music"],
+      "episodes": 25,
+      "studio": "Fanworks",
+      "rating": 7.7,
+      "main_character": "Retsuko"
+    },
+    {
+      "id": 169,
+      "title": "Keep Your Hands Off Eizouken!",
+      "release_year": 2020,
+      "genre": ["Comedy", "Adventure", "Slice of Life"],
+      "episodes": 12,
+      "studio": "Science Saru",
+      "rating": 8.5,
+      "main_character": "Midori Asakusa"
+    },
+    {
+      "id": 170,
+      "title": "SK8 the Infinity",
+      "release_year": 2021,
+      "genre": ["Sports", "Action", "Drama"],
+      "episodes": 12,
+      "studio": "Bones",
+      "rating": 8.0,
+      "main_character": "Reki"
+    },
+    {
+      "id": 171,
+      "title": "Odd Taxi",
+      "release_year": 2021,
+      "genre": ["Mystery", "Drama", "Comedy"],
+      "episodes": 12,
+      "studio": "OLM",
+      "rating": 8.2,
+      "main_character": "Odokawa"
+    },
+    {
+      "id": 172,
+      "title": "Sonny Boy",
+      "release_year": 2021,
+      "genre": ["Sci-Fi", "Drama", "Mystery"],
+      "episodes": 12,
+      "studio": "Madhouse",
+      "rating": 7.6,
+      "main_character": "Yo"
+    },
+    {
+      "id": 173,
+      "title": "Wonder Egg Priority",
+      "release_year": 2021,
+      "genre": ["Drama", "Psychological", "Fantasy"],
+      "episodes": 12,
+      "studio": "CloverWorks",
+      "rating": 7.4,
+      "main_character": "Ai Ohto"
+    },
+    {
+      "id": 174,
+      "title": "Ousama Ranking",
+      "release_year": 2021,
+      "genre": ["Adventure", "Comedy", "Drama"],
+      "episodes": 24,
+      "studio": "Wit Studio",
+      "rating": 8.3,
+      "main_character": "Bojji"
+    },
+    {
+      "id": 175,
+      "title": "Mushoku Tensei: Jobless Reincarnation",
+      "release_year": 2021,
+      "genre": ["Fantasy", "Drama", "Adventure"],
+      "episodes": 26,
+      "studio": "Studio Bind",
+      "rating": 8.4,
+      "main_character": "Rudeus Greyrat"
+    },
+    {
+      "id": 176,
+      "title": "The Eminence in Shadow",
+      "release_year": 2022,
+      "genre": ["Action", "Comedy", "Fantasy"],
+      "episodes": 12,
+      "studio": "Nexus",
+      "rating": 7.6,
+      "main_character": "Cid Kagenou"
+    },
+    {
+      "id": 177,
+      "title": "Cyberpunk: Edgerunners",
+      "release_year": 2022,
+      "genre": ["Action", "Sci-Fi", "Drama"],
+      "episodes": 10,
+      "studio": "Studio Trigger",
+      "rating": 8.8,
+      "main_character": "David Martinez"
+    },
+    {
+      "id": 178,
+      "title": "Bocchi the Rock!",
+      "release_year": 2022,
+      "genre": ["Comedy", "Music", "Slice of Life"],
+      "episodes": 12,
+      "studio": "CloverWorks",
+      "rating": 8.1,
+      "main_character": "Bocchi Hitori"
+    },
+    {
+      "id": 179,
+      "title": "Lycoris Recoil",
+      "release_year": 2022,
+      "genre": ["Action", "Slice of Life", "Mystery"],
+      "episodes": 12,
+      "studio": "A-1 Pictures",
+      "rating": 7.9,
+      "main_character": "Chisato"
+    },
+    {
+      "id": 180,
+      "title": "Spy x Family",
+      "release_year": 2022,
+      "genre": ["Action", "Comedy", "Slice of Life"],
+      "episodes": 25,
+      "studio": "Wit Studio",
+      "rating": 8.5,
+      "main_character": "Loid Forger"
+    },
+    {
+      "id": 181,
+      "title": "Jujutsu Kaisen",
+      "release_year": 2020,
+      "genre": ["Action", "Supernatural", "Horror"],
+      "episodes": 24,
+      "studio": "MAPPA",
+      "rating": 8.7,
+      "main_character": "Yuji Itadori"
+    },
+    {
+      "id": 182,
+      "title": "Mob Psycho 100 II",
+      "release_year": 2019,
+      "genre": ["Action", "Comedy", "Supernatural"],
+      "episodes": 25,
+      "studio": "Bones",
+      "rating": 8.5,
+      "main_character": "Shigeo Kageyama"
+    },
+    {
+      "id": 183,
+      "title": "Cells at Work! Code Black",
+      "release_year": 2020,
+      "genre": ["Action", "Educational", "Comedy"],
+      "episodes": 12,
+      "studio": "David Production",
+      "rating": 7.5,
+      "main_character": "Cell"
+    },
+    {
+      "id": 184,
+      "title": "Fate/Grand Order - Absolute Demonic Front: Babylonia",
+      "release_year": 2019,
+      "genre": ["Action", "Fantasy", "Drama"],
+      "episodes": 25,
+      "studio": "CloverWorks",
+      "rating": 8.3,
+      "main_character": "Ritsuka Fujimaru"
+    },
+    {
+      "id": 185,
+      "title": "Fate/Extra Last Encore",
+      "release_year": 2018,
+      "genre": ["Action", "Fantasy", "Mystery"],
+      "episodes": 13,
+      "studio": "Shaft",
+      "rating": 7.7,
+      "main_character": "Hakuno Kishinami"
+    },
+    {
+      "id": 186,
+      "title": "Wotakoi: Love is Hard for Otaku",
+      "release_year": 2018,
+      "genre": ["Romance", "Comedy", "Slice of Life"],
+      "episodes": 12,
+      "studio": "A-1 Pictures",
+      "rating": 7.6,
+      "main_character": "Narumi Momose"
+    },
+    {
+      "id": 187,
+      "title": "A Place Further than the Universe",
+      "release_year": 2018,
+      "genre": ["Adventure", "Drama", "Slice of Life"],
+      "episodes": 13,
+      "studio": "Madhouse",
+      "rating": 8.4,
+      "main_character": "Mari Tamaki"
+    },
+    {
+      "id": 188,
+      "title": "Great Pretender",
+      "release_year": 2020,
+      "genre": ["Action", "Comedy", "Crime"],
+      "episodes": 23,
+      "studio": "Wit Studio",
+      "rating": 8.5,
+      "main_character": "Laurent Thierry"
+    },
+    {
+      "id": 189,
+      "title": "BNA: Brand New Animal",
+      "release_year": 2020,
+      "genre": ["Action", "Sci-Fi", "Mystery"],
+      "episodes": 12,
+      "studio": "Studio Trigger",
+      "rating": 7.5,
+      "main_character": "Michiru Kagemori"
+    },
+    {
+      "id": 190,
+      "title": "Megalobox",
+      "release_year": 2018,
+      "genre": ["Sports", "Action", "Drama"],
+      "episodes": 13,
+      "studio": "TMS Entertainment",
+      "rating": 8.1,
+      "main_character": "Joe"
+    },
+    {
+      "id": 191,
+      "title": "Yamada-kun and the Seven Witches",
+      "release_year": 2015,
+      "genre": ["Romance", "Comedy", "School"],
+      "episodes": 12,
+      "studio": "Liden Films",
+      "rating": 7.2,
+      "main_character": "Yamada"
+    },
+    {
+      "id": 192,
+      "title": "Servamp",
+      "release_year": 2016,
+      "genre": ["Action", "Supernatural", "Comedy"],
+      "episodes": 12,
+      "studio": "Brain's Base",
+      "rating": 7.0,
+      "main_character": "Kuro"
+    },
+    {
+      "id": 193,
+      "title": "Miss Kobayashi's Dragon Maid",
+      "release_year": 2017,
+      "genre": ["Comedy", "Fantasy", "Slice of Life"],
+      "episodes": 13,
+      "studio": "Mizkan",
+      "rating": 8.0,
+      "main_character": "Kobayashi"
+    },
+    {
+      "id": 194,
+      "title": "The Misfit of Demon King Academy",
+      "release_year": 2020,
+      "genre": ["Action", "Fantasy", "Drama"],
+      "episodes": 13,
+      "studio": "Silver Link",
+      "rating": 7.0,
+      "main_character": "Anos Voldigoad"
+    },
+    {
+      "id": 195,
+      "title": "Higurashi: When They Cry",
+      "release_year": 2006,
+      "genre": ["Horror", "Mystery", "Thriller"],
+      "episodes": 26,
+      "studio": "Studio Deen",
+      "rating": 8.1,
+      "main_character": "Keiichi Maebara"
+    },
+    {
+      "id": 196,
+      "title": "Umineko: When They Cry",
+      "release_year": 2009,
+      "genre": ["Mystery", "Horror", "Psychological"],
+      "episodes": 26,
+      "studio": "Studio Deen",
+      "rating": 7.3,
+      "main_character": "Battler Ushiromiya"
+    },
+    {
+      "id": 197,
+      "title": "School Rumble",
+      "release_year": 2004,
+      "genre": ["Comedy", "Romance", "Slice of Life"],
+      "episodes": 26,
+      "studio": "TNK",
+      "rating": 7.4,
+      "main_character": "Tenma Tsukamoto"
+    },
+    {
+      "id": 198,
+      "title": "Hajime no Ippo",
+      "release_year": 2010,
+      "genre": ["Sports", "Drama", "Comedy"],
+      "episodes": 75,
+      "studio": "Madhouse",
+      "rating": 8.4,
+      "main_character": "Ippo Makunouchi"
+    },
+    {
+      "id": 199,
+      "title": "Initial D",
+      "release_year": 1998,
+      "genre": ["Action", "Drama", "Sports"],
+      "episodes": 26,
+      "studio": "Studio Comet",
+      "rating": 8.0,
+      "main_character": "Takumi Fujiwara"
+    },
+    {
+      "id": 200,
+      "title": "Captain Tsubasa",
+      "release_year": 2018,
+      "genre": ["Sports", "Action", "Drama"],
+      "episodes": 52,
+      "studio": "Sunrise",
+      "rating": 7.8,
+      "main_character": "Tsubasa Ozora"
+    },
+    {
+      "id": 201,
+      "title": "Ace of Diamond",
+      "release_year": 2013,
+      "genre": ["Sports", "Drama", "School"],
+      "episodes": 54,
+      "studio": "Madhouse",
+      "rating": 7.9,
+      "main_character": "Eijun Sawamura"
+    },
+    {
+      "id": 202,
+      "title": "Major",
+      "release_year": 2004,
+      "genre": ["Sports", "Drama", "Slice of Life"],
+      "episodes": 154,
+      "studio": "Studio Hibari",
+      "rating": 8.0,
+      "main_character": "Goro Honda"
+    },
+    {
+      "id": 203,
+      "title": "Ping Pong The Animation",
+      "release_year": 2014,
+      "genre": ["Sports", "Drama", "Comedy"],
+      "episodes": 11,
+      "studio": "Tatsunoko Production",
+      "rating": 8.4,
+      "main_character": "Smile"
+    },
+    {
+      "id": 204,
+      "title": "Yuri Kuma Arashi",
+      "release_year": 2015,
+      "genre": ["Drama", "Fantasy", "Mystery"],
+      "episodes": 12,
+      "studio": "Silver Link",
+      "rating": 7.0,
+      "main_character": "Kureha"
+    },
+    {
+      "id": 205,
+      "title": "Kiss Him, Not Me",
+      "release_year": 2016,
+      "genre": ["Romance", "Comedy", "School"],
+      "episodes": 12,
+      "studio": "Feel",
+      "rating": 7.2,
+      "main_character": "Kae Serinuma"
+    },
+    {
+      "id": 206,
+      "title": "ReLIFE",
+      "release_year": 2016,
+      "genre": ["Drama", "Romance", "Slice of Life"],
+      "episodes": 13,
+      "studio": "TMS Entertainment",
+      "rating": 7.8,
+      "main_character": "Arata Kaizaki"
+    },
+    {
+      "id": 207,
+      "title": "My Roommate Is a Cat",
+      "release_year": 2020,
+      "genre": ["Slice of Life", "Comedy", "Drama"],
+      "episodes": 12,
+      "studio": "Silver Link",
+      "rating": 7.6,
+      "main_character": "Subaru"
+    },
+    {
+      "id": 208,
+      "title": "The World God Only Knows",
+      "release_year": 2010,
+      "genre": ["Comedy", "Romance", "Slice of Life"],
+      "episodes": 26,
+      "studio": "Manglobe",
+      "rating": 8.0,
+      "main_character": "Keima Katsuragi"
+    },
+    {
+      "id": 209,
+      "title": "Oreshura",
+      "release_year": 2013,
+      "genre": ["Romance", "Comedy", "School"],
+      "episodes": 12,
+      "studio": "TNK",
+      "rating": 6.9,
+      "main_character": "Eita Kidou"
+    },
+    {
+      "id": 210,
+      "title": "The Irregular at Magic High School",
+      "release_year": 2014,
+      "genre": ["Action", "Magic", "School"],
+      "episodes": 26,
+      "studio": "Madhouse",
+      "rating": 7.9,
+      "main_character": "Tatsuya Shiba"
+    },
+    {
+      "id": 211,
+      "title": "A Certain Magical Index",
+      "release_year": 2008,
+      "genre": ["Action", "Sci-Fi", "Magic"],
+      "episodes": 24,
+      "studio": "J.C.Staff",
+      "rating": 7.8,
+      "main_character": "Kamijou Touma"
+    },
+    {
+      "id": 212,
+      "title": "A Certain Scientific Railgun",
+      "release_year": 2009,
+      "genre": ["Action", "Sci-Fi", "Supernatural"],
+      "episodes": 24,
+      "studio": "J.C.Staff",
+      "rating": 7.9,
+      "main_character": "Mikoto Misaka"
+    },
+    {
+      "id": 213,
+      "title": "A Certain Scientific Accelerator",
+      "release_year": 2019,
+      "genre": ["Action", "Sci-Fi", "Supernatural"],
+      "episodes": 12,
+      "studio": "J.C.Staff",
+      "rating": 7.1,
+      "main_character": "Accelerator"
+    },
+    {
+      "id": 214,
+      "title": "Kekkai Sensen",
+      "release_year": 2015,
+      "genre": ["Action", "Comedy", "Supernatural"],
+      "episodes": 12,
+      "studio": "Bones",
+      "rating": 7.8,
+      "main_character": "Leonardo Watch"
+    },
+    {
+      "id": 215,
+      "title": "Kekkai Sensen & Beyond",
+      "release_year": 2017,
+      "genre": ["Action", "Comedy", "Supernatural"],
+      "episodes": 12,
+      "studio": "Bones",
+      "rating": 7.4,
+      "main_character": "Leonardo Watch"
+    },
+    {
+      "id": 216,
+      "title": "Mobile Suit Gundam: Iron-Blooded Orphans",
+      "release_year": 2015,
+      "genre": ["Mecha", "Action", "Drama"],
+      "episodes": 50,
+      "studio": "Sunrise",
+      "rating": 8.4,
+      "main_character": "Mikazuki Augus"
+    },
+    {
+      "id": 217,
+      "title": "Mobile Suit Gundam: The Origin",
+      "release_year": 2015,
+      "genre": ["Mecha", "Drama", "Historical"],
+      "episodes": 6,
+      "studio": "Sunrise",
+      "rating": 8.0,
+      "main_character": "Char Aznable"
+    },
+    {
+      "id": 218,
+      "title": "Gundam Build Fighters",
+      "release_year": 2013,
+      "genre": ["Mecha", "Action", "Comedy"],
+      "episodes": 25,
+      "studio": "Sunrise",
+      "rating": 7.7,
+      "main_character": "Sei Iori"
+    },
+    {
+      "id": 219,
+      "title": "Gundam Build Divers",
+      "release_year": 2018,
+      "genre": ["Mecha", "Action", "Comedy"],
+      "episodes": 25,
+      "studio": "Sunrise",
+      "rating": 7.9,
+      "main_character": "Riku"
+    },
+    {
+      "id": 220,
+      "title": "Gundam Build Fighters Try",
+      "release_year": 2014,
+      "genre": ["Mecha", "Action", "Comedy"],
+      "episodes": 25,
+      "studio": "Sunrise",
+      "rating": 7.5,
+      "main_character": "Sekai Kamiki"
+    },
+    {
+      "id": 221,
+      "title": "JoJo's Bizarre Adventure: Diamond Is Unbreakable",
+      "release_year": 2016,
+      "genre": ["Action", "Adventure", "Supernatural"],
+      "episodes": 39,
+      "studio": "David Production",
+      "rating": 8.5,
+      "main_character": "Josuke Higashikata"
+    },
+    {
+      "id": 222,
+      "title": "JoJo's Bizarre Adventure: Golden Wind",
+      "release_year": 2018,
+      "genre": ["Action", "Adventure", "Crime"],
+      "episodes": 39,
+      "studio": "David Production",
+      "rating": 8.4,
+      "main_character": "Giorno Giovanna"
+    },
+    {
+      "id": 223,
+      "title": "JoJo's Bizarre Adventure: Stone Ocean",
+      "release_year": 2021,
+      "genre": ["Action", "Adventure", "Supernatural"],
+      "episodes": 12,
+      "studio": "David Production",
+      "rating": 7.8,
+      "main_character": "Jolyne Cujoh"
+    },
+    {
+      "id": 224,
+      "title": "Afro Samurai",
+      "release_year": 2007,
+      "genre": ["Action", "Adventure", "Samurai"],
+      "episodes": 5,
+      "studio": "Gonzo",
+      "rating": 7.8,
+      "main_character": "Afro Samurai"
+    },
+    {
+      "id": 225,
+      "title": "Shigurui: Death Frenzy",
+      "release_year": 2007,
+      "genre": ["Action", "Historical", "Horror"],
+      "episodes": 12,
+      "studio": "Madhouse",
+      "rating": 8.1,
+      "main_character": "Fujiki Gennosuke"
+    },
+    {
+      "id": 226,
+      "title": "Samurai X: Trust and Betrayal",
+      "release_year": 1999,
+      "genre": ["Action", "Historical", "Drama"],
+      "episodes": 4,
+      "studio": "Studio Deen",
+      "rating": 8.6,
+      "main_character": "Himura Kenshin"
+    },
+    {
+      "id": 227,
+      "title": "Higurashi: When They Cry – Gou",
+      "release_year": 2020,
+      "genre": ["Horror", "Mystery", "Thriller"],
+      "episodes": 24,
+      "studio": "Passione",
+      "rating": 7.2,
+      "main_character": "Keiichi Maebara"
+    },
+    {
+      "id": 228,
+      "title": "Isekai Cheat Magician",
+      "release_year": 2019,
+      "genre": ["Action", "Fantasy", "Adventure"],
+      "episodes": 24,
+      "studio": "Connect",
+      "rating": 7.0,
+      "main_character": "Taichi Nishimura"
+    },
+    {
+      "id": 229,
+      "title": "So I'm a Spider, So What?",
+      "release_year": 2021,
+      "genre": ["Action", "Fantasy", "Comedy"],
+      "episodes": 12,
+      "studio": "CloverWorks",
+      "rating": 7.8,
+      "main_character": "Kumoko"
+    },
+    {
+      "id": 230,
+      "title": "Cautious Hero: The Hero Is Overpowered but Overly Cautious",
+      "release_year": 2019,
+      "genre": ["Comedy", "Fantasy", "Adventure"],
+      "episodes": 12,
+      "studio": "White Fox",
+      "rating": 7.8,
+      "main_character": "Seiya Ryuuguuin"
+    },
+    {
+      "id": 231,
+      "title": "Isekai Quartet",
+      "release_year": 2019,
+      "genre": ["Comedy", "Fantasy", "Slice of Life"],
+      "episodes": 12,
+      "studio": "Studio Puyukai",
+      "rating": 7.4,
+      "main_character": "Kazuma Satou"
+    },
+    {
+      "id": 232,
+      "title": "Combatants Will Be Dispatched!",
+      "release_year": 2020,
+      "genre": ["Action", "Comedy", "Sci-Fi"],
+      "episodes": 12,
+      "studio": "J.C.Staff",
+      "rating": 7.2,
+      "main_character": "The Captain"
+    },
+    {
+      "id": 233,
+      "title": "That Time I Got Reincarnated as a Slime Season 2",
+      "release_year": 2021,
+      "genre": ["Action", "Fantasy", "Adventure"],
+      "episodes": 12,
+      "studio": "8bit",
+      "rating": 8.0,
+      "main_character": "Rimuru Tempest"
+    },
+    {
+      "id": 234,
+      "title": "KonoSuba 2",
+      "release_year": 2017,
+      "genre": ["Comedy", "Fantasy", "Adventure"],
+      "episodes": 10,
+      "studio": "Studio Deen",
+      "rating": 7.7,
+      "main_character": "Kazuma Satou"
+    },
+    {
+      "id": 235,
+      "title": "Death Parade",
+      "release_year": 2015,
+      "genre": ["Mystery", "Drama", "Psychological"],
+      "episodes": 12,
+      "studio": "Madhouse",
+      "rating": 8.1,
+      "main_character": "Decim"
+    },
+    {
+      "id": 236,
+      "title": "Gleipnir",
+      "release_year": 2020,
+      "genre": ["Action", "Horror", "Mystery"],
+      "episodes": 12,
+      "studio": "Lerche",
+      "rating": 7.1,
+      "main_character": "Shuichi Kagaya"
+    },
+    {
+      "id": 237,
+      "title": "God of High School",
+      "release_year": 2020,
+      "genre": ["Action", "Martial Arts", "Fantasy"],
+      "episodes": 12,
+      "studio": "MAPPA",
+      "rating": 7.3,
+      "main_character": "Jin Mori"
+    },
+    {
+      "id": 238,
+      "title": "Tower of God",
+      "release_year": 2020,
+      "genre": ["Action", "Adventure", "Fantasy"],
+      "episodes": 13,
+      "studio": "Telecom Animation Film",
+      "rating": 7.5,
+      "main_character": "Bam"
+    },
+    {
+      "id": 239,
+      "title": "Shaman King (2021)",
+      "release_year": 2021,
+      "genre": ["Action", "Adventure", "Supernatural"],
+      "episodes": 52,
+      "studio": "Bridge",
+      "rating": 7.2,
+      "main_character": "Yoh Asakura"
+    },
+    {
+      "id": 240,
+      "title": "Hakuouki",
+      "release_year": 2010,
+      "genre": ["Historical", "Action", "Drama"],
+      "episodes": 12,
+      "studio": "Studio Deen",
+      "rating": 7.2,
+      "main_character": "Chikage Kazama"
+    },
+    {
+      "id": 241,
+      "title": "Katanagatari",
+      "release_year": 2010,
+      "genre": ["Action", "Adventure", "Historical"],
+      "episodes": 12,
+      "studio": "White Fox",
+      "rating": 8.2,
+      "main_character": "Yasuri Shichika"
+    },
+    {
+      "id": 242,
+      "title": "Sengoku Basara: Samurai Kings",
+      "release_year": 2009,
+      "genre": ["Action", "Historical", "Fantasy"],
+      "episodes": 12,
+      "studio": "Production I.G",
+      "rating": 7.5,
+      "main_character": "Sanada Yukimura"
+    },
+    {
+      "id": 243,
+      "title": "Mobile Suit Gundam: Iron-Blooded Orphans",
+      "release_year": 2015,
+      "genre": ["Mecha", "Action", "Drama"],
+      "episodes": 50,
+      "studio": "Sunrise",
+      "rating": 8.4,
+      "main_character": "Mikazuki Augus"
+    },
+    {
+      "id": 244,
+      "title": "Mobile Suit Gundam: The Origin",
+      "release_year": 2015,
+      "genre": ["Mecha", "Drama", "Historical"],
+      "episodes": 6,
+      "studio": "Sunrise",
+      "rating": 8.0,
+      "main_character": "Char Aznable"
+    },
+    {
+      "id": 245,
+      "title": "Gundam Build Fighters",
+      "release_year": 2013,
+      "genre": ["Mecha", "Action", "Comedy"],
+      "episodes": 25,
+      "studio": "Sunrise",
+      "rating": 7.7,
+      "main_character": "Sei Iori"
+    },
+    {
+      "id": 246,
+      "title": "Gundam Build Divers",
+      "release_year": 2018,
+      "genre": ["Mecha", "Action", "Comedy"],
+      "episodes": 25,
+      "studio": "Sunrise",
+      "rating": 7.9,
+      "main_character": "Riku"
+    },
+    {
+      "id": 247,
+      "title": "Gundam Build Fighters Try",
+      "release_year": 2014,
+      "genre": ["Mecha", "Action", "Comedy"],
+      "episodes": 25,
+      "studio": "Sunrise",
+      "rating": 7.5,
+      "main_character": "Sekai Kamiki"
+    },
+    {
+      "id": 248,
+      "title": "JoJo's Bizarre Adventure: Diamond Is Unbreakable",
+      "release_year": 2016,
+      "genre": ["Action", "Adventure", "Supernatural"],
+      "episodes": 39,
+      "studio": "David Production",
+      "rating": 8.5,
+      "main_character": "Josuke Higashikata"
+    },
+    {
+      "id": 249,
+      "title": "JoJo's Bizarre Adventure: Golden Wind",
+      "release_year": 2018,
+      "genre": ["Action", "Adventure", "Crime"],
+      "episodes": 39,
+      "studio": "David Production",
+      "rating": 8.4,
+      "main_character": "Giorno Giovanna"
+    },
+    {
+      "id": 250,
+      "title": "JoJo's Bizarre Adventure: Stone Ocean",
+      "release_year": 2021,
+      "genre": ["Action", "Adventure", "Supernatural"],
+      "episodes": 12,
+      "studio": "David Production",
+      "rating": 7.8,
+      "main_character": "Jolyne Cujoh"
+    },
+    {
+      "id": 251,
+      "title": "Afro Samurai",
+      "release_year": 2007,
+      "genre": ["Action", "Adventure", "Samurai"],
+      "episodes": 5,
+      "studio": "Gonzo",
+      "rating": 7.8,
+      "main_character": "Afro Samurai"
+    },
+    {
+      "id": 252,
+      "title": "Shigurui: Death Frenzy",
+      "release_year": 2007,
+      "genre": ["Action", "Historical", "Horror"],
+      "episodes": 12,
+      "studio": "Madhouse",
+      "rating": 8.1,
+      "main_character": "Fujiki Gennosuke"
+    },
+    {
+      "id": 253,
+      "title": "Samurai X: Trust and Betrayal",
+      "release_year": 1999,
+      "genre": ["Action", "Historical", "Drama"],
+      "episodes": 4,
+      "studio": "Studio Deen",
+      "rating": 8.6,
+      "main_character": "Himura Kenshin"
+    },
+    {
+      "id": 254,
+      "title": "Higurashi: When They Cry – Gou",
+      "release_year": 2020,
+      "genre": ["Horror", "Mystery", "Thriller"],
+      "episodes": 24,
+      "studio": "Passione",
+      "rating": 7.2,
+      "main_character": "Keiichi Maebara"
+    },
+    {
+      "id": 255,
+      "title": "Isekai Cheat Magician",
+      "release_year": 2019,
+      "genre": ["Action", "Fantasy", "Adventure"],
+      "episodes": 24,
+      "studio": "Connect",
+      "rating": 7.0,
+      "main_character": "Taichi Nishimura"
+    },
+    {
+      "id": 256,
+      "title": "So I'm a Spider, So What?",
+      "release_year": 2021,
+      "genre": ["Action", "Fantasy", "Comedy"],
+      "episodes": 12,
+      "studio": "CloverWorks",
+      "rating": 7.8,
+      "main_character": "Kumoko"
+    },
+    {
+      "id": 257,
+      "title": "Cautious Hero: The Hero Is Overpowered but Overly Cautious",
+      "release_year": 2019,
+      "genre": ["Comedy", "Fantasy", "Adventure"],
+      "episodes": 12,
+      "studio": "White Fox",
+      "rating": 7.8,
+      "main_character": "Seiya Ryuuguuin"
+    },
+    {
+      "id": 258,
+      "title": "Isekai Quartet",
+      "release_year": 2019,
+      "genre": ["Comedy", "Fantasy", "Slice of Life"],
+      "episodes": 12,
+      "studio": "Studio Puyukai",
+      "rating": 7.4,
+      "main_character": "Kazuma Satou"
+    },
+    {
+      "id": 259,
+      "title": "Combatants Will Be Dispatched!",
+      "release_year": 2020,
+      "genre": ["Action", "Comedy", "Sci-Fi"],
+      "episodes": 12,
+      "studio": "J.C.Staff",
+      "rating": 7.2,
+      "main_character": "The Captain"
+    },
+    {
+      "id": 260,
+      "title": "That Time I Got Reincarnated as a Slime Season 2",
+      "release_year": 2021,
+      "genre": ["Action", "Fantasy", "Adventure"],
+      "episodes": 12,
+      "studio": "8bit",
+      "rating": 8.0,
+      "main_character": "Rimuru Tempest"
+    },
+    {
+      "id": 261,
+      "title": "KonoSuba 2",
+      "release_year": 2017,
+      "genre": ["Comedy", "Fantasy", "Adventure"],
+      "episodes": 10,
+      "studio": "Studio Deen",
+      "rating": 7.7,
+      "main_character": "Kazuma Satou"
+    },
+    {
+      "id": 262,
+      "title": "Death Parade",
+      "release_year": 2015,
+      "genre": ["Mystery", "Drama", "Psychological"],
+      "episodes": 12,
+      "studio": "Madhouse",
+      "rating": 8.1,
+      "main_character": "Decim"
+    },
+    {
+      "id": 263,
+      "title": "Gleipnir",
+      "release_year": 2020,
+      "genre": ["Action", "Horror", "Mystery"],
+      "episodes": 12,
+      "studio": "Lerche",
+      "rating": 7.1,
+      "main_character": "Shuichi Kagaya"
+    },
+    {
+      "id": 264,
+      "title": "God of High School",
+      "release_year": 2020,
+      "genre": ["Action", "Martial Arts", "Fantasy"],
+      "episodes": 12,
+      "studio": "MAPPA",
+      "rating": 7.3,
+      "main_character": "Jin Mori"
+    },
+    {
+      "id": 265,
+      "title": "Tower of God",
+      "release_year": 2020,
+      "genre": ["Action", "Adventure", "Fantasy"],
+      "episodes": 13,
+      "studio": "Telecom Animation Film",
+      "rating": 7.5,
+      "main_character": "Bam"
+    },
+    {
+      "id": 266,
+      "title": "Shaman King (2021)",
+      "release_year": 2021,
+      "genre": ["Action", "Adventure", "Supernatural"],
+      "episodes": 52,
+      "studio": "Bridge",
+      "rating": 7.2,
+      "main_character": "Yoh Asakura"
+    },
+    {
+      "id": 267,
+      "title": "Hakuouki",
+      "release_year": 2010,
+      "genre": ["Historical", "Action", "Drama"],
+      "episodes": 12,
+      "studio": "Studio Deen",
+      "rating": 7.2,
+      "main_character": "Chikage Kazama"
+    },
+    {
+      "id": 268,
+      "title": "Katanagatari",
+      "release_year": 2010,
+      "genre": ["Action", "Adventure", "Historical"],
+      "episodes": 12,
+      "studio": "White Fox",
+      "rating": 8.2,
+      "main_character": "Yasuri Shichika"
+    },
+    {
+      "id": 269,
+      "title": "Sengoku Basara: Samurai Kings",
+      "release_year": 2009,
+      "genre": ["Action", "Historical", "Fantasy"],
+      "episodes": 12,
+      "studio": "Production I.G",
+      "rating": 7.5,
+      "main_character": "Sanada Yukimura"
+    },
+    {
+      "id": 270,
+      "title": "Mobile Suit Gundam: Iron-Blooded Orphans",
+      "release_year": 2015,
+      "genre": ["Mecha", "Action", "Drama"],
+      "episodes": 50,
+      "studio": "Sunrise",
+      "rating": 8.4,
+      "main_character": "Mikazuki Augus"
+    },
+    {
+      "id": 271,
+      "title": "Mobile Suit Gundam: The Origin",
+      "release_year": 2015,
+      "genre": ["Mecha", "Drama", "Historical"],
+      "episodes": 6,
+      "studio": "Sunrise",
+      "rating": 8.0,
+      "main_character": "Char Aznable"
+    },
+    {
+      "id": 272,
+      "title": "Gundam Build Fighters",
+      "release_year": 2013,
+      "genre": ["Mecha", "Action", "Comedy"],
+      "episodes": 25,
+      "studio": "Sunrise",
+      "rating": 7.7,
+      "main_character": "Sei Iori"
+    },
+    {
+      "id": 273,
+      "title": "Gundam Build Divers",
+      "release_year": 2018,
+      "genre": ["Mecha", "Action", "Comedy"],
+      "episodes": 25,
+      "studio": "Sunrise",
+      "rating": 7.9,
+      "main_character": "Riku"
+    },
+    {
+      "id": 274,
+      "title": "Gundam Build Fighters Try",
+      "release_year": 2014,
+      "genre": ["Mecha", "Action", "Comedy"],
+      "episodes": 25,
+      "studio": "Sunrise",
+      "rating": 7.5,
+      "main_character": "Sekai Kamiki"
+    },
+    {
+      "id": 275,
+      "title": "JoJo's Bizarre Adventure: Diamond Is Unbreakable",
+      "release_year": 2016,
+      "genre": ["Action", "Adventure", "Supernatural"],
+      "episodes": 39,
+      "studio": "David Production",
+      "rating": 8.5,
+      "main_character": "Josuke Higashikata"
+    },
+    {
+      "id": 276,
+      "title": "JoJo's Bizarre Adventure: Golden Wind",
+      "release_year": 2018,
+      "genre": ["Action", "Adventure", "Crime"],
+      "episodes": 39,
+      "studio": "David Production",
+      "rating": 8.4,
+      "main_character": "Giorno Giovanna"
+    },
+    {
+      "id": 277,
+      "title": "JoJo's Bizarre Adventure: Stone Ocean",
+      "release_year": 2021,
+      "genre": ["Action", "Adventure", "Supernatural"],
+      "episodes": 12,
+      "studio": "David Production",
+      "rating": 7.8,
+      "main_character": "Jolyne Cujoh"
+    },
+    {
+      "id": 278,
+      "title": "Afro Samurai",
+      "release_year": 2007,
+      "genre": ["Action", "Adventure", "Samurai"],
+      "episodes": 5,
+      "studio": "Gonzo",
+      "rating": 7.8,
+      "main_character": "Afro Samurai"
+    },
+    {
+      "id": 279,
+      "title": "Shigurui: Death Frenzy",
+      "release_year": 2007,
+      "genre": ["Action", "Historical", "Horror"],
+      "episodes": 12,
+      "studio": "Madhouse",
+      "rating": 8.1,
+      "main_character": "Fujiki Gennosuke"
+    },
+    {
+      "id": 280,
+      "title": "Samurai X: Trust and Betrayal",
+      "release_year": 1999,
+      "genre": ["Action", "Historical", "Drama"],
+      "episodes": 4,
+      "studio": "Studio Deen",
+      "rating": 8.6,
+      "main_character": "Himura Kenshin"
+    },
+    {
+      "id": 281,
+      "title": "Higurashi: When They Cry – Gou",
+      "release_year": 2020,
+      "genre": ["Horror", "Mystery", "Thriller"],
+      "episodes": 24,
+      "studio": "Passione",
+      "rating": 7.2,
+      "main_character": "Keiichi Maebara"
+    },
+    {
+      "id": 282,
+      "title": "Isekai Cheat Magician",
+      "release_year": 2019,
+      "genre": ["Action", "Fantasy", "Adventure"],
+      "episodes": 24,
+      "studio": "Connect",
+      "rating": 7.0,
+      "main_character": "Taichi Nishimura"
+    },
+    {
+      "id": 283,
+      "title": "So I'm a Spider, So What?",
+      "release_year": 2021,
+      "genre": ["Action", "Fantasy", "Comedy"],
+      "episodes": 12,
+      "studio": "CloverWorks",
+      "rating": 7.8,
+      "main_character": "Kumoko"
+    },
+    {
+      "id": 284,
+      "title": "Cautious Hero: The Hero Is Overpowered but Overly Cautious",
+      "release_year": 2019,
+      "genre": ["Comedy", "Fantasy", "Adventure"],
+      "episodes": 12,
+      "studio": "White Fox",
+      "rating": 7.8,
+      "main_character": "Seiya Ryuuguuin"
+    },
+    {
+      "id": 285,
+      "title": "Isekai Quartet",
+      "release_year": 2019,
+      "genre": ["Comedy", "Fantasy", "Slice of Life"],
+      "episodes": 12,
+      "studio": "Studio Puyukai",
+      "rating": 7.4,
+      "main_character": "Kazuma Satou"
+    },
+    {
+      "id": 286,
+      "title": "Combatants Will Be Dispatched!",
+      "release_year": 2020,
+      "genre": ["Action", "Comedy", "Sci-Fi"],
+      "episodes": 12,
+      "studio": "J.C.Staff",
+      "rating": 7.2,
+      "main_character": "The Captain"
+    },
+    {
+      "id": 287,
+      "title": "That Time I Got Reincarnated as a Slime Season 2",
+      "release_year": 2021,
+      "genre": ["Action", "Fantasy", "Adventure"],
+      "episodes": 12,
+      "studio": "8bit",
+      "rating": 8.0,
+      "main_character": "Rimuru Tempest"
+    },
+    {
+      "id": 288,
+      "title": "KonoSuba 2",
+      "release_year": 2017,
+      "genre": ["Comedy", "Fantasy", "Adventure"],
+      "episodes": 10,
+      "studio": "Studio Deen",
+      "rating": 7.7,
+      "main_character": "Kazuma Satou"
+    },
+    {
+      "id": 289,
+      "title": "Death Parade",
+      "release_year": 2015,
+      "genre": ["Mystery", "Drama", "Psychological"],
+      "episodes": 12,
+      "studio": "Madhouse",
+      "rating": 8.1,
+      "main_character": "Decim"
+    },
+    {
+      "id": 290,
+      "title": "Gleipnir",
+      "release_year": 2020,
+      "genre": ["Action", "Horror", "Mystery"],
+      "episodes": 12,
+      "studio": "Lerche",
+      "rating": 7.1,
+      "main_character": "Shuichi Kagaya"
+    },
+    {
+      "id": 291,
+      "title": "God of High School",
+      "release_year": 2020,
+      "genre": ["Action", "Martial Arts", "Fantasy"],
+      "episodes": 12,
+      "studio": "MAPPA",
+      "rating": 7.3,
+      "main_character": "Jin Mori"
+    },
+    {
+      "id": 292,
+      "title": "Tower of God",
+      "release_year": 2020,
+      "genre": ["Action", "Adventure", "Fantasy"],
+      "episodes": 13,
+      "studio": "Telecom Animation Film",
+      "rating": 7.5,
+      "main_character": "Bam"
+    },
+    {
+      "id": 293,
+      "title": "Shaman King (2021)",
+      "release_year": 2021,
+      "genre": ["Action", "Adventure", "Supernatural"],
+      "episodes": 52,
+      "studio": "Bridge",
+      "rating": 7.2,
+      "main_character": "Yoh Asakura"
+    },
+    {
+      "id": 294,
+      "title": "Higurashi: When They Cry – Gou",
+      "release_year": 2020,
+      "genre": ["Horror", "Mystery", "Thriller"],
+      "episodes": 24,
+      "studio": "Passione",
+      "rating": 7.2,
+      "main_character": "Keiichi Maebara"
+    },
+    {
+      "id": 295,
+      "title": "Isekai Cheat Magician",
+      "release_year": 2019,
+      "genre": ["Action", "Fantasy", "Adventure"],
+      "episodes": 24,
+      "studio": "Connect",
+      "rating": 7.0,
+      "main_character": "Taichi Nishimura"
+    },
+    {
+      "id": 296,
+      "title": "So I'm a Spider, So What?",
+      "release_year": 2021,
+      "genre": ["Action", "Fantasy", "Comedy"],
+      "episodes": 12,
+      "studio": "CloverWorks",
+      "rating": 7.8,
+      "main_character": "Kumoko"
+    },
+    {
+      "id": 297,
+      "title": "Cautious Hero: The Hero Is Overpowered but Overly Cautious",
+      "release_year": 2019,
+      "genre": ["Comedy", "Fantasy", "Adventure"],
+      "episodes": 12,
+      "studio": "White Fox",
+      "rating": 7.8,
+      "main_character": "Seiya Ryuuguuin"
+    },
+    {
+      "id": 298,
+      "title": "Isekai Quartet",
+      "release_year": 2019,
+      "genre": ["Comedy", "Fantasy", "Slice of Life"],
+      "episodes": 12,
+      "studio": "Studio Puyukai",
+      "rating": 7.4,
+      "main_character": "Kazuma Satou"
+    },
+    {
+      "id": 299,
+      "title": "Combatants Will Be Dispatched!",
+      "release_year": 2020,
+      "genre": ["Action", "Comedy", "Sci-Fi"],
+      "episodes": 12,
+      "studio": "J.C.Staff",
+      "rating": 7.2,
+      "main_character": "The Captain"
+    },
+    {
+      "id": 300,
+      "title": "That Time I Got Reincarnated as a Slime Season 2",
+      "release_year": 2021,
+      "genre": ["Action", "Fantasy", "Adventure"],
+      "episodes": 12,
+      "studio": "8bit",
+      "rating": 8.0,
+      "main_character": "Rimuru Tempest"
     }
-]
+  ]
+  

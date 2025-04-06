@@ -31,6 +31,11 @@ function AppRoutes() {
     gameEnded
   } = useGameStore();
 
+  // Reset game state when app loads
+  useEffect(() => {
+    resetGame();
+  }, [resetGame]);
+
   const shouldHideNav = isGameActive && (location.pathname === '/play' || location.pathname === '/game') && !gameEnded;
 
   const handleGameStart = (

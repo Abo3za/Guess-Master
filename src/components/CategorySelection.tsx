@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Category } from '../types';
 import { 
-  Users, Plus, Minus,
+  Users,
   Flag, Trophy, Crown,
   AlertCircle
 } from 'lucide-react';
@@ -102,129 +102,151 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
   };
 
   return (
-    <div className="min-h-screen bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 py-8" dir="rtl">
-        <div className="mb-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-8">
-            <div className="flex items-center gap-3">
-              <button
-                onClick={onResetGame}
-                className="secondary-button px-6 py-3 flex items-center gap-2 text-lg"
-              >
-                <Users className="w-6 h-6" />
-                فرق جديدة
-              </button>
-              
-              <button
-                onClick={handleEndGame}
-                className="primary-button bg-red-500 hover:bg-red-600 px-6 py-3 flex items-center gap-2 text-lg"
-              >
-                <Flag className="w-6 h-6" />
-                إنهاء اللعبة
-              </button>
-            </div>
-
-            <div className="text-center bg-blue-500/10 px-6 py-3 rounded-xl border border-blue-500/20">
-              <span className="text-xl font-bold text-blue-400 flex items-center gap-2">
-                <Trophy className="w-6 h-6" />
-                أول فريق يصل إلى {winningPoints} نقطة يفوز
-              </span>
-            </div>
+    <div className="min-h-screen bg-gray-900 fixed inset-0 overflow-auto">
+      <div className="h-full px-4 py-8" dir="rtl">
+        <div className="flex justify-between items-center gap-4 mb-8">
+          <button
+            onClick={onResetGame}
+            className="secondary-button px-6 py-3 flex items-center gap-2 text-lg"
+          >
+            <Users className="w-6 h-6" />
+            فرق جديدة
+          </button>
+          
+          <div className="text-center bg-blue-500/10 px-6 py-3 rounded-xl border border-blue-500/20">
+            <span className="text-xl font-bold text-blue-400 flex items-center gap-2">
+              <Trophy className="w-6 h-6" />
+              أول فريق يصل إلى {winningPoints} نقطة يفوز
+            </span>
           </div>
 
-          {/* Add category usage warning */}
-          {categories.filter(category => (categorySelectionCounts[category.value as Category] || 0) >= 3).length > 0 && (
-            <div className="mb-6 p-4 bg-yellow-500/10 rounded-xl border border-yellow-500/20">
-              <p className="text-yellow-400 text-center">
-                <AlertCircle className="w-5 h-5 inline-block mr-2" />
-                بعض الفئات وصلت للحد الأقصى (3 مرات)
-              </p>
-            </div>
-          )}
+          <button
+            onClick={handleEndGame}
+            className="primary-button bg-red-500 hover:bg-red-600 px-6 py-3 flex items-center gap-2 text-lg"
+          >
+            <Flag className="w-6 h-6" />
+            إنهاء اللعبة
+          </button>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-            {teams.map((team) => (
+        {/* Add category usage warning */}
+        {categories.filter(category => (categorySelectionCounts[category.value as Category] || 0) >= 3).length > 0 && (
+          <div className="mb-6 p-4 bg-yellow-500/10 rounded-xl border border-yellow-500/20">
+            <p className="text-yellow-400 text-center">
+              <AlertCircle className="w-5 h-5 inline-block mr-2" />
+              بعض الفئات وصلت للحد الأقصى (3 مرات)
+            </p>
+          </div>
+        )}
+
+        <div className="flex gap-8 h-[calc(100vh-10rem)]">
+          {/* الفريق الأول - يمين */}
+          <div className="w-1/4 bg-gray-800/50 rounded-2xl p-6">
+            {teams.slice(0, 1).map((team) => (
               <div
                 key={team.id}
-                className={`team-card ${team.isActive ? 'ring-2 ring-blue-500' : ''} transition-all duration-300`}
+                className={`h-full flex flex-col justify-center relative overflow-hidden rounded-xl ${
+                  team.isActive ? 'ring-2 ring-blue-500' : ''
+                }`}
+                style={{
+                  backgroundImage: 'url(/Images/Team1.png)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
               >
-                <div className="flex justify-between items-center mb-4">
-                  <div className="flex items-center gap-2">
-                    <h3 className="text-xl font-bold text-white">{team.name}</h3>
-                    {team.isActive && <Crown className="w-5 h-5 text-yellow-400" />}
+                <div className="absolute inset-0 bg-gray-900/70"></div>
+                <div className="relative z-10 p-6">
+                  <div className="flex items-center justify-center gap-2 mb-6">
+                    <h3 className="text-4xl font-bold text-white">{team.name}</h3>
+                    {team.isActive && <Crown className="w-10 h-10 text-yellow-400" />}
                   </div>
-                  <div className="text-2xl font-bold text-blue-400">
+                  <div className="text-7xl font-bold text-blue-400 text-center">
                     {team.score}
                   </div>
-                </div>
-                <div className="flex gap-3">
-                  <button
-                    onClick={() => adjustScore(team.id, -10)}
-                    className="danger-button flex-1 py-2 flex items-center justify-center gap-2 text-lg"
-                  >
-                    <Minus className="w-5 h-5" />
-                    -10
-                  </button>
-                  <button
-                    onClick={() => adjustScore(team.id, 10)}
-                    className="success-button flex-1 py-2 flex items-center justify-center gap-2 text-lg"
-                  >
-                    <Plus className="w-5 h-5" />
-                    +10
-                  </button>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold text-blue-400 mb-2">
-              دور {activeTeam?.name}
-            </h2>
-            <p className="text-xl text-gray-300">
-              اختر الفئة التي تريد
-            </p>
-          </div>
-        </div>
+          {/* المحتوى الرئيسي - المنتصف */}
+          <div className="w-2/4 flex flex-col">
+            <div className="text-center mb-8 bg-gray-800/50 rounded-2xl p-6">
+              <h2 className="text-5xl font-bold text-blue-400 mb-4">
+                دور {activeTeam?.name}
+              </h2>
+              <p className="text-2xl text-gray-300">
+                اختر الفئة التي تريد
+              </p>
+            </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-16 mb-8">
-          {categories.map((category) => {
-            const selectionCount = categorySelectionCounts[category.value as Category] || 0;
-            const isDisabled = selectionCount >= 3;
-            
-            return (
-              <div key={category.value} className="relative group">
-                <div className="flex flex-col">
-                  <button
-                    onClick={() => handleCategorySelect(category.value as Category)}
-                    disabled={isDisabled}
-                    className={`category-card ${isDisabled ? 'opacity-50 cursor-not-allowed' : 'group-hover:scale-105'} transition-all duration-300 w-full aspect-[4/3] overflow-hidden rounded-t-2xl shadow-lg`}
-                    style={{
-                      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url(${category.bgImage})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center',
-                    }}
-                  >
-                    <div className="relative z-10 h-full flex flex-col items-center justify-end p-4">
-                      <div className="flex items-center gap-2 bg-black/20 backdrop-blur-sm px-4 py-2 rounded-xl">
-                        <span className="text-lg text-white font-semibold drop-shadow-md">
-                          {selectionCount}/3
-                        </span>
-                        {isDisabled && (
-                          <span className="text-lg text-white font-semibold drop-shadow-md">تم اختيارها</span>
-                        )}
+            <div className="grid grid-cols-2 gap-8 flex-1">
+              {categories.map((category) => {
+                const selectionCount = categorySelectionCounts[category.value as Category] || 0;
+                const isDisabled = selectionCount >= 3;
+                
+                return (
+                  <div key={category.value} className="relative group">
+                    <button
+                      onClick={() => handleCategorySelect(category.value as Category)}
+                      disabled={isDisabled}
+                      className={`category-card ${
+                        isDisabled ? 'opacity-50 cursor-not-allowed' : 'group-hover:scale-105'
+                      } transition-all duration-300 w-full h-full overflow-hidden rounded-2xl shadow-lg bg-gray-800/50`}
+                      style={{
+                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${category.bgImage})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                      }}
+                    >
+                      <div className="relative z-10 h-full flex flex-col items-center justify-between p-8">
+                        <h3 className="text-3xl font-bold text-white drop-shadow-lg">
+                          {category.label}
+                        </h3>
+                        <div className="flex items-center gap-3 bg-black/60 backdrop-blur-sm px-6 py-3 rounded-xl">
+                          <span className="text-xl text-white font-semibold drop-shadow-md">
+                            {selectionCount}/3
+                          </span>
+                          {isDisabled && (
+                            <span className="text-xl text-white font-semibold drop-shadow-md">
+                              تم اختيارها
+                            </span>
+                          )}
+                        </div>
                       </div>
-                    </div>
-                  </button>
-                  <div className="bg-[#2F3640] w-full py-4 px-6 rounded-b-2xl shadow-lg">
-                    <div className="text-2xl font-bold text-white text-center">
-                      {category.label}
-                    </div>
+                    </button>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* الفريق الثاني - يسار */}
+          <div className="w-1/4 bg-gray-800/50 rounded-2xl p-6">
+            {teams.slice(1, 2).map((team) => (
+              <div
+                key={team.id}
+                className={`h-full flex flex-col justify-center relative overflow-hidden rounded-xl ${
+                  team.isActive ? 'ring-2 ring-blue-500' : ''
+                }`}
+                style={{
+                  backgroundImage: 'url(/Images/Team2.png)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              >
+                <div className="absolute inset-0 bg-gray-900/70"></div>
+                <div className="relative z-10 p-6">
+                  <div className="flex items-center justify-center gap-2 mb-6">
+                    <h3 className="text-4xl font-bold text-white">{team.name}</h3>
+                    {team.isActive && <Crown className="w-10 h-10 text-yellow-400" />}
+                  </div>
+                  <div className="text-7xl font-bold text-blue-400 text-center">
+                    {team.score}
                   </div>
                 </div>
               </div>
-            );
-          })}
+            ))}
+          </div>
         </div>
       </div>
     </div>

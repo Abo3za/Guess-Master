@@ -16,21 +16,26 @@ interface GameStore extends GameState {
   clearUsedItems: () => void;
   clearCategoryUsedItems: (category: Category) => void;
   endGame: () => void;
+  getRemainingRounds: () => number;
+  checkWinCondition: () => boolean;
 }
 
 const initialState: GameState = {
   teams: [],
   currentItem: null,
   selectedCategory: null,
-  round: 1,
-  maxRounds: 10,
   answerRevealed: false,
   isLoading: false,
-  usedItems: new Set(),
+  usedItems: new Set<string>(),
   categoryUsedItems: {} as Record<Category, Set<string>>,
   gameEnded: false,
   categorySelectionCounts: {} as Record<Category, number>,
+  isGameActive: false,
 };
+
+const TOTAL_CATEGORIES = 10; // Total number of categories
+const SELECTIONS_PER_CATEGORY = 3; // Maximum selections per category
+const WINNING_SCORE = 200; // Points needed to win
 
 export const useGameStore = create<GameStore>()(
   persist(
@@ -45,20 +50,20 @@ export const useGameStore = create<GameStore>()(
         }));
         set({ 
           teams, 
-          round: 1, 
           answerRevealed: false,
           currentItem: null,
           selectedCategory: null,
-          usedItems: new Set(),
-          categoryUsedItems: {},
+          usedItems: new Set<string>(),
+          categoryUsedItems: {} as Record<Category, Set<string>>,
           categorySelectionCounts: {},
+          isGameActive: true,
         });
       },
       setCurrentItem: (item) => {
         set((state) => {
           const newCategoryUsedItems = { ...state.categoryUsedItems };
           if (!newCategoryUsedItems[item.category]) {
-            newCategoryUsedItems[item.category] = new Set();
+            newCategoryUsedItems[item.category] = new Set<string>();
           }
           
           newCategoryUsedItems[item.category].add(item.id);
@@ -80,22 +85,23 @@ export const useGameStore = create<GameStore>()(
           }
         };
       }),
-      revealDetail: (detailIndex) => {
-        const { currentItem } = get();
-        if (!currentItem) return;
-
-        const updatedDetails = [...currentItem.details];
-        updatedDetails[detailIndex].revealed = true;
-
-        set({
-          currentItem: {
-            ...currentItem,
-            details: updatedDetails,
-          },
+      revealDetail: (index) => {
+        set((state) => {
+          if (!state.currentItem) return state;
+          
+          const updatedDetails = [...state.currentItem.details];
+          updatedDetails[index] = { ...updatedDetails[index], revealed: true };
+          
+          return {
+            currentItem: {
+              ...state.currentItem,
+              details: updatedDetails,
+            },
+          };
         });
       },
       makeGuess: (teamId, guess) => {
-        const { currentItem, teams, round, maxRounds } = get();
+        const { currentItem, teams } = get();
         if (!currentItem || !guess) return false;
 
         const normalizeString = (str: string) => 
@@ -112,7 +118,7 @@ export const useGameStore = create<GameStore>()(
         if (isCorrect) {
           const unrevealedCount = currentItem.details.filter(d => !d.revealed).length;
           const allDetailsRevealed = unrevealedCount === 0;
-          const points = allDetailsRevealed ? 10 : unrevealedCount * 5;
+          const points = allDetailsRevealed ? 10 : unrevealedCount * 10;
 
           const updatedTeams = teams.map((team) =>
             team.id === teamId
@@ -120,52 +126,51 @@ export const useGameStore = create<GameStore>()(
               : team
           );
           
-          const isLastRound = round >= maxRounds;
-          if (isLastRound) {
-            set({ 
-              teams: updatedTeams,
-              answerRevealed: false,
-              gameEnded: true
-            });
-          } else {
-            set({ 
-              teams: updatedTeams,
-              answerRevealed: false
-            });
-          }
+          set({ 
+            teams: updatedTeams,
+            answerRevealed: false
+          });
         }
 
         return isCorrect;
       },
       adjustScore: (teamId: string, amount: number) => {
-        const { teams } = get();
-        const updatedTeams = teams.map((team) =>
-          team.id === teamId
-            ? { ...team, score: Math.max(0, team.score + amount) }
-            : team
-        );
-        set({ teams: updatedTeams });
+        set((state) => {
+          const updatedTeams = state.teams.map((team) =>
+            team.id === teamId
+              ? { ...team, score: Math.max(0, team.score + amount) }
+              : team
+          );
+
+          // Check if any team has reached the winning score
+          const hasWinner = updatedTeams.some(team => team.score >= WINNING_SCORE);
+          if (hasWinner) {
+            return { 
+              teams: updatedTeams,
+              isGameActive: false 
+            };
+          }
+
+          return { teams: updatedTeams };
+        });
       },
       nextTurn: () => {
-        const { teams, round, maxRounds } = get();
-        const currentActiveIndex = teams.findIndex((team) => team.isActive);
-        const nextActiveIndex = (currentActiveIndex + 1) % teams.length;
-        
-        const shouldIncrementRound = nextActiveIndex === 0;
-        const nextRound = shouldIncrementRound ? round + 1 : round;
-
-        const updatedTeams = teams.map((team, index) => ({
-          ...team,
-          isActive: index === nextActiveIndex,
-        }));
-
-        set({ 
-          teams: updatedTeams,
-          round: nextRound
+        set((state) => {
+          const currentActiveIndex = state.teams.findIndex((team) => team.isActive);
+          const nextActiveIndex = (currentActiveIndex + 1) % state.teams.length;
+          
+          return {
+            teams: state.teams.map((team, index) => ({
+              ...team,
+              isActive: index === nextActiveIndex,
+            })),
+          };
         });
       },
       revealAnswer: () => {
-        set({ answerRevealed: true });
+        set((state) => ({
+          answerRevealed: true,
+        }));
       },
       resetGame: () => {
         set(initialState);
@@ -180,26 +185,35 @@ export const useGameStore = create<GameStore>()(
       clearUsedItems: () => {
         set({ usedItems: new Set() });
       },
-      clearCategoryUsedItems: (category: Category) => {
-        const { categoryUsedItems } = get();
-        const newCategoryUsedItems = { ...categoryUsedItems };
-        newCategoryUsedItems[category] = new Set();
-        set({ categoryUsedItems: newCategoryUsedItems });
+      clearCategoryUsedItems: (category) => {
+        set((state) => {
+          const newCategoryUsedItems = { ...state.categoryUsedItems };
+          newCategoryUsedItems[category] = new Set<string>();
+          return { categoryUsedItems: newCategoryUsedItems };
+        });
       },
       endGame: () => {
-        set({ gameEnded: true });
+        set({ isGameActive: false });
+      },
+      getRemainingRounds: () => {
+        const state = get();
+        const usedRounds = Object.values(state.categorySelectionCounts).reduce(
+          (sum, count) => sum + count,
+          0
+        );
+        return state.maxRounds - usedRounds;
+      },
+      checkWinCondition: () => {
+        const state = get();
+        return state.teams.some(team => team.score >= WINNING_SCORE);
       },
     }),
     {
       name: 'game-storage',
       partialize: (state) => ({
         teams: state.teams,
-        round: state.round,
-        maxRounds: state.maxRounds,
-        usedItems: state.usedItems,
-        categoryUsedItems: state.categoryUsedItems,
         categorySelectionCounts: state.categorySelectionCounts,
-      })
+      }),
     }
   )
 );

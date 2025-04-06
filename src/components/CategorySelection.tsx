@@ -53,7 +53,7 @@ const categories = [
 ];
 
 export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, onResetGame }) => {
-  const { teams, adjustScore, round, maxRounds, endGame, categorySelectionCounts } = useGameStore();
+  const { teams, adjustScore, endGame, categorySelectionCounts, checkWinCondition } = useGameStore();
   const [showEndNotification, setShowEndNotification] = useState(false);
   const [winner, setWinner] = useState<{ name: string; score: number } | null>(null);
 
@@ -78,16 +78,12 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
     onResetGame();
   };
 
-  // Check if all categories have been selected 3 times
+  // Check for win condition
   useEffect(() => {
-    const allCategoriesUsed = categories.every(category => 
-      (categorySelectionCounts[category.value as Category] || 0) >= 3
-    );
-
-    if (allCategoriesUsed) {
+    if (checkWinCondition()) {
       handleEndGame();
     }
-  }, [categorySelectionCounts]);
+  }, [teams]);
 
   const handleCategorySelect = (category: Category) => {
     const selectionCount = categorySelectionCounts[category] || 0;
@@ -122,10 +118,10 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
               </button>
             </div>
 
-            {/* Round Counter */}
+            {/* Score Display */}
             <div className="text-center">
               <span className="text-xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                الجولة {round} من {maxRounds}
+                أول فريق يصل إلى 200 نقطة يفوز
               </span>
             </div>
           </div>

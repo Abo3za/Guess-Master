@@ -89,7 +89,7 @@ function AppRoutes() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <NavigationBar />
-      <main className="pt-16">
+      <main className="pt-28">
         <Routes>
           <Route path="/" element={<WelcomePage />} />
           <Route path="/about" element={<AboutPage />} />

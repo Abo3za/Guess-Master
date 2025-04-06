@@ -9,18 +9,18 @@ const WelcomePage: React.FC = () => {
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
       <div className="relative h-screen flex items-center justify-center">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80 z-10" />
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=2071')] bg-cover bg-center" />
-        <div className="relative z-20 text-center px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 z-10" />
+        <div className="absolute inset-0 bg-[url('/Images/background.png')] bg-cover bg-center" />
+        <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
+          <h1 className="text-6xl md:text-8xl font-bold mb-8 text-white drop-shadow-lg">
             مرحباً بك في لعبة التخمين
           </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-300">
+          <p className="text-2xl md:text-3xl mb-12 text-gray-100 drop-shadow-md">
             اختبر معلوماتك في مختلف المجالات
           </p>
           <button
             onClick={() => navigate('/setup')}
-            className="primary-button text-xl px-8 py-4 flex items-center gap-2 mx-auto"
+            className="primary-button text-xl px-12 py-5 flex items-center gap-2 mx-auto hover:scale-105 transition-transform"
           >
             <Play className="w-6 h-6" />
             ابدأ اللعبة

@@ -1,46 +1,45 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Gamepad2, Home, Info, MessageSquare } from 'lucide-react';
+import { Home, Info, MessageSquare } from 'lucide-react';
 
 const NavigationBar: React.FC = () => {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-lg border-b border-white/5">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo and Brand */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="bg-gradient-to-br from-blue-500 to-indigo-500 p-2 rounded-lg">
-              <Gamepad2 className="w-6 h-6 text-white" />
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-              لعبة التخمين
-            </span>
-          </Link>
-
+        <div className="flex items-center justify-between h-28">
           {/* Navigation Links */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6">
             <Link
               to="/"
-              className="text-gray-300 hover:text-white transition-colors flex items-center gap-1"
+              className="text-gray-200 hover:text-white transition-colors flex items-center gap-2 text-lg hover:bg-white/10 px-4 py-2 rounded-lg"
             >
-              <Home className="w-5 h-5" />
+              <Home className="w-6 h-6" />
               الرئيسية
             </Link>
             <Link
               to="/about"
-              className="text-gray-300 hover:text-white transition-colors flex items-center gap-1"
+              className="text-gray-200 hover:text-white transition-colors flex items-center gap-2 text-lg hover:bg-white/10 px-4 py-2 rounded-lg"
             >
-              <Info className="w-5 h-5" />
+              <Info className="w-6 h-6" />
               عن اللعبة
             </Link>
             <Link
               to="/contact"
-              className="text-gray-300 hover:text-white transition-colors flex items-center gap-1"
+              className="text-gray-200 hover:text-white transition-colors flex items-center gap-2 text-lg hover:bg-white/10 px-4 py-2 rounded-lg"
             >
-              <MessageSquare className="w-5 h-5" />
+              <MessageSquare className="w-6 h-6" />
               تواصل معنا
             </Link>
           </div>
+
+          {/* Logo */}
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/Images/Logo.png" 
+              alt="Guess Master Logo" 
+              className="h-20 w-auto"
+            />
+          </Link>
         </div>
       </div>
     </nav>

@@ -3,7 +3,7 @@ import { persist } from 'zustand/middleware';
 import { GameState, Team, GameItem, Category } from '../types';
 
 interface GameStore extends GameState {
-  initializeGame: (teams: string[]) => void;
+  initializeGame: (teams: string[], winningPoints: number) => void;
   setCurrentItem: (item: GameItem) => void;
   setCategory: (category: Category) => void;
   revealDetail: (detailIndex: number) => void;
@@ -17,6 +17,7 @@ interface GameStore extends GameState {
   clearCategoryUsedItems: (category: Category) => void;
   endGame: () => void;
   checkWinCondition: () => boolean;
+  winningPoints: number;
 }
 
 const initialState: GameState = {
@@ -30,15 +31,14 @@ const initialState: GameState = {
   gameEnded: false,
   categorySelectionCounts: {} as Record<Category, number>,
   isGameActive: false,
+  winningPoints: 200,
 };
-
-const WINNING_SCORE = 200; // Points needed to win
 
 export const useGameStore = create<GameStore>()(
   persist(
     (set, get) => ({
       ...initialState,
-      initializeGame: (teamNames) => {
+      initializeGame: (teamNames, winningPoints) => {
         const teams: Team[] = teamNames.map((name, index) => ({
           id: `team-${index + 1}`,
           name,
@@ -55,6 +55,7 @@ export const useGameStore = create<GameStore>()(
           categorySelectionCounts: {},
           isGameActive: true,
           gameEnded: false,
+          winningPoints,
         });
       },
       setCurrentItem: (item) => {
@@ -141,7 +142,7 @@ export const useGameStore = create<GameStore>()(
           );
 
           // Check if any team has reached the winning score
-          const hasWinner = updatedTeams.some(team => team.score >= WINNING_SCORE);
+          const hasWinner = updatedTeams.some(team => team.score >= state.winningPoints);
           if (hasWinner) {
             return { 
               teams: updatedTeams,
@@ -201,8 +202,8 @@ export const useGameStore = create<GameStore>()(
         });
       },
       checkWinCondition: () => {
-        const { teams } = get();
-        return teams.some(team => team.score >= WINNING_SCORE);
+        const { teams, winningPoints } = get();
+        return teams.some(team => team.score >= winningPoints);
       }
     }),
     {
@@ -216,7 +217,8 @@ export const useGameStore = create<GameStore>()(
         categoryUsedItems: state.categoryUsedItems,
         categorySelectionCounts: state.categorySelectionCounts,
         isGameActive: state.isGameActive,
-        gameEnded: state.gameEnded
+        gameEnded: state.gameEnded,
+        winningPoints: state.winningPoints
       })
     }
   )

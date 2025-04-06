@@ -1,17 +1,25 @@
 import React, { useState } from 'react';
-import { Users, Gamepad2, Brain, Trophy, Target } from 'lucide-react';
+import { Users, Gamepad2, Brain, Trophy, Target, Settings } from 'lucide-react';
 
 interface GameSetupProps {
-  onStart: (teams: string[]) => void;
+  onStart: (teams: string[], winningPoints: number) => void;
 }
+
+const RECOMMENDED_POINTS = [
+  { value: 100, label: 'سريعة', description: 'مباراة قصيرة (15-20 دقيقة)' },
+  { value: 200, label: 'عادية', description: 'مباراة متوسطة (25-30 دقيقة)' },
+  { value: 300, label: 'طويلة', description: 'مباراة طويلة (35-45 دقيقة)' },
+];
 
 export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
   const [teams, setTeams] = useState(['الفريق 1', 'الفريق 2']);
+  const [winningPoints, setWinningPoints] = useState(200);
+  const [customPoints, setCustomPoints] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (teams.every(team => team.trim())) {
-      onStart(teams);
+      onStart(teams, winningPoints);
     }
   };
 
@@ -87,11 +95,12 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
               <Users className="w-8 h-8 text-white" />
             </div>
             <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              إعداد الفرق
+              إعداد اللعبة
             </h2>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Team Names */}
             {teams.map((team, index) => (
               <div key={index} className="space-y-2">
                 <label className="block text-sm font-medium text-gray-300">
@@ -107,6 +116,66 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
                 />
               </div>
             ))}
+
+            {/* Winning Points Selection */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-2">
+                <Settings className="w-5 h-5 text-blue-400" />
+                <h3 className="text-lg font-semibold text-white">نقاط الفوز</h3>
+              </div>
+
+              {!customPoints ? (
+                <>
+                  <div className="grid grid-cols-3 gap-3">
+                    {RECOMMENDED_POINTS.map((option) => (
+                      <button
+                        key={option.value}
+                        type="button"
+                        onClick={() => setWinningPoints(option.value)}
+                        className={`p-3 rounded-lg border-2 transition-all ${
+                          winningPoints === option.value
+                            ? 'border-blue-500 bg-blue-500/10'
+                            : 'border-white/10 hover:border-white/20'
+                        }`}
+                      >
+                        <div className="text-lg font-bold text-white">{option.label}</div>
+                        <div className="text-sm text-gray-400">{option.value} نقطة</div>
+                        <div className="text-xs text-gray-500 mt-1">{option.description}</div>
+                      </button>
+                    ))}
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => setCustomPoints(true)}
+                    className="text-sm text-blue-400 hover:text-blue-300"
+                  >
+                    تخصيص النقاط
+                  </button>
+                </>
+              ) : (
+                <div className="space-y-2">
+                  <input
+                    type="number"
+                    value={winningPoints}
+                    onChange={(e) => setWinningPoints(Math.max(50, parseInt(e.target.value) || 50))}
+                    className="input-field text-right"
+                    min="50"
+                    step="10"
+                    required
+                  />
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-400">الحد الأدنى: 50 نقطة</span>
+                    <button
+                      type="button"
+                      onClick={() => setCustomPoints(false)}
+                      className="text-blue-400 hover:text-blue-300"
+                    >
+                      العودة للإعدادات الموصى بها
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
 
             <button
               type="submit"

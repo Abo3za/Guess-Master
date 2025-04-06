@@ -1,7 +1,10 @@
 import React from 'react';
 import { Info } from 'lucide-react';
+import { useGameStore } from '../store/gameStore';
 
 export const AboutPage: React.FC = () => {
+  const { winningPoints } = useGameStore();
+  
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-white pt-20 pb-24">
       <div className="max-w-4xl mx-auto px-6">
@@ -27,7 +30,7 @@ export const AboutPage: React.FC = () => {
             <li>• اختر الفئة التي تريد اللعب بها</li>
             <li>• استخدم التلميحات المتاحة للوصول إلى الإجابة</li>
             <li>• كل تلميح يكشفه الفريق يقلل من النقاط المحتملة</li>
-            <li>• الفريق الذي يجمع 200 نقطة أولاً يفوز</li>
+            <li>• الفريق الذي يجمع {winningPoints} نقطة أولاً يفوز</li>
           </ul>
         </div>
 

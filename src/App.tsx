@@ -32,8 +32,8 @@ function AppRoutes() {
 
   const shouldHideNav = isGameActive && (location.pathname === '/categories' || location.pathname === '/game');
 
-  const handleGameStart = (teams: string[]) => {
-    initializeGame(teams);
+  const handleGameStart = (teams: string[], winningPoints: number) => {
+    initializeGame(teams, winningPoints);
     navigate('/categories');
   };
 

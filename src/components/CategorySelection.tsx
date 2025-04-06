@@ -46,7 +46,7 @@ const categories = [
 ];
 
 export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, onResetGame }) => {
-  const { teams, adjustScore, endGame, categorySelectionCounts, checkWinCondition } = useGameStore();
+  const { teams, adjustScore, endGame, categorySelectionCounts, checkWinCondition, winningPoints } = useGameStore();
   const [showEndNotification, setShowEndNotification] = useState(false);
   const [winner, setWinner] = useState<{ name: string; score: number } | null>(null);
 
@@ -111,7 +111,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
             <div className="text-center bg-blue-500/10 px-6 py-3 rounded-xl border border-blue-500/20">
               <span className="text-xl font-bold text-blue-400 flex items-center gap-2">
                 <Trophy className="w-6 h-6" />
-                أول فريق يصل إلى 200 نقطة يفوز
+                أول فريق يصل إلى {winningPoints} نقطة يفوز
               </span>
             </div>
           </div>

@@ -200,10 +200,13 @@ export const useGameStore = create<GameStore>()(
         });
       },
       endGame: () => {
-        set({ 
+        set((state) => ({ 
           isGameActive: false,
-          gameEnded: true
-        });
+          gameEnded: true,
+          currentItem: null,
+          selectedCategory: null,
+          answerRevealed: false
+        }));
       },
       checkWinCondition: () => {
         const { teams, winningPoints } = get();

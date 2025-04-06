@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Category } from '../types';
 import { 
   Users, Plus, Minus,
-  Flag, Trophy, Crown
+  Flag, Trophy, Crown,
+  AlertCircle
 } from 'lucide-react';
 import { useGameStore } from '../store/gameStore';
-import { GameEndNotification } from './GameEndNotification';
 
 interface CategorySelectionProps {
   onSelect: (category: Category) => void;
@@ -46,38 +46,30 @@ const categories = [
 ];
 
 export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, onResetGame }) => {
-  const { teams, adjustScore, endGame, categorySelectionCounts, checkWinCondition, winningPoints } = useGameStore();
-  const [showEndNotification, setShowEndNotification] = useState(false);
-  const [winner, setWinner] = useState<{ name: string; score: number } | null>(null);
+  const { teams, adjustScore, endGame, categorySelectionCounts, checkWinCondition, winningPoints, gameEnded } = useGameStore();
 
   const activeTeam = teams.find(team => team.isActive);
 
-  const getWinningTeam = () => {
-    return teams.reduce((prev, current) => 
-      (prev.score > current.score) ? prev : current
+  // Check if all categories have reached their limit
+  const checkAllCategoriesUsed = () => {
+    return categories.every(category => 
+      (categorySelectionCounts[category.value as Category] || 0) >= 3
     );
   };
 
-  const handleEndGame = () => {
-    const winningTeam = getWinningTeam();
-    setWinner({ name: winningTeam.name, score: winningTeam.score });
-    setShowEndNotification(true);
-  };
-
-  const handleNotificationClose = () => {
-    setShowEndNotification(false);
-    setWinner(null);
-    endGame();
-    onResetGame();
-  };
-
   useEffect(() => {
-    if (checkWinCondition()) {
-      handleEndGame();
+    if (!gameEnded) {
+      const hasWinner = checkWinCondition();
+      const allCategoriesUsed = checkAllCategoriesUsed();
+      
+      if (hasWinner || allCategoriesUsed) {
+        endGame();
+      }
     }
-  }, [teams]);
+  }, [teams, categorySelectionCounts, gameEnded, checkWinCondition, endGame]);
 
   const handleCategorySelect = (category: Category) => {
+    if (gameEnded) return;
     const selectionCount = categorySelectionCounts[category] || 0;
     if (selectionCount >= 3) {
       return;
@@ -100,7 +92,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
               </button>
               
               <button
-                onClick={handleEndGame}
+                onClick={endGame}
                 className="primary-button bg-red-500 hover:bg-red-600 px-6 py-3 flex items-center gap-2 text-lg"
               >
                 <Flag className="w-6 h-6" />
@@ -115,6 +107,16 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
               </span>
             </div>
           </div>
+
+          {/* Add category usage warning */}
+          {categories.filter(category => (categorySelectionCounts[category.value as Category] || 0) >= 3).length > 0 && (
+            <div className="mb-6 p-4 bg-yellow-500/10 rounded-xl border border-yellow-500/20">
+              <p className="text-yellow-400 text-center">
+                <AlertCircle className="w-5 h-5 inline-block mr-2" />
+                بعض الفئات وصلت للحد الأقصى (3 مرات)
+              </p>
+            </div>
+          )}
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             {teams.map((team) => (
@@ -201,15 +203,6 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
           })}
         </div>
       </div>
-
-      {showEndNotification && winner && (
-        <div className="fixed inset-0 z-50">
-          <GameEndNotification
-            winner={winner}
-            onClose={handleNotificationClose}
-          />
-        </div>
-      )}
     </div>
   );
 };

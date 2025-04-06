@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import WelcomePage from './components/WelcomePage';
 import { AboutPage } from './components/AboutPage';
@@ -16,6 +16,7 @@ import { fetchRandomGame } from './services/rawgApi';
 import { fetchRandomFootballItem } from './services/footballApi';
 import { fetchRandomWrestler } from './services/wweApi';
 import { fetchRandomCountry } from './services/countriesApi';
+import { WinPage } from './components/WinPage';
 
 function AppRoutes() {
   const navigate = useNavigate();
@@ -27,7 +28,8 @@ function AppRoutes() {
     clearCategoryUsedItems,
     backToCategories,
     resetGame,
-    setCurrentItem
+    setCurrentItem,
+    gameEnded
   } = useGameStore();
 
   const shouldHideNav = isGameActive && (location.pathname === '/categories' || location.pathname === '/game');
@@ -89,6 +91,14 @@ function AppRoutes() {
     navigate('/');
   };
 
+  // Redirect to win page if game has ended and we're in a game-related page
+  useEffect(() => {
+    if (gameEnded && 
+        (location.pathname === '/categories' || location.pathname === '/game')) {
+      navigate('/win');
+    }
+  }, [gameEnded, location.pathname, navigate]);
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <NavigationBar />
@@ -98,7 +108,8 @@ function AppRoutes() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/setup" element={<GameSetup onStart={handleGameStart} />} />
-          {isGameActive ? (
+          <Route path="/win" element={<WinPage />} />
+          {!gameEnded && isGameActive ? (
             <>
               <Route path="/categories" element={
                 <CategorySelection 
@@ -114,7 +125,7 @@ function AppRoutes() {
               } />
             </>
           ) : (
-            <Route path="*" element={<Navigate to="/setup" replace />} />
+            !gameEnded && <Route path="*" element={<Navigate to="/setup" replace />} />
           )}
         </Routes>
       </main>

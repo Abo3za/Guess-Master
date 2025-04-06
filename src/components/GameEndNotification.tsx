@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Trophy } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { Trophy, AlertCircle, Users, Star, Award } from 'lucide-react';
 
 interface GameEndNotificationProps {
   winner: {
@@ -7,109 +7,86 @@ interface GameEndNotificationProps {
     score: number;
   };
   onClose: () => void;
+  reason: 'points' | 'categories';
 }
 
-export const GameEndNotification: React.FC<GameEndNotificationProps> = ({ winner, onClose }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [showContent, setShowContent] = useState(false);
-
+export const GameEndNotification: React.FC<GameEndNotificationProps> = ({ winner, onClose, reason }) => {
   useEffect(() => {
-    // Start the entrance animation
-    setIsVisible(true);
-    
-    // Show content after a short delay
-    const contentTimer = setTimeout(() => {
-      setShowContent(true);
-    }, 300);
-
-    // Auto-close after 5 seconds
-    const closeTimer = setTimeout(() => {
-      setIsVisible(false);
-      setShowContent(false);
-      setTimeout(onClose, 500); // Wait for fade-out animation
-    }, 5000);
-
+    // Prevent scrolling when notification is shown
+    document.body.style.overflow = 'hidden';
     return () => {
-      clearTimeout(contentTimer);
-      clearTimeout(closeTimer);
+      document.body.style.overflow = 'unset';
     };
-  }, [onClose]);
+  }, []);
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center">
-      {/* Backdrop */}
-      <div 
-        className={`fixed inset-0 bg-black/50 transition-opacity duration-500 ${
-          isVisible ? 'opacity-100' : 'opacity-0'
-        }`}
-        onClick={onClose}
-      />
-
-      {/* Notification Card */}
-      <div 
-        className={`relative bg-gradient-to-br from-purple-600 to-indigo-600 rounded-2xl p-8 shadow-2xl transform transition-all duration-500 ${
-          isVisible ? 'scale-100 opacity-100' : 'scale-95 opacity-0'
-        }`}
-      >
-        {/* Trophy Icon */}
-        <div 
-          className={`absolute -top-8 left-1/2 transform -translate-x-1/2 transition-all duration-500 ${
-            showContent ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0'
-          }`}
-        >
-          <div className="bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full p-4 shadow-lg">
-            <Trophy className="w-8 h-8 text-white" />
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm">
+      <div className="bg-gray-800 rounded-xl p-8 max-w-2xl w-full mx-4 border border-white/10">
+        <div className="text-center">
+          <div className="mb-8">
+            {reason === 'points' ? (
+              <div className="w-24 h-24 mx-auto bg-gradient-to-br from-yellow-500 to-amber-500 rounded-full flex items-center justify-center">
+                <Trophy className="w-16 h-16 text-white" />
+              </div>
+            ) : (
+              <div className="w-24 h-24 mx-auto bg-gradient-to-br from-blue-500 to-indigo-500 rounded-full flex items-center justify-center">
+                <AlertCircle className="w-16 h-16 text-white" />
+              </div>
+            )}
           </div>
-        </div>
 
-        {/* Content */}
-        <div 
-          className={`text-center text-white transition-all duration-500 ${
-            showContent ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
-          }`}
-        >
-          <h2 className="text-3xl font-bold mb-4">انتهت اللعبة!</h2>
-          <p className="text-xl mb-2">الفائز هو</p>
-          <p className="text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-            {winner.name}
-          </p>
-          <p className="text-2xl">
-            بـ <span className="font-bold">{winner.score}</span> نقطة
-          </p>
-        </div>
+          <h2 className="text-4xl font-bold mb-4">
+            {reason === 'points' ? 'مبروك!' : 'انتهت اللعبة!'}
+          </h2>
 
-        {/* Confetti Animation */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(50)].map((_, i) => (
-            <div
-              key={i}
-              className={`absolute w-2 h-2 bg-yellow-400 rounded-full transition-opacity duration-500 ${
-                showContent ? 'opacity-100' : 'opacity-0'
-              }`}
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animation: `confetti ${Math.random() * 2 + 1}s ease-out forwards`,
-                transform: `rotate(${Math.random() * 360}deg)`,
-              }}
-            />
-          ))}
+          <p className="text-xl text-gray-300 mb-8">
+            {reason === 'points' 
+              ? `${winner.name} وصل إلى النقاط المطلوبة للفوز!`
+              : 'تم استخدام جميع الفئات للحد الأقصى'}
+          </p>
+
+          <div className="bg-white/5 rounded-lg p-6 mb-8">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <Award className="w-8 h-8 text-yellow-400" />
+              <h3 className="text-2xl font-bold text-blue-400">الفائز</h3>
+            </div>
+            <div className="bg-gradient-to-r from-blue-500/20 to-indigo-500/20 rounded-lg p-4 mb-4">
+              <p className="text-3xl font-bold text-white">{winner.name}</p>
+              <p className="text-xl text-gray-400 mt-2">بـ {winner.score} نقطة</p>
+            </div>
+          </div>
+
+          <div className="bg-white/5 rounded-lg p-6 mb-8">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <Users className="w-8 h-8 text-blue-400" />
+              <h3 className="text-2xl font-bold text-blue-400">ملخص النتائج</h3>
+            </div>
+            <div className="space-y-4">
+              <div className="flex justify-between items-center p-4 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-lg">
+                <div className="flex items-center gap-3">
+                  <Star className="w-6 h-6 text-yellow-400" />
+                  <span className="text-xl font-bold text-white">{winner.name}</span>
+                </div>
+                <span className="text-2xl font-bold text-blue-400">{winner.score} نقطة</span>
+              </div>
+              <div className="flex justify-between items-center p-4 bg-gradient-to-r from-blue-500/10 to-indigo-500/10 rounded-lg">
+                <div className="flex items-center gap-3">
+                  <Star className="w-6 h-6 text-gray-400" />
+                  <span className="text-xl font-bold text-white">الفريق الثاني</span>
+                </div>
+                <span className="text-2xl font-bold text-gray-400">0 نقطة</span>
+              </div>
+            </div>
+          </div>
+
+          <button
+            onClick={onClose}
+            className="primary-button w-full bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-xl py-4"
+          >
+            بدء لعبة جديدة
+          </button>
         </div>
       </div>
-
-      {/* Animation Keyframes */}
-      <style jsx>{`
-        @keyframes confetti {
-          0% {
-            transform: translateY(0) rotate(0deg);
-            opacity: 1;
-          }
-          100% {
-            transform: translateY(-100vh) rotate(360deg);
-            opacity: 0;
-          }
-        }
-      `}</style>
     </div>
   );
 }; 

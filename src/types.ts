@@ -21,6 +21,8 @@ export interface GameItem {
     value: string;
     revealed: boolean;
   }[];
+  mediaUrl?: string;
+  isAudioOnly?: boolean;
 }
 
 export interface Team {

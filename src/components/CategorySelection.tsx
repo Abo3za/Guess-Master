@@ -43,6 +43,36 @@ const allCategories = [
     value: 'wwe',
     label: 'المصارعة',
     bgImage: '/Images/WrestlingCard.png'
+  },
+  {
+    value: 'music',
+    label: 'موسيقى',
+    bgImage: '/Images/MusicCard.avif'
+  },
+  {
+    value: 'sports',
+    label: 'رياضات متنوعة',
+    bgImage: '/Images/SportsCard.avif'
+  },
+  {
+    value: 'tech',
+    label: 'تكنولوجيا',
+    bgImage: '/Images/TechnologyCard.webp'
+  },
+  {
+    value: 'history',
+    label: 'تاريخ',
+    bgImage: '/Images/HistoryCard.jpg'
+  },
+  {
+    value: 'geography',
+    label: 'جغرافيا',
+    bgImage: '/Images/GeographyCard.jpg'
+  },
+  {
+    value: 'science',
+    label: 'علوم',
+    bgImage: '/Images/scienceCard.webp'
   }
 ];
 
@@ -141,7 +171,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
                   team.isActive ? 'ring-2 ring-blue-500' : ''
                 }`}
                 style={{
-                  backgroundImage: 'url(/Images/Team1.png)',
+                  backgroundImage: 'url(/Images/Team1.webp)',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
@@ -215,7 +245,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
                   team.isActive ? 'ring-2 ring-blue-500' : ''
                 }`}
                 style={{
-                  backgroundImage: 'url(/Images/Team2.png)',
+                  backgroundImage: 'url(/Images/Team2.webp)',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}

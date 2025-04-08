@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Crown, Eye, Lightbulb, X } from 'lucide-react';
+import { ArrowRight, Crown, Eye, Lightbulb, X, Play, Pause } from 'lucide-react';
 import { useGameStore, CATEGORIES } from '../store/gameStore';
 import { useNavigate } from 'react-router-dom';
 
@@ -24,6 +24,8 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
 
   const [showAnswer, setShowAnswer] = useState(false);
   const [selectedTeam, setSelectedTeam] = useState<number | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [iframeKey, setIframeKey] = useState(0);
 
   useEffect(() => {
     const savedGameState = localStorage.getItem('gameState');
@@ -131,6 +133,11 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
     navigate('/categories');
   };
 
+  const handlePlayPause = () => {
+    setIsPlaying(!isPlaying);
+    setIframeKey(prev => prev + 1); // Reset iframe to trigger new state
+  };
+
   if (!currentItem) return null;
 
   const categoryLabel = selectedCategory && CATEGORIES[selectedCategory] 
@@ -162,6 +169,40 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
               </span>
             </div>
           </div>
+
+          {/* Audio Player for Music Category */}
+          {currentItem.category === 'music' && currentItem.mediaUrl && (
+            <div className="mb-8">
+              <div className="bg-gray-700/50 rounded-lg p-4">
+                {isPlaying && (
+                  <iframe
+                    key={iframeKey}
+                    className="w-full"
+                    height="80"
+                    src={currentItem.mediaUrl}
+                    title="Music Preview"
+                    allow="autoplay"
+                    style={{ display: currentItem.isAudioOnly ? 'none' : 'block' }}
+                  />
+                )}
+                <div className="h-20 flex items-center justify-center gap-4">
+                  <button
+                    onClick={handlePlayPause}
+                    className="bg-blue-500 hover:bg-blue-600 text-white rounded-full p-4 transition-all duration-300"
+                  >
+                    {isPlaying ? (
+                      <Pause className="w-6 h-6" />
+                    ) : (
+                      <Play className="w-6 h-6" />
+                    )}
+                  </button>
+                  <p className="text-gray-400">
+                    {isPlaying ? 'جاري تشغيل المقطع الصوتي...' : 'اضغط للتشغيل'}
+                  </p>
+                </div>
+              </div>
+            </div>
+          )}
 
           <div className="grid grid-cols-2 gap-6">
             {currentItem.details.map((detail, index) => (

@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "title": "Blinding Lights",
+        "artist": "The Weeknd",
+        "youtube_url": "https://www.youtube.com/watch?v=4NRXx6U8ABQ",
+        "release_year": 2019,
+        "genre": ["Synth-pop", "Pop"],
+        "album": "After Hours",
+        "main_lyric": "I'm blinded by the lights",
+        "answer": "Blinding Lights"
+    },
+    {
+        "id": 2,
+        "title": "Shape of You",
+        "artist": "Ed Sheeran",
+        "youtube_url": "https://www.youtube.com/watch?v=JGwWNGJdvx8",
+        "release_year": 2017,
+        "genre": ["Pop"],
+        "album": "÷ (Divide)",
+        "main_lyric": "I'm in love with the shape of you",
+        "answer": "Shape of You"
+    },
+    {
+        "id": 3,
+        "title": "Levitating",
+        "artist": "Dua Lipa",
+        "youtube_url": "https://www.youtube.com/watch?v=TUVcZfQe-Kw",
+        "release_year": 2020,
+        "genre": ["Disco", "Pop"],
+        "album": "Future Nostalgia",
+        "main_lyric": "I got you, moonlight, you're my starlight",
+        "answer": "Levitating"
+    },
+    {
+        "id": 4,
+        "title": "Peaches",
+        "artist": "Justin Bieber",
+        "youtube_url": "https://www.youtube.com/watch?v=tQ0yjYUFKAE",
+        "release_year": 2021,
+        "genre": ["R&B", "Pop"],
+        "album": "Justice",
+        "main_lyric": "I got my peaches out in Georgia",
+        "answer": "Peaches"
+    },
+    {
+        "id": 5,
+        "title": "Bad Guy",
+        "artist": "Billie Eilish",
+        "youtube_url": "https://www.youtube.com/watch?v=DyDfgMOUjCI",
+        "release_year": 2019,
+        "genre": ["Pop", "Electropop"],
+        "album": "When We All Fall Asleep, Where Do We Go?",
+        "main_lyric": "I'm the bad guy, duh",
+        "answer": "Bad Guy"
+    },
+    {
+        "id": 6,
+        "title": "Old Town Road",
+        "artist": "Lil Nas X",
+        "youtube_url": "https://www.youtube.com/watch?v=r7qovpFAGrQ",
+        "release_year": 2019,
+        "genre": ["Country Rap"],
+        "album": "7",
+        "main_lyric": "Can't nobody tell me nothing",
+        "answer": "Old Town Road"
+    },
+    {
+        "id": 7,
+        "title": "Happier Than Ever",
+        "artist": "Billie Eilish",
+        "youtube_url": "https://www.youtube.com/watch?v=5GJWxDKyk3A",
+        "release_year": 2021,
+        "genre": ["Alternative", "Pop Rock"],
+        "album": "Happier Than Ever",
+        "main_lyric": "When I'm away from you, I'm happier than ever",
+        "answer": "Happier Than Ever"
+    },
+    {
+        "id": 8,
+        "title": "Watermelon Sugar",
+        "artist": "Harry Styles",
+        "youtube_url": "https://www.youtube.com/watch?v=E07s5ZYygMg",
+        "release_year": 2019,
+        "genre": ["Pop Rock"],
+        "album": "Fine Line",
+        "main_lyric": "Watermelon sugar high",
+        "answer": "Watermelon Sugar"
+    },
+    {
+        "id": 9,
+        "title": "Senorita",
+        "artist": "Shawn Mendes & Camila Cabello",
+        "youtube_url": "https://www.youtube.com/watch?v=Pkh8UtuejGw",
+        "release_year": 2019,
+        "genre": ["Latin Pop"],
+        "album": "Shawn Mendes (Deluxe)",
+        "main_lyric": "I love it when you call me señorita",
+        "answer": "Senorita"
+    },
+    {
+        "id": 10,
+        "title": "Stay",
+        "artist": "The Kid LAROI & Justin Bieber",
+        "youtube_url": "https://www.youtube.com/watch?v=kTJczUoc26U",
+        "release_year": 2021,
+        "genre": ["Pop", "Synth-pop"],
+        "album": "Stay (Single)",
+        "main_lyric": "I do the same thing I told you that I never would",
+        "answer": "Stay"
+    }
+]

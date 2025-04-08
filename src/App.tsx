@@ -14,6 +14,7 @@ import { fetchRandomTVShow } from './services/tvSeriesApi';
 import { fetchRandomGame } from './services/rawgApi';
 import { fetchRandomFootballItem } from './services/footballApi';
 import { fetchRandomWrestler } from './services/wweApi';
+import { fetchRandomMusic } from './services/Music';
 import { WinPage } from './components/WinPage';
 import WelcomePage from './components/WelcomePage';
 import SignUp from './components/SignUp';
@@ -124,8 +125,10 @@ function AppRoutes() {
         case 'wwe':
           item = await fetchRandomWrestler(category);
           break;
-        // For demo categories, use placeholder data
         case 'music':
+          item = await fetchRandomMusic(category);
+          break;
+        // For demo categories, use placeholder data
         case 'sports':
         case 'tech':
         case 'history':

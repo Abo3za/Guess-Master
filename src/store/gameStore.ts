@@ -2,7 +2,20 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { GameState, Team, GameItem, Category } from '../types';
 
-export type Category = 'anime' | 'movies' | 'games' | 'books' | 'songs' | 'celebrities';
+export type Category = 
+  | 'anime'
+  | 'tv'
+  | 'movies'
+  | 'games'
+  | 'football'
+  | 'wwe'
+  | 'music'
+  | 'sports'
+  | 'tech'
+  | 'history'
+  | 'geography'
+  | 'science'
+  | 'religion';
 
 interface CategoryInfo {
   label: string;
@@ -10,12 +23,19 @@ interface CategoryInfo {
 }
 
 export const CATEGORIES: Record<Category, CategoryInfo> = {
-  anime: { label: 'الأنمي', icon: '🎭' },
-  movies: { label: 'الأفلام', icon: '🎬' },
-  games: { label: 'الألعاب', icon: '🎮' },
-  books: { label: 'الكتب', icon: '📚' },
-  songs: { label: 'الأغاني', icon: '🎵' },
-  celebrities: { label: 'المشاهير', icon: '🌟' }
+  anime: { label: 'أنمي', icon: '🎭' },
+  tv: { label: 'مسلسلات', icon: '📺' },
+  movies: { label: 'أفلام', icon: '🎬' },
+  games: { label: 'ألعاب', icon: '🎮' },
+  football: { label: 'كرة القدم', icon: '⚽' },
+  wwe: { label: 'المصارعة', icon: '🤼' },
+  music: { label: 'موسيقى', icon: '🎵' },
+  sports: { label: 'رياضات متنوعة', icon: '🏆' },
+  tech: { label: 'تكنولوجيا', icon: '💻' },
+  history: { label: 'تاريخ', icon: '📜' },
+  geography: { label: 'جغرافيا', icon: '🌍' },
+  science: { label: 'علوم', icon: '🔬' },
+  religion: { label: 'دين', icon: '🕌' }
 };
 
 interface GameStore extends GameState {

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Plus, X, Crown, Play } from 'lucide-react';
 import { useGameStore } from '../store/gameStore';
 import { useNavigate } from 'react-router-dom';
+import { Team } from '../types';
 
 interface GameSetupProps {
   onStart: (
@@ -12,14 +13,26 @@ interface GameSetupProps {
   ) => void;
 }
 
-const RECOMMENDED_POINTS = [
+interface Category {
+  value: string;
+  label: string;
+  bgImage: string;
+}
+
+interface PointOption {
+  value: number;
+  label: string;
+  description: string;
+}
+
+const RECOMMENDED_POINTS: PointOption[] = [
   { value: 100, label: 'سريعة', description: 'مباراة قصيرة (15-20 دقيقة)' },
   { value: 200, label: 'عادية', description: 'مباراة متوسطة (25-30 دقيقة)' },
   { value: 300, label: 'طويلة', description: 'مباراة طويلة (35-45 دقيقة)' },
 ];
 
 // Extended category list including both real and placeholder categories
-const allCategories = [
+const allCategories: Category[] = [
   {
     value: 'anime',
     label: 'أنمي',
@@ -79,6 +92,11 @@ const allCategories = [
     value: 'science',
     label: 'علوم',
     bgImage: '/Images/scienceCard.webp'
+  },
+  {
+    value: 'religion',
+    label: 'دين',
+    bgImage: '/Images/IslamCard.jpg'
   }
 ];
 

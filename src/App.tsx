@@ -15,6 +15,7 @@ import { fetchRandomGame } from './services/rawgApi';
 import { fetchRandomFootballItem } from './services/footballApi';
 import { fetchRandomWrestler } from './services/wweApi';
 import { fetchRandomMusic } from './services/Music';
+import { fetchRandomReligion } from './services/religionApi';
 import { WinPage } from './components/WinPage';
 import WelcomePage from './components/WelcomePage';
 import SignUp from './components/SignUp';
@@ -127,6 +128,9 @@ function AppRoutes() {
           break;
         case 'music':
           item = await fetchRandomMusic(category);
+          break;
+        case 'religion':
+          item = await fetchRandomReligion(category);
           break;
         // For demo categories, use placeholder data
         case 'sports':

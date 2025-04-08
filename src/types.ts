@@ -10,7 +10,8 @@ export type Category =
   | 'tech'
   | 'history'
   | 'geography'
-  | 'science';
+  | 'science'
+  | 'religion';
 
 export interface GameItem {
   id: string;

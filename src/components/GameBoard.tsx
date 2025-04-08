@@ -156,16 +156,17 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
       </button>
 
       <div className="max-w-4xl mx-auto">
-        <div className="bg-gray-800 rounded-xl p-8 shadow-xl mb-8">
-          <div className="flex justify-between items-center mb-6">
-            <div className="flex items-center gap-4">
+        <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 shadow-2xl mb-8 border border-gray-700/50">
+          <div className="flex justify-between items-center mb-8">
+            <div className="flex items-center gap-4 bg-blue-500/10 px-6 py-3 rounded-xl border border-blue-500/20">
               <h2 className="text-2xl font-bold text-blue-400">التصنيف:</h2>
-              <span className="text-white font-bold text-xl">{categoryLabel}</span>
+              <span className="text-white font-bold text-2xl">{categoryLabel}</span>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-gray-300">الفريق النشط:</span>
-              <span className="text-white font-bold">
+            <div className="flex items-center gap-2 bg-green-500/10 px-6 py-3 rounded-xl border border-green-500/20">
+              <span className="text-gray-300">دور:</span>
+              <span className="text-white font-bold text-xl flex items-center gap-2">
                 {teams.find(t => t.isActive)?.name}
+                <Crown className="w-5 h-5 text-yellow-400" />
               </span>
             </div>
           </div>
@@ -188,7 +189,7 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
                 <div className="h-20 flex items-center justify-center gap-4">
                   <button
                     onClick={handlePlayPause}
-                    className="bg-blue-500 hover:bg-blue-600 text-white rounded-full p-4 transition-all duration-300"
+                    className="bg-blue-500 hover:bg-blue-600 text-white rounded-full p-4 transition-all duration-300 transform hover:scale-110"
                   >
                     {isPlaying ? (
                       <Pause className="w-6 h-6" />
@@ -208,21 +209,24 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
             {currentItem.details.map((detail, index) => (
               <div
                 key={index}
-                className={`bg-gray-700/50 rounded-lg p-6 ${
-                  detail.revealed ? 'opacity-100' : 'opacity-50'
-                }`}
+                className={`transform transition-all duration-300 ${
+                  detail.revealed 
+                    ? 'bg-gradient-to-br from-blue-900/50 to-blue-800/30 scale-100' 
+                    : 'bg-gradient-to-br from-gray-800/50 to-gray-700/30 hover:scale-105'
+                } rounded-xl p-6 shadow-lg border border-gray-700/50`}
               >
                 {!detail.revealed ? (
                   <button
                     onClick={() => handleReveal(index)}
-                    className="w-full h-full flex items-center justify-center"
+                    className="w-full h-32 flex flex-col items-center justify-center gap-3 text-gray-400 hover:text-blue-400 transition-colors duration-300"
                   >
-                    <Eye className="w-8 h-8 text-gray-400" />
+                    <Eye className="w-8 h-8" />
+                    <span className="text-sm">انقر لكشف التلميح</span>
                   </button>
                 ) : (
-                  <div className="text-center">
-                    <p className="text-sm text-gray-400 mb-2">{detail.label}</p>
-                    <p className="text-lg text-white">{detail.value}</p>
+                  <div className="text-center h-32 flex flex-col items-center justify-center">
+                    <p className="text-sm text-blue-400 mb-3 font-medium">{detail.label}</p>
+                    <p className="text-xl text-white font-bold">{detail.value}</p>
                   </div>
                 )}
               </div>
@@ -233,22 +237,22 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
         {!showAnswer ? (
           <button
             onClick={() => setShowAnswer(true)}
-            className="primary-button px-8 py-4 text-xl flex items-center justify-center gap-2 w-full"
+            className="bg-gradient-to-r from-yellow-600 to-yellow-500 hover:from-yellow-500 hover:to-yellow-400 text-white px-8 py-4 rounded-xl text-xl font-bold flex items-center justify-center gap-3 w-full transform transition-all duration-300 hover:scale-105 shadow-lg"
           >
-            <Lightbulb className="w-6 h-6" />
-            كشف الجواب
+            <Lightbulb className="w-7 h-7" />
+            هل عرفت الإجابة؟ اضغط هنا!
           </button>
         ) : (
           <>
-            <div className="bg-gray-800 rounded-xl p-8 shadow-xl mb-8">
+            <div className="bg-gradient-to-br from-green-900/50 to-green-800/30 rounded-xl p-8 shadow-xl mb-8 border border-green-500/20">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-blue-400 mb-4">الإجابة</h3>
-                <p className="text-3xl font-bold text-white">{currentItem.name}</p>
+                <h3 className="text-2xl font-bold text-green-400 mb-4">الإجابة الصحيحة هي</h3>
+                <p className="text-4xl font-bold text-white bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">{currentItem.name}</p>
               </div>
             </div>
 
-            <div className="bg-gray-800 rounded-xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold text-blue-400 mb-4 text-center">اختر الفريق الذي جاوب</h3>
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 shadow-xl border border-gray-700/50">
+              <h3 className="text-2xl font-bold text-blue-400 mb-6 text-center">من الفريق الذي عرف الإجابة؟</h3>
               <div className="grid grid-cols-2 gap-4">
                 {teams.map((team) => (
                   <button

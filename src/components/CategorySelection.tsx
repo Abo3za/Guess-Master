@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Category } from '../types';
+import { Category, CategoryOption } from '../types';
 import { 
   Users,
   Flag, Trophy, Crown,
@@ -13,65 +13,83 @@ interface CategorySelectionProps {
   onResetGame: () => void;
 }
 
-const allCategories = [
+const allCategories: CategoryOption[] = [
   {
     value: 'anime',
     label: 'أنمي',
+    icon: null,
     bgImage: '/Images/AnimesCard.png'
   },
   {
     value: 'tv',
     label: 'مسلسلات',
+    icon: null,
     bgImage: '/Images/SeriesCard.png'
   },
   {
     value: 'movies',
     label: 'أفلام',
+    icon: null,
     bgImage: '/Images/MoviesCard.png'
   },
   {
     value: 'games',
     label: 'ألعاب',
+    icon: null,
     bgImage: '/Images/GamesCard.png'
   },
   {
     value: 'football',
     label: 'كرة القدم',
+    icon: null,
     bgImage: '/Images/FootballCard.png'
   },
   {
     value: 'wwe',
     label: 'المصارعة',
+    icon: null,
     bgImage: '/Images/WrestlingCard.png'
   },
   {
     value: 'music',
     label: 'موسيقى',
+    icon: null,
     bgImage: '/Images/MusicCard.avif'
+  },
+  {
+    value: 'religion',
+    label: 'دين',
+    icon: null,
+    bgImage: '/Images/IslamCard.jpg'
   },
   {
     value: 'sports',
     label: 'رياضات متنوعة',
+    icon: null,
     bgImage: '/Images/SportsCard.avif'
   },
   {
     value: 'tech',
     label: 'تكنولوجيا',
+    icon: null,
     bgImage: '/Images/TechnologyCard.webp'
   },
   {
     value: 'history',
     label: 'تاريخ',
+    icon: null,
     bgImage: '/Images/HistoryCard.jpg'
   },
   {
     value: 'geography',
     label: 'جغرافيا',
+    icon: null,
     bgImage: '/Images/GeographyCard.jpg'
   },
   {
     value: 'science',
     label: 'علوم',
+    icon: null,
     bgImage: '/Images/scienceCard.webp'
   }
 ];
@@ -97,7 +115,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
   // Check if all categories have reached their limit
   const checkAllCategoriesUsed = () => {
     return categories.every(category => 
-      (categorySelectionCounts[category.value as Category] || 0) >= 3
+      (categorySelectionCounts[category.value] || 0) >= 3
     );
   };
 
@@ -118,13 +136,13 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
     }
   }, [teams, categorySelectionCounts, gameEnded, checkWinCondition, endGame]);
 
-  const handleCategorySelect = (category: Category) => {
+  const handleCategorySelect = (category: CategoryOption) => {
     if (gameEnded) return;
-    const selectionCount = categorySelectionCounts[category] || 0;
+    const selectionCount = categorySelectionCounts[category.value] || 0;
     if (selectionCount >= 3) {
       return;
     }
-    onSelect(category);
+    onSelect(category.value);
   };
 
   const handleEndGame = () => {
@@ -152,7 +170,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
         </div>
 
         {/* Add category usage warning */}
-        {categories.filter(category => (categorySelectionCounts[category.value as Category] || 0) >= 3).length > 0 && (
+        {categories.filter(category => (categorySelectionCounts[category.value] || 0) >= 3).length > 0 && (
           <div className="mb-6 p-4 bg-yellow-500/10 rounded-xl border border-yellow-500/20">
             <p className="text-yellow-400 text-center">
               <AlertCircle className="w-5 h-5 inline-block mr-2" />
@@ -203,13 +221,13 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
 
             <div className="grid grid-cols-2 gap-8 flex-1">
               {categories.map((category) => {
-                const selectionCount = categorySelectionCounts[category.value as Category] || 0;
+                const selectionCount = categorySelectionCounts[category.value] || 0;
                 const isDisabled = selectionCount >= 3;
                 
                 return (
                   <div key={category.value} className="relative group">
                     <button
-                      onClick={() => handleCategorySelect(category.value as Category)}
+                      onClick={() => handleCategorySelect(category)}
                       disabled={isDisabled}
                       className={`category-card ${
                         isDisabled ? 'opacity-50 cursor-not-allowed' : 'group-hover:scale-105'

@@ -97,6 +97,11 @@ const allCategories: Category[] = [
     value: 'religion',
     label: 'دين',
     bgImage: '/Images/IslamCard.jpg'
+  },
+  {
+    value: 'whoami',
+    label: 'من انا',
+    bgImage: '/Images/WhoAmICard.png'
   }
 ];
 

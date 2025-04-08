@@ -91,6 +91,12 @@ const allCategories: CategoryOption[] = [
     label: 'علوم',
     icon: null,
     bgImage: '/Images/scienceCard.webp'
+  },
+  {
+    value: 'whoami',
+    label: 'من انا',
+    icon: null,
+    bgImage: '/Images/WhoAmICard.png'
   }
 ];
 

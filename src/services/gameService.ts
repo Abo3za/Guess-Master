@@ -5,6 +5,7 @@ import tvSeriesDB from '../Database/TVSeries.json';
 import gamesDB from '../Database/GamesDB.json';
 import footballDB from '../Database/FootballDB.json';
 import wweDB from '../Database/WWEDB.json';
+import whoAmIDB from '../Database/WhoAmIDB.json';
 
 const categoryToDB: Record<Category, any[]> = {
   anime: animeDB,
@@ -13,6 +14,7 @@ const categoryToDB: Record<Category, any[]> = {
   games: gamesDB,
   football: footballDB,
   wwe: wweDB,
+  whoami: whoAmIDB,
   countries: [] // No database for countries yet
 };
 
@@ -24,6 +26,22 @@ export const getRandomItem = (category: Category): GameItem | null => {
   const item = db[randomIndex];
 
   // Convert the database item to a GameItem
+  if (category === 'whoami') {
+    return {
+      id: item.id.toString(),
+      category,
+      name: item.name,
+      details: [
+        { label: 'المهنة', value: item.occupation || '', revealed: false },
+        { label: 'الجنسية', value: item.nationality || '', revealed: false },
+        { label: 'العمر/تاريخ الميلاد', value: item.birthDate || '', revealed: false },
+        { label: 'الإنجازات', value: item.achievements || '', revealed: false },
+        { label: 'معلومة مميزة', value: item.highlight || '', revealed: false },
+        { label: 'مجال الشهرة', value: item.field || '', revealed: false }
+      ].filter(detail => detail.value)
+    };
+  }
+
   return {
     id: item.id.toString(),
     category,
@@ -33,6 +51,6 @@ export const getRandomItem = (category: Category): GameItem | null => {
       { label: 'التصنيف', value: Array.isArray(item.genre) ? item.genre.join(', ') : item.genre || '', revealed: false },
       { label: 'الاستوديو', value: item.studio || '', revealed: false },
       { label: 'الشخصية الرئيسية', value: item.main_character || '', revealed: false }
-    ].filter(detail => detail.value) // Only include details that have values
+    ].filter(detail => detail.value)
   };
 }; 

@@ -97,6 +97,12 @@ const allCategories: CategoryOption[] = [
     label: 'من انا',
     icon: null,
     bgImage: '/Images/WhoAmICard.png'
+  },
+  {
+    value: 'memories',
+    label: 'ذكريات',
+    icon: null,
+    bgImage: '/Images/OldCard.jpg'
   }
 ];
 

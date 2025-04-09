@@ -102,6 +102,11 @@ const allCategories: Category[] = [
     value: 'whoami',
     label: 'من انا',
     bgImage: '/Images/WhoAmICard.png'
+  },
+  {
+    value: 'memories',
+    label: 'ذكريات',
+    bgImage: '/Images/OldCard.jpg'
   }
 ];
 

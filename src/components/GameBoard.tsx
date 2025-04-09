@@ -171,6 +171,30 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
             </div>
           </div>
 
+          {/* Add descriptive text for what to guess */}
+          <div className="bg-gray-800/50 rounded-xl p-4 mb-8 text-center">
+            <p className="text-xl text-gray-300">
+              خمن {
+                selectedCategory === 'anime' ? 'اسم الأنمي' :
+                selectedCategory === 'tv' ? 'اسم المسلسل' :
+                selectedCategory === 'movies' ? 'اسم الفيلم' :
+                selectedCategory === 'games' ? 'اسم اللعبة' :
+                selectedCategory === 'football' ? 'اسم اللاعب' :
+                selectedCategory === 'wwe' ? 'اسم المصارع' :
+                selectedCategory === 'music' ? 'اسم الأغنية أو الفنان' :
+                selectedCategory === 'sports' ? 'اسم الرياضي أو الرياضة' :
+                selectedCategory === 'tech' ? 'اسم التقنية أو الجهاز' :
+                selectedCategory === 'history' ? 'الحدث أو الشخصية التاريخية' :
+                selectedCategory === 'geography' ? 'المكان أو المعلم الجغرافي' :
+                selectedCategory === 'science' ? 'المصطلح أو الاكتشاف العلمي' :
+                selectedCategory === 'religion' ? 'المصطلح أو الشخصية الدينية' :
+                selectedCategory === 'whoami' ? 'الشخصية' :
+                selectedCategory === 'memories' ? 'الذكرى أو الشيء القديم' :
+                'الإجابة الصحيحة'
+              }
+            </p>
+          </div>
+
           {/* Audio Player for Music Category */}
           {currentItem.category === 'music' && currentItem.mediaUrl && (
             <div className="mb-8">

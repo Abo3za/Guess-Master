@@ -17,6 +17,7 @@ import { fetchRandomWrestler } from './services/wweApi';
 import { fetchRandomMusic } from './services/Music';
 import { fetchRandomReligion } from './services/religionApi';
 import { fetchRandomWhoAmI } from './services/whoAmIApi';
+import { fetchRandomMemory } from './services/memoriesApi';
 import { WinPage } from './components/WinPage';
 import WelcomePage from './components/WelcomePage';
 import SignUp from './components/SignUp';
@@ -135,6 +136,9 @@ function AppRoutes() {
           break;
         case 'whoami':
           item = await fetchRandomWhoAmI(category);
+          break;
+        case 'memories':
+          item = await fetchRandomMemory(category);
           break;
         // For demo categories, use placeholder data
         case 'sports':

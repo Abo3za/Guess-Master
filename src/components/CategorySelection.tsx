@@ -164,7 +164,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
   return (
     <div className="min-h-screen bg-gray-900 fixed inset-0 overflow-auto">
       <div className="h-full px-4 py-8" dir="rtl">
-        <div className="flex justify-between items-center gap-4 mb-8">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
           <div className="text-center bg-blue-500/10 px-6 py-3 rounded-xl border border-blue-500/20">
             <span className="text-xl font-bold text-blue-400 flex items-center gap-2">
               <Trophy className="w-6 h-6" />
@@ -191,9 +191,9 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
           </div>
         )}
 
-        <div className="flex gap-8 h-[calc(100vh-10rem)]">
+        <div className="flex flex-col md:flex-row gap-8 h-[calc(100vh-10rem)]">
           {/* الفريق الأول - يمين */}
-          <div className="w-1/4 bg-gray-800/50 rounded-2xl p-6">
+          <div className="w-full md:w-1/4 bg-gray-800/50 rounded-2xl p-6">
             {teams.slice(0, 1).map((team) => (
               <div
                 key={team.id}
@@ -221,7 +221,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
           </div>
 
           {/* المحتوى الرئيسي - المنتصف */}
-          <div className="w-2/4 flex flex-col">
+          <div className="w-full md:w-2/4 flex flex-col">
             <div className="text-center mb-8 bg-gray-800/50 rounded-2xl p-6">
               <h2 className="text-5xl font-bold text-blue-400 mb-4">
                 دور {activeTeam?.name}
@@ -231,7 +231,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-8 flex-1">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8 flex-1">
               {categories.map((category) => {
                 const selectionCount = categorySelectionCounts[category.value] || 0;
                 const isDisabled = selectionCount >= 3;
@@ -267,7 +267,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
           </div>
 
           {/* الفريق الثاني - يسار */}
-          <div className="w-1/4 bg-gray-800/50 rounded-2xl p-6">
+          <div className="w-full md:w-1/4 bg-gray-800/50 rounded-2xl p-6">
             {teams.slice(1, 2).map((team) => (
               <div
                 key={team.id}

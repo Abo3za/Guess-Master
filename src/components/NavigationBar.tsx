@@ -6,11 +6,11 @@ import { auth } from '../services/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 
 const NavigationBar: React.FC = () => {
-  const { isGameActive } = useGameStore();
+  const { isGameActive, resetGame } = useGameStore();
   const location = useLocation();
   const navigate = useNavigate();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const shouldHideNav = isGameActive && (location.pathname === '/categories' || location.pathname === '/game');
+  const shouldHideNav = isGameActive || location.pathname === '/win';
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -30,19 +30,30 @@ const NavigationBar: React.FC = () => {
     }
   };
 
+  const handleNavigation = (path: string) => {
+    if (isGameActive) {
+      resetGame();
+      setTimeout(() => {
+        navigate(path);
+      }, 100);
+    } else {
+      navigate(path);
+    }
+  };
+
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-lg border-b border-white/5 shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/40 backdrop-blur-lg">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo and Profile Button */}
           <div className="flex items-center gap-4">
-            <Link to="/" className="flex items-center">
+            <button onClick={() => handleNavigation('/')} className="flex items-center">
               <img 
                 src="/Images/Logo.png" 
                 alt="Guess Master Logo" 
                 className="h-16 w-auto"
               />
-            </Link>
+            </button>
             <button
               onClick={handleProfileClick}
               className="flex items-center gap-2 bg-white/10 hover:bg-white/20 transition-colors px-4 py-2 rounded-lg text-gray-200 hover:text-white"
@@ -54,27 +65,27 @@ const NavigationBar: React.FC = () => {
 
           {/* Navigation Links */}
           <div className="flex items-center gap-6">
-            <Link
-              to="/"
+            <button
+              onClick={() => handleNavigation('/')}
               className="text-gray-200 hover:text-white transition-colors flex items-center gap-2 text-lg hover:bg-white/10 px-4 py-2 rounded-lg"
             >
               <Home className="w-5 h-5" />
               الرئيسية
-            </Link>
-            <Link
-              to="/about"
+            </button>
+            <button
+              onClick={() => handleNavigation('/about')}
               className="text-gray-200 hover:text-white transition-colors flex items-center gap-2 text-lg hover:bg-white/10 px-4 py-2 rounded-lg"
             >
               <Info className="w-5 h-5" />
               عن اللعبة
-            </Link>
-            <Link
-              to="/contact"
+            </button>
+            <button
+              onClick={() => handleNavigation('/contact')}
               className="text-gray-200 hover:text-white transition-colors flex items-center gap-2 text-lg hover:bg-white/10 px-4 py-2 rounded-lg"
             >
               <MessageSquare className="w-5 h-5" />
               تواصل معنا
-            </Link>
+            </button>
           </div>
         </div>
       </div>

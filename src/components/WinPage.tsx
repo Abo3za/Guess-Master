@@ -9,7 +9,7 @@ interface WinPageProps {
 
 export const WinPage: React.FC<WinPageProps> = ({ onPlayAgain }) => {
   const navigate = useNavigate();
-  const { teams, winningPoints, gameEnded, resetGame } = useGameStore();
+  const { teams, winningPoints, gameEnded, resetGame, isGameActive } = useGameStore();
 
   useEffect(() => {
     // If there are no teams or game hasn't ended, redirect to setup
@@ -29,13 +29,16 @@ export const WinPage: React.FC<WinPageProps> = ({ onPlayAgain }) => {
 
   const handleHomeClick = () => {
     resetGame();
-    navigate('/');
+    setTimeout(() => {
+      navigate('/');
+    }, 100);
   };
 
   const handleNewGameClick = () => {
     resetGame();
-    onPlayAgain();
-    navigate('/setup');
+    setTimeout(() => {
+      navigate('/setup');
+    }, 100);
   };
 
   if (!winner) {
@@ -124,14 +127,14 @@ export const WinPage: React.FC<WinPageProps> = ({ onPlayAgain }) => {
           <div className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={handleHomeClick}
-              className="primary-button flex-1 text-xl py-4 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 transform transition-all duration-300 hover:scale-105"
+              className="primary-button flex-1 text-xl py-4 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 transform transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
             >
               <Home className="w-6 h-6" />
               الصفحة الرئيسية
             </button>
             <button
               onClick={handleNewGameClick}
-              className="primary-button flex-1 text-xl py-4 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 transform transition-all duration-300 hover:scale-105"
+              className="primary-button flex-1 text-xl py-4 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 transform transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
             >
               <Gamepad2 className="w-6 h-6" />
               لعبة جديدة

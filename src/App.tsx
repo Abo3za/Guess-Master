@@ -50,6 +50,13 @@ function AppRoutes() {
     const savedGameState = localStorage.getItem('gameState');
     if (savedGameState) {
       const state = JSON.parse(savedGameState);
+      
+      // Don't restore if game has ended
+      if (state.gameEnded) {
+        localStorage.removeItem('gameState');
+        return;
+      }
+
       if (state.isGameActive) {
         // استرجاع حالة اللعبة كاملة
         initializeGame(
@@ -63,8 +70,8 @@ function AppRoutes() {
           setCurrentItem(state.currentItem);
         }
 
-        // توجيه المستخدم إلى الصفحة المناسبة
-        if (location.pathname === '/') {
+        // Only redirect if we're on the home page or setup page
+        if (location.pathname === '/' || location.pathname === '/setup') {
           if (state.currentItem) {
             navigate('/game');
           } else {
@@ -77,7 +84,7 @@ function AppRoutes() {
 
   // حفظ حالة اللعبة عند أي تغيير
   useEffect(() => {
-    if (isGameActive) {
+    if (isGameActive && !gameEnded) {
       const gameState = {
         isGameActive,
         teams,
@@ -85,11 +92,15 @@ function AppRoutes() {
         hideHints,
         selectedCategories,
         currentItem,
+        gameEnded,
         lastUpdated: new Date().toISOString()
       };
       localStorage.setItem('gameState', JSON.stringify(gameState));
+    } else if (gameEnded) {
+      // Clear game state when game ends
+      localStorage.removeItem('gameState');
     }
-  }, [isGameActive, teams, winningPoints, hideHints, selectedCategories, currentItem]);
+  }, [isGameActive, teams, winningPoints, hideHints, selectedCategories, currentItem, gameEnded]);
 
   const shouldHideNav = isGameActive && (location.pathname === '/play' || location.pathname === '/game') && !gameEnded;
 
@@ -246,19 +257,16 @@ function AppRoutes() {
               />
             </ProtectedRoute>
           } />
-          <Route path="/profile" element={
-            <ProtectedRoute>
-              <UserProfile />
-            </ProtectedRoute>
-          } />
           <Route path="/win" element={
             <ProtectedRoute>
               <WinPage onPlayAgain={handleResetGame} />
             </ProtectedRoute>
           } />
-
-          {/* Fallback Route */}
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="/profile" element={
+            <ProtectedRoute>
+              <UserProfile />
+            </ProtectedRoute>
+          } />
         </Routes>
       </main>
     </div>
@@ -268,33 +276,7 @@ function AppRoutes() {
 function App() {
   return (
     <Router>
-      <div dir="rtl">
-        <Toaster
-          position="top-center"
-          reverseOrder={false}
-          toastOptions={{
-            duration: 3000,
-            style: {
-              background: '#1F2937',
-              color: '#fff',
-              fontSize: '16px',
-            },
-            success: {
-              iconTheme: {
-                primary: '#10B981',
-                secondary: '#fff',
-              },
-            },
-            error: {
-              iconTheme: {
-                primary: '#EF4444',
-                secondary: '#fff',
-              },
-            },
-          }}
-        />
-        <AppRoutes />
-      </div>
+      <AppRoutes />
     </Router>
   );
 }

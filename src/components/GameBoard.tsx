@@ -190,6 +190,7 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
                 selectedCategory === 'religion' ? 'المصطلح أو الشخصية الدينية' :
                 selectedCategory === 'whoami' ? 'الشخصية' :
                 selectedCategory === 'memories' ? 'الذكرى أو الشيء القديم' :
+                selectedCategory === 'playerJourney' ? 'مسيرة اللاعب' :
                 'الإجابة الصحيحة'
               }
             </p>

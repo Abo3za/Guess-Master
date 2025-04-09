@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Plus, X, Crown, Play } from 'lucide-react';
 import { useGameStore } from '../store/gameStore';
 import { useNavigate } from 'react-router-dom';
 import { Team } from '../types';
@@ -107,12 +106,17 @@ const allCategories: Category[] = [
     value: 'memories',
     label: 'ذكريات',
     bgImage: '/Images/OldCard.jpg'
-  }
+  },
+  {
+    value: 'playerJourney',
+    label: 'مسيرة لاعب',
+    bgImage: '/Images/PlayerJurney.webp'
+  },
 ];
 
 export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
   const navigate = useNavigate();
-  const { teams, addTeam, setActiveTeam, resetGame } = useGameStore();
+  const { teams, resetGame } = useGameStore();
   const [team1Name, setTeam1Name] = useState('فريق 1');
   const [team2Name, setTeam2Name] = useState('فريق 2');
   const [winningPoints, setWinningPoints] = useState(200);

@@ -17,7 +17,8 @@ export type Category =
   | 'science'
   | 'religion'
   | 'whoami'
-  | 'memories';
+  | 'memories'
+  | 'playerJourney';
 
 interface CategoryInfo {
   label: string;
@@ -39,7 +40,8 @@ export const CATEGORIES: Record<Category, CategoryInfo> = {
   science: { label: 'علوم', icon: '🔬' },
   religion: { label: 'دين', icon: '🕌' },
   whoami: { label: 'من انا', icon: '❓' },
-  memories: { label: 'ذكريات', icon: '📷' }
+  memories: { label: 'ذكريات', icon: '📷' },
+  playerJourney: { label: 'مسيرة لاعب', icon: '⚽' }
 };
 
 interface GameStore extends GameState {

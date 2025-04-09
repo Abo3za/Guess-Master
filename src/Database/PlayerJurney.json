@@ -1,0 +1,34 @@
+[
+    {
+      "id": 1,
+      "name": "Cristiano Ronaldo",
+      "club1": "Sporting CP",
+      "club2": "Manchester United",
+      "club3": "Real Madrid",
+      "club4": "Juventus",
+      "club5": "Al-Nassr"
+    },
+    {
+      "id": 2,
+      "name": "Lionel Messi",
+      "club1": "Newell’s Old Boys",
+      "club2": "Barcelona",
+      "club3": "Paris Saint-Germain",
+      "club4": "Inter Miami"
+    },
+    {
+      "id": 3,
+      "name": "Zlatan Ibrahimović",
+      "club1": "Malmö FF",
+      "club2": "Ajax",
+      "club3": "Juventus",
+      "club4": "Inter Milan",
+      "club5": "Barcelona",
+      "club6": "AC Milan",
+      "club7": "Paris Saint-Germain",
+      "club8": "Manchester United",
+      "club9": "LA Galaxy",
+      "club10": "AC Milan"
+    }
+  ]
+  

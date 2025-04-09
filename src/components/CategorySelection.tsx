@@ -103,6 +103,12 @@ const allCategories: CategoryOption[] = [
     label: 'ذكريات',
     icon: null,
     bgImage: '/Images/OldCard.jpg'
+  },
+  {
+    value: 'playerJourney',
+    label: 'مسيرة لاعب',
+    icon: null,
+    bgImage: '/Images/PlayerJurney.webp'
   }
 ];
 

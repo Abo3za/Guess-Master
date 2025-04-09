@@ -6,6 +6,7 @@ import gamesDB from '../Database/GamesDB.json';
 import footballDB from '../Database/FootballDB.json';
 import wweDB from '../Database/WWEDB.json';
 import whoAmIDB from '../Database/WhoAmIDB.json';
+import playerJourneyDB from '../Database/PlayerJurney.json';
 
 const categoryToDB: Record<Category, any[]> = {
   anime: animeDB,
@@ -15,6 +16,7 @@ const categoryToDB: Record<Category, any[]> = {
   football: footballDB,
   wwe: wweDB,
   whoami: whoAmIDB,
+  playerJourney: playerJourneyDB,
   countries: [] // No database for countries yet
 };
 
@@ -39,6 +41,24 @@ export const getRandomItem = (category: Category): GameItem | null => {
         { label: 'معلومة مميزة', value: item.highlight || '', revealed: false },
         { label: 'مجال الشهرة', value: item.field || '', revealed: false }
       ].filter(detail => detail.value)
+    };
+  }
+
+  if (category === 'playerJourney') {
+    const clubs = Object.entries(item)
+      .filter(([key]) => key.startsWith('club'))
+      .map(([_, value]) => value)
+      .filter(Boolean);
+
+    return {
+      id: item.id.toString(),
+      category,
+      name: item.name,
+      details: clubs.map((club, index) => ({
+        label: `النادي ${index + 1}`,
+        value: club,
+        revealed: false
+      }))
     };
   }
 

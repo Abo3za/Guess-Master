@@ -25,6 +25,7 @@ import Login from './components/Login';
 import UserProfile from './components/UserProfile';
 import ProtectedRoute from './components/ProtectedRoute';
 import { Toaster } from 'react-hot-toast';
+import { fetchRandomPlayerJourney } from './services/playerJourneyApi';
 
 function AppRoutes() {
   const navigate = useNavigate();
@@ -150,6 +151,9 @@ function AppRoutes() {
           break;
         case 'memories':
           item = await fetchRandomMemory(category);
+          break;
+        case 'playerJourney':
+          item = await fetchRandomPlayerJourney(category);
           break;
         // For demo categories, use placeholder data
         case 'sports':

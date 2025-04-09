@@ -26,6 +26,19 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
   const [selectedTeam, setSelectedTeam] = useState<number | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [iframeKey, setIframeKey] = useState(0);
+  const [hintOrder, setHintOrder] = useState<number[]>([]);
+
+  // Create shuffled order when currentItem changes
+  useEffect(() => {
+    if (currentItem?.details) {
+      const order = Array.from({ length: currentItem.details.length }, (_, i) => i);
+      for (let i = order.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [order[i], order[j]] = [order[j], order[i]];
+      }
+      setHintOrder(order);
+    }
+  }, [currentItem?.id]); // Only shuffle when the item ID changes
 
   useEffect(() => {
     const savedGameState = localStorage.getItem('gameState');
@@ -90,7 +103,7 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
 
   const handleReveal = (index: number) => {
     if (!currentItem || showAnswer) return;
-    revealDetail(index);
+    revealDetail(hintOrder[index]);
   };
 
   const handleTeamSelect = React.useCallback((teamId: number | null) => {
@@ -232,31 +245,38 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
           )}
 
           <div className="grid grid-cols-2 gap-6">
-            {currentItem.details.map((detail, index) => (
-              <div
-                key={index}
-                className={`transform transition-all duration-300 ${
-                  detail.revealed 
-                    ? 'bg-gradient-to-br from-blue-900/50 to-blue-800/30 scale-100' 
-                    : 'bg-gradient-to-br from-gray-800/50 to-gray-700/30 hover:scale-105'
-                } rounded-xl p-6 shadow-lg border border-gray-700/50`}
-              >
-                {!detail.revealed ? (
-                  <button
-                    onClick={() => handleReveal(index)}
-                    className="w-full h-32 flex flex-col items-center justify-center gap-3 text-gray-400 hover:text-blue-400 transition-colors duration-300"
-                  >
-                    <Eye className="w-8 h-8" />
-                    <span className="text-sm">انقر لكشف التلميح</span>
-                  </button>
-                ) : (
-                  <div className="text-center h-32 flex flex-col items-center justify-center">
-                    <p className="text-sm text-blue-400 mb-3 font-medium">{detail.label}</p>
-                    <p className="text-xl text-white font-bold">{detail.value}</p>
-                  </div>
-                )}
-              </div>
-            ))}
+            {currentItem?.details && hintOrder.length > 0 && currentItem.details.map((_, index) => {
+              const originalIndex = hintOrder[index];
+              const detail = currentItem.details[originalIndex];
+              
+              if (!detail) return null;
+              
+              return (
+                <div
+                  key={index}
+                  className={`transform transition-all duration-300 ${
+                    detail.revealed 
+                      ? 'bg-gradient-to-br from-blue-900/50 to-blue-800/30 scale-100' 
+                      : 'bg-gradient-to-br from-gray-800/50 to-gray-700/30 hover:scale-105'
+                  } rounded-xl p-6 shadow-lg border border-gray-700/50`}
+                >
+                  {!detail.revealed ? (
+                    <button
+                      onClick={() => handleReveal(index)}
+                      className="w-full h-32 flex flex-col items-center justify-center gap-3 text-gray-400 hover:text-blue-400 transition-colors duration-300"
+                    >
+                      <Eye className="w-8 h-8" />
+                      <span className="text-sm">انقر لكشف التلميح</span>
+                    </button>
+                  ) : (
+                    <div className="text-center h-32 flex flex-col items-center justify-center">
+                      <p className="text-sm text-blue-400 mb-3 font-medium">{detail.label}</p>
+                      <p className="text-xl text-white font-bold">{detail.value}</p>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
 

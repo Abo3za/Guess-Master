@@ -7,6 +7,7 @@ import footballDB from '../Database/FootballDB.json';
 import wweDB from '../Database/WWEDB.json';
 import whoAmIDB from '../Database/WhoAmIDB.json';
 import playerJourneyDB from '../Database/PlayerJurney.json';
+import prophetsDB from '../Database/ProphetsDB.json';
 
 const categoryToDB: Record<Category, any[]> = {
   anime: animeDB,
@@ -17,7 +18,8 @@ const categoryToDB: Record<Category, any[]> = {
   wwe: wweDB,
   whoami: whoAmIDB,
   playerJourney: playerJourneyDB,
-  countries: [] // No database for countries yet
+  countries: [], // No database for countries yet
+  prophets: prophetsDB,
 };
 
 export const getRandomItem = (category: Category): GameItem | null => {

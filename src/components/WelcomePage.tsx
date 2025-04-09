@@ -25,9 +25,9 @@ const WelcomePage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-gray-900 text-white overflow-hidden">
       {/* Hero Section */}
-      <div className="relative h-screen flex items-center justify-center">
+      <div className="relative flex items-center justify-center" style={{ minHeight: 'calc(100vh - 80px)' }}>
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 z-10" />
         <div className="absolute inset-0 bg-[url('/Images/background.png')] bg-cover bg-center" />
         <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">

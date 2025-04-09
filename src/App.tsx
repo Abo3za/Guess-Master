@@ -26,6 +26,7 @@ import UserProfile from './components/UserProfile';
 import ProtectedRoute from './components/ProtectedRoute';
 import { Toaster } from 'react-hot-toast';
 import { fetchRandomPlayerJourney } from './services/playerJourneyApi';
+import { fetchRandomProphet } from './services/prophetsApi';
 
 function AppRoutes() {
   const navigate = useNavigate();
@@ -155,6 +156,9 @@ function AppRoutes() {
         case 'playerJourney':
           item = await fetchRandomPlayerJourney(category);
           break;
+        case 'prophets':
+          item = await fetchRandomProphet(category);
+          break;
         // For demo categories, use placeholder data
         case 'sports':
         case 'tech':
@@ -207,7 +211,7 @@ function AppRoutes() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {!shouldHideNav && <NavigationBar />}
-      <main className={shouldHideNav ? "" : "pt-28"}>
+      <main>
         <Toaster
           position="top-center"
           reverseOrder={false}

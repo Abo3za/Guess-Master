@@ -94,7 +94,7 @@ const allCategories: Category[] = [
   },
   {
     value: 'religion',
-    label: 'دين',
+    label: 'اماكن دينية',
     bgImage: '/Images/IslamCard.jpg'
   },
   {
@@ -111,6 +111,11 @@ const allCategories: Category[] = [
     value: 'playerJourney',
     label: 'مسيرة لاعب',
     bgImage: '/Images/PlayerJurney.webp'
+  },
+  {
+    value: 'prophets',
+    label: 'انبياء وصحابة',
+    bgImage: '/Images/ProphetsCard.jpg'
   },
 ];
 

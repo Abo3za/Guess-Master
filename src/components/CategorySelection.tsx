@@ -109,6 +109,12 @@ const allCategories: CategoryOption[] = [
     label: 'مسيرة لاعب',
     icon: null,
     bgImage: '/Images/PlayerJurney.webp'
+  },
+  {
+    value: 'prophets',
+    label: 'انبياء وصحابة',
+    icon: null,
+    bgImage: '/Images/ProphetsCard.jpg'
   }
 ];
 

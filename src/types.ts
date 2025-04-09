@@ -14,7 +14,8 @@ export type Category =
   | 'religion'
   | 'whoami'
   | 'memories'
-  | 'playerJourney';
+  | 'playerJourney'
+  | 'prophets';
 
 export interface GameItem {
   id: string;

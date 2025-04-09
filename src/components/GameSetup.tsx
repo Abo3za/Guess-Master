@@ -204,11 +204,11 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
   };
 
   return (
-    <div className="min-h-screen p-4 md:p-8 flex flex-col items-center">
-      <h1 className="text-4xl font-bold mb-12">حدد معلومات الفرق</h1>
+    <div className="min-h-screen p-0 flex flex-col items-center">
+      <h1 className="text-4xl font-bold mb-12 mt-8">حدد معلومات الفرق</h1>
 
       {/* Teams Section */}
-      <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+      <div className="w-full px-8 grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
         {/* First Team */}
         <div className="flex flex-col items-center">
           <h2 className="text-3xl font-bold mb-6">الفريق الأول</h2>
@@ -241,9 +241,9 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
       </div>
 
       {/* Categories Section */}
-      <div className="w-full max-w-7xl mb-16">
+      <div className="w-full px-8 mb-16">
         <h2 className="text-3xl font-bold text-center mb-8">اختر التصنيفات</h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {allCategories.map((category) => (
             <button
               key={category.value}
@@ -282,9 +282,9 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
       </div>
 
       {/* Points Selection */}
-      <div className="w-full max-w-4xl mb-16">
+      <div className="w-full px-8 mb-16">
         <h2 className="text-3xl font-bold text-center mb-8">اختر عدد النقاط المطلوبة للفوز</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {RECOMMENDED_POINTS.map((option) => (
             <button
               key={option.value}
@@ -307,7 +307,7 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
       <button
         onClick={handleStartGame}
         disabled={selectedCategories.length < 6}
-        className="bg-gradient-to-r from-blue-600 to-blue-400 text-white px-16 py-4 rounded-full text-2xl font-bold hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="bg-gradient-to-r from-blue-600 to-blue-400 text-white px-16 py-4 rounded-full text-2xl font-bold hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed mb-8"
       >
         ابدأ اللعب
       </button>

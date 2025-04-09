@@ -29,6 +29,331 @@
       "club8": "Manchester United",
       "club9": "LA Galaxy",
       "club10": "AC Milan"
+    },
+    {
+      "id": 4,
+      "name": "Neymar Jr.",
+      "club1": "Santos",
+      "club2": "Barcelona",
+      "club3": "Paris Saint-Germain"
+    },
+    {
+      "id": 5,
+      "name": "Kylian Mbappé",
+      "club1": "AS Monaco",
+      "club2": "Paris Saint-Germain"
+    },
+    {
+      "id": 6,
+      "name": "Robert Lewandowski",
+      "club1": "Znicz Pruszków",
+      "club2": "Lech Poznań",
+      "club3": "Borussia Dortmund",
+      "club4": "Bayern Munich",
+      "club5": "Barcelona"
+    },
+    {
+      "id": 7,
+      "name": "Kevin De Bruyne",
+      "club1": "Genk",
+      "club2": "Chelsea",
+      "club3": "Wolfsburg",
+      "club4": "Manchester City"
+    },
+    {
+      "id": 8,
+      "name": "Virgil van Dijk",
+      "club1": "Groningen",
+      "club2": "Celtic",
+      "club3": "Southampton",
+      "club4": "Liverpool"
+    },
+    {
+      "id": 9,
+      "name": "Luka Modrić",
+      "club1": "Dinamo Zagreb",
+      "club2": "Tottenham Hotspur",
+      "club3": "Real Madrid"
+    },
+    {
+      "id": 10,
+      "name": "Sergio Ramos",
+      "club1": "Sevilla",
+      "club2": "Real Madrid",
+      "club3": "Paris Saint-Germain"
+    },
+    {
+      "id": 11,
+      "name": "Manuel Neuer",
+      "club1": "Schalke 04",
+      "club2": "Bayern Munich"
+    },
+    {
+      "id": 12,
+      "name": "Mohamed Salah",
+      "club1": "Al Mokawloon Al Arab",
+      "club2": "Basel",
+      "club3": "Chelsea",
+      "club4": "Fiorentina",
+      "club5": "Roma",
+      "club6": "Liverpool"
+    },
+    {
+      "id": 13,
+      "name": "Sadio Mané",
+      "club1": "Metz",
+      "club2": "Red Bull Salzburg",
+      "club3": "Southampton",
+      "club4": "Liverpool",
+      "club5": "Bayern Munich"
+    },
+    {
+      "id": 14,
+      "name": "Karim Benzema",
+      "club1": "Lyon",
+      "club2": "Real Madrid"
+    },
+    {
+      "id": 15,
+      "name": "Eden Hazard",
+      "club1": "Lille",
+      "club2": "Chelsea",
+      "club3": "Real Madrid"
+    },
+    {
+      "id": 16,
+      "name": "Paulo Dybala",
+      "club1": "Instituto",
+      "club2": "Palermo",
+      "club3": "Juventus",
+      "club4": "AS Roma"
+    },
+    {
+      "id": 17,
+      "name": "Luis Suárez",
+      "club1": "Nacional",
+      "club2": "Groningen",
+      "club3": "Ajax",
+      "club4": "Liverpool",
+      "club5": "Barcelona",
+      "club6": "Atlético Madrid"
+    },
+    {
+      "id": 18,
+      "name": "Antoine Griezmann",
+      "club1": "Real Sociedad",
+      "club2": "Atlético Madrid",
+      "club3": "Barcelona"
+    },
+    {
+      "id": 19,
+      "name": "Raheem Sterling",
+      "club1": "Queens Park Rangers",
+      "club2": "Liverpool",
+      "club3": "Manchester City"
+    },
+    {
+      "id": 20,
+      "name": "Harry Kane",
+      "club1": "Tottenham Hotspur",
+      "club2": "Bayern Munich"
+    },
+    {
+      "id": 21,
+      "name": "David Beckham",
+      "club1": "Manchester United",
+      "club2": "Real Madrid",
+      "club3": "LA Galaxy",
+      "club4": "AC Milan",
+      "club5": "Paris Saint-Germain"
+    },
+    {
+      "id": 22,
+      "name": "Ronaldinho",
+      "club1": "Grêmio",
+      "club2": "Paris Saint-Germain",
+      "club3": "Barcelona",
+      "club4": "AC Milan",
+      "club5": "Flamengo",
+      "club6": "Atlético Mineiro"
+    },
+    {
+      "id": 23,
+      "name": "Francesco Totti",
+      "club1": "AS Roma"
+    },
+    {
+      "id": 24,
+      "name": "Andrea Pirlo",
+      "club1": "Inter Milan",
+      "club2": "AC Milan",
+      "club3": "Juventus"
+    },
+    {
+      "id": 25,
+      "name": "Xavi Hernández",
+      "club1": "Barcelona",
+      "club2": "Al-Sadd"
+    },
+    {
+      "id": 26,
+      "name": "Andrés Iniesta",
+      "club1": "Barcelona",
+      "club2": "Vissel Kobe"
+    },
+    {
+      "id": 27,
+      "name": "Iker Casillas",
+      "club1": "Real Madrid",
+      "club2": "Porto"
+    },
+    {
+      "id": 28,
+      "name": "Sergio Busquets",
+      "club1": "Barcelona"
+    },
+    {
+      "id": 29,
+      "name": "Gerard Piqué",
+      "club1": "Manchester United",
+      "club2": "Barcelona"
+    },
+    {
+      "id": 30,
+      "name": "Thiago Silva",
+      "club1": "Fluminense",
+      "club2": "AC Milan",
+      "club3": "Paris Saint-Germain",
+      "club4": "Chelsea"
+    },
+    {
+      "id": 31,
+      "name": "N'Golo Kanté",
+      "club1": "Boulogne",
+      "club2": "Caen",
+      "club3": "Leicester City",
+      "club4": "Chelsea"
+    },
+    {
+      "id": 32,
+      "name": "Gianluigi Buffon",
+      "club1": "Parma",
+      "club2": "Juventus",
+      "club3": "Paris Saint-Germain",
+      "club4": "Juventus"
+    },
+    {
+      "id": 33,
+      "name": "Marc-André ter Stegen",
+      "club1": "Borussia Mönchengladbach",
+      "club2": "Barcelona"
+    },
+    {
+      "id": 34,
+      "name": "Ederson Moraes",
+      "club1": "Rio Ave",
+      "club2": "Benfica",
+      "club3": "Manchester City"
+    },
+    {
+      "id": 35,
+      "name": "Alisson Becker",
+      "club1": "Internacional",
+      "club2": "Roma",
+      "club3": "Liverpool"
+    },
+    {
+      "id": 36,
+      "name": "Mesut Özil",
+      "club1": "Real Madrid",
+      "club2": "Arsenal",
+      "club3": "Fenerbahçe",
+      "club4": "İstanbul Başakşehir"
+    },
+    {
+      "id": 37,
+      "name": "Paul Pogba",
+      "club1": "Le Havre",
+      "club2": "Manchester United",
+      "club3": "Juventus",
+      "club4": "Manchester United"
+    },
+    {
+      "id": 38,
+      "name": "Sergio Agüero",
+      "club1": "Independiente",
+      "club2": "Atlético Madrid",
+      "club3": "Manchester City",
+      "club4": "Barcelona"
+    },
+    {
+      "id": 39,
+      "name": "David Villa",
+      "club1": "Sporting Gijón",
+      "club2": "Zaragoza",
+      "club3": "Valencia",
+      "club4": "Barcelona",
+      "club5": "Atlético Madrid",
+      "club6": "New York City FC"
+    },
+    {
+      "id": 40,
+      "name": "Arjen Robben",
+      "club1": "Groningen",
+      "club2": "PSV Eindhoven",
+      "club3": "Chelsea",
+      "club4": "Real Madrid",
+      "club5": "Bayern Munich"
+    },
+    {
+      "id": 41,
+      "name": "Wayne Rooney",
+      "club1": "Everton",
+      "club2": "Manchester United",
+      "club3": "DC United",
+      "club4": "Derby County"
+    },
+    {
+      "id": 42,
+      "name": "Steven Gerrard",
+      "club1": "Liverpool",
+      "club2": "LA Galaxy"
+    },
+    {
+      "id": 43,
+      "name": "Frank Lampard",
+      "club1": "West Ham United",
+      "club2": "Chelsea",
+      "club3": "Manchester City"
+    },
+    {
+      "id": 44,
+      "name": "Didier Drogba",
+      "club1": "Le Mans",
+      "club2": "Guingamp",
+      "club3": "Marseille",
+      "club4": "Chelsea",
+      "club5": "Galatasaray",
+      "club6": "Montreal Impact"
+    },
+    {
+      "id": 45,
+      "name": "Samuel Eto'o",
+      "club1": "Real Madrid",
+      "club2": "Mallorca",
+      "club3": "Barcelona",
+      "club4": "Inter Milan",
+      "club5": "Chelsea",
+      "club6": "Everton",
+      "club7": "Sampdoria",
+      "club8": "Antalyaspor"
+    },
+    {
+      "id": 46,
+      "name": "Luis Figo",
+      "club1": "Sporting CP",
+      "club2": "Barcelona",
+      "club3": "Real Madrid",
+      "club4": "Inter Milan"
     }
-  ]
-  
+]

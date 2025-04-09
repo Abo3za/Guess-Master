@@ -27,6 +27,11 @@ import ProtectedRoute from './components/ProtectedRoute';
 import { Toaster } from 'react-hot-toast';
 import { fetchRandomPlayerJourney } from './services/playerJourneyApi';
 import { fetchRandomProphet } from './services/prophetsApi';
+import { getRandomSpacetoonItem } from './services/spacetoonApi';
+import { getRandomArabicSeriesItem } from './services/arabicSeriesApi';
+import { getRandomQuranItem } from './services/quranApi';
+import { getRandomCarsItem } from './services/carsApi';
+import { getRandomGlobalBrandsItem } from './services/globalBrandsApi';
 
 function AppRoutes() {
   const navigate = useNavigate();
@@ -158,6 +163,21 @@ function AppRoutes() {
           break;
         case 'prophets':
           item = await fetchRandomProphet(category);
+          break;
+        case 'spacetoon':
+          item = await getRandomSpacetoonItem();
+          break;
+        case 'arabicSeries':
+          item = await getRandomArabicSeriesItem();
+          break;
+        case 'quran':
+          item = await getRandomQuranItem();
+          break;
+        case 'cars':
+          item = await getRandomCarsItem();
+          break;
+        case 'globalBrands':
+          item = await getRandomGlobalBrandsItem();
           break;
         // For demo categories, use placeholder data
         case 'sports':

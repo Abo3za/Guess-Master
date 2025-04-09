@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "كونان",
+      "details": [
+        { "label": "النوع", "value": "تحري", "revealed": false },
+        { "label": "الشخصية الرئيسية", "value": "كونان إيدوغاوا", "revealed": false },
+        { "label": "الاسم الحقيقي", "value": "شينيتشي كودو", "revealed": false },
+        { "label": "العمر", "value": "17 سنة", "revealed": false }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "ساندي بل",
+      "details": [
+        { "label": "النوع", "value": "مغامرات", "revealed": false },
+        { "label": "الشخصية الرئيسية", "value": "ساندي بل", "revealed": false },
+        { "label": "الحيوان", "value": "قنفذ", "revealed": false },
+        { "label": "اللون", "value": "أزرق", "revealed": false }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "بوكيمون",
+      "details": [
+        { "label": "النوع", "value": "مغامرات", "revealed": false },
+        { "label": "الشخصية الرئيسية", "value": "آش كيتشوم", "revealed": false },
+        { "label": "الحيوان الأليف", "value": "بيكاتشو", "revealed": false },
+        { "label": "الهدف", "value": "مدرب بوكيمون", "revealed": false }
+      ]
+    }
+  ]
+} 

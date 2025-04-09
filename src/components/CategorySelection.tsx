@@ -16,25 +16,25 @@ interface CategorySelectionProps {
 const allCategories: CategoryOption[] = [
   {
     value: 'anime',
-    label: 'أنمي',
+    label: 'الأنمي',
     icon: null,
     bgImage: '/Images/AnimesCard.png'
   },
   {
     value: 'tv',
-    label: 'مسلسلات',
+    label: 'المسلسلات',
     icon: null,
     bgImage: '/Images/SeriesCard.png'
   },
   {
     value: 'movies',
-    label: 'أفلام',
+    label: 'الأفلام',
     icon: null,
     bgImage: '/Images/MoviesCard.png'
   },
   {
     value: 'games',
-    label: 'ألعاب',
+    label: 'الألعاب',
     icon: null,
     bgImage: '/Images/GamesCard.png'
   },
@@ -52,13 +52,13 @@ const allCategories: CategoryOption[] = [
   },
   {
     value: 'music',
-    label: 'موسيقى',
+    label: 'الموسيقى',
     icon: null,
     bgImage: '/Images/MusicCard.avif'
   },
   {
     value: 'religion',
-    label: 'دين',
+    label: 'الدين',
     icon: null,
     bgImage: '/Images/IslamCard.jpg'
   },
@@ -94,27 +94,57 @@ const allCategories: CategoryOption[] = [
   },
   {
     value: 'whoami',
-    label: 'من انا',
+    label: 'من أنا',
     icon: null,
     bgImage: '/Images/WhoAmICard.png'
   },
   {
     value: 'memories',
-    label: 'ذكريات',
+    label: 'الذكريات',
     icon: null,
     bgImage: '/Images/OldCard.jpg'
   },
   {
     value: 'playerJourney',
-    label: 'مسيرة لاعب',
+    label: 'رحلة اللاعب',
     icon: null,
     bgImage: '/Images/PlayerJurney.webp'
   },
   {
     value: 'prophets',
-    label: 'انبياء وصحابة',
+    label: 'الأنبياء',
     icon: null,
     bgImage: '/Images/ProphetsCard.jpg'
+  },
+  {
+    value: 'spacetoon',
+    label: 'سبيستون',
+    icon: null,
+    bgImage: '/Images/SpacetoonCard.jpg'
+  },
+  {
+    value: 'arabicSeries',
+    label: 'مسلسلات عربية',
+    icon: null,
+    bgImage: '/Images/ArabicSeriesCard.jpg'
+  },
+  {
+    value: 'quran',
+    label: 'قرآن',
+    icon: null,
+    bgImage: '/Images/QuranCard.jpg'
+  },
+  {
+    value: 'cars',
+    label: 'سيارات',
+    icon: null,
+    bgImage: '/Images/CarsCard.jpg'
+  },
+  {
+    value: 'globalBrands',
+    label: 'ماركات عالمية',
+    icon: null,
+    bgImage: '/Images/GlobalBrandsCard.jpg'
   }
 ];
 
@@ -213,7 +243,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
                   team.isActive ? 'ring-2 ring-blue-500' : ''
                 }`}
                 style={{
-                  backgroundImage: 'url(/Images/Team1.webp)',
+                  backgroundImage: 'url(/Images/Team1.png)',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
@@ -287,7 +317,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
                   team.isActive ? 'ring-2 ring-blue-500' : ''
                 }`}
                 style={{
-                  backgroundImage: 'url(/Images/Team2.webp)',
+                  backgroundImage: 'url(/Images/Team2.png)',
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}

@@ -7,19 +7,19 @@ export type Category =
   | 'tv'
   | 'movies'
   | 'games'
-  | 'football'
   | 'wwe'
+  | 'football'
   | 'music'
-  | 'sports'
-  | 'tech'
-  | 'history'
-  | 'geography'
-  | 'science'
-  | 'religion'
   | 'whoami'
   | 'memories'
   | 'playerJourney'
-  | 'prophets';
+  | 'prophets'
+  | 'religion'
+  | 'spacetoon'
+  | 'arabicSeries'
+  | 'quran'
+  | 'cars'
+  | 'globalBrands';
 
 interface CategoryInfo {
   label: string;
@@ -27,23 +27,23 @@ interface CategoryInfo {
 }
 
 export const CATEGORIES: Record<Category, CategoryInfo> = {
-  anime: { label: 'أنمي', icon: '🎭' },
-  tv: { label: 'مسلسلات', icon: '📺' },
-  movies: { label: 'أفلام', icon: '🎬' },
-  games: { label: 'ألعاب', icon: '🎮' },
-  football: { label: 'كرة القدم', icon: '⚽' },
+  anime: { label: 'الأنمي', icon: '🎭' },
+  tv: { label: 'المسلسلات', icon: '📺' },
+  movies: { label: 'الأفلام', icon: '🎬' },
+  games: { label: 'الألعاب', icon: '🎮' },
   wwe: { label: 'المصارعة', icon: '🤼' },
-  music: { label: 'موسيقى', icon: '🎵' },
-  sports: { label: 'رياضات متنوعة', icon: '🏆' },
-  tech: { label: 'تكنولوجيا', icon: '💻' },
-  history: { label: 'تاريخ', icon: '📜' },
-  geography: { label: 'جغرافيا', icon: '🌍' },
-  science: { label: 'علوم', icon: '🔬' },
-  religion: { label: 'اماكن دينية', icon: '🕌' },
-  whoami: { label: 'من انا', icon: '❓' },
-  memories: { label: 'ذكريات', icon: '📷' },
-  playerJourney: { label: 'مسيرة لاعب', icon: '⚽' },
-  prophets: { label: 'انبياء وصحابة', icon: '📜' }
+  football: { label: 'كرة القدم', icon: '⚽' },
+  music: { label: 'الموسيقى', icon: '🎵' },
+  whoami: { label: 'من أنا', icon: '❓' },
+  memories: { label: 'الذكريات', icon: '📸' },
+  playerJourney: { label: 'رحلة اللاعب', icon: '🏆' },
+  prophets: { label: 'الأنبياء', icon: '🕌' },
+  religion: { label: 'الدين', icon: '📿' },
+  spacetoon: { label: 'سبيستون', icon: '📺' },
+  arabicSeries: { label: 'مسلسلات عربية', icon: '🎭' },
+  quran: { label: 'قرآن', icon: '📖' },
+  cars: { label: 'سيارات', icon: '🚗' },
+  globalBrands: { label: 'ماركات عالمية', icon: '🏢' }
 };
 
 interface GameStore extends GameState {

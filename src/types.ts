@@ -15,7 +15,12 @@ export type Category =
   | 'whoami'
   | 'memories'
   | 'playerJourney'
-  | 'prophets';
+  | 'prophets'
+  | 'spacetoon'
+  | 'arabicSeries'
+  | 'quran'
+  | 'cars'
+  | 'globalBrands';
 
 export interface GameItem {
   id: string;

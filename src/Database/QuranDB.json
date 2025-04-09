@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "سورة البقرة",
+      "details": [
+        { "label": "رقم السورة", "value": "2", "revealed": false },
+        { "label": "عدد الآيات", "value": "286", "revealed": false },
+        { "label": "النوع", "value": "مدنية", "revealed": false },
+        { "label": "الموضوع الرئيسي", "value": "التشريعات والأحكام", "revealed": false }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "سورة الفاتحة",
+      "details": [
+        { "label": "رقم السورة", "value": "1", "revealed": false },
+        { "label": "عدد الآيات", "value": "7", "revealed": false },
+        { "label": "النوع", "value": "مكية", "revealed": false },
+        { "label": "الموضوع الرئيسي", "value": "الفاتحة", "revealed": false }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "سورة الكهف",
+      "details": [
+        { "label": "رقم السورة", "value": "18", "revealed": false },
+        { "label": "عدد الآيات", "value": "110", "revealed": false },
+        { "label": "النوع", "value": "مكية", "revealed": false },
+        { "label": "الموضوع الرئيسي", "value": "قصة أصحاب الكهف", "revealed": false }
+      ]
+    }
+  ]
+} 

@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "باب الحارة",
+      "details": [
+        { "label": "النوع", "value": "دراما اجتماعية", "revealed": false },
+        { "label": "الممثل الرئيسي", "value": "عباس النوري", "revealed": false },
+        { "label": "عدد الأجزاء", "value": "11 جزء", "revealed": false },
+        { "label": "البلد", "value": "سوريا", "revealed": false }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "الخاوة",
+      "details": [
+        { "label": "النوع", "value": "دراما اجتماعية", "revealed": false },
+        { "label": "الممثل الرئيسي", "value": "تيم حسن", "revealed": false },
+        { "label": "عدد الأجزاء", "value": "3 أجزاء", "revealed": false },
+        { "label": "البلد", "value": "سوريا", "revealed": false }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "الجماعة",
+      "details": [
+        { "label": "النوع", "value": "تاريخي", "revealed": false },
+        { "label": "الممثل الرئيسي", "value": "أحمد رزق", "revealed": false },
+        { "label": "عدد الأجزاء", "value": "3 أجزاء", "revealed": false },
+        { "label": "البلد", "value": "مصر", "revealed": false }
+      ]
+    }
+  ]
+} 

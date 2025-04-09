@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "تويوتا كامري",
+      "details": [
+        { "label": "النوع", "value": "سيدان", "revealed": false },
+        { "label": "الشركة المصنعة", "value": "تويوتا", "revealed": false },
+        { "label": "بلد المنشأ", "value": "اليابان", "revealed": false },
+        { "label": "الفئة", "value": "متوسطة", "revealed": false }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "مرسيدس بنز S-Class",
+      "details": [
+        { "label": "النوع", "value": "سيدان فاخرة", "revealed": false },
+        { "label": "الشركة المصنعة", "value": "مرسيدس بنز", "revealed": false },
+        { "label": "بلد المنشأ", "value": "ألمانيا", "revealed": false },
+        { "label": "الفئة", "value": "فاخرة", "revealed": false }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "بي ام دبليو X5",
+      "details": [
+        { "label": "النوع", "value": "دفع رباعي", "revealed": false },
+        { "label": "الشركة المصنعة", "value": "بي ام دبليو", "revealed": false },
+        { "label": "بلد المنشأ", "value": "ألمانيا", "revealed": false },
+        { "label": "الفئة", "value": "فاخرة", "revealed": false }
+      ]
+    }
+  ]
+} 

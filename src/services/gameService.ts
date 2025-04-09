@@ -1,78 +1,46 @@
-import { Category, GameItem } from '../types';
-import animeDB from '../Database/AnimeDB.json';
-import moviesDB from '../Database/MoviesDB.json';
-import tvSeriesDB from '../Database/TVSeries.json';
-import gamesDB from '../Database/GamesDB.json';
-import footballDB from '../Database/FootballDB.json';
-import wweDB from '../Database/WWEDB.json';
-import whoAmIDB from '../Database/WhoAmIDB.json';
-import playerJourneyDB from '../Database/PlayerJurney.json';
-import prophetsDB from '../Database/ProphetsDB.json';
+import { getRandomAnimeItem } from './animeApi';
+import { getRandomTVItem } from './tvApi';
+import { getRandomMoviesItem } from './moviesApi';
+import { getRandomGamesItem } from './gamesApi';
+import { getRandomWWEItem } from './wweApi';
+import { getRandomFootballItem } from './footballApi';
+import { getRandomMusicItem } from './musicApi';
+import { getRandomWhoAmIItem } from './whoAmIApi';
+import { getRandomMemoriesItem } from './memoriesApi';
+import { getRandomPlayerJourneyItem } from './playerJourneyApi';
+import { getRandomProphetsItem } from './prophetsApi';
+import { getRandomReligionItem } from './religionApi';
+import { getRandomSpacetoonItem } from './spacetoonApi';
+import { getRandomArabicSeriesItem } from './arabicSeriesApi';
+import { getRandomQuranItem } from './quranApi';
+import { getRandomCarsItem } from './carsApi';
+import { getRandomGlobalBrandsItem } from './globalBrandsApi';
+import { Category } from '../store/gameStore';
 
-const categoryToDB: Record<Category, any[]> = {
-  anime: animeDB,
-  movies: moviesDB,
-  tv: tvSeriesDB,
-  games: gamesDB,
-  football: footballDB,
-  wwe: wweDB,
-  whoami: whoAmIDB,
-  playerJourney: playerJourneyDB,
-  countries: [], // No database for countries yet
-  prophets: prophetsDB,
+const categoryToApiMap: Record<Category, () => any> = {
+  anime: getRandomAnimeItem,
+  tv: getRandomTVItem,
+  movies: getRandomMoviesItem,
+  games: getRandomGamesItem,
+  wwe: getRandomWWEItem,
+  football: getRandomFootballItem,
+  music: getRandomMusicItem,
+  whoami: getRandomWhoAmIItem,
+  memories: getRandomMemoriesItem,
+  playerJourney: getRandomPlayerJourneyItem,
+  prophets: getRandomProphetsItem,
+  religion: getRandomReligionItem,
+  spacetoon: getRandomSpacetoonItem,
+  arabicSeries: getRandomArabicSeriesItem,
+  quran: getRandomQuranItem,
+  cars: getRandomCarsItem,
+  globalBrands: getRandomGlobalBrandsItem
 };
 
-export const getRandomItem = (category: Category): GameItem | null => {
-  const db = categoryToDB[category];
-  if (!db || db.length === 0) return null;
-
-  const randomIndex = Math.floor(Math.random() * db.length);
-  const item = db[randomIndex];
-
-  // Convert the database item to a GameItem
-  if (category === 'whoami') {
-    return {
-      id: item.id.toString(),
-      category,
-      name: item.name,
-      details: [
-        { label: 'المهنة', value: item.occupation || '', revealed: false },
-        { label: 'الجنسية', value: item.nationality || '', revealed: false },
-        { label: 'العمر/تاريخ الميلاد', value: item.birthDate || '', revealed: false },
-        { label: 'الإنجازات', value: item.achievements || '', revealed: false },
-        { label: 'معلومة مميزة', value: item.highlight || '', revealed: false },
-        { label: 'مجال الشهرة', value: item.field || '', revealed: false }
-      ].filter(detail => detail.value)
-    };
+export const getRandomItem = (category: Category) => {
+  const getItemFunction = categoryToApiMap[category];
+  if (!getItemFunction) {
+    throw new Error(`No API function found for category: ${category}`);
   }
-
-  if (category === 'playerJourney') {
-    const clubs = Object.entries(item)
-      .filter(([key]) => key.startsWith('club'))
-      .map(([_, value]) => value)
-      .filter(Boolean);
-
-    return {
-      id: item.id.toString(),
-      category,
-      name: item.name,
-      details: clubs.map((club, index) => ({
-        label: `النادي ${index + 1}`,
-        value: club,
-        revealed: false
-      }))
-    };
-  }
-
-  return {
-    id: item.id.toString(),
-    category,
-    name: item.title || item.name,
-    details: [
-      { label: 'سنة الإصدار', value: item.release_year?.toString() || '', revealed: false },
-      { label: 'التصنيف', value: Array.isArray(item.genre) ? item.genre.join(', ') : item.genre || '', revealed: false },
-      { label: 'الاستوديو', value: item.studio || '', revealed: false },
-      { label: 'الشخصية الرئيسية', value: item.main_character || '', revealed: false }
-    ].filter(detail => detail.value)
-  };
+  return getItemFunction();
 }; 

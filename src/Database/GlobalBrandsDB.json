@@ -1,0 +1,34 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "نايكي",
+      "details": [
+        { "label": "نوع المنتجات", "value": "ملابس وأحذية رياضية", "revealed": false },
+        { "label": "بلد المنشأ", "value": "الولايات المتحدة", "revealed": false },
+        { "label": "سنة التأسيس", "value": "1964", "revealed": false },
+        { "label": "الشعار", "value": "سووش", "revealed": false }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "آبل",
+      "details": [
+        { "label": "نوع المنتجات", "value": "إلكترونيات وتكنولوجيا", "revealed": false },
+        { "label": "بلد المنشأ", "value": "الولايات المتحدة", "revealed": false },
+        { "label": "سنة التأسيس", "value": "1976", "revealed": false },
+        { "label": "المؤسس", "value": "ستيف جوبز", "revealed": false }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "كوكا كولا",
+      "details": [
+        { "label": "نوع المنتجات", "value": "مشروبات غازية", "revealed": false },
+        { "label": "بلد المنشأ", "value": "الولايات المتحدة", "revealed": false },
+        { "label": "سنة التأسيس", "value": "1886", "revealed": false },
+        { "label": "اللون الرئيسي", "value": "أحمر", "revealed": false }
+      ]
+    }
+  ]
+} 

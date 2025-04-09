@@ -34,22 +34,22 @@ const RECOMMENDED_POINTS: PointOption[] = [
 const allCategories: Category[] = [
   {
     value: 'anime',
-    label: 'أنمي',
+    label: 'الأنمي',
     bgImage: '/Images/AnimesCard.png'
   },
   {
     value: 'tv',
-    label: 'مسلسلات',
+    label: 'المسلسلات',
     bgImage: '/Images/SeriesCard.png'
   },
   {
     value: 'movies',
-    label: 'أفلام',
+    label: 'الأفلام',
     bgImage: '/Images/MoviesCard.png'
   },
   {
     value: 'games',
-    label: 'ألعاب',
+    label: 'الألعاب',
     bgImage: '/Images/GamesCard.png'
   },
   {
@@ -64,7 +64,7 @@ const allCategories: Category[] = [
   },
   {
     value: 'music',
-    label: 'موسيقى',
+    label: 'الموسيقى',
     bgImage: '/Images/MusicCard.avif'
   },
   {
@@ -94,29 +94,54 @@ const allCategories: Category[] = [
   },
   {
     value: 'religion',
-    label: 'اماكن دينية',
+    label: 'الدين',
     bgImage: '/Images/IslamCard.jpg'
   },
   {
     value: 'whoami',
-    label: 'من انا',
+    label: 'من أنا',
     bgImage: '/Images/WhoAmICard.png'
   },
   {
     value: 'memories',
-    label: 'ذكريات',
+    label: 'الذكريات',
     bgImage: '/Images/OldCard.jpg'
   },
   {
     value: 'playerJourney',
-    label: 'مسيرة لاعب',
+    label: 'رحلة اللاعب',
     bgImage: '/Images/PlayerJurney.webp'
   },
   {
     value: 'prophets',
-    label: 'انبياء وصحابة',
+    label: 'الأنبياء',
     bgImage: '/Images/ProphetsCard.jpg'
   },
+  {
+    value: 'spacetoon',
+    label: 'سبيستون',
+    bgImage: '/Images/SpacetoonCard.jpg'
+  },
+  {
+    value: 'arabicSeries',
+    label: 'مسلسلات عربية',
+    bgImage: '/Images/ArabicSeriesCard.jpg'
+  },
+  {
+    value: 'quran',
+    label: 'قرآن',
+    bgImage: '/Images/QuranCard.jpg'
+  },
+  {
+    value: 'cars',
+    label: 'سيارات',
+    bgImage: '/Images/CarsCard.jpg'
+  },
+  {
+    value: 'globalBrands',
+    label: 'ماركات عالمية',
+    bgImage: '/Images/GlobalBrandsCard.jpg'
+  }
 ];
 
 export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {

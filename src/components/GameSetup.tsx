@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useGameStore } from '../store/gameStore';
 import { useNavigate } from 'react-router-dom';
 import { Team } from '../types';
+import { CATEGORY_CONFIG } from '../config/categories';
 
 interface GameSetupProps {
   onStart: (
@@ -10,12 +11,6 @@ interface GameSetupProps {
     hideHints: boolean,
     selectedCategories: string[]
   ) => void;
-}
-
-interface Category {
-  value: string;
-  label: string;
-  bgImage: string;
 }
 
 interface PointOption {
@@ -30,129 +25,13 @@ const RECOMMENDED_POINTS: PointOption[] = [
   { value: 300, label: 'طويلة', description: 'مباراة طويلة (35-45 دقيقة)' },
 ];
 
-// Extended category list including both real and placeholder categories
-const allCategories: Category[] = [
-  {
-    value: 'anime',
-    label: 'الأنمي',
-    bgImage: '/Images/AnimesCard.png'
-  },
-  {
-    value: 'tv',
-    label: 'المسلسلات',
-    bgImage: '/Images/SeriesCard.png'
-  },
-  {
-    value: 'movies',
-    label: 'الأفلام',
-    bgImage: '/Images/MoviesCard.png'
-  },
-  {
-    value: 'games',
-    label: 'الألعاب',
-    bgImage: '/Images/GamesCard.png'
-  },
-  {
-    value: 'football',
-    label: 'كرة القدم',
-    bgImage: '/Images/FootballCard.png'
-  },
-  {
-    value: 'wwe',
-    label: 'المصارعة',
-    bgImage: '/Images/WrestlingCard.png'
-  },
-  {
-    value: 'music',
-    label: 'الموسيقى',
-    bgImage: '/Images/MusicCard.avif'
-  },
-  {
-    value: 'sports',
-    label: 'رياضات متنوعة',
-    bgImage: '/Images/SportsCard.avif'
-  },
-  {
-    value: 'tech',
-    label: 'تكنولوجيا',
-    bgImage: '/Images/TechnologyCard.webp'
-  },
-  {
-    value: 'history',
-    label: 'تاريخ',
-    bgImage: '/Images/HistoryCard.jpg'
-  },
-  {
-    value: 'geography',
-    label: 'جغرافيا',
-    bgImage: '/Images/GeographyCard.jpg'
-  },
-  {
-    value: 'science',
-    label: 'علوم',
-    bgImage: '/Images/scienceCard.webp'
-  },
-  {
-    value: 'religion',
-    label: 'الدين',
-    bgImage: '/Images/IslamCard.jpg'
-  },
-  {
-    value: 'whoami',
-    label: 'من أنا',
-    bgImage: '/Images/WhoAmICard.png'
-  },
-  {
-    value: 'memories',
-    label: 'الذكريات',
-    bgImage: '/Images/OldCard.jpg'
-  },
-  {
-    value: 'playerJourney',
-    label: 'رحلة اللاعب',
-    bgImage: '/Images/PlayerJurney.webp'
-  },
-  {
-    value: 'prophets',
-    label: 'الأنبياء',
-    bgImage: '/Images/ProphetsCard.jpg'
-  },
-  {
-    value: 'spacetoon',
-    label: 'سبيستون',
-    bgImage: '/Images/SpacetoonCard.jpg'
-  },
-  {
-    value: 'arabicSeries',
-    label: 'مسلسلات عربية',
-    bgImage: '/Images/ArabicSeriesCard.jpg'
-  },
-  {
-    value: 'quran',
-    label: 'قرآن',
-    bgImage: '/Images/QuranCard.jpg'
-  },
-  {
-    value: 'cars',
-    label: 'سيارات',
-    bgImage: '/Images/CarsCard.jpg'
-  },
-  {
-    value: 'globalBrands',
-    label: 'ماركات عالمية',
-    bgImage: '/Images/GlobalBrandsCard.jpg'
-  },
-  {
-    value: 'animals',
-    label: 'الحيوانات',
-    bgImage: '/Images/AnimalsCard.webp'
-  },
-  {
-    value: 'saudiLeague',
-    label: 'الدوري السعودي',
-    bgImage: '/Images/SaudiLeagueCard.jpg'
-  }
-];
+// Replace the categories array with:
+const categories = Object.entries(CATEGORY_CONFIG).map(([key, value]) => ({
+  id: key,
+  label: value.label,
+  icon: value.icon,
+  bgImage: value.bgImage
+}));
 
 export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
   const navigate = useNavigate();
@@ -284,12 +163,12 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
       <div className="w-full px-8 mb-16">
         <h2 className="text-3xl font-bold text-center mb-8">اختر التصنيفات</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          {allCategories.map((category) => (
+          {categories.map((category) => (
             <button
-              key={category.value}
-              onClick={() => handleCategoryToggle(category.value)}
+              key={category.id}
+              onClick={() => handleCategoryToggle(category.id)}
               className={`relative group overflow-hidden rounded-xl transition-all duration-300 aspect-[4/5] ${
-                selectedCategories.includes(category.value)
+                selectedCategories.includes(category.id)
                   ? 'ring-4 ring-orange-500'
                   : 'hover:ring-2 hover:ring-orange-500/50'
               }`}
@@ -301,7 +180,7 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
               {/* Selected Indicator */}
-              {selectedCategories.includes(category.value) && (
+              {selectedCategories.includes(category.id) && (
                 <div className="absolute top-3 right-3 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
                   <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />

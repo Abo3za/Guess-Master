@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "جبل إيفرست",
+      "details": [
+        { "label": "الموقع", "value": "بين نيبال والصين", "revealed": false },
+        { "label": "الارتفاع", "value": "8,848 متر", "revealed": false },
+        { "label": "السلسلة الجبلية", "value": "جبال الهيمالايا", "revealed": false },
+        { "label": "أول متسلق", "value": "إدموند هيلاري وتنزينج نورجاي", "revealed": false },
+        { "label": "سنة أول تسلق", "value": "1953", "revealed": false }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "نهر النيل",
+      "details": [
+        { "label": "الطول", "value": "6,650 كم", "revealed": false },
+        { "label": "الموقع", "value": "شرق أفريقيا", "revealed": false },
+        { "label": "المصب", "value": "البحر الأبيض المتوسط", "revealed": false },
+        { "label": "الدول التي يمر بها", "value": "11 دولة", "revealed": false },
+        { "label": "أطول رافد", "value": "النيل الأبيض", "revealed": false }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "صحراء الربع الخالي",
+      "details": [
+        { "label": "الموقع", "value": "شبه الجزيرة العربية", "revealed": false },
+        { "label": "المساحة", "value": "650,000 كم²", "revealed": false },
+        { "label": "الدول", "value": "السعودية، الإمارات، عمان، اليمن", "revealed": false },
+        { "label": "المناخ", "value": "صحراوي حار", "revealed": false },
+        { "label": "أعلى كثبان رملية", "value": "300 متر", "revealed": false }
+      ]
+    }
+  ]
+} 

@@ -2,25 +2,36 @@
     "items": [
       {
         "id": 1,
-        "name": "سالم الدوسري",
+        "name": "كريستيانو رونالدو",
         "details": [
           { "label": "المركز", "value": "مهاجم", "revealed": false },
-          { "label": "النادي", "value": "الهلال", "revealed": false },
-          { "label": "عدد الأجزاء", "value": "11 جزء", "revealed": false },
-          { "label": "البلد", "value": "سوريا", "revealed": false },
-          { "label": "الموسم", "value": "1", "revealed": false }
+          { "label": "النادي", "value": "النصر", "revealed": false },
+          { "label": "البلد", "value": "البرتغال", "revealed": false },
+          { "label": "السنة التي انضم فيها", "value": "2023", "revealed": false },
+          { "label": "أندية سابقة", "value": "ريال مدريد، يوفنتوس، مانشستر يونايتد", "revealed": false }
         ]
       },
       {
         "id": 2,
-        "name": "محمد الفيصل",
+        "name": "الهلال",
         "details": [
-          { "label": "المركز", "value": "مهاجم", "revealed": false },
-          { "label": "النادي", "value": "الهلال", "revealed": false },
-          { "label": "عدد الأجزاء", "value": "3 أجزاء", "revealed": false },
-            { "label": "البلد", "value": "سوريا", "revealed": false },
-          { "label": "الموسم", "value": "1", "revealed": false }
+          { "label": "سنة التأسيس", "value": "1957", "revealed": false },
+          { "label": "المدينة", "value": "الرياض", "revealed": false },
+          { "label": "الألوان", "value": "أزرق وأبيض", "revealed": false },
+          { "label": "عدد بطولات الدوري", "value": "18", "revealed": false },
+          { "label": "أشهر اللاعبين", "value": "سلمان الفرج، نيمار، سالم الدوسري", "revealed": false }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "نهائي كأس الملك 2023",
+        "details": [
+          { "label": "الفرق", "value": "النصر ضد الهلال", "revealed": false },
+          { "label": "النتيجة", "value": "3-2 للنصر", "revealed": false },
+          { "label": "الملعب", "value": "ملعب الجوهرة", "revealed": false },
+          { "label": "الموسم", "value": "2022-2023", "revealed": false },
+          { "label": "أبرز اللاعبين", "value": "كريستيانو، تاليسكا، نيمار", "revealed": false }
         ]
       }
     ]
-  } 
+  }

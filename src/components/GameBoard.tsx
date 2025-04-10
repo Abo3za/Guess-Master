@@ -200,7 +200,7 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
                 selectedCategory === 'history' ? 'الحدث أو الشخصية التاريخية' :
                 selectedCategory === 'geography' ? 'المكان أو المعلم الجغرافي' :
                 selectedCategory === 'science' ? 'المصطلح أو الاكتشاف العلمي' :
-                selectedCategory === 'religion' ? 'حزر المكان' :
+                selectedCategory === 'religion' ? 'المكان' :
                 selectedCategory === 'whoami' ? 'الشخصية' :
                 selectedCategory === 'memories' ? 'الذكرى أو الشيء القديم' :
                 selectedCategory === 'playerJourney' ? 'مسيرة اللاعب' :
@@ -210,6 +210,12 @@ export const GameBoard: React.FC<GameBoardProps> = ({ onBackToCategories }) => {
                 selectedCategory === 'quran' ? 'اسم السورة أو الآية' :
                 selectedCategory === 'cars' ? 'اسم السيارة أو الماركة' :
                 selectedCategory === 'globalBrands' ? 'اسم الماركة أو المنتج' :
+                selectedCategory === 'saudiLeague' ? (
+                  currentItem.details.some(d => d.label === 'المركز') ? 'اللاعب' :
+                  currentItem.details.some(d => d.label === 'سنة التأسيس') ? 'النادي' :
+                  currentItem.details.some(d => d.label === 'الفرق') ? 'المباراة' :
+                  'حزر الإجابة'
+                ) :
                 'الإجابة الصحيحة'
               }
             </p>

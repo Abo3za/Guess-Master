@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "آيفون 15",
+      "details": [
+        { "label": "الشركة المصنعة", "value": "آبل", "revealed": false },
+        { "label": "سنة الإصدار", "value": "2023", "revealed": false },
+        { "label": "نظام التشغيل", "value": "iOS 17", "revealed": false },
+        { "label": "المعالج", "value": "A16 Bionic", "revealed": false },
+        { "label": "الشاشة", "value": "6.1 بوصة Super Retina XDR", "revealed": false }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "ماك بوك برو",
+      "details": [
+        { "label": "الشركة المصنعة", "value": "آبل", "revealed": false },
+        { "label": "سنة الإصدار", "value": "2023", "revealed": false },
+        { "label": "نظام التشغيل", "value": "macOS Ventura", "revealed": false },
+        { "label": "المعالج", "value": "M2 Pro", "revealed": false },
+        { "label": "الشاشة", "value": "14 بوصة Liquid Retina XDR", "revealed": false }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "سامسونج جالكسي S23",
+      "details": [
+        { "label": "الشركة المصنعة", "value": "سامسونج", "revealed": false },
+        { "label": "سنة الإصدار", "value": "2023", "revealed": false },
+        { "label": "نظام التشغيل", "value": "Android 13", "revealed": false },
+        { "label": "المعالج", "value": "Snapdragon 8 Gen 2", "revealed": false },
+        { "label": "الشاشة", "value": "6.1 بوصة Dynamic AMOLED 2X", "revealed": false }
+      ]
+    }
+  ]
+} 

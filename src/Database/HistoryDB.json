@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "معركة بدر",
+      "details": [
+        { "label": "السنة", "value": "2 هـ", "revealed": false },
+        { "label": "المكان", "value": "بدر", "revealed": false },
+        { "label": "الطرفان", "value": "المسلمون ضد قريش", "revealed": false },
+        { "label": "النتيجة", "value": "انتصار المسلمين", "revealed": false },
+        { "label": "عدد الشهداء", "value": "14 شهيداً", "revealed": false }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "فتح مكة",
+      "details": [
+        { "label": "السنة", "value": "8 هـ", "revealed": false },
+        { "label": "المكان", "value": "مكة المكرمة", "revealed": false },
+        { "label": "السبب", "value": "نقض قريش لصلح الحديبية", "revealed": false },
+        { "label": "النتيجة", "value": "فتح مكة ودخول الناس في دين الله أفواجاً", "revealed": false },
+        { "label": "عدد الجيش", "value": "10,000 مقاتل", "revealed": false }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "معركة اليرموك",
+      "details": [
+        { "label": "السنة", "value": "15 هـ", "revealed": false },
+        { "label": "المكان", "value": "وادي اليرموك", "revealed": false },
+        { "label": "الطرفان", "value": "المسلمون ضد الروم", "revealed": false },
+        { "label": "النتيجة", "value": "انتصار المسلمين", "revealed": false },
+        { "label": "عدد الجيش الإسلامي", "value": "36,000 مقاتل", "revealed": false }
+      ]
+    }
+  ]
+} 

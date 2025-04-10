@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Category, CategoryOption } from '../types';
+import { Category } from '../types';
 import { 
   Users,
   Flag, Trophy, Crown,
@@ -7,158 +7,26 @@ import {
 } from 'lucide-react';
 import { useGameStore } from '../store/gameStore';
 import { useNavigate } from 'react-router-dom';
+import { CATEGORY_CONFIG } from '../config/categories';
 
 interface CategorySelectionProps {
   onSelect: (category: Category) => void;
   onResetGame: () => void;
 }
 
-const allCategories: CategoryOption[] = [
-  {
-    value: 'anime',
-    label: 'الأنمي',
-    icon: null,
-    bgImage: '/Images/AnimesCard.png'
-  },
-  {
-    value: 'tv',
-    label: 'المسلسلات',
-    icon: null,
-    bgImage: '/Images/SeriesCard.png'
-  },
-  {
-    value: 'movies',
-    label: 'الأفلام',
-    icon: null,
-    bgImage: '/Images/MoviesCard.png'
-  },
-  {
-    value: 'games',
-    label: 'الألعاب',
-    icon: null,
-    bgImage: '/Images/GamesCard.png'
-  },
-  {
-    value: 'football',
-    label: 'كرة القدم',
-    icon: null,
-    bgImage: '/Images/FootballCard.png'
-  },
-  {
-    value: 'wwe',
-    label: 'المصارعة',
-    icon: null,
-    bgImage: '/Images/WrestlingCard.png'
-  },
-  {
-    value: 'music',
-    label: 'الموسيقى',
-    icon: null,
-    bgImage: '/Images/MusicCard.avif'
-  },
-  {
-    value: 'religion',
-    label: 'الدين',
-    icon: null,
-    bgImage: '/Images/IslamCard.jpg'
-  },
-  {
-    value: 'sports',
-    label: 'رياضات متنوعة',
-    icon: null,
-    bgImage: '/Images/SportsCard.avif'
-  },
-  {
-    value: 'tech',
-    label: 'تكنولوجيا',
-    icon: null,
-    bgImage: '/Images/TechnologyCard.webp'
-  },
-  {
-    value: 'history',
-    label: 'تاريخ',
-    icon: null,
-    bgImage: '/Images/HistoryCard.jpg'
-  },
-  {
-    value: 'geography',
-    label: 'جغرافيا',
-    icon: null,
-    bgImage: '/Images/GeographyCard.jpg'
-  },
-  {
-    value: 'science',
-    label: 'علوم',
-    icon: null,
-    bgImage: '/Images/scienceCard.webp'
-  },
-  {
-    value: 'whoami',
-    label: 'من أنا',
-    icon: null,
-    bgImage: '/Images/WhoAmICard.png'
-  },
-  {
-    value: 'memories',
-    label: 'الذكريات',
-    icon: null,
-    bgImage: '/Images/OldCard.jpg'
-  },
-  {
-    value: 'playerJourney',
-    label: 'رحلة اللاعب',
-    icon: null,
-    bgImage: '/Images/PlayerJurney.webp'
-  },
-  {
-    value: 'prophets',
-    label: 'الأنبياء',
-    icon: null,
-    bgImage: '/Images/ProphetsCard.jpg'
-  },
-  {
-    value: 'spacetoon',
-    label: 'سبيستون',
-    icon: null,
-    bgImage: '/Images/SpacetoonCard.jpg'
-  },
-  {
-    value: 'arabicSeries',
-    label: 'مسلسلات عربية',
-    icon: null,
-    bgImage: '/Images/ArabicSeriesCard.jpg'
-  },
-  {
-    value: 'quran',
-    label: 'قرآن',
-    icon: null,
-    bgImage: '/Images/QuranCard.jpg'
-  },
-  {
-    value: 'cars',
-    label: 'سيارات',
-    icon: null,
-    bgImage: '/Images/CarsCard.jpg'
-  },
-  {
-    value: 'globalBrands',
-    label: 'ماركات عالمية',
-    icon: null,
-    bgImage: '/Images/GlobalBrandsCard.jpg'
-  },
-  {
-    value: 'animals',
-    label: 'الحيوانات',
-    icon: null,
-    bgImage: '/Images/AnimalsCard.webp'
-  },
-  {
-    value: 'saudiLeague',
-    label: 'الدوري السعودي',
-    icon: null,
-    bgImage: '/Images/SaudiLeagueCard.jpg'
-  }
-];
+interface CategoryOption {
+  id: Category;
+  label: string;
+  icon: string;
+  bgImage: string;
+}
+
+const categories: CategoryOption[] = Object.entries(CATEGORY_CONFIG).map(([key, value]) => ({
+  id: key as Category,
+  label: value.label,
+  icon: value.icon,
+  bgImage: value.bgImage
+}));
 
 export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, onResetGame }) => {
   const navigate = useNavigate();
@@ -176,12 +44,12 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
   const activeTeam = teams.find(team => team.isActive);
 
   // Filter categories to only show selected ones
-  const categories = allCategories.filter(cat => selectedCategories.includes(cat.value));
+  const filteredCategories = categories.filter(cat => selectedCategories.includes(cat.id));
 
   // Check if all categories have reached their limit
   const checkAllCategoriesUsed = () => {
-    return categories.every(category => 
-      (categorySelectionCounts[category.value] || 0) >= 3
+    return filteredCategories.every(category => 
+      (categorySelectionCounts[category.id] || 0) >= 3
     );
   };
 
@@ -204,11 +72,11 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
 
   const handleCategorySelect = (category: CategoryOption) => {
     if (gameEnded) return;
-    const selectionCount = categorySelectionCounts[category.value] || 0;
+    const selectionCount = categorySelectionCounts[category.id] || 0;
     if (selectionCount >= 3) {
       return;
     }
-    onSelect(category.value);
+    onSelect(category.id);
   };
 
   const handleEndGame = () => {
@@ -236,7 +104,7 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
         </div>
 
         {/* Add category usage warning */}
-        {categories.filter(category => (categorySelectionCounts[category.value] || 0) >= 3).length > 0 && (
+        {filteredCategories.filter(category => (categorySelectionCounts[category.id] || 0) >= 3).length > 0 && (
           <div className="mb-6 p-4 bg-yellow-500/10 rounded-xl border border-yellow-500/20">
             <p className="text-yellow-400 text-center">
               <AlertCircle className="w-5 h-5 inline-block mr-2" />
@@ -286,24 +154,23 @@ export const CategorySelection: React.FC<CategorySelectionProps> = ({ onSelect, 
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8 flex-1">
-              {categories.map((category) => {
-                const selectionCount = categorySelectionCounts[category.value] || 0;
+              {filteredCategories.map((category) => {
+                const selectionCount = categorySelectionCounts[category.id] || 0;
                 const isDisabled = selectionCount >= 3;
                 
                 return (
-                  <div key={category.value} className="relative group">
+                  <div key={category.id} className="relative group">
                     <button
                       onClick={() => handleCategorySelect(category)}
                       disabled={isDisabled}
                       className={`category-card ${
                         isDisabled ? 'opacity-50 cursor-not-allowed' : 'group-hover:scale-105'
                       } transition-all duration-300 w-full h-full overflow-hidden rounded-2xl shadow-lg bg-gray-800/50`}
-                      style={{
-                        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${category.bgImage})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                      }}
                     >
+                      <div 
+                        className="absolute inset-0 bg-cover bg-center"
+                        style={{ backgroundImage: `url(${category.bgImage})` }}
+                      />
                       <div className="absolute inset-0 bg-gray-900/50"></div>
                       <div className="relative z-10 p-6">
                         <h3 className="text-3xl font-bold text-white mb-4">

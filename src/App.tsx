@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { AboutPage } from './components/AboutPage';
 import { ContactPage } from './components/ContactPage';
 import NavigationBar from './components/NavigationBar';
@@ -8,16 +8,7 @@ import { CategorySelection } from './components/CategorySelection';
 import { GameBoard } from './components/GameBoard';
 import { useGameStore } from './store/gameStore';
 import { Category } from './types';
-import { fetchRandomAnime } from './services/jikanApi';
-import { fetchRandomMovie } from './services/omdbApi';
-import { fetchRandomTVShow } from './services/tvSeriesApi';
-import { fetchRandomGame } from './services/rawgApi';
-import { fetchRandomFootballItem } from './services/footballApi';
-import { fetchRandomWrestler } from './services/wweApi';
-import { fetchRandomMusic } from './services/Music';
-import { fetchRandomReligion } from './services/religionApi';
-import { fetchRandomWhoAmI } from './services/whoAmIApi';
-import { fetchRandomMemory } from './services/memoriesApi';
+import { API_CONFIG } from './config/apiConfig';
 import { WinPage } from './components/WinPage';
 import WelcomePage from './components/WelcomePage';
 import SignUp from './components/SignUp';
@@ -25,15 +16,6 @@ import Login from './components/Login';
 import UserProfile from './components/UserProfile';
 import ProtectedRoute from './components/ProtectedRoute';
 import { Toaster } from 'react-hot-toast';
-import { fetchRandomPlayerJourney } from './services/playerJourneyApi';
-import { fetchRandomProphet } from './services/prophetsApi';
-import { getRandomSpacetoonItem } from './services/spacetoonApi';
-import { getRandomArabicSeriesItem } from './services/arabicSeriesApi';
-import { getRandomQuranItem } from './services/quranApi';
-import { getRandomCarsItem } from './services/carsApi';
-import { getRandomGlobalBrandsItem } from './services/globalBrandsApi';
-import { getRandomAnimal } from './services/animalsApi';
-import { getRandomSaudiLeagueItem } from './services/SaudiLeaguesApi';
 function AppRoutes() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -126,95 +108,14 @@ function AppRoutes() {
     setCategory(category);
     clearCategoryUsedItems(category);
     
-    let item;
     try {
-      switch (category) {
-        case 'anime':
-          item = await fetchRandomAnime(category);
-          break;
-        case 'movies':
-          item = await fetchRandomMovie(category);
-          break;
-        case 'tv':
-          item = await fetchRandomTVShow(category);
-          break;
-        case 'games':
-          item = await fetchRandomGame(category);
-          break;
-        case 'football':
-          item = await fetchRandomFootballItem(category);
-          break;
-        case 'wwe':
-          item = await fetchRandomWrestler(category);
-          break;
-        case 'music':
-          item = await fetchRandomMusic(category);
-          break;
-        case 'religion':
-          item = await fetchRandomReligion(category);
-          break;
-        case 'whoami':
-          item = await fetchRandomWhoAmI(category);
-          break;
-        case 'memories':
-          item = await fetchRandomMemory(category);
-          break;
-        case 'playerJourney':
-          item = await fetchRandomPlayerJourney(category);
-          break;
-        case 'prophets':
-          item = await fetchRandomProphet(category);
-          break;
-        case 'spacetoon':
-          item = await getRandomSpacetoonItem();
-          break;
-        case 'arabicSeries':
-          item = await getRandomArabicSeriesItem();
-          break;
-        case 'quran':
-          item = await getRandomQuranItem();
-          break;
-        case 'cars':
-          item = await getRandomCarsItem();
-          break;
-        case 'globalBrands':
-          item = await getRandomGlobalBrandsItem();
-          break;
-        case 'animals':
-          item = await getRandomAnimal();
-          break;
-        case 'saudiLeague':
-          item = await getRandomSaudiLeagueItem();
-          break;
-        // For demo categories, use placeholder data
-        case 'sports':
-        case 'tech':
-        case 'history':
-        case 'geography':
-        case 'science':
-          // Use placeholder data for demo categories
-          item = {
-            id: `demo-${category}-${Date.now()}`,
-            name: 'عنصر تجريبي',
-            category: category,
-            details: [
-              { label: 'تلميح 1', value: 'معلومة تجريبية 1', revealed: false },
-              { label: 'تلميح 2', value: 'معلومة تجريبية 2', revealed: false },
-              { label: 'تلميح 3', value: 'معلومة تجريبية 3', revealed: false },
-            ]
-          };
-          break;
-        default:
-          throw new Error(`Unknown category: ${category}`);
-      }
-
+      const item = await API_CONFIG[category](category);
       if (item) {
         setCurrentItem(item);
         navigate('/game');
       }
     } catch (error) {
       console.error('Error fetching item:', error);
-      // Handle error appropriately
     }
   };
 

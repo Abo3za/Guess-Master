@@ -25,7 +25,7 @@ export const CATEGORIES: Record<Category, CategoryInfo> = {
   [Category.quran]: { label: 'قرآن', icon: '📖' },
   [Category.cars]: { label: 'سيارات', icon: '🚗' },
   [Category.globalBrands]: { label: 'ماركات عالمية', icon: '🏢' },
-  [Category.ANIMALS]: { label: 'الحيوانات', icon: '🦁' },
+  [Category.animals]: { label: 'الحيوانات', icon: '🦁' },
   [Category.sports]: { label: 'الرياضة', icon: '⚽' },
   [Category.tech]: { label: 'التكنولوجيا', icon: '💻' },
   [Category.history]: { label: 'التاريخ', icon: '📜' },

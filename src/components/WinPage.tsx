@@ -39,8 +39,8 @@ export const WinPage: React.FC<WinPageProps> = ({ onPlayAgain }) => {
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black">
       {/* Animated background particles */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/Images/WinBackground.png')] bg-cover bg-center opacity-20" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/90" />
+        <div className="absolute inset-0 bg-[url('/Images/WinBackground.png')] bg-cover bg-top bg-no-repeat opacity-50" style={{ backgroundSize: 'cover' }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80" />
         <div className="absolute inset-0 animate-pulse">
           {[...Array(20)].map((_, i) => (
             <div

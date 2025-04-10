@@ -151,6 +151,12 @@ const allCategories: CategoryOption[] = [
     label: 'الحيوانات',
     icon: null,
     bgImage: '/Images/AnimalsCard.webp'
+  },
+  {
+    value: 'saudiLeague',
+    label: 'الدوري السعودي',
+    icon: null,
+    bgImage: '/Images/SaudiLeagueCard.jpg'
   }
 ];
 

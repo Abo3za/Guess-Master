@@ -30,7 +30,8 @@ export const CATEGORIES: Record<Category, CategoryInfo> = {
   [Category.tech]: { label: 'التكنولوجيا', icon: '💻' },
   [Category.history]: { label: 'التاريخ', icon: '📜' },
   [Category.geography]: { label: 'الجغرافيا', icon: '🌍' },
-  [Category.science]: { label: 'العلوم', icon: '🔬' }
+  [Category.science]: { label: 'العلوم', icon: '🔬' },
+  [Category.saudiLeague]: { label: 'الدوري السعودي', icon: '🏆' },
 };
 
 interface GameStore extends GameState {

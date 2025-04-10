@@ -1,0 +1,26 @@
+{
+    "items": [
+      {
+        "id": 1,
+        "name": "سالم الدوسري",
+        "details": [
+          { "label": "المركز", "value": "مهاجم", "revealed": false },
+          { "label": "النادي", "value": "الهلال", "revealed": false },
+          { "label": "عدد الأجزاء", "value": "11 جزء", "revealed": false },
+          { "label": "البلد", "value": "سوريا", "revealed": false },
+          { "label": "الموسم", "value": "1", "revealed": false }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "محمد الفيصل",
+        "details": [
+          { "label": "المركز", "value": "مهاجم", "revealed": false },
+          { "label": "النادي", "value": "الهلال", "revealed": false },
+          { "label": "عدد الأجزاء", "value": "3 أجزاء", "revealed": false },
+            { "label": "البلد", "value": "سوريا", "revealed": false },
+          { "label": "الموسم", "value": "1", "revealed": false }
+        ]
+      }
+    ]
+  } 

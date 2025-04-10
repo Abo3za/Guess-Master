@@ -21,7 +21,8 @@ export enum Category {
   quran = 'quran',
   cars = 'cars',
   globalBrands = 'globalBrands',
-  animals = 'animals'
+  animals = 'animals',
+  saudiLeague = 'saudiLeague'
 }
 
 export const CATEGORIES = {
@@ -162,6 +163,12 @@ export const CATEGORIES = {
     icon: "🦁",
     description: "تعرف على الحيوانات المختلفة",
     image: "AnimalsCard.webp"
+  },
+  [Category.saudiLeague]: {
+    name: "الدوري السعودي",
+    icon: "🏆",
+    description: "تعرف على الدوري السعودي المختلف",
+    image: "SaudiLeagueCard.webp"
   }
 };
 

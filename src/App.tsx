@@ -33,6 +33,7 @@ import { getRandomQuranItem } from './services/quranApi';
 import { getRandomCarsItem } from './services/carsApi';
 import { getRandomGlobalBrandsItem } from './services/globalBrandsApi';
 import { getRandomAnimal } from './services/animalsApi';
+import { getRandomSaudiLeagueItem } from './services/SaudiLeaguesApi';
 function AppRoutes() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -181,6 +182,9 @@ function AppRoutes() {
           break;
         case 'animals':
           item = await getRandomAnimal();
+          break;
+        case 'saudiLeague':
+          item = await getRandomSaudiLeagueItem();
           break;
         // For demo categories, use placeholder data
         case 'sports':

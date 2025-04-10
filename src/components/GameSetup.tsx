@@ -3,27 +3,15 @@ import { useGameStore } from '../store/gameStore';
 import { useNavigate } from 'react-router-dom';
 import { Team } from '../types';
 import { CATEGORY_CONFIG } from '../config/categories';
+import { RECOMMENDED_POINTS, DEFAULT_WINNING_POINTS, DEFAULT_HIDE_HINTS } from '../config/gameConfig';
 
 interface GameSetupProps {
   onStart: (
     teams: { id: number; name: string; score: number; isActive: boolean }[],
     winningPoints: number,
-    hideHints: boolean,
     selectedCategories: string[]
   ) => void;
 }
-
-interface PointOption {
-  value: number;
-  label: string;
-  description: string;
-}
-
-const RECOMMENDED_POINTS: PointOption[] = [
-  { value: 100, label: 'سريعة', description: 'مباراة قصيرة (15-20 دقيقة)' },
-  { value: 200, label: 'عادية', description: 'مباراة متوسطة (25-30 دقيقة)' },
-  { value: 300, label: 'طويلة', description: 'مباراة طويلة (35-45 دقيقة)' },
-];
 
 // Replace the categories array with:
 const categories = Object.entries(CATEGORY_CONFIG).map(([key, value]) => ({
@@ -38,7 +26,8 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
   const { teams, resetGame } = useGameStore();
   const [team1Name, setTeam1Name] = useState('فريق 1');
   const [team2Name, setTeam2Name] = useState('فريق 2');
-  const [winningPoints, setWinningPoints] = useState(200);
+  const [winningPoints, setWinningPoints] = useState(DEFAULT_WINNING_POINTS);
+  const [hideHints, setHideHints] = useState(DEFAULT_HIDE_HINTS);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const [error, setError] = useState('');
 
@@ -106,6 +95,10 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
     });
   };
 
+  const handlePointChange = (option: { value: number; label: string }) => {
+    setWinningPoints(option.value);
+  };
+
   const handleStartGame = () => {
     if (selectedCategories.length !== 6) {
       setError('الرجاء اختيار 6 تصنيفات');
@@ -118,7 +111,7 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
       { ...teams[1], name: team2Name, isActive: false }
     ];
 
-    onStart(gameTeams, winningPoints, false, selectedCategories);
+    onStart(gameTeams, winningPoints, hideHints, selectedCategories);
     navigate('/categories');
   };
 
@@ -207,7 +200,7 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
           {RECOMMENDED_POINTS.map((option) => (
             <button
               key={option.value}
-              onClick={() => setWinningPoints(option.value)}
+              onClick={() => handlePointChange(option)}
               className={`p-6 rounded-xl text-center transition-all ${
                 winningPoints === option.value
                   ? 'bg-blue-500 text-white'
@@ -237,6 +230,7 @@ export const GameSetup: React.FC<GameSetupProps> = ({ onStart }) => {
           {error}
         </div>
       )}
+
     </div>
   );
 };

@@ -1,11 +1,8 @@
+import { Category } from '../types';
 import spacetoonData from '../Database/SpacetoonDB.json';
+import { createGenericApi } from './genericApi';
 
-export const getSpacetoonItems = () => {
-  return spacetoonData.items;
-};
+const spacetoonApi = createGenericApi(spacetoonData);
 
-export const getRandomSpacetoonItem = () => {
-  const items = spacetoonData.items;
-  const randomIndex = Math.floor(Math.random() * items.length);
-  return items[randomIndex];
-}; 
+export const getSpacetoonItems = spacetoonApi.getItems;
+export const getRandomSpacetoonItem = spacetoonApi.getRandomItem; 

@@ -7,7 +7,8 @@
         { "label": "النوع", "value": "سيدان", "revealed": false },
         { "label": "الشركة المصنعة", "value": "تويوتا", "revealed": false },
         { "label": "بلد المنشأ", "value": "اليابان", "revealed": false },
-        { "label": "الفئة", "value": "متوسطة", "revealed": false }
+        { "label": "الفئة", "value": "متوسطة", "revealed": false },
+        { "label": "الموديل", "value": "كامري", "revealed": false }
       ]
     },
     {
@@ -17,7 +18,8 @@
         { "label": "النوع", "value": "سيدان فاخرة", "revealed": false },
         { "label": "الشركة المصنعة", "value": "مرسيدس بنز", "revealed": false },
         { "label": "بلد المنشأ", "value": "ألمانيا", "revealed": false },
-        { "label": "الفئة", "value": "فاخرة", "revealed": false }
+        { "label": "الفئة", "value": "فاخرة", "revealed": false },
+        { "label": "الموديل", "value": "S-Class", "revealed": false }
       ]
     },
     {
@@ -27,7 +29,8 @@
         { "label": "النوع", "value": "دفع رباعي", "revealed": false },
         { "label": "الشركة المصنعة", "value": "بي ام دبليو", "revealed": false },
         { "label": "بلد المنشأ", "value": "ألمانيا", "revealed": false },
-        { "label": "الفئة", "value": "فاخرة", "revealed": false }
+        { "label": "الفئة", "value": "فاخرة", "revealed": false },
+        { "label": "الموديل", "value": "X5", "revealed": false }
       ]
     }
   ]

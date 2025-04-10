@@ -1,11 +1,8 @@
+import { Category } from '../types';
 import quranData from '../Database/QuranDB.json';
+import { createGenericApi } from './genericApi';
 
-export const getQuranItems = () => {
-  return quranData.items;
-};
+const quranApi = createGenericApi(quranData);
 
-export const getRandomQuranItem = () => {
-  const items = quranData.items;
-  const randomIndex = Math.floor(Math.random() * items.length);
-  return items[randomIndex];
-}; 
+export const getQuranItems = quranApi.getItems;
+export const getRandomQuranItem = quranApi.getRandomItem; 

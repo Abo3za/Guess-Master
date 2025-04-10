@@ -2,48 +2,35 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { GameState, Team, GameItem, Category } from '../types';
 
-export type Category = 
-  | 'anime'
-  | 'tv'
-  | 'movies'
-  | 'games'
-  | 'wwe'
-  | 'football'
-  | 'music'
-  | 'whoami'
-  | 'memories'
-  | 'playerJourney'
-  | 'prophets'
-  | 'religion'
-  | 'spacetoon'
-  | 'arabicSeries'
-  | 'quran'
-  | 'cars'
-  | 'globalBrands';
-
 interface CategoryInfo {
   label: string;
   icon: string;
 }
 
 export const CATEGORIES: Record<Category, CategoryInfo> = {
-  anime: { label: 'الأنمي', icon: '🎭' },
-  tv: { label: 'المسلسلات', icon: '📺' },
-  movies: { label: 'الأفلام', icon: '🎬' },
-  games: { label: 'الألعاب', icon: '🎮' },
-  wwe: { label: 'المصارعة', icon: '🤼' },
-  football: { label: 'كرة القدم', icon: '⚽' },
-  music: { label: 'الموسيقى', icon: '🎵' },
-  whoami: { label: 'من أنا', icon: '❓' },
-  memories: { label: 'الذكريات', icon: '📸' },
-  playerJourney: { label: 'رحلة اللاعب', icon: '🏆' },
-  prophets: { label: 'الأنبياء', icon: '🕌' },
-  religion: { label: 'الدين', icon: '📿' },
-  spacetoon: { label: 'سبيستون', icon: '📺' },
-  arabicSeries: { label: 'مسلسلات عربية', icon: '🎭' },
-  quran: { label: 'قرآن', icon: '📖' },
-  cars: { label: 'سيارات', icon: '🚗' },
-  globalBrands: { label: 'ماركات عالمية', icon: '🏢' }
+  [Category.anime]: { label: 'الأنمي', icon: '🎭' },
+  [Category.tv]: { label: 'المسلسلات', icon: '📺' },
+  [Category.movies]: { label: 'الأفلام', icon: '🎬' },
+  [Category.games]: { label: 'الألعاب', icon: '🎮' },
+  [Category.wwe]: { label: 'المصارعة', icon: '🤼' },
+  [Category.football]: { label: 'كرة القدم', icon: '⚽' },
+  [Category.music]: { label: 'الموسيقى', icon: '🎵' },
+  [Category.whoami]: { label: 'من أنا', icon: '❓' },
+  [Category.memories]: { label: 'الذكريات', icon: '📸' },
+  [Category.playerJourney]: { label: 'رحلة اللاعب', icon: '🏆' },
+  [Category.prophets]: { label: 'الأنبياء', icon: '🕌' },
+  [Category.religion]: { label: 'الدين', icon: '📿' },
+  [Category.spacetoon]: { label: 'سبيستون', icon: '📺' },
+  [Category.arabicSeries]: { label: 'مسلسلات عربية', icon: '🎭' },
+  [Category.quran]: { label: 'قرآن', icon: '📖' },
+  [Category.cars]: { label: 'سيارات', icon: '🚗' },
+  [Category.globalBrands]: { label: 'ماركات عالمية', icon: '🏢' },
+  [Category.ANIMALS]: { label: 'الحيوانات', icon: '🦁' },
+  [Category.sports]: { label: 'الرياضة', icon: '⚽' },
+  [Category.tech]: { label: 'التكنولوجيا', icon: '💻' },
+  [Category.history]: { label: 'التاريخ', icon: '📜' },
+  [Category.geography]: { label: 'الجغرافيا', icon: '🌍' },
+  [Category.science]: { label: 'العلوم', icon: '🔬' }
 };
 
 interface GameStore extends GameState {

@@ -1,13 +1,24 @@
-import { GameItem, Category } from '../types';
-import prophetsDB from '../Database/ProphetsDB.json';
+import { Category } from '../types';
+import { createGenericApi } from './genericApi';
+import prophetsData from '../Database/ProphetsDB.json';
 
-export const fetchProphetsItems = () => {
-  return prophetsDB;
-};
+// Convert the data to match our generic API format
+const formattedProphetsData = prophetsData.map(prophet => ({
+  ...prophet,
+  name: prophet.title, // Map title to name for consistency
+  details: {
+    era: prophet.era,
+    role: prophet.role,
+    related_event: prophet.related_event,
+    mentioned_in: prophet.mentioned_in,
+    famous_for: prophet.famous_for
+  }
+}));
 
-export const fetchProphetItemById = (id: string) => {
-  return prophetsDB.find(item => item.id.toString() === id);
-};
+const prophetsApi = createGenericApi(formattedProphetsData, Category.PROPHETS);
+
+export const getProphetsItems = prophetsApi.getItems;
+export const getRandomProphet = prophetsApi.getRandomItem;
 
 function getDetailsForCategory(data: any): any[] {
   const allDetails = [

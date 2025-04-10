@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Trophy, AlertCircle, Users, Star, Award, Home, Gamepad2, Sparkles } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useGameStore } from '../store/gameStore';
@@ -9,15 +9,7 @@ interface WinPageProps {
 
 export const WinPage: React.FC<WinPageProps> = ({ onPlayAgain }) => {
   const navigate = useNavigate();
-  const { teams, winningPoints, gameEnded, resetGame, isGameActive } = useGameStore();
-
-  useEffect(() => {
-    // If there are no teams or game hasn't ended, redirect to setup
-    if (!teams?.length || !gameEnded) {
-      navigate('/setup');
-      return;
-    }
-  }, [teams, gameEnded, navigate]);
+  const { teams, winningPoints, gameEnded, resetGame } = useGameStore();
 
   // Get the winning team
   const winner = teams?.length ? teams.reduce((prev, current) => 
@@ -29,16 +21,14 @@ export const WinPage: React.FC<WinPageProps> = ({ onPlayAgain }) => {
 
   const handleHomeClick = () => {
     resetGame();
-    setTimeout(() => {
-      navigate('/');
-    }, 100);
+    localStorage.removeItem('gameState');
+    navigate('/');
   };
 
   const handleNewGameClick = () => {
     resetGame();
-    setTimeout(() => {
-      navigate('/setup');
-    }, 100);
+    localStorage.removeItem('gameState');
+    navigate('/setup');
   };
 
   if (!winner) {

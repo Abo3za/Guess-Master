@@ -1,11 +1,8 @@
+import { Category } from '../types';
 import carsData from '../Database/CarsDB.json';
+import { createGenericApi } from './genericApi';
 
-export const getCarsItems = () => {
-  return carsData.items;
-};
+const carsApi = createGenericApi(carsData);
 
-export const getRandomCarsItem = () => {
-  const items = carsData.items;
-  const randomIndex = Math.floor(Math.random() * items.length);
-  return items[randomIndex];
-}; 
+export const getCarsItems = carsApi.getItems;
+export const getRandomCarsItem = carsApi.getRandomItem; 

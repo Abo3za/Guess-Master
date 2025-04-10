@@ -1,0 +1,95 @@
+[
+  {
+    "id": 1,
+    "name": "الأسد",
+    "details": [
+      {
+        "label": "الموطن",
+        "value": "الغابات والسافانا",
+        "revealed": false
+      },
+      {
+        "label": "النظام الغذائي",
+        "value": "اللحوم",
+        "revealed": false
+      },
+      {
+        "label": "متوسط العمر",
+        "value": "10-14 سنة",
+        "revealed": false
+      },
+      {
+        "label": "الخصائص",
+        "value": "ملك الغابة",
+        "revealed": false
+      },
+      {
+        "label": "حقائق",
+        "value": "يمكن أن يصل وزنه إلى 250 كجم",
+        "revealed": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "الفيل",
+    "details": [
+      {
+        "label": "الموطن",
+        "value": "الغابات والسافانا",
+        "revealed": false
+      },
+      {
+        "label": "النظام الغذائي",
+        "value": "النباتات",
+        "revealed": false
+      },
+      {
+        "label": "متوسط العمر",
+        "value": "60-70 سنة",
+        "revealed": false
+      },
+      {
+        "label": "الخصائص",
+        "value": "أكبر حيوان بري",
+        "revealed": false
+      },
+      {
+        "label": "حقائق",
+        "value": "يستخدم خرطومه للشرب والتنفس",
+        "revealed": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "الزرافة",
+    "details": [
+      {
+        "label": "الموطن",
+        "value": "السافانا",
+        "revealed": false
+      },
+      {
+        "label": "النظام الغذائي",
+        "value": "أوراق الأشجار",
+        "revealed": false
+      },
+      {
+        "label": "متوسط العمر",
+        "value": "20-25 سنة",
+        "revealed": false
+      },
+      {
+        "label": "الخصائص",
+        "value": "أطول حيوان بري",
+        "revealed": false
+      },
+      {
+        "label": "حقائق",
+        "value": "يمكن أن يصل طول عنقها إلى 2 متر",
+        "revealed": false
+      }
+    ]
+  }
+] 

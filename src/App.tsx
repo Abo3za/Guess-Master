@@ -32,7 +32,7 @@ import { getRandomArabicSeriesItem } from './services/arabicSeriesApi';
 import { getRandomQuranItem } from './services/quranApi';
 import { getRandomCarsItem } from './services/carsApi';
 import { getRandomGlobalBrandsItem } from './services/globalBrandsApi';
-
+import { getRandomAnimal } from './services/animalsApi';
 function AppRoutes() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -58,8 +58,8 @@ function AppRoutes() {
     if (savedGameState) {
       const state = JSON.parse(savedGameState);
       
-      // Don't restore if game has ended
-      if (state.gameEnded) {
+      // Don't restore if game has ended or we're on the win page
+      if (state.gameEnded || window.location.pathname === '/win') {
         localStorage.removeItem('gameState');
         return;
       }
@@ -77,8 +77,8 @@ function AppRoutes() {
           setCurrentItem(state.currentItem);
         }
 
-        // Only redirect if we're on the home page or setup page
-        if (location.pathname === '/' || location.pathname === '/setup') {
+        // Only redirect if we're on the home page or setup page and not coming from win page
+        if ((location.pathname === '/' || location.pathname === '/setup') && !window.location.pathname.includes('/win')) {
           if (state.currentItem) {
             navigate('/game');
           } else {
@@ -178,6 +178,9 @@ function AppRoutes() {
           break;
         case 'globalBrands':
           item = await getRandomGlobalBrandsItem();
+          break;
+        case 'animals':
+          item = await getRandomAnimal();
           break;
         // For demo categories, use placeholder data
         case 'sports':

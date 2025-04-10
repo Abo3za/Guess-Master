@@ -1,11 +1,8 @@
+import { Category } from '../types';
 import arabicSeriesData from '../Database/ArabicSeriesDB.json';
+import { createGenericApi } from './genericApi';
 
-export const getArabicSeriesItems = () => {
-  return arabicSeriesData.items;
-};
+const arabicSeriesApi = createGenericApi(arabicSeriesData);
 
-export const getRandomArabicSeriesItem = () => {
-  const items = arabicSeriesData.items;
-  const randomIndex = Math.floor(Math.random() * items.length);
-  return items[randomIndex];
-}; 
+export const getArabicSeriesItems = arabicSeriesApi.getItems;
+export const getRandomArabicSeriesItem = arabicSeriesApi.getRandomItem; 

@@ -141,6 +141,11 @@ const allCategories: Category[] = [
     value: 'globalBrands',
     label: 'ماركات عالمية',
     bgImage: '/Images/GlobalBrandsCard.jpg'
+  },
+  {
+    value: 'animals',
+    label: 'الحيوانات',
+    bgImage: '/Images/AnimalsCard.webp'
   }
 ];
 

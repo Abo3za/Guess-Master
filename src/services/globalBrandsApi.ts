@@ -1,11 +1,8 @@
+import { Category } from '../types';
 import globalBrandsData from '../Database/GlobalBrandsDB.json';
+import { createGenericApi } from './genericApi';
 
-export const getGlobalBrandsItems = () => {
-  return globalBrandsData.items;
-};
+const globalBrandsApi = createGenericApi(globalBrandsData);
 
-export const getRandomGlobalBrandsItem = () => {
-  const items = globalBrandsData.items;
-  const randomIndex = Math.floor(Math.random() * items.length);
-  return items[randomIndex];
-}; 
+export const getGlobalBrandsItems = globalBrandsApi.getItems;
+export const getRandomGlobalBrandsItem = globalBrandsApi.getRandomItem; 
